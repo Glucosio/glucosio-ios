@@ -9,6 +9,7 @@
     [super viewDidLoad];
 
     self.eulaView.text = GLUCLoc(@"Terms Full");
+    self.eulaView.editable = NO;
     self.eulaView.font = [GLUCAppearanceController defaultFont];
     [self.saveButton setTitle:GLUCLoc(@"Accept") forState:UIControlStateNormal];
     
