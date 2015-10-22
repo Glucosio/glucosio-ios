@@ -1,0 +1,17 @@
+PODS:
+  - Charts (2.1.4)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+
+DEPENDENCIES:
+  - Charts
+  - FMDB
+
+SPEC CHECKSUMS:
+  Charts: 870589b6b4bf8468baacea8869c28983d71f602c
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+
+COCOAPODS: 0.39.0.rc.1

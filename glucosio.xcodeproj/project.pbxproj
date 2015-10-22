@@ -1,0 +1,970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C717FEC6A53D6692424E /* GLUCViewController.m */; };
+		42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */; };
+		42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */; };
+		42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */; };
+		42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */; };
+		42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */; };
+		42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */; };
+		5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193691BC2D2B9007CD147 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193681BC2D2B9007CD147 /* main.m */; };
+		551193741BC2D2B9007CD147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551193731BC2D2B9007CD147 /* Assets.xcassets */; };
+		551193821BC2D2B9007CD147 /* glucosioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193811BC2D2B9007CD147 /* glucosioTests.m */; };
+		5511938D1BC2D2B9007CD147 /* glucosioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511938C1BC2D2B9007CD147 /* glucosioUITests.m */; };
+		551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A01BC3EF60007CD147 /* GLUCAboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */; settings = {ASSET_TAGS = (); }; };
+		551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B61BC3EF60007CD147 /* GLUCHealthTip.m */; settings = {ASSET_TAGS = (); }; };
+		551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B81BC3EF60007CD147 /* GLUCModel.m */; settings = {ASSET_TAGS = (); }; };
+		551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BA1BC3EF60007CD147 /* GLUCRange.m */; settings = {ASSET_TAGS = (); }; };
+		551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BC1BC3EF60007CD147 /* GLUCReading.m */; settings = {ASSET_TAGS = (); }; };
+		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; settings = {ASSET_TAGS = (); }; };
+		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; settings = {ASSET_TAGS = (); }; };
+		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3661BD28BC80052A865 /* GLUCLoc.m */; settings = {ASSET_TAGS = (); }; };
+		555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		558180BA1BCD16210088A518 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 558180B81BCD161C0088A518 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BC1BCD419B0088A518 /* lato-bold.ttf */; settings = {ASSET_TAGS = (); }; };
+		558180BF1BCD419B0088A518 /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BD1BCD419B0088A518 /* lato.ttf */; settings = {ASSET_TAGS = (); }; };
+		558180C21BCD5DF50088A518 /* GLUCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558180C11BCD5DF50088A518 /* GLUCTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; settings = {ASSET_TAGS = (); }; };
+		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44416E140D3C3C50BF35DA28 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5511937E1BC2D2B9007CD147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5511935C1BC2D2B8007CD147 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 551193631BC2D2B9007CD147;
+			remoteInfo = glucosio;
+		};
+		551193891BC2D2B9007CD147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5511935C1BC2D2B8007CD147 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 551193631BC2D2B9007CD147;
+			remoteInfo = glucosio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42B3C0C2FE36FC4F4F0327AD /* GLUCPersistenceDDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCPersistenceDDL.h; sourceTree = "<group>"; };
+		42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAppearanceController.h; sourceTree = "<group>"; };
+		42B3C144BA070A08A3EBDF2C /* GLUCReadingEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReadingEditorViewController.h; sourceTree = "<group>"; };
+		42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCAppearanceController.m; sourceTree = "<group>"; };
+		42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEditorViewController.m; sourceTree = "<group>"; };
+		42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCPersistenceDDL.m; sourceTree = "<group>"; };
+		42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCListEditorViewController.m; sourceTree = "<group>"; };
+		42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCValueEditorViewController.m; sourceTree = "<group>"; };
+		42B3C6E11F3CF2E80BF1FC1E /* GLUCValueEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCValueEditorViewController.h; sourceTree = "<group>"; };
+		42B3C717FEC6A53D6692424E /* GLUCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCViewController.m; sourceTree = "<group>"; };
+		42B3CA6A126FD897A0E739A7 /* GLUCListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCListEditorViewController.h; sourceTree = "<group>"; };
+		42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReadingEditorViewController.m; sourceTree = "<group>"; };
+		42B3CD95FBA708D0B283F8C7 /* GLUCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEditorViewController.h; sourceTree = "<group>"; };
+		42B3CFADEECD38EC70948DC8 /* GLUCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCViewController.h; sourceTree = "<group>"; };
+		44416E140D3C3C50BF35DA28 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5511291B1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCDateTimeEditorViewController.h; sourceTree = "<group>"; };
+		5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCDateTimeEditorViewController.m; sourceTree = "<group>"; };
+		551193641BC2D2B9007CD147 /* glucosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glucosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		551193681BC2D2B9007CD147 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		551193731BC2D2B9007CD147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		551193781BC2D2B9007CD147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5511937D1BC2D2B9007CD147 /* glucosioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = glucosioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551193811BC2D2B9007CD147 /* glucosioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = glucosioTests.m; sourceTree = "<group>"; };
+		551193831BC2D2B9007CD147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551193881BC2D2B9007CD147 /* glucosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = glucosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5511938C1BC2D2B9007CD147 /* glucosioUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = glucosioUITests.m; sourceTree = "<group>"; };
+		5511938E1BC2D2B9007CD147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5511939F1BC3EF60007CD147 /* GLUCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAboutViewController.h; sourceTree = "<group>"; };
+		551193A01BC3EF60007CD147 /* GLUCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCAboutViewController.m; sourceTree = "<group>"; };
+		551193A21BC3EF60007CD147 /* GLUCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAppDelegate.h; sourceTree = "<group>"; };
+		551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCAppDelegate.m; sourceTree = "<group>"; };
+		551193A51BC3EF60007CD147 /* GLUCFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCFeedbackViewController.h; sourceTree = "<group>"; };
+		551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCFeedbackViewController.m; sourceTree = "<group>"; };
+		551193A81BC3EF60007CD147 /* GLUCHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCHistoryViewController.h; sourceTree = "<group>"; };
+		551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCHistoryViewController.m; sourceTree = "<group>"; };
+		551193AB1BC3EF60007CD147 /* GLUCOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCOverviewViewController.h; sourceTree = "<group>"; };
+		551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCOverviewViewController.m; sourceTree = "<group>"; };
+		551193AE1BC3EF60007CD147 /* GLUCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSettingsViewController.h; sourceTree = "<group>"; };
+		551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSettingsViewController.m; sourceTree = "<group>"; };
+		551193B11BC3EF60007CD147 /* GLUCEULAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEULAViewController.h; sourceTree = "<group>"; };
+		551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEULAViewController.m; sourceTree = "<group>"; };
+		551193B51BC3EF60007CD147 /* GLUCHealthTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCHealthTip.h; sourceTree = "<group>"; };
+		551193B61BC3EF60007CD147 /* GLUCHealthTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCHealthTip.m; sourceTree = "<group>"; };
+		551193B71BC3EF60007CD147 /* GLUCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCModel.h; sourceTree = "<group>"; };
+		551193B81BC3EF60007CD147 /* GLUCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCModel.m; sourceTree = "<group>"; };
+		551193B91BC3EF60007CD147 /* GLUCRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCRange.h; sourceTree = "<group>"; };
+		551193BA1BC3EF60007CD147 /* GLUCRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCRange.m; sourceTree = "<group>"; };
+		551193BB1BC3EF60007CD147 /* GLUCReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReading.h; sourceTree = "<group>"; };
+		551193BC1BC3EF60007CD147 /* GLUCReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReading.m; sourceTree = "<group>"; };
+		551193BF1BC3EF60007CD147 /* GLUCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCUser.h; sourceTree = "<group>"; };
+		551193C01BC3EF60007CD147 /* GLUCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCUser.m; sourceTree = "<group>"; };
+		551193C21BC3EF60007CD147 /* GLUCPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCPersistenceController.h; sourceTree = "<group>"; };
+		551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCPersistenceController.m; sourceTree = "<group>"; };
+		551193C61BC3EF60007CD147 /* UIColor+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLUCAdditions.h"; sourceTree = "<group>"; };
+		551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLUCAdditions.m"; sourceTree = "<group>"; };
+		555CA3551BD28BC80052A865 /* NSCalendar+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+GLUCAdditions.h"; sourceTree = "<group>"; };
+		555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+GLUCAdditions.m"; sourceTree = "<group>"; };
+		555CA3571BD28BC80052A865 /* NSDate+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GLUCAdditions.h"; sourceTree = "<group>"; };
+		555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GLUCAdditions.m"; sourceTree = "<group>"; };
+		555CA3591BD28BC80052A865 /* NSDateComponents+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+GLUCAdditions.h"; sourceTree = "<group>"; };
+		555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+GLUCAdditions.m"; sourceTree = "<group>"; };
+		555CA35C1BD28BC80052A865 /* NSArray+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+GLUCAdditions.h"; sourceTree = "<group>"; };
+		555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GLUCAdditions.m"; sourceTree = "<group>"; };
+		555CA3651BD28BC80052A865 /* GLUCLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCLoc.h; sourceTree = "<group>"; };
+		555CA3661BD28BC80052A865 /* GLUCLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCLoc.m; sourceTree = "<group>"; };
+		555CA3711BD4E0C80052A865 /* NSFileManager+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GLUCAdditions.h"; sourceTree = "<group>"; };
+		555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GLUCAdditions.m"; sourceTree = "<group>"; };
+		558180B91BCD161D0088A518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		558180BC1BCD419B0088A518 /* lato-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-bold.ttf"; sourceTree = "<group>"; };
+		558180BD1BCD419B0088A518 /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
+		558180C01BCD5DF50088A518 /* GLUCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCTabBarController.h; sourceTree = "<group>"; };
+		558180C11BCD5DF50088A518 /* GLUCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCTabBarController.m; sourceTree = "<group>"; };
+		5584534A1BC564D300492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		5584534D1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5584534F1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D6365B48E939E015DFC960F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		551193611BC2D2B9007CD147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5511937A1BC2D2B9007CD147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551193851BC2D2B9007CD147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42B3CBE43E582D9337216DA9 /* Editors */ = {
+			isa = PBXGroup;
+			children = (
+				5511291B1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.h */,
+				5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */,
+				42B3C144BA070A08A3EBDF2C /* GLUCReadingEditorViewController.h */,
+				42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */,
+				42B3CA6A126FD897A0E739A7 /* GLUCListEditorViewController.h */,
+				42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */,
+				42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */,
+				42B3C6E11F3CF2E80BF1FC1E /* GLUCValueEditorViewController.h */,
+				42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */,
+				42B3CD95FBA708D0B283F8C7 /* GLUCEditorViewController.h */,
+			);
+			path = Editors;
+			sourceTree = "<group>";
+		};
+		5511935B1BC2D2B8007CD147 = {
+			isa = PBXGroup;
+			children = (
+				551193661BC2D2B9007CD147 /* glucosio */,
+				551193801BC2D2B9007CD147 /* glucosioTests */,
+				5511938B1BC2D2B9007CD147 /* glucosioUITests */,
+				551193651BC2D2B9007CD147 /* Products */,
+				624868642F71D8AD6046612F /* Pods */,
+				E361650FCAC6BC1A71F98212 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		551193651BC2D2B9007CD147 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				551193641BC2D2B9007CD147 /* glucosio.app */,
+				5511937D1BC2D2B9007CD147 /* glucosioTests.xctest */,
+				551193881BC2D2B9007CD147 /* glucosioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		551193661BC2D2B9007CD147 /* glucosio */ = {
+			isa = PBXGroup;
+			children = (
+				558453481BC564C400492E38 /* UI */,
+				5511939C1BC3EF60007CD147 /* Classes */,
+				551193781BC2D2B9007CD147 /* Info.plist */,
+				551193671BC2D2B9007CD147 /* Supporting Files */,
+			);
+			path = glucosio;
+			sourceTree = "<group>";
+		};
+		551193671BC2D2B9007CD147 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				551193681BC2D2B9007CD147 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		551193801BC2D2B9007CD147 /* glucosioTests */ = {
+			isa = PBXGroup;
+			children = (
+				551193811BC2D2B9007CD147 /* glucosioTests.m */,
+				551193831BC2D2B9007CD147 /* Info.plist */,
+			);
+			path = glucosioTests;
+			sourceTree = "<group>";
+		};
+		5511938B1BC2D2B9007CD147 /* glucosioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5511938C1BC2D2B9007CD147 /* glucosioUITests.m */,
+				5511938E1BC2D2B9007CD147 /* Info.plist */,
+			);
+			path = glucosioUITests;
+			sourceTree = "<group>";
+		};
+		5511939C1BC3EF60007CD147 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				555CA3531BD28BC80052A865 /* Utiilities */,
+				5511939D1BC3EF60007CD147 /* Controller */,
+				551193B31BC3EF60007CD147 /* Model */,
+				551193C41BC3EF60007CD147 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5511939D1BC3EF60007CD147 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5511939E1BC3EF60007CD147 /* About */,
+				551193A11BC3EF60007CD147 /* Application */,
+				551193A41BC3EF60007CD147 /* Feedback */,
+				551193A71BC3EF60007CD147 /* History */,
+				551193AA1BC3EF60007CD147 /* Overview */,
+				551193AD1BC3EF60007CD147 /* Settings */,
+				551193B01BC3EF60007CD147 /* TermsAndConditions */,
+				42B3C717FEC6A53D6692424E /* GLUCViewController.m */,
+				42B3CFADEECD38EC70948DC8 /* GLUCViewController.h */,
+				42B3CBE43E582D9337216DA9 /* Editors */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5511939E1BC3EF60007CD147 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				5511939F1BC3EF60007CD147 /* GLUCAboutViewController.h */,
+				551193A01BC3EF60007CD147 /* GLUCAboutViewController.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		551193A11BC3EF60007CD147 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				551193A21BC3EF60007CD147 /* GLUCAppDelegate.h */,
+				551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */,
+				558180C01BCD5DF50088A518 /* GLUCTabBarController.h */,
+				558180C11BCD5DF50088A518 /* GLUCTabBarController.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		551193A41BC3EF60007CD147 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				551193A51BC3EF60007CD147 /* GLUCFeedbackViewController.h */,
+				551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		551193A71BC3EF60007CD147 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				551193A81BC3EF60007CD147 /* GLUCHistoryViewController.h */,
+				551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		551193AA1BC3EF60007CD147 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				551193AB1BC3EF60007CD147 /* GLUCOverviewViewController.h */,
+				551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		551193AD1BC3EF60007CD147 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				551193AE1BC3EF60007CD147 /* GLUCSettingsViewController.h */,
+				551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		551193B01BC3EF60007CD147 /* TermsAndConditions */ = {
+			isa = PBXGroup;
+			children = (
+				551193B11BC3EF60007CD147 /* GLUCEULAViewController.h */,
+				551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */,
+			);
+			path = TermsAndConditions;
+			sourceTree = "<group>";
+		};
+		551193B31BC3EF60007CD147 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				551193B41BC3EF60007CD147 /* Domain */,
+				551193C11BC3EF60007CD147 /* Persistence */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		551193B41BC3EF60007CD147 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				551193B51BC3EF60007CD147 /* GLUCHealthTip.h */,
+				551193B61BC3EF60007CD147 /* GLUCHealthTip.m */,
+				551193B71BC3EF60007CD147 /* GLUCModel.h */,
+				551193B81BC3EF60007CD147 /* GLUCModel.m */,
+				551193B91BC3EF60007CD147 /* GLUCRange.h */,
+				551193BA1BC3EF60007CD147 /* GLUCRange.m */,
+				551193BB1BC3EF60007CD147 /* GLUCReading.h */,
+				551193BC1BC3EF60007CD147 /* GLUCReading.m */,
+				551193BF1BC3EF60007CD147 /* GLUCUser.h */,
+				551193C01BC3EF60007CD147 /* GLUCUser.m */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		551193C11BC3EF60007CD147 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				551193C21BC3EF60007CD147 /* GLUCPersistenceController.h */,
+				551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */,
+				42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */,
+				42B3C0C2FE36FC4F4F0327AD /* GLUCPersistenceDDL.h */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		551193C41BC3EF60007CD147 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				551193C51BC3EF60007CD147 /* Extensions */,
+				42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */,
+				42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		551193C51BC3EF60007CD147 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				551193C61BC3EF60007CD147 /* UIColor+GLUCAdditions.h */,
+				551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		555CA3531BD28BC80052A865 /* Utiilities */ = {
+			isa = PBXGroup;
+			children = (
+				555CA3541BD28BC80052A865 /* Dates */,
+				555CA35B1BD28BC80052A865 /* Extensions */,
+				555CA3641BD28BC80052A865 /* Localization */,
+			);
+			path = Utiilities;
+			sourceTree = "<group>";
+		};
+		555CA3541BD28BC80052A865 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				555CA3551BD28BC80052A865 /* NSCalendar+GLUCAdditions.h */,
+				555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */,
+				555CA3571BD28BC80052A865 /* NSDate+GLUCAdditions.h */,
+				555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */,
+				555CA3591BD28BC80052A865 /* NSDateComponents+GLUCAdditions.h */,
+				555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */,
+			);
+			path = Dates;
+			sourceTree = "<group>";
+		};
+		555CA35B1BD28BC80052A865 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				555CA3711BD4E0C80052A865 /* NSFileManager+GLUCAdditions.h */,
+				555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */,
+				555CA35C1BD28BC80052A865 /* NSArray+GLUCAdditions.h */,
+				555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		555CA3641BD28BC80052A865 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				555CA3651BD28BC80052A865 /* GLUCLoc.h */,
+				555CA3661BD28BC80052A865 /* GLUCLoc.m */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		558180BB1BCD419B0088A518 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				558180BC1BCD419B0088A518 /* lato-bold.ttf */,
+				558180BD1BCD419B0088A518 /* lato.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		558453481BC564C400492E38 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				558180BB1BCD419B0088A518 /* Fonts */,
+				551193731BC2D2B9007CD147 /* Assets.xcassets */,
+				5584534C1BC564E800492E38 /* LaunchScreen.storyboard */,
+				5584534E1BC564E800492E38 /* Main.storyboard */,
+				558453491BC564D300492E38 /* Settings.storyboard */,
+				558180B81BCD161C0088A518 /* Localizable.strings */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		624868642F71D8AD6046612F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */,
+				6D6365B48E939E015DFC960F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E361650FCAC6BC1A71F98212 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44416E140D3C3C50BF35DA28 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		551193631BC2D2B9007CD147 /* glucosio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 551193911BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosio" */;
+			buildPhases = (
+				0B569EE24C6DA98B639115CB /* Check Pods Manifest.lock */,
+				551193601BC2D2B9007CD147 /* Sources */,
+				551193611BC2D2B9007CD147 /* Frameworks */,
+				551193621BC2D2B9007CD147 /* Resources */,
+				D579F9D590F5B59A5C4B1743 /* Embed Pods Frameworks */,
+				7C49C61FB2A0F762EB1C4A7B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glucosio;
+			productName = glucosio;
+			productReference = 551193641BC2D2B9007CD147 /* glucosio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5511937C1BC2D2B9007CD147 /* glucosioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 551193941BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosioTests" */;
+			buildPhases = (
+				551193791BC2D2B9007CD147 /* Sources */,
+				5511937A1BC2D2B9007CD147 /* Frameworks */,
+				5511937B1BC2D2B9007CD147 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5511937F1BC2D2B9007CD147 /* PBXTargetDependency */,
+			);
+			name = glucosioTests;
+			productName = glucosioTests;
+			productReference = 5511937D1BC2D2B9007CD147 /* glucosioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		551193871BC2D2B9007CD147 /* glucosioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 551193971BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosioUITests" */;
+			buildPhases = (
+				551193841BC2D2B9007CD147 /* Sources */,
+				551193851BC2D2B9007CD147 /* Frameworks */,
+				551193861BC2D2B9007CD147 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5511938A1BC2D2B9007CD147 /* PBXTargetDependency */,
+			);
+			name = glucosioUITests;
+			productName = glucosioUITests;
+			productReference = 551193881BC2D2B9007CD147 /* glucosioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5511935C1BC2D2B8007CD147 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Glucosio.org;
+				TargetAttributes = {
+					551193631BC2D2B9007CD147 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BJF5PGS7VQ;
+					};
+					5511937C1BC2D2B9007CD147 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 551193631BC2D2B9007CD147;
+					};
+					551193871BC2D2B9007CD147 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 551193631BC2D2B9007CD147;
+					};
+				};
+			};
+			buildConfigurationList = 5511935F1BC2D2B9007CD147 /* Build configuration list for PBXProject "glucosio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5511935B1BC2D2B8007CD147;
+			productRefGroup = 551193651BC2D2B9007CD147 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				551193631BC2D2B9007CD147 /* glucosio */,
+				5511937C1BC2D2B9007CD147 /* glucosioTests */,
+				551193871BC2D2B9007CD147 /* glucosioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		551193621BC2D2B9007CD147 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				558180BA1BCD16210088A518 /* Localizable.strings in Resources */,
+				558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */,
+				558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */,
+				551193741BC2D2B9007CD147 /* Assets.xcassets in Resources */,
+				5584534B1BC564D300492E38 /* Settings.storyboard in Resources */,
+				558453511BC564E800492E38 /* Main.storyboard in Resources */,
+				558180BF1BCD419B0088A518 /* lato.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5511937B1BC2D2B9007CD147 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551193861BC2D2B9007CD147 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B569EE24C6DA98B639115CB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C49C61FB2A0F762EB1C4A7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D579F9D590F5B59A5C4B1743 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		551193601BC2D2B9007CD147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */,
+				551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */,
+				551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */,
+				551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */,
+				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
+				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
+				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
+				555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */,
+				555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */,
+				558180C21BCD5DF50088A518 /* GLUCTabBarController.m in Sources */,
+				551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */,
+				551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */,
+				555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */,
+				551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */,
+				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
+				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
+				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
+				551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */,
+				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
+				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
+				551193691BC2D2B9007CD147 /* main.m in Sources */,
+				551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */,
+				42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */,
+				5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */,
+				42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */,
+				42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */,
+				42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */,
+				42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */,
+				42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */,
+				42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551193791BC2D2B9007CD147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551193821BC2D2B9007CD147 /* glucosioTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551193841BC2D2B9007CD147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5511938D1BC2D2B9007CD147 /* glucosioUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5511937F1BC2D2B9007CD147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 551193631BC2D2B9007CD147 /* glucosio */;
+			targetProxy = 5511937E1BC2D2B9007CD147 /* PBXContainerItemProxy */;
+		};
+		5511938A1BC2D2B9007CD147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 551193631BC2D2B9007CD147 /* glucosio */;
+			targetProxy = 551193891BC2D2B9007CD147 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		558180B81BCD161C0088A518 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				558180B91BCD161D0088A518 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		558453491BC564D300492E38 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5584534A1BC564D300492E38 /* Base */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		5584534C1BC564E800492E38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5584534D1BC564E800492E38 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5584534E1BC564E800492E38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5584534F1BC564E800492E38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5511938F1BC2D2B9007CD147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		551193901BC2D2B9007CD147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		551193921BC2D2B9007CD147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = glucosio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idjump.glucosio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		551193931BC2D2B9007CD147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D6365B48E939E015DFC960F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = glucosio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idjump.glucosio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		551193951BC2D2B9007CD147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = glucosioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/glucosio.app/glucosio";
+			};
+			name = Debug;
+		};
+		551193961BC2D2B9007CD147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = glucosioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/glucosio.app/glucosio";
+			};
+			name = Release;
+		};
+		551193981BC2D2B9007CD147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = glucosioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = glucosio;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		551193991BC2D2B9007CD147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = glucosioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = glucosio;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5511935F1BC2D2B9007CD147 /* Build configuration list for PBXProject "glucosio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5511938F1BC2D2B9007CD147 /* Debug */,
+				551193901BC2D2B9007CD147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		551193911BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551193921BC2D2B9007CD147 /* Debug */,
+				551193931BC2D2B9007CD147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		551193941BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551193951BC2D2B9007CD147 /* Debug */,
+				551193961BC2D2B9007CD147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		551193971BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551193981BC2D2B9007CD147 /* Debug */,
+				551193991BC2D2B9007CD147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5511935C1BC2D2B8007CD147 /* Project object */;
+}
