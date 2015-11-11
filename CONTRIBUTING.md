@@ -15,13 +15,13 @@ If you have questions about how to install or use Glucosio, please direct these 
 * __SECURITY__: Report any potential security bug to us at hello@glucosio.org instead of filing an issue in our bug tracker
 * The issues in other components should be reported in their respective repositories: 
   - [Android client](https://github.com/Glucosio/glucosio-android/issues)
-  - [API](https://github.com/Glucosio/cglucosio-api/issues)
+  - [API](https://github.com/Glucosio/glucosio-api/issues)
   - [Branding](https://github.com/Glucosio/branding-assets/issues)
 * Report the issue using our [template][template], it includes all the information we need to track down the issue.
 
 Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
 
-[template]: https://raw.github.com/Glucosio/glucosio-android/master/issue_template.md
+[template]: https://raw.github.com/Glucosio/glucosio-project-tools/gh/templates/master/issue_template.md
 [mailinglist]: https://groups.google.com/forum/#!forum/glucosio-help/
 [forum]: https://community.glucosio.org
 [slack]: https://slack.glucosio.org
