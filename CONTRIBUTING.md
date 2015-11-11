@@ -11,7 +11,7 @@ If you have questions about how to install or use Glucosio, please direct these 
   - Go to one of the repositories, click "issues" and type any word in the top search/command bar.
   - You can also filter by appending e. g. "state:open" to the search string.
   - More info on [search syntax within github](https://help.github.com/articles/searching-issues)
-* This repository ([glucosio-api](https://github.com/Glucosio/glucosio-api/issues)) is *only* for issues within the Glucosio API code. 
+* This repository ([glucosio-api](https://github.com/Glucosio/glucosio-ios/issues)) is *only* for issues within the Glucosio API code. 
 * __SECURITY__: Report any potential security bug to us at hello@glucosio.org instead of filing an issue in our bug tracker
 * The issues in other components should be reported in their respective repositories: 
   - [Android client](https://github.com/Glucosio/glucosio-android/issues)
