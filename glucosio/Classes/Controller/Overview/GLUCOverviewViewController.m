@@ -40,9 +40,8 @@
     self.tipView.layer.borderColor = [[UIColor gluc_pink] CGColor];
     self.tipView.layer.borderWidth = 0.25f;
     self.tipView.layer.cornerRadius = 8.0f;
-    
     [self.tipView sizeToFit];
-
+    self.tipView.editable = false;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
