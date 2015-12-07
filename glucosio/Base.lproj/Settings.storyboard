@@ -301,12 +301,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACw-yp-igf">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACw-yp-igf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ACw-yp-igf" firstAttribute="bottom" secondItem="cux-WY-xoX" secondAttribute="top" id="2E7-pn-JTV"/>
+                            <constraint firstItem="ACw-yp-igf" firstAttribute="top" secondItem="oh8-eb-XqK" secondAttribute="top" id="ZIp-Wm-ZFc"/>
+                            <constraint firstAttribute="trailing" secondItem="ACw-yp-igf" secondAttribute="trailing" id="e1H-AB-cNO"/>
+                            <constraint firstItem="ACw-yp-igf" firstAttribute="leading" secondItem="oh8-eb-XqK" secondAttribute="leading" id="ojm-uO-Lus"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="ACw-yp-igf" id="0Rw-xT-t0S"/>
