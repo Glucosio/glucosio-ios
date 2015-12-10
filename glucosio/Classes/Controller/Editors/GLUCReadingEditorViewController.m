@@ -174,10 +174,12 @@
 }
 
 - (IBAction)cancel:(id)sender {
+    [self.valueField resignFirstResponder];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)save:(UIButton *)sender {
+    [self.valueField resignFirstResponder];
     [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:self.editedObject];
     [self.model saveReading:self.editedObject];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
