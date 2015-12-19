@@ -1,6 +1,6 @@
 #import "GLUCSettingsViewController.h"
 #import "GLUCEditorViewController.h"
-#import "GLUCListEditorViewController.h"
+#import "GLUCIndexedListEditorViewController.h"
 #import "GLUCValueEditorViewController.h"
 #import "UIColor+GLUCAdditions.h"
 #import "GLUCLoc.h"
@@ -134,7 +134,7 @@
             if (indexPath.row < self.settingKeys.count) {
                 NSString *targetKey = self.settingKeys[(NSUInteger) indexPath.row];
                 if ([self.model.currentUser propertyIsLookup:targetKey]) {
-                    GLUCListEditorViewController *editor = (GLUCListEditorViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCListEditorViewControllerIdentifier];
+                    GLUCIndexedListEditorViewController *editor = (GLUCIndexedListEditorViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCIndexedListEditorViewControllerIdentifier];
                     editor.editedObject = self.model.currentUser;
                     editor.editedProperty = targetKey;
                     editor.title = [self.model.currentUser titleForKey:targetKey];
