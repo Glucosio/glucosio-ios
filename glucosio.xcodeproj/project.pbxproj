@@ -14,39 +14,40 @@
 		42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */; };
 		42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */; };
 		42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */; };
-		5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */; };
 		551193691BC2D2B9007CD147 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193681BC2D2B9007CD147 /* main.m */; };
 		551193741BC2D2B9007CD147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551193731BC2D2B9007CD147 /* Assets.xcassets */; };
 		551193821BC2D2B9007CD147 /* glucosioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193811BC2D2B9007CD147 /* glucosioTests.m */; };
 		5511938D1BC2D2B9007CD147 /* glucosioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511938C1BC2D2B9007CD147 /* glucosioUITests.m */; };
-		551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A01BC3EF60007CD147 /* GLUCAboutViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */; settings = {ASSET_TAGS = (); }; };
-		551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B61BC3EF60007CD147 /* GLUCHealthTip.m */; settings = {ASSET_TAGS = (); }; };
-		551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B81BC3EF60007CD147 /* GLUCModel.m */; settings = {ASSET_TAGS = (); }; };
-		551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BA1BC3EF60007CD147 /* GLUCRange.m */; settings = {ASSET_TAGS = (); }; };
-		551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BC1BC3EF60007CD147 /* GLUCReading.m */; settings = {ASSET_TAGS = (); }; };
-		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; settings = {ASSET_TAGS = (); }; };
-		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; settings = {ASSET_TAGS = (); }; };
-		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3661BD28BC80052A865 /* GLUCLoc.m */; settings = {ASSET_TAGS = (); }; };
-		555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		558180BA1BCD16210088A518 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 558180B81BCD161C0088A518 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
-		558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BC1BCD419B0088A518 /* lato-bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		558180BF1BCD419B0088A518 /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BD1BCD419B0088A518 /* lato.ttf */; settings = {ASSET_TAGS = (); }; };
-		558180C21BCD5DF50088A518 /* GLUCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558180C11BCD5DF50088A518 /* GLUCTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; settings = {ASSET_TAGS = (); }; };
-		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A01BC3EF60007CD147 /* GLUCAboutViewController.m */; };
+		551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */; };
+		551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */; };
+		551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */; };
+		551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */; };
+		551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */; };
+		551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */; };
+		551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B61BC3EF60007CD147 /* GLUCHealthTip.m */; };
+		551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B81BC3EF60007CD147 /* GLUCModel.m */; };
+		551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BA1BC3EF60007CD147 /* GLUCRange.m */; };
+		551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BC1BC3EF60007CD147 /* GLUCReading.m */; };
+		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; };
+		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; };
+		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
+		555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */; };
+		555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */; };
+		555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */; };
+		555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */; };
+		555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3661BD28BC80052A865 /* GLUCLoc.m */; };
+		555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */; };
+		558180BA1BCD16210088A518 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 558180B81BCD161C0088A518 /* Localizable.strings */; };
+		558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BC1BCD419B0088A518 /* lato-bold.ttf */; };
+		558180BF1BCD419B0088A518 /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BD1BCD419B0088A518 /* lato.ttf */; };
+		558180C21BCD5DF50088A518 /* GLUCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558180C11BCD5DF50088A518 /* GLUCTabBarController.m */; };
+		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; };
+		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; };
+		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
 		A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44416E140D3C3C50BF35DA28 /* Pods.framework */; };
+		DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		5584534D1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5584534F1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6365B48E939E015DFC960F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCIndexedListEditorViewController.h; sourceTree = "<group>"; };
+		DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCIndexedListEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +186,10 @@
 				42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */,
 				42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */,
 				42B3C6E11F3CF2E80BF1FC1E /* GLUCValueEditorViewController.h */,
-				42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */,
 				42B3CD95FBA708D0B283F8C7 /* GLUCEditorViewController.h */,
+				42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */,
+				DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */,
+				DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */,
 			);
 			path = Editors;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 				551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */,
 				551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */,
 				551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */,
+				DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */,
 				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
 				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
 				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
