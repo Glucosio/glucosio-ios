@@ -1,5 +1,6 @@
 #import "GLUCSettingsViewController.h"
 #import "GLUCEditorViewController.h"
+#import "GLUCListEditorViewController.h"
 #import "GLUCIndexedListEditorViewController.h"
 #import "GLUCValueEditorViewController.h"
 #import "UIColor+GLUCAdditions.h"
@@ -134,23 +135,45 @@
             if (indexPath.row < self.settingKeys.count) {
                 NSString *targetKey = self.settingKeys[(NSUInteger) indexPath.row];
                 if ([self.model.currentUser propertyIsLookup:targetKey]) {
-                    GLUCIndexedListEditorViewController *editor = (GLUCIndexedListEditorViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCIndexedListEditorViewControllerIdentifier];
-                    editor.editedObject = self.model.currentUser;
-                    editor.editedProperty = targetKey;
-                    editor.title = [self.model.currentUser titleForKey:targetKey];
-                    editor.model = self.model;
                     
-                    if ([self.model.currentUser propertyIsIndirectLookup:targetKey]) {
-                        NSString *currentValue = [self.model.currentUser displayValueForKey:targetKey];
-                        editor.items = [[self.model.currentUser potentialDisplayValuesForKey:targetKey] sortedArrayUsingSelector:@selector(compare:)];
-                        editor.selectedItemIndex = [editor.items indexOfObject:currentValue];
+                    if ([targetKey isEqualToString:kGLUCUserCountryPreferenceKey]) {
+                        GLUCIndexedListEditorViewController *editor = (GLUCIndexedListEditorViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCIndexedListEditorViewControllerIdentifier];
+                        editor.editedObject = self.model.currentUser;
+                        editor.editedProperty = targetKey;
+                        editor.title = [self.model.currentUser titleForKey:targetKey];
+                        editor.model = self.model;
+                        
+                        if ([self.model.currentUser propertyIsIndirectLookup:targetKey]) {
+                            NSString *currentValue = [self.model.currentUser displayValueForKey:targetKey];
+                            editor.items = [[self.model.currentUser potentialDisplayValuesForKey:targetKey] sortedArrayUsingSelector:@selector(compare:)];
+                            editor.selectedItemIndex = [editor.items indexOfObject:currentValue];
+                        } else {
+                            editor.items = [self.model.currentUser potentialDisplayValuesForKey:targetKey];
+                            editor.selectedItemIndex = [[self.model.currentUser lookupIndexForKey:targetKey] unsignedIntegerValue];
+                        }
+                        
+                        self.navigationItem.backBarButtonItem = [self cancelButtonItem];
+                        [self.navigationController pushViewController:editor animated:YES];
                     } else {
-                        editor.items = [self.model.currentUser potentialDisplayValuesForKey:targetKey];
-                        editor.selectedItemIndex = [[self.model.currentUser lookupIndexForKey:targetKey] unsignedIntegerValue];
+                        
+                        GLUCListEditorViewController *editor = (GLUCListEditorViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCListEditorViewControllerIdentifier];
+                        editor.editedObject = self.model.currentUser;
+                        editor.editedProperty = targetKey;
+                        editor.title = [self.model.currentUser titleForKey:targetKey];
+                        editor.model = self.model;
+                        
+                        if ([self.model.currentUser propertyIsIndirectLookup:targetKey]) {
+                            NSString *currentValue = [self.model.currentUser displayValueForKey:targetKey];
+                            editor.items = [[self.model.currentUser potentialDisplayValuesForKey:targetKey] sortedArrayUsingSelector:@selector(compare:)];
+                            editor.selectedItemIndex = [editor.items indexOfObject:currentValue];
+                        } else {
+                            editor.items = [self.model.currentUser potentialDisplayValuesForKey:targetKey];
+                            editor.selectedItemIndex = [[self.model.currentUser lookupIndexForKey:targetKey] unsignedIntegerValue];
+                        }
+                        
+                        self.navigationItem.backBarButtonItem = [self cancelButtonItem];
+                        [self.navigationController pushViewController:editor animated:YES];
                     }
-                    
-                    self.navigationItem.backBarButtonItem = [self cancelButtonItem];
-                    [self.navigationController pushViewController:editor animated:YES];
                 } else {
                     if ([targetKey isEqualToString:kGLUCUserAllowResearchUsePropertyKey]) {
                         BOOL enabled = [[self.model.currentUser valueForKey:kGLUCUserAllowResearchUsePropertyKey] boolValue];
