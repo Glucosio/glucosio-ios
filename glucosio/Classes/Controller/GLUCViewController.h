@@ -5,6 +5,7 @@
 
 static NSString *const kGLUCEulaViewControllerIdentifier = @"EULAView";
 static NSString *const kGLUCListEditorViewControllerIdentifier = @"ListEditor";
+static NSString *const kGLUCIndexedListEditorViewControllerIdentifier = @"IndexedListEditor";
 static NSString *const kGLUCReadingEditorViewControllerIdentifier = @"ReadingEditor";
 static NSString *const kGLUCValueEditorViewControllerIdentifier = @"ValueEditor";
 static NSString *const kGLUCAboutViewControllerIdentifier = @"AboutView";

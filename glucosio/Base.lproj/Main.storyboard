@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bUu-8H-pg1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bUu-8H-pg1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VgL-rG-Y8A" id="H8l-dX-sK9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/15 4:39pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-cS-vcM">
@@ -206,7 +206,6 @@
                             <constraint firstItem="RpK-Sf-Ehy" firstAttribute="top" secondItem="xuz-M5-o1m" secondAttribute="bottom" id="6Vc-ym-1b2"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="leading" secondItem="tjL-5U-5UK" secondAttribute="leadingMargin" id="FDD-UD-Yxg"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="top" secondItem="UhW-L0-H9u" secondAttribute="bottom" constant="8" id="N84-pj-Gxv"/>
-                            <constraint firstItem="OUR-7V-yMA" firstAttribute="top" secondItem="UhW-L0-H9u" secondAttribute="bottom" constant="8" id="PsG-h7-b19"/>
                             <constraint firstItem="xuz-M5-o1m" firstAttribute="top" secondItem="OUR-7V-yMA" secondAttribute="bottom" constant="18" id="X5P-j4-yRp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xuz-M5-o1m" secondAttribute="trailing" constant="-20" id="tKz-Sr-Lfy"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="centerX" secondItem="tjL-5U-5UK" secondAttribute="centerX" constant="1" id="wWr-1d-wxE"/>
