@@ -1,10 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "GLUCViewController.h"
+#import "GLUCWebViewController.h"
 
 static NSString *const kGLUCDefaultHomePageURLString = @"https://www.glucosio.org";
 
-@interface GLUCAboutViewController : GLUCViewController <UIWebViewDelegate>
+@interface GLUCAboutViewController : GLUCWebViewController
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end

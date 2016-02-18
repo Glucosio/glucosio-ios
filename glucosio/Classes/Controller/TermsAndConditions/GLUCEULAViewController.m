@@ -7,19 +7,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.eulaView.text = GLUCLoc(@"Terms Full");
-    self.eulaView.editable = NO;
-    self.eulaView.font = [GLUCAppearanceController defaultFont];
     [self.saveButton setTitle:GLUCLoc(@"Accept") forState:UIControlStateNormal];
-    
+}
+
+- (NSURL *)url {
+    return [NSURL URLWithString:kGLUCTOSUrlString];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    if (!self.requireConfirmation) {
-        self.saveButton.hidden = YES;
-    }
     [super viewWillAppear:animated];
+    [self setupUI];
+}
+
+- (void)setupUI {
+    if (!self.requireConfirmation) {
+        [self.saveButton removeFromSuperview];
+        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.webView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        [self.view addConstraint:bottom];
+    }
 }
 
 - (IBAction)save:(UIButton *)sender {
@@ -27,3 +32,4 @@
 }
 
 @end
+

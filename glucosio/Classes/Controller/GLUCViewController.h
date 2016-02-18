@@ -9,6 +9,7 @@ static NSString *const kGLUCIndexedListEditorViewControllerIdentifier = @"Indexe
 static NSString *const kGLUCReadingEditorViewControllerIdentifier = @"ReadingEditor";
 static NSString *const kGLUCValueEditorViewControllerIdentifier = @"ValueEditor";
 static NSString *const kGLUCAboutViewControllerIdentifier = @"AboutView";
+static NSString *const kGLUCPrivacyViewControllerIdentifier = @"PrivacyView";
 
 static NSString *const kGLUCMainStoryboardIdentifier = @"Main";
 static NSString *const kGLUCSettingsStoryboardIdentifier = @"Settings";
