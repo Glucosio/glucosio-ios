@@ -1,9 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "GLUCEditorViewController.h"
+#import "GLUCWebViewController.h"
 
-@interface GLUCEULAViewController : GLUCEditorViewController
+static NSString *const kGLUCTOSUrlString = @"https://www.glucosio.org/terms";
 
-@property (nonatomic, strong) IBOutlet UITextView *eulaView;
+@interface GLUCEULAViewController : GLUCWebViewController
 
 @property (nonatomic, assign) BOOL requireConfirmation;
 

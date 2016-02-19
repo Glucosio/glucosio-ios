@@ -47,6 +47,8 @@
 		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; };
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
 		A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44416E140D3C3C50BF35DA28 /* Pods.framework */; };
+		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
+		DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */; };
 		DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,10 @@
 		5584534D1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5584534F1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6365B48E939E015DFC960F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
+		DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCPrivacyViewController.m; path = Privacy/GLUCPrivacyViewController.m; sourceTree = "<group>"; };
+		DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCWebViewController.h; path = WebViewController/GLUCWebViewController.h; sourceTree = "<group>"; };
+		DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCWebViewController.m; path = WebViewController/GLUCWebViewController.m; sourceTree = "<group>"; };
 		DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCIndexedListEditorViewController.h; sourceTree = "<group>"; };
 		DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCIndexedListEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,15 +273,17 @@
 		5511939D1BC3EF60007CD147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFC3CE811C763191003A22D9 /* GLUCWebViewController */,
 				5511939E1BC3EF60007CD147 /* About */,
 				551193A11BC3EF60007CD147 /* Application */,
 				551193A41BC3EF60007CD147 /* Feedback */,
 				551193A71BC3EF60007CD147 /* History */,
 				551193AA1BC3EF60007CD147 /* Overview */,
+				DFC3CE801C762CC5003A22D9 /* Privacy */,
 				551193AD1BC3EF60007CD147 /* Settings */,
 				551193B01BC3EF60007CD147 /* TermsAndConditions */,
-				42B3C717FEC6A53D6692424E /* GLUCViewController.m */,
 				42B3CFADEECD38EC70948DC8 /* GLUCViewController.h */,
+				42B3C717FEC6A53D6692424E /* GLUCViewController.m */,
 				42B3CBE43E582D9337216DA9 /* Editors */,
 			);
 			path = Controller;
@@ -474,6 +482,24 @@
 				6D6365B48E939E015DFC960F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFC3CE801C762CC5003A22D9 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */,
+				DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */,
+			);
+			name = Privacy;
+			sourceTree = "<group>";
+		};
+		DFC3CE811C763191003A22D9 /* GLUCWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */,
+				DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */,
+			);
+			name = GLUCWebViewController;
 			sourceTree = "<group>";
 		};
 		E361650FCAC6BC1A71F98212 /* Frameworks */ = {
@@ -675,6 +701,7 @@
 				551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */,
 				551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */,
 				DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */,
+				DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */,
 				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
 				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
 				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
@@ -696,6 +723,7 @@
 				42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */,
 				5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */,
 				42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */,
+				DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */,
 				42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */,
 				42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */,
 				42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */,

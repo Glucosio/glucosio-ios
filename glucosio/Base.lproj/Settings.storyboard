@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hk3-Vk-kPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hk3-Vk-kPc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -228,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="86" y="-478"/>
         </scene>
-        <!--Terms of Use-->
+        <!--Terms and Conditions-->
         <scene sceneID="X94-yw-eC4">
             <objects>
-                <viewController storyboardIdentifier="EULAView" title="Terms of Use" id="RbF-Fc-8xL" customClass="GLUCEULAViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EULAView" title="Terms and Conditions" id="RbF-Fc-8xL" customClass="GLUCEULAViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LKH-b9-RgM"/>
                         <viewControllerLayoutGuide type="bottom" id="VbN-Ta-IdX"/>
@@ -240,12 +240,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYv-Uy-C7U">
-                                <rect key="frame" x="20" y="0.0" width="560" height="534"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42p-D6-l9O">
                                 <rect key="frame" x="283" y="550" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
@@ -254,25 +248,63 @@
                                     <action selector="save:" destination="RbF-Fc-8xL" eventType="touchUpInside" id="oaf-oY-QQC"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywc-Ia-LV1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="514"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dYv-Uy-C7U" firstAttribute="trailing" secondItem="jhK-a6-cac" secondAttribute="trailingMargin" id="8ae-SD-w5R"/>
                             <constraint firstItem="42p-D6-l9O" firstAttribute="centerX" secondItem="jhK-a6-cac" secondAttribute="centerX" id="Fqt-Xp-iro"/>
-                            <constraint firstItem="dYv-Uy-C7U" firstAttribute="top" secondItem="jhK-a6-cac" secondAttribute="top" id="IfW-wc-FmC"/>
-                            <constraint firstItem="42p-D6-l9O" firstAttribute="top" secondItem="dYv-Uy-C7U" secondAttribute="bottom" constant="16" id="PYD-h4-nSR"/>
+                            <constraint firstAttribute="trailing" secondItem="ywc-Ia-LV1" secondAttribute="trailing" id="GIb-i8-KtE"/>
+                            <constraint firstItem="ywc-Ia-LV1" firstAttribute="leading" secondItem="jhK-a6-cac" secondAttribute="leading" id="Suk-nK-l7Y"/>
+                            <constraint firstItem="ywc-Ia-LV1" firstAttribute="top" secondItem="LKH-b9-RgM" secondAttribute="bottom" id="UNc-Ll-MXU"/>
+                            <constraint firstItem="42p-D6-l9O" firstAttribute="top" secondItem="ywc-Ia-LV1" secondAttribute="bottom" constant="16" id="Xnq-o8-eVj"/>
                             <constraint firstItem="VbN-Ta-IdX" firstAttribute="top" secondItem="42p-D6-l9O" secondAttribute="bottom" constant="20" id="lkt-yD-Y9P"/>
-                            <constraint firstItem="dYv-Uy-C7U" firstAttribute="leading" secondItem="jhK-a6-cac" secondAttribute="leadingMargin" id="yUm-bq-h3o"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eulaView" destination="dYv-Uy-C7U" id="7Rv-6X-L3v"/>
-                        <outlet property="saveButton" destination="42p-D6-l9O" id="4ne-Kp-XQc"/>
+                        <outlet property="saveButton" destination="42p-D6-l9O" id="1x9-uh-TX1"/>
+                        <outlet property="webView" destination="ywc-Ia-LV1" id="wSL-7v-er5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fh-A1-ZIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="430"/>
+            <point key="canvasLocation" x="1352" y="544"/>
+        </scene>
+        <!--Privacy-->
+        <scene sceneID="OyD-Xm-R9y">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyView" title="Privacy" id="dCy-ep-wCQ" customClass="GLUCPrivacyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TWI-uI-noa"/>
+                        <viewControllerLayoutGuide type="bottom" id="2iW-Ao-9AM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dww-aC-70X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-g6-Knw">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MQ9-g6-Knw" secondAttribute="trailing" id="7bP-EH-s3H"/>
+                            <constraint firstItem="2iW-Ao-9AM" firstAttribute="top" secondItem="MQ9-g6-Knw" secondAttribute="bottom" id="Fnt-Zu-WW6"/>
+                            <constraint firstItem="MQ9-g6-Knw" firstAttribute="top" secondItem="TWI-uI-noa" secondAttribute="bottom" id="JpQ-4U-sDX"/>
+                            <constraint firstItem="MQ9-g6-Knw" firstAttribute="leading" secondItem="dww-aC-70X" secondAttribute="leading" id="fQw-mu-1Ug"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="MQ9-g6-Knw" id="At4-P9-7gs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gam-NS-RCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="1289"/>
         </scene>
         <!--Indexed List-->
         <scene sceneID="Rph-pc-J0n">

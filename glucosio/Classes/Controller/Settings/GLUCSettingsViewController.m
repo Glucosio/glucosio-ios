@@ -8,6 +8,7 @@
 #import "GLUCEULAViewController.h"
 #import "GLUCAppearanceController.h"
 #import "GLUCAboutViewController.h"
+#import "GLUCPrivacyViewController.h"
 
 #import "GLUCAppDelegate.h"
 
@@ -40,7 +41,7 @@
         self.settingKeys = [self.model.currentUser settingsProperties];
     }
 
-    self.aboutKeys = @[GLUCLoc(@"Version"), GLUCLoc(@"Terms of Use")];
+    self.aboutKeys = @[GLUCLoc(@"Version"), GLUCLoc(@"Terms of Use"), GLUCLoc(@"Privacy")];
 
     self.settings = [NSMutableDictionary dictionary];
 
@@ -111,7 +112,7 @@
             retVal = self.settingKeys.count + (self.welcomeMode ? 1 : 0);
             break;
         case 1:
-            retVal = 2;
+            retVal = 3;
             break;
     }
     return retVal;
@@ -205,16 +206,19 @@
             switch (indexPath.row) {
                 case 0:
                 {
-                    GLUCAboutViewController *eulaViewController = (GLUCAboutViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCAboutViewControllerIdentifier];
-                    [self.navigationController pushViewController:eulaViewController animated:YES];
+                    GLUCAboutViewController *aboutViewController = (GLUCAboutViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCAboutViewControllerIdentifier];
+                    [self.navigationController pushViewController:aboutViewController animated:YES];
                 }
                     break;
                 case 1:
-                default:
                     [self gotoEULAViewRequireConfirmation:NO];
                     break;
-
-
+                default:
+                {
+                    GLUCPrivacyViewController *privacyViewController = (GLUCPrivacyViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCPrivacyViewControllerIdentifier];
+                    [self.navigationController pushViewController:privacyViewController animated:YES];
+                }
+                    break;
             }
             break;
         default:
