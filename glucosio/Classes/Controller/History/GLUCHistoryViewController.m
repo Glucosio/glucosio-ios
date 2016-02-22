@@ -18,7 +18,7 @@
     }
     
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
-                                                           title:GLUCLoc(@"Delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+                                                           title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
                                                                [self.model deleteReading:self.readings[(NSUInteger) indexPath.row]];
                                                                self.historyTableView.editing = NO;
                                                                self.readings = [self.model allReadings:NO];

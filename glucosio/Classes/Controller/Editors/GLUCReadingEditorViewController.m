@@ -28,7 +28,7 @@
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
     
-    self.rowKeys = @[GLUCLoc(@"Date"), GLUCLoc(@"Time"), GLUCLoc(@"Measured")];
+    self.rowKeys = @[GLUCLoc(@"dialog_add_date"), GLUCLoc(@"dialog_add_time"), GLUCLoc(@"dialog_add_measured")];
     self.values = @[@"", @"", @""];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
@@ -89,7 +89,7 @@
 
 - (void) editCreationDate:(BOOL)editTime {
     NSString *targetKey = kGLUCModelCreationDateKey;
-    NSString *editorTitle = (editTime) ? GLUCLoc(@"Time") : GLUCLoc(@"Date");
+    NSString *editorTitle = (editTime) ? GLUCLoc(@"dialog_add_time") : GLUCLoc(@"dialog_add_date");
     GLUCDateTimeEditorViewController *editor = (GLUCDateTimeEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:@"DateTimeEditor"];
     UIView *v = [editor view]; // force load from xib
     if (v) {

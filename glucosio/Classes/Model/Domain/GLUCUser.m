@@ -20,7 +20,7 @@
             kGLUCModelSchemaPropertiesKey : @{
                     kGLUCUserCountryPreferenceKey : @{
                             kGLUCModelAttributeKey : kGLUCUserCountryPreferenceKey,
-                            kGLUCModelAttributeTitleKey : @"Country",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_country",
                             kGLUCModelAttributeTypeKey : @"NSString",
                             kGLUCModelPotentialValuesKey : [NSLocale ISOCountryCodes],
                             kGLUCModelDefaultValueKey : [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode],
@@ -28,7 +28,7 @@
                     },
                     kGLUCUserAgePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserAgePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Age",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_age",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelAttributeValidRangeKey : @{
                                     @"min" : @2,
@@ -37,45 +37,45 @@
                     },
                     kGLUCUserGenderPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserGenderPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Gender",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_gender",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"Male"), GLUCLoc(@"Female"), GLUCLoc(@"Other")],
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_gender_list_1"), GLUCLoc(@"helloactivity_gender_list_2"), GLUCLoc(@"helloactivity_gender_list_3")],
                             kGLUCModelDefaultIndexKey : @0
                     },
                     kGLUCUserIllnessTypePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserIllnessTypePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Diabetes type",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_spinner_diabetes_type",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"Type 1"), GLUCLoc(@"Type 2")],
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_diabetes_type_1"), GLUCLoc(@"helloactivity_spinner_diabetes_type_2")],
                             kGLUCModelDefaultIndexKey : @1,
                     },
                     kGLUCUserPreferredUnitsPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserPreferredUnitsPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Preferred unit",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_spinner_preferred_unit",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"mg/dL"), GLUCLoc(@"mmol/L")],
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_preferred_unit_1"), GLUCLoc(@"helloactivity_spinner_preferred_unit_2")],
                             kGLUCModelDefaultIndexKey : @0,
                     },
                     kGLUCUserRangeTypePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserRangeTypePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Preferred range",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_spinner_preferred_range",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelPotentialValuesKey : [[GLUCRange allRanges] valueForKey:@"rangeName"],
                             kGLUCModelDefaultIndexKey : @0,
                     },
                     kGLUCUserRangeMinPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserRangeMinPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Min value",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_preferred_range_min",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                     },
                     kGLUCUserRangeMaxPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserRangeMaxPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Max value",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_preferred_range_max",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                     },
                     kGLUCUserAllowResearchUsePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserAllowResearchUsePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Share anonymous data for research",
+                            kGLUCModelAttributeTitleKey : @"helloactivity_share_data",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelDefaultValueKey : @YES
                     },

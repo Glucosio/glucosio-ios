@@ -4,7 +4,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = GLUCLoc(@"Version 0.0.0");
+    self.title = GLUCLoc(@"version");
 }
 
 - (NSURL *)url {

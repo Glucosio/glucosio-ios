@@ -7,7 +7,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.saveButton setTitle:GLUCLoc(@"Accept") forState:UIControlStateNormal];
+    [self.saveButton setTitle:GLUCLoc(@"helloactivity_button_next") forState:UIControlStateNormal];
 }
 
 - (NSURL *)url {

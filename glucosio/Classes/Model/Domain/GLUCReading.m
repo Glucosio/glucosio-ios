@@ -5,16 +5,18 @@
 
 + (NSArray *) readingTypes {
     return @[
-             GLUCLoc(@"Before breakfast"),
-             GLUCLoc(@"After breakfast"),
-             GLUCLoc(@"Before lunch"),
-             GLUCLoc(@"After lunch"),
-             GLUCLoc(@"Before dinner"),
-             GLUCLoc(@"After dinner"),
-             GLUCLoc(@"General"),
-             GLUCLoc(@"Recheck"),
-             GLUCLoc(@"Night"),
-             GLUCLoc(@"Other"),
+             GLUCLoc(@"dialog_add_type_1"), // "Before breakfast"
+             GLUCLoc(@"dialog_add_type_2"), // "After breakfast"
+             GLUCLoc(@"dialog_add_type_3"), // "Before lunch"
+             GLUCLoc(@"dialog_add_type_4"), // "After lunch"
+             GLUCLoc(@"dialog_add_type_5"), // "Before dinner"
+             GLUCLoc(@"dialog_add_type_6"), // "After dinner"
+             GLUCLoc(@"dialog_add_type_7"), // "Snack"
+             GLUCLoc(@"dialog_add_type_8"), // "Bedtime"
+             GLUCLoc(@"dialog_add_type_9"), // "Night"
+             GLUCLoc(@"dialog_add_type_10"), // "Fasting glucose"
+             GLUCLoc(@"dialog_add_type_11"), // "Recheck"
+             GLUCLoc(@"dialog_add_type_12"), // "Other"
              ];
 }
 
@@ -26,12 +28,12 @@
             kGLUCModelSchemaPropertiesKey : @{
                     kGLUCReadingModelValuePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCReadingModelValuePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Value",
+                            kGLUCModelAttributeTitleKey : @"dialog_add_concentration",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                     },
                     kGLUCReadingReadingTypeIdPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCReadingReadingTypeIdPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Measured",
+                            kGLUCModelAttributeTitleKey : @"dialog_add_measured",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelPotentialValuesKey : [GLUCReading readingTypes],
                             kGLUCModelDefaultIndexKey : @0
@@ -44,7 +46,7 @@
                     },
                     kGLUCReadingModelCustomTypeNamePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCReadingModelCustomTypeNamePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Custom measure",
+                            kGLUCModelAttributeTitleKey : @"dialog_add_custom_type",
                             kGLUCModelAttributeTypeKey : @"NSString"
 
                     }
@@ -65,7 +67,7 @@
 }
 
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId {
-    NSString *retVal = GLUCLoc(@"Other");
+    NSString *retVal = GLUCLoc(@"dialog_add_type_12");
     NSArray *types = [[self class] readingTypes];
     if (readingTypeId >= 0 && readingTypeId < types.count)
         retVal = types[readingTypeId];

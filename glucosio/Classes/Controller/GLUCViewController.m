@@ -14,6 +14,6 @@
 
 
 - (UIBarButtonItem *) cancelButtonItem {
-    return [[UIBarButtonItem alloc] initWithTitle:GLUCLoc(@"Cancel") style:UIBarButtonItemStylePlain target:nil action:nil];
+    return [[UIBarButtonItem alloc] initWithTitle:GLUCLoc(@"dialog_add_cancel") style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 @end

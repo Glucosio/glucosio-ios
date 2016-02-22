@@ -41,7 +41,7 @@
         self.settingKeys = [self.model.currentUser settingsProperties];
     }
 
-    self.aboutKeys = @[GLUCLoc(@"Version"), GLUCLoc(@"Terms of Use"), GLUCLoc(@"Privacy")];
+    self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy")];
 
     self.settings = [NSMutableDictionary dictionary];
 
@@ -49,18 +49,18 @@
 
     if (self.welcomeMode) {
         self.title = GLUCLoc(kGLUCAppNameKey);
-        self.helloLabel.text = GLUCLoc(@"Hello.");
+        self.helloLabel.text = GLUCLoc(@"title_activity_hello");
         self.helloLabel.font = [GLUCAppearanceController defaultBoldFontOfSize:32.0f];
-        self.introLabel.text = GLUCLoc(@"We just need a few quick things before getting you started.");
+        self.introLabel.text = GLUCLoc(@"helloactivity_subhead");
     } else {
         [self.stackView removeArrangedSubview:self.welcomeView];
-        self.title = GLUCLoc(@"Settings");
+        self.title = GLUCLoc(@"action_settings");
     }
     
     self.getStartedButton = (UIButton *)[self.getStartedButtonCell viewWithTag:10];
     if (self.getStartedButton) {
         self.getStartedButton.enabled = NO;
-        [self.getStartedButton setTitle:GLUCLoc(@"Get started") forState:UIControlStateNormal];
+        [self.getStartedButton setTitle:GLUCLoc(@"helloactivity_button_start") forState:UIControlStateNormal];
         [self.getStartedButton addTarget:self action:@selector(getStarted:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -302,7 +302,7 @@
     NSString *retVal = nil;
     if (section == 0) {
         if (self.welcomeMode)
-            retVal = GLUCLoc(@"You can change these in settings later.");
+            retVal = GLUCLoc(@"helloactivity_hint_settings");
     }
     return retVal;
 }
@@ -312,10 +312,10 @@
     switch (section) {
         case 0:
         default:
-            retVal = GLUCLoc(@"Settings");
+            retVal = GLUCLoc(@"action_settings");
             break;
         case 1:
-            retVal = GLUCLoc(@"About");
+            retVal = GLUCLoc(@"preferences_about");
             break;
     }
     return retVal;

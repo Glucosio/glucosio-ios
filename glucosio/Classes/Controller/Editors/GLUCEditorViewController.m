@@ -10,7 +10,7 @@
     [super viewDidLoad];
     
     [self.saveButton setTitle:GLUCLoc([self.saveButton titleForState:UIControlStateNormal]) forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem.title = GLUCLoc(@"Cancel");
+    self.navigationItem.leftBarButtonItem.title = GLUCLoc(@"dialog_add_cancel");
 }
 
 

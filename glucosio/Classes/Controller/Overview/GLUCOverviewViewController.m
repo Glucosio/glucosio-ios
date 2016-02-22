@@ -119,7 +119,7 @@
         }
     }
     
-    self.chartView.noDataText = GLUCLoc(@"No data available.  Tap '+' to add a reading.");
+    self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
     dataSet.label = GLUCLoc(@"Daily Average Readings");

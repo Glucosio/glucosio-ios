@@ -4,7 +4,7 @@
 @class GLUCUser;
 
 
-static NSString *const kGLUCAppNameKey = @"Glucosio";
+static NSString *const kGLUCAppNameKey = @"app_name";
 
 static NSString *const kGLUCSettingsCellIdentifier = @"SettingsCell";
 

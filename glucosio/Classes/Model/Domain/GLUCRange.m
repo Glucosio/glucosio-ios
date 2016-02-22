@@ -7,22 +7,22 @@
     // @[GLUCLoc(@"ADA"), GLUCLoc(@"AACE"), GLUCLoc(@"UK NICE"), GLUCLoc(@"Custom"
     NSArray *retVal = @[
             @{
-                    @"rangeName" : @"ADA",
+                    @"rangeName" : GLUCLoc(@"helloactivity_spinner_preferred_range_1"),
                     @"min" : @70,
                     @"max" : @180
             },
             @{
-                    @"rangeName" : @"AACE",
+                    @"rangeName" : GLUCLoc(@"helloactivity_spinner_preferred_range_2"),
                     @"min" : @110,
                     @"max" : @140
             },
             @{
-                    @"rangeName" : @"UK NICE",
+                    @"rangeName" : GLUCLoc(@"helloactivity_spinner_preferred_range_3"),
                     @"min" : @72,
                     @"max" : @153
             },
             @{
-                    @"rangeName" : @"Custom",
+                    @"rangeName" : GLUCLoc(@"helloactivity_spinner_preferred_range_4"),
                     @"min" : @70,
                     @"max" : @180
             }
