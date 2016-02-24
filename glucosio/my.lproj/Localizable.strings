@@ -1,0 +1,540 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "အပြင်အဆင်များ";
+
+/* No description supplied by the engineer */
+"action_feedback" = "အကြံပြုချက်​ပေးရန်";
+
+/* No description supplied by the engineer */
+"action_invite" = "မိတ်​ဆွေများကို ဖိတ်​ခေါ်ပါ";
+
+/* No description supplied by the engineer */
+"tab_overview" = "ခြုံငုံကြည့်ခြင်း";
+
+/* No description supplied by the engineer */
+"tab_history" = "မှတ်တမ်း";
+
+/* No description supplied by the engineer */
+"tab_tips" = "အကြံပြုချက်များ";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "မင်္ဂလာပါ။";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "မင်္ဂလာပါ။";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "သုံးစွဲမှု စည်းကမ်းချက်များ";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "သင် စတင် အသုံးမပြုမီ လျင်မြန်စွာ ဆောင်ရွက်နိုင်သည့် အချက်အနည်းငယ် ဆောင်ရွက်ရန် လိုအပ်ပါသည်။";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "နိုင်ငံ";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "အသက်";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "ကျေးဇူးပြု၍ မှန်ကန်သော အသက်ကို ဖြည့်ပါ။";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "လိင်";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "ကျား";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "မ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "အခြား";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "ဆီးချို အမျိုးအစား";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "အမျိုးအစား ၁";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "အမျိုးအစား ၂";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "အသုံးပြုလိုသော အတိုင်းအတာ";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "သုတေသနအတွက် အချက်အလက်ကို မျှဝေပါ (အမျိုးအမည် မဖော်ပြပါ)။";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "သင် ဒီအရာကို အပြင်အဆင်များထဲတွင် ပြောင်းလဲနိုင်သည်။";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "ရှေ့သို့";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "စတင်မည်";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "သွေးထဲရှိ အချိုဓါတ် အဆင့်ကို ဖြည့်ပါ";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "ဒြပ် ပါဝင်မှု";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "နေ့စွဲ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "အချိန်";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "တိုင်းထွာပြီး";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "မနက်စာ မစားမီ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "မနက်စာ စားပြီး";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "နေ့လည်စာ မစားမီ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "နေ့လည်စာ စားပြီး";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "ညစာ မစားမီ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "ညစာ စားပြီး";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "မုန့်ပဲသ​ရေစာ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "အိပ်ယာဝင်ချိန်";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "ည";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "ဂလူးကို့စ်ရှောင်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "ပြန်စစ်ရန်";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "အခြား";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "မလုပ်တော့ပါ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "ကျေးဇူးပြု၍ မှန်ကန်သော တန်ဖိုးကို ဖြည့်ပါ။";
+
+/* No description supplied by the engineer */
+"dialog_error" = "ကျေးဇူးပြု၍ ကွက်လပ်အားလုံးကို ဖြည့်ပေးပါ။";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "ဖျက်ရန်";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "ပြန်ဆိုချက် ၁ ခု ဖျက်ပြီး";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "UNDO";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "နောက်ဆုံး စစ်ဆေးမှု။";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "လွန်ခဲ့သော လ အတွက် ဦးတည်ချက်။";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "သတ်မှတ်တန်ဖိုးအတွင်းနှင့် ကျန်းမာသည်";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "လ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "နေ့";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "အပတ်";
+
+/* No description supplied by the engineer */
+"preferences_about" = "အကြောင်း";
+
+/* No description supplied by the engineer */
+"preferences_version" = "ဗားရှင်း";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "သုံးစွဲမှု စည်းကမ်းချက်များ";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "အမျိုးအစား";
+
+/* No description supplied by the engineer */
+"weight" = "ကိုယ်အ​လေးချိန်";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "စိတ်ကြိုက် တိုင်းထွာမှု အတန်းအစား";
+
+/* No description supplied by the engineer */
+"assistant" = "အကူ";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "အခုပဲ အဆင့်မြှင့်ပါ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "အိုကေ၊ ရပြီ";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "အကြံပြုချက် ပေးရန်";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ပြန်ဆိုချက် ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "သင့် ကိုယ်အလေးချိန်ကို ပြင်ရန်";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "သင့်ကိုယ်အလေးချိန်ကို အမြဲတမ်း မွမ်းမံပြင်ဆင်ပါ။ ထိုအခါ Glucosio တွင် မှန်ကန်တိကျသည့် အချက်အလက်များ ရှိနေမည်ဖြစ်သည်။";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "သုတေသနတွင် သင် ပါဝင်နေမှု(opt-in)ကို မွမ်းမံပါ။";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "ဆီးချို သုတေသနအချက်အလက် မျှဝေခြင်းတွင် သင်ပါဝင်မှု/မပါဝင်မှု (opt-in သို့မဟုတ် opt-out) ကို အမြဲ ပြောင်းလဲနိုင်သည်။ သို့သော် မျှဝေထားသည့် အချက်အလက်အားလုံးကို လုံးဝ အမျိုးအမည်မဖော်ပြထားပါ။ ကျွန်တော်တို့သည် စာရင်းအင်းဆိုင်ရာ သွင်ပြင်လက္ခဏာများနှင့် ဂလူးကို့စ်ပမာဏ အတက်အကျတို့ကိုသာလျှင် မျှဝေပါသည်။";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "အတန်းအစား ဖန်တီးရန်";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "ဂလူးကို့စ် အချက်အလက်အတွက် Glucosio က ပုံသေ ကဏ္ဍများဖြင့် ထည့်သွင်းထားပါသည် သို့ရာတွင် သင်၏လိုအပ်ချက်နှင့် ကိုက်ညီရန် စိတ်ကြိုက်ကဏ္ဍများကို အပြင်အဆင်များထဲတွင် ဖန်တီးနိုင်ပါသည်.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "ဒီနေရာကို မကြာခဏ စစ်ဆေးပါ";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Glucosio လက်ထောက်သည် ပုံမှန်အကြံပြုချက်များကို ပေးပါသည်။ ထို့ပြင် ဆက်လက်တိုးတက်အောင် ဆောင်ရွက်နေပါသည်။ ထို့ကြောင့် သင့်Glucosio သုံးစွဲမှုအတွေ့အကြုံများနှင့် အခြားအသုံးဝင်သည့် အကြံပြုချက်များအတွက် သင်ဆောင်ရွက်နိုင်သည်များကို အဲဒီမှာ အမြဲ လာရောက်ကြည့်ရှုပါ။";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "နည်းပညာ အခက်အခဲများ သို့မဟုတ် Glucosio နှင့် ပတ်သက်၍ တုံ့ပြန်လိုပါက Glucosio ကို ပိုမိုကောင်းမွန်ဖို့ ကူညီရန် အပြင်အဆင် စာရင်းတွင် ကျွန်ုပ်တို့ကို ပေးပို့ပါ.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "ပြန်ဆိုချက် တစ်ခု ထည့်ပါ";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "သင်၏ ဂလူးကို့စ် ဖတ်ခြင်းကို ပုံမှန် ဖြစ်အောင်လုပ်ပေးပါ အဲလိုဆိုရင် ကျွန်ုပ်တို့က သင်၏ဂလူးကို့စ် ပမာဏကို အချိန်တိုင်း စောင့်ကြည့်ဖို့ ကူညီမှာပါ.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "သင့်အချက်အလက်များကို ထုတ်ယူရန်";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "အချက်အလက်များကို သင့်ဆရာဝန်ထံ မျှဝေရန် (သို့) အချက်အလက်ထုတ်ယူသည့် စွမ်းရည်ကို အသုံးပြုပြီး Google Drive တွင် အရန်အဖြစ် ကူးယူသိမ်းဆည်းပါ။";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "အသုံးပြုလိုသော တန်ဖိုး(မှ - ထိ)";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "စိတ်ကြိုက် တန်ဖိုး (မှ - ထိ)";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "အနည်းဆုံး တန်ဖိုး";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "အများဆုံး တန်ဖိုး";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "အခုပဲ သုံးကြည့်လိုက်ပါ";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "ဘာသာစကား";
+
+/* No description supplied by the engineer */
+"invitation_title" = "အခြားသူများကို ဖိတ်ခေါ်ပါ";
+
+/* No description supplied by the engineer */
+"invitation_message" = "ဆီးချိုရောဂါဆိုင်ရာ စီမံခန့်ခွဲမှုနှင့် သုတေသနအတွက် ပွင့်လင်းရင်းမြစ် အက်ပ် Glucosio ကို စမ်းသုံးကြည့်ပါ။";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Glucosio ကို စမ်းသုံးကြည့်ပါ။";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "သိမ်းဆည်းပါ";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "ကိုယ်​ရေးလုံခြုံမှု";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Glucosio ကို အသုံးပြုခြင်းဖြင့် သင် ​အောက်ပါအ​ကြောင်းအရာကို သ​ဘောတူပြီး ဖြစ်သည်။";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "ဂူဂဲလ် ဒရိုက်ဖ်";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Glucosio အ​ကြောင်း";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Glucosio ကို အဆင့်သတ်မှတ်​ပေးပါ";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "ပွင့်လင်းရင်းမြစ်ဆိုင်ရာ အသုံးပြုခွင့်မူဝါဒ";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "FreeStyleLibre® ၏ အထောက်အပံ့ အကူအညီကို ဖွင့်ပါ";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "စမ်းသပ်အဆင့်: FreeStyle Libre® ၏ အထောက်အပံ့ အကူအညီကို ဖွင့်ပါ";
+
+/* No description supplied by the engineer */
+"about_donate" = "Glucosio သို့ လှူဒါန်းပါ";
+
+/* No description supplied by the engineer */
+"reading_ok" = "​ကောင်းပြီ";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "သွေးထဲရှိ သကြားဓါတ်နည်းခြင်း";
+
+/* No description supplied by the engineer */
+"reading_low" = "နိမ့်";
+
+/* No description supplied by the engineer */
+"reading_high" = "မြင့်";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "သွေးထဲရှိ သကြားဓါတ် လွန်ကဲခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "အေးဆေးသက်သာစွာ လမ်းလျှောက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "အ​လျှောက်မြန်";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "အနှေးလျှောက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "​ပြေးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "​ရေကူးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "ကခုန်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "ဘီးတပ် စကိတ်စီးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "စက်ဘီးစီးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "​ဂေါက်ရိုက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "ဆော့ဖ်ဘော (ဘေ့စ်ဘောတစ်မျိုး)";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "ကြက်​တောင်ရိုက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "​ဘောလုံးကန်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "ဘတ်စကတ်​ဘောကစားခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "​ဘော်လီ​ဘောပုတ်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "ခရစ်ကတ်ကစားခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "သံပြားဝိုင်းပစ်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "နှင်း​လျှောစီးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "လက်​ဝှေ့ထိုးခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "တင်းနစ်ကစားခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "စားပွဲတင်တင်းနစ်";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "သိုင်းကစားခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "​ကျောက်​ဆောင်တွယ်တက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "နပန်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "ခရီး​ဝေးလမ်း​လျှောက်ခြင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "ခြံရှင်းအလုပ်";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "ကစီဓါတ်ပါ​သော အစာများ";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "အသားဓါတ်";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "သကြား";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "အဆီ";
+
+/* No description supplied by the engineer */
+"about_credits" = "မှတ်တမ်းတင်လွှာ";
+
+/* No description supplied by the engineer */
+"about_contribute" = "ဝိုင်းဝန်းကူညီပါ";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "ဘာသာပြန်ခြင်းကို ကူညီပါ";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "​ဆော့ဖ်ဝဲတည်​ဆောက်ခြင်းတွင် ကူညီပါ";
+
+/* No description supplied by the engineer */
+"about_discussion" = "ကျွန်​တော်တို့ရဲ့ ​ဆွေး​နွေးရာ အသိုင်းအဝိုင်းတွင် ပါဝင်ပါ";
+
+/* No description supplied by the engineer */
+"about_maillist" = "ကျွန်​တော်တို့ရဲ့ စာပို့စာရင်းကို လစဉ် ဖတ်ရှုပါ";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "သိမ်းထားသည့် အကြံပြုချက်များ";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "အချက်အလက် ထုတ်ယူရန်";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "မှ။ ။";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "သို့။";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "ဒီနေ့ကို ရွေးပါ";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "ထုတ်ယူပါ";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "အချက်အလက် ထုတ်ယူရန်";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "အားလုံးကို ထုတ်ယူပါ";
+
+/* No description supplied by the engineer */
+"share_using" = "အသုံးပြုခြင်းကို မျှဝေပါ";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio အချက်အလက်";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "ထုတ်ယူနေသည်";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "မှတ်သားထားခြင်းများ";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio သည် ကိရိယာမျက်နှာပြင်ဖမ်းယူသည့်ပုံကို သိမ်းဆည်းရန် သိမ်းဆည်းမှုဆိုင်ရာ ခွင့်ပြုချက်ကို လိုအပ်ပါသည်။";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "ကိရိယာမျက်နှာပြင် ဖမ်းယူထားသည့်ပုံကို ပြခန်းထဲတွင် သိမ်းထားသည်။";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "ကိရိယာမျက်နှာပြင်ဖမ်းပုံကို ပြခန်းထဲ သိမ်းဆည်းရာတွင် အမှားဖြစ်ပေါ်သည်။";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "ထုတ်ယူမည့် အပိုင်းအခြား";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "ထုတ်ယူရန် မည်သည့်မှတ်သားချက်မျှ မရှိပါ။";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "မှတ်သားချက်အသစ် ထည့်သွင်းပြီး။";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "ကိုယ်အ​လေးချိန်";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Ketone များ";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "အနိမ့်ဆုံး ဖိအား";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "အမြင့်ဆုံး ဖိအား";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "ကိုလက်စထရော စုစုပေါင်း";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL ကိုလက်စထရော";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL ကိုလက်စထရော";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "ခန္ဓာကိုယ် အလေးချိန် ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "ကိုလက်စထရော အဆင့် ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "HB1AC ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Ketone များ ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "သွေးဖိအား မှတ်သားချက် ထည့်ရန်";
+
+/* No description supplied by the engineer */
+"fab_weight" = "ခန္ဓာကိုယ် အလေးချိန်";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Ketone များ";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "သွေးပေါင်ချိန်";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "ကိုလက်စထရော အဆင့်";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HB1AC မှတ်သားချက်";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "သွေးရှိ ဂလူးကို့စ် အဆင့်";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "ယခုအချိန်တွင် အချက်အလက် ဖြည့်ပြီးသား ဖြစ်နေသည်။ မှန်ကန်သည့် အချက်အလက်ကို မထည့်ခင် ကျေးဇူးပြု၍ ရှိပြီးသားကို ဖျက်ပေးပါ။";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "သင့် ဖုန်းကို အာရုံခံ ကိရိယာပေါ်တွင် တင်ပါ။ မတုန်ခါမချင်း ဖုန်းကို မရွှေ့ပါနှင့်။";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC ကို ပိတ်ထားပါသည်။";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "HBA1C တွက်ရန် အချက်အလက် မလုံလောက်ပါ";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

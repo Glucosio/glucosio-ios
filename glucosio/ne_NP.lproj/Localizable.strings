@@ -1,0 +1,180 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "सेटिङहरु";
+
+/* No description supplied by the engineer */
+"action_feedback" = "प्रतिक्रिया पठाउनुहोस्";
+
+/* No description supplied by the engineer */
+"tab_overview" = "सर्वेक्षण";
+
+/* No description supplied by the engineer */
+"tab_history" = "इतिहास";
+
+/* No description supplied by the engineer */
+"tab_tips" = "सुझाव";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "नमस्कार।";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "नमस्कार।";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "उपयोग सर्तहरु।";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "शुरुवात गर्नु अघि हामिलाई केहि कुराहरु चाहिनेछ।";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "देश";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "उमेर";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "कृपया ठिक उमेर हाल्नुहोला।";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "लिङ्ग";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "पुरुष";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "महिला";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "अन्य";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "मधुमेहको प्रकार";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "प्रकार १";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "प्रकार २";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "रुचाइएको एकाइ";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "अनुसन्धानको लागी अनाम डाटा साझेदारी गर्नुहोस्।";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "अर्को";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "शुरुवात गर्नुहोस्।";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "रक्त ग्लूकोज स्तर थप्नुहोस";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "मिति";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "समय";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "नापिएको";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "बिहानी नाश्ता अघि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "बिहानी नाश्ता पछि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "खाजा अघि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "खाजा पछि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "रात्री भोजन अघि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "रात्री भोजन पछि";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "रात्री";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "अन्य";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "रद्द";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "थप्नुहोस्";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "कृपया ठिक मान हाल्नुहोस्।";
+
+/* No description supplied by the engineer */
+"dialog_error" = "कृपया सबै क्षेत्रहरु भर्नुहोस्।";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "हटाउनुहोस";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "एउटा हटाइयो";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "undo";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "पछिल्लो जाँच:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "सीमा भित्र र स्वस्थ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "महिना";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "दिन";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "हप्ता";
+
+/* No description supplied by the engineer */
+"preferences_about" = "बारेमा";
+
+/* No description supplied by the engineer */
+"preferences_version" = "संस्करण";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "उपयोग नियम";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "प्रकार";
+
+/* No description supplied by the engineer */
+"weight" = "तौल";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "अनुकूलन मापन श्रेणी";
+
+/* No description supplied by the engineer */
+"assistant" = "सहायक";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ल ठिक छ";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "प्रतिक्रिया बुझाउनुहोस्";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "आफ्नो वजन अद्यावधिक गर्नुहोस्";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "विभाग सिर्जना";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "रुचाइएको सीमा";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "तौल";

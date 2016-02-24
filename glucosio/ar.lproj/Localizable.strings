@@ -1,0 +1,269 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "جلوكوسيو";
+
+/* No description supplied by the engineer */
+"action_settings" = "إعدادات";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ارسل رأيك";
+
+/* No description supplied by the engineer */
+"action_invite" = "ادعو صديق";
+
+/* No description supplied by the engineer */
+"tab_overview" = "نظره عامه";
+
+/* No description supplied by the engineer */
+"tab_history" = "السّجل";
+
+/* No description supplied by the engineer */
+"tab_tips" = "نصائح";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "مرحباً.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "مرحباً.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "شروط الاستخدام";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "نحن بحاجة فقط لبضعة أشياء سريعة قبل البدء.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "الدولة";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "العمر";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "الرجاء إدخال عمر صحيح.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "الجنس";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "ذكر";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "أنثى";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "غير ذلك";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "نوع داء السكر";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "نوع 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "نوع 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "الوحدة المفضلة";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "شارك البيانات بطريقة مجهولة للبحوث.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "يمكنك تغيير هذه الإعدادات في وقت لاحق.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "التالي";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "لنبدأ";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "أضف مستوى الجلوكوز في الدم";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "التركيز";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "التاريخ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "الوقت";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "القياس";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "قبل الإفطار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "وبعد الإفطار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "قبل الغداء";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "بعد الغداء";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "قبل العشاء";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "بعد العشاء";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "ليل";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "غير ذلك";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ألغِ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "أضِف";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "الرجاء إدخال قيمة صحيحة.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "الرجاء تعبئة كافة الحقول.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "احذف";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "حُذِفت قراءة واحدة";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "التراجع عن";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "أخر فحص:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "الاتجاه الشهر الماضي:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "في النطاق وصحي";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "الشهر";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "يوم";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "اسبوع";
+
+/* No description supplied by the engineer */
+"tip_example" = "استخدام جبن أقل في وصفاتك للطعام الخاصة. الموزاريلا الطازجة المعبأة في الماء والجبن السويسري يحتويان على أقل نسبة من الصوديوم.";
+
+/* No description supplied by the engineer */
+"preferences_about" = "عن";
+
+/* No description supplied by the engineer */
+"preferences_version" = "الإصدار";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "شروط الاستخدام";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "نوع";
+
+/* No description supplied by the engineer */
+"weight" = "الوزن";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "فئة قياس مُخصصة";
+
+/* No description supplied by the engineer */
+"assistant" = "مساعدة";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "حدِّث الآن";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "حسنا، فهمت";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "أرسل الملاحظات";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "أضف القراءة";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "حدِّث وزنك";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "تأكد من تحديث وزنك لكي يحصل جلوكوسيو على معلومات أكثر دقة.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "حدّث اختيار المشاركة في البحث";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "يمكنك دائماً اختيار المشاركة في أبحاث مرض السكري، ولكن تذكر كل البيانات المشاركة مجهولة تماما. نُشارك فقط التركيبة السكانية والجلوكوز ومستوياته.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "أتشىء فئات";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "جلوكوسيو يأتي بفئات افتراضية لإدخال الجلوكوز ولكن يمكنك إنشاء فئات مخصصة في الإعدادات بحيث تتطابق مع احتياجاتك الخاصة.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "تردد هنا عدة مرات";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "مساعد جلوكوسيو يوفر نصائح عدة ، لذلك قم بالتردد هنا لتتعرف على إجراءات يمكنك اتخاذها لتحسين تجربة جلوكوسيو ونصائح مفيدة أخرى.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "إذا كان لديك اي مشكلة تقنية أو اقتراحات حول جلوكوسيو نحن نشجعكم على ارساله من قائمة الإعدادات من أجل مساعدتنا على تحسين جلوكوسيو.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "إضافة قراءة";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "تأكد من إضافة قراءات السكر بانتظام حتى يمكننا مساعدتك على تتبع مستويات السكر الخاص بك مع الوقت.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "النطاق المفضل";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "نطاق مُخصص";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "قيمة الحد الأدنى";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "قيمة الحد الأقصى";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "جرِّبها الآن";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "اللغه";
+
+/* No description supplied by the engineer */
+"invitation_title" = "ادعو أشخاص آخرين";
+
+/* No description supplied by the engineer */
+"invitation_message" = "جرِّب جلوكوسيو، تطبيق مصدر مفتوح لإدارة مرض السكري والبحث.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "جرِّب جلوكوسيو";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "نسخة احتياطية";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "الخصوصية";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "باستخدام جلوكوسيو، فإنك توافق على";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "الوزن";

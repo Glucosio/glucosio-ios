@@ -1,0 +1,153 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Asetukset";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Anna palautetta";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Yhteenveto";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historia";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Vinkit";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Hei.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Hei.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Käyttöehdot.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Käydään läpi muutama asia ennen käytön aloittamista.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Maa";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Ikä";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Anna kelvollinen ikä.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Sukupuoli";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Mies";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Nainen";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Muu";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Diabetestyyppi";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tyyppi 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tyyppi 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Yksikkö";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Jaa tietoja nimettömästi tutkimustarkoituksiin.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Voit muuttaa näitä myöhemmin asetuksista.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "SEURAAVA";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ALOITA";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Lisää verensokeritaso";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Pitoisuus";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Päivä";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Aika";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Mitattu";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Ennen aamiaista";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Aamiaisen jälkeen";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Ennen lounasta";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Lounaan jälkeen";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Ennen illallista";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Illallisen jälkeen";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Muu";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "PERUUTA";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "LISÄÄ";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Täytä kaikki kentät.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Poista";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 lukema poistettu";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "KUMOA";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Viimeisin tarkistus:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Kehitys viime kuukauden aikana:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "rajoissa ja terve";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Tietoa";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versio";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Käyttöehdot";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tyyppi";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "LISÄÄ LUKEMA";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Lisää lukema";

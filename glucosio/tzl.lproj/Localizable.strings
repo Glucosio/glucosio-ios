@@ -1,0 +1,66 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Setatxen";
+
+/* No description supplied by the engineer */
+"tab_history" = "Þistoria";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tüdeis";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Azul.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Azul.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Päts";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Vellità";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Xhendreu";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Sorta del sücritis";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Sorta 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Sorta 2";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Cuncentraziun";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Däts";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Temp";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Nic'ht";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "NIÞILIÇARH";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "AXHUNTARH";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Zeletarh";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Över";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Verziun";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Sorta";
+
+/* No description supplied by the engineer */
+"assistant" = "Axhutor";

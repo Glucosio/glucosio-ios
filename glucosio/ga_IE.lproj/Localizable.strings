@@ -1,0 +1,531 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Socruithe";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Aiseolas";
+
+/* No description supplied by the engineer */
+"action_invite" = "Tabhair cuireadh do chara";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Foramharc";
+
+/* No description supplied by the engineer */
+"tab_history" = "Stair";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Leideanna";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Dia dhuit.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Dia dhuit.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Téarmaí Úsáide.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Cúpla rud beag sula dtosóimid.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Tír";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Aois";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Cuir aois bhailí isteach.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Inscne";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Fireannach";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Baineannach";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Eile";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Cineál diaibéitis";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Cineál 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Cineál 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Do rogha aonaid";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Comhroinn sonraí gan ainm le haghaidh taighde.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Is féidir leat iad seo a athrú ar ball sna socruithe.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "AR AGHAIDH";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "TÚS MAITH";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Tomhais Leibhéal Glúcós Fola";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Tiúchan";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Dáta";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Am";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Tomhaiste";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Roimh bhricfeasta";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Tar éis bricfeasta";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Roimh lón";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Tar éis lóin";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Roimh shuipéar";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Tar éis suipéir";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Sneaic";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Am luí";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Oíche";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Glúcós céalacain";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Seiceáil arís";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Eile";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "CEALAIGH";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "OK";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Cuir luach bailí isteach.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Líon isteach na réimsí go léir.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Scrios";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "Scriosadh tomhas amháin";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "CEALAIGH";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Tomhas is déanaí:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Treocht le linn na míosa seo caite:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "sa raon sláintiúil";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mí";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Lá";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Seachtain";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Maidir Leis";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Leagan";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Téarmaí Úsáide";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Cineál";
+
+/* No description supplied by the engineer */
+"weight" = "Meáchan";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Catagóir saincheaptha";
+
+/* No description supplied by the engineer */
+"assistant" = "Cúntóir";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "NUASHONRAIGH ANOIS";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "TUIGIM";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "SEOL AISEOLAS";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "TOMHAS NUA";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Nuashonraigh do mheáchan";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Ba chóir duit do mheáchan a choinneáil cothrom le dáta sa chaoi go mbeidh an t-eolas is fearr ag Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Athraigh an socrú a bhaineann le taighde";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Is féidir leat do chuid sonraí a chomhroinnt le taighdeoirí atá ag obair ar dhiaibéiteas, go hiomlán gan ainm, nó comhroinnt a stopadh am ar bith. Ní chomhroinnimid ach faisnéis dhéimeagrafach agus treochtaí leibhéil glúcóis.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Cruthaigh catagóirí";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Tagann Glucosio le catagóirí réamhshocraithe le haghaidh ionchurtha glúcóis, ach is féidir leat catagóirí de do chuid féin a chruthú sna socruithe.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Féach anseo go minic";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Tugann Cúntóir Glucosio leideanna duit go rialta, agus rachaidh sé i bhfeabhas de réir a chéile. Mar sin, ba chóir duit filleadh anseo anois is arís le gníomhartha agus leideanna úsáideacha a fháil.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Má fheiceann tú aon fhadhb theicniúil, nó más mian leat aiseolas faoi Glucosio a thabhairt dúinn, is féidir é sin a dhéanamh sa roghchlár Socruithe, chun cabhrú linn Glucosio a fheabhsú.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Tomhas nua";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Ba chóir duit do leibhéal glúcos fola a thástáil go rialta sa chaoi go mbeidh tú in ann an leibhéal a leanúint thar thréimhse ama.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Easpórtáil do chuid sonraí";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Comhroinn do chuid sonraí le do dhochtúir, nó sábháil na sonraí ar Google Drive leis an ngné easpórtála.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Raon inmhianaithe";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Raon saincheaptha";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Íosluach";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Uasluach";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "BAIN TRIAIL AS";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Teanga";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Tabhair cuirí do dhaoine eile";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Bain triail as Glucosio, aip oscailte le haghaidh bainistíocht agus taighde ar dhiaibéiteas.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Bain triail as Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Cúltaca";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Príobháideachas";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Trí Glucosio a úsáid, glacann tú leis na";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Maidir le Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Rátáil Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Ceadúnais foinse oscailte";
+
+/* No description supplied by the engineer */
+"about_donate" = "Tabhair deontas do Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hipiglicéime";
+
+/* No description supplied by the engineer */
+"reading_low" = "Íseal";
+
+/* No description supplied by the engineer */
+"reading_high" = "Ard";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hipirglicéime";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Siúlóid ar do shocair";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Siúlóid thapa";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Bogshodar";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Rith";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Snámh";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Damhsa";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Scátáil rollála";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Rothaíocht";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Galf";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Bogliathróid";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badmantan";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Peil";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Cispheil";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Eitpheil";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Cruicéad";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Friosbaí";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Scíáil";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Dornálaíocht";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Leadóg";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Leadóg bhoird";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Ealaíona oscartha";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Dreapadóireacht";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Iomrascáil";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Cnocadóireacht";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Garraíodóireacht";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Carbaihiodráití:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Próitéin:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Siúcra:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Saill:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Admhálacha";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Rannpháirtíocht";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Aistriúchán";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Forbairt";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Glac páirt sa díospóireacht";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Cláraigh leis an liosta ríomhphoist";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "LEIDEANNA SA gCARTLANN";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Easpórtáil sonraí";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "Ó:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Go:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Inniu";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EASPÓRTÁIL";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Easpórtáil Sonraí";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Easpórtáil gach uile rud";
+
+/* No description supplied by the engineer */
+"share_using" = "Comhroinn ar";
+
+/* No description supplied by the engineer */
+"share_subject" = "Sonraí Glucosio";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Sonraí á n-easpórtáil";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "leibhéil";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Ní mór duit cead a thabhairt do Glucosio chun an pictiúr a shábháil";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Sábháladh an pictiúr sa ghailearaí";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Earráid agus an pictiúr á shábháil sa ghailearaí";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Raon easpórtála";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Níl aon léamh le heaspórtáil.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Cuireadh léamh nua leis";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Meáchan";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Céatóin";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Brú Is Lú";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Brú is Airde";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Colaistéaról Iomlán";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "Colaistéaról LPÍD";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "Colaistéaról LPAD";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Cuir isteach meáchan coirp";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Cuir isteach leibhéal colaistéaróil";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Cuir isteach HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Cuir isteach céatóin";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Cuir isteach brú fola";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Meáchan Coirp";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Céatóin";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Brú Fola";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Leibhéal Colaistéaróil";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "Leibhéal HB1AC";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Leibhéal Glúcós Fola";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Tá iontráil agat ag an am seo cheana. Caithfidh tú é a scriosadh sular féidir ceann nua a chur leis.";

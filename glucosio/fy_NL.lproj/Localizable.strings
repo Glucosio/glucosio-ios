@@ -1,0 +1,159 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Ynstellingen";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Weromkeppeling ferstjoere";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Oersjoch";
+
+/* No description supplied by the engineer */
+"tab_history" = "Skiednis";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tips";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Brûksbetingsten.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Lân";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Aldens";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Geslacht";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Man";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Frou";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Oar";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Diabetestype";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Type 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Type 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Foarkarsienheid";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "FOLGJENDE";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "OAN DE SLACH";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Bloedsûkerspegel tafoegje";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Konsintraasje";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Datum";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Tiid";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Metten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Foar it moarnsiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Nei it moarnsiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Foar it middeisiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Nei it middeisiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Foar it jûnsiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Nei it jûnsiten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Nacht";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Oar";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ANNULEARJE";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "TAFOEGJE";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Fuortsmite";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 útlêzing fuortsmiten";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ÛNGEDIEN MEITSJE";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Lêste kontrôle:";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Moanne";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Dei";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Wike";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Oer";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Ferzje";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Brûksbetingsten";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Type";
+
+/* No description supplied by the engineer */
+"assistant" = "Assistint";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "NO BYWURKJE";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "WEROMKEPPELING FERSTJOERE";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ÚTLÊZING TAFOEGJE";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Kategoryen meitsje";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Sjoch hjir regelmjittich";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "In útlêzing tafoegje";

@@ -1,0 +1,234 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "সেটিংস";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ফিডব্যাক প্রেরণ করুন";
+
+/* No description supplied by the engineer */
+"tab_overview" = "সংক্ষিপ্ত বিবরণ";
+
+/* No description supplied by the engineer */
+"tab_history" = "ইতিহাস";
+
+/* No description supplied by the engineer */
+"tab_tips" = "ইঙ্গিত";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "হ্যালো।";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "হ্যালো।";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "ব্যবহারের শর্তাবলী।";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "শুরু করার আগে আমাদের শুধু দ্রুত কিছু জিনিস প্রয়োজন।";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "দেশ";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "বয়স";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "একটি বৈধ বয়স লিখুন।";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "লিঙ্গ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "পুরুষ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "মহিলা";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "অন্যান্য";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "ডায়াবেটিসের ধরণ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "১ নং ধরণ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "২ নং ধরণ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "পছন্দের ইউনিট";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "গবেষণার জন্য বেনামী তথ্য শেয়ার করুন।";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "আপনি এগুলি সেটিংসে গিয়ে পরেও বদলাতে পারেন।";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "পরবর্তী";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "শুরু করুন";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "রক্তে গ্লুকোজের মাত্রা যোগ করুন";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "ঘনত্ব";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "তারিখ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "সময়";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "পরিমাপ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "সকালে খাওয়ার আগে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "সকালে খাওয়ার পরে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "দুপুরে খাওয়ার আগে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "দুপুরে খাওয়ার পরে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "রাতে খাওয়ার আগে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "রাতে খাওয়ার পরে";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "রাত";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "অন্যান্য";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "বাতিল";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "যোগ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "অনুগ্রহ করে একটি বৈধ মান প্রবেশ করান।";
+
+/* No description supplied by the engineer */
+"dialog_error" = "অনুগ্রহ করে সকল ফিল্ড ভরাট করুন।";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "মুছে ফেলুন";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "একটি তথ্য মুছে ফেলা হল";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "বাতিল করুন";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "সর্বশেষ পরীক্ষা:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "গত মাস ধরে প্রবনতা:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "পরিসীমার মধ্যে ও সুস্থ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "মাস";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "দিন";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "সপ্তাহ";
+
+/* No description supplied by the engineer */
+"preferences_about" = "সম্পর্কে";
+
+/* No description supplied by the engineer */
+"preferences_version" = "সংস্করণ";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "ব্যবহারের শর্তাবলী।";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "ধরন";
+
+/* No description supplied by the engineer */
+"weight" = "ওজন";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "কাস্টম পরিমাপ বিভাগ";
+
+/* No description supplied by the engineer */
+"assistant" = "সহকারী";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "এখনই আপডেট করো";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ঠিক আছে, বুঝতে পেরেছি";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ফিডব্যাক জমা করুন";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "রিডিং সংযুক্ত করুন";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "আপনার নতুন ওজন দিন";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "অবশ্যই আপনার ওজন নিয়মিত হালনাগাদ করুন যেন গ্লুকোসিও সঠিক তথ্য পেতে পারে।";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "আপনার গবেষণা হালনাগাদে যোগ দিন";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "আপনি যেকোন সময়ে ডায়াবেটিস গবেষণার জন্য তথ্য প্রদানে অংশ নিতে বা তা থেকে বিরত থাকতে পারে, তবে মনে রাখবেন সকল ডাটা যা শেয়ার করা হচ্ছে তা বেনামে। আমরা কেবল মাত্র ডেমোগ্রাফি এবং গ্লুকোজ লেভেল ট্রেন্ড শেয়ার করে থাকি।";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "বিভাগ তৈরি করুন";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "গ্লুকোসিওতে কিছু ডিফল্ট বিষয়শ্রেণী থাকে আপনার গ্লুকোজ ইনপুট দেওয়ার জন্য তবে আপনি নিজেও আপনার সাথে মিল রেখে সেটিং থেকে নিজস্ব বিষয়শ্রেণী তৈরি করতে পারেন।";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "এখানে প্রায়ই পরীক্ষা করুন";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "গ্লুকোসিও সহযোগী নিয়মিত পরামর্শ প্রদান করে এবং প্রতিনিয়ত নিজেকে আরও ভালো করছে, তাই আপনার গ্লুকোসিও অভিজ্ঞতাকে আরও ভালো করতে এবং অন্যান্য আরও উপকারী পরামর্শ পেতে নিয়মিত এখানে দেখুন এবং কি করতে হবে জানুন।";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "যেকোন কারিগরি সমস্যায় বা যদি গ্লুকোসিও সম্পর্কে কোন ফিডব্যাক থাকে তাহলে গ্লুকোসিওকে আরও ভালো করতে সেটিং মেনু থেকে তা সাবমিট করুন।";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "পড়ায় যুক্ত করুন";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "অবশ্যই নিয়মিত আপনার গ্লুকোজের মাত্রা যোগ করবেন যেন আমরা আপনাকে আপনার গ্লুকোজের মাত্রা সময়ে সময়ে ট্র্যাক করতে সহযোগীতা করতে পারি। ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "পছন্দের পরিসীমা";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "স্বনির্ধারিত পরিসীমা";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "সর্বনিম্ন মান";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "সর্বোচ্চ মান";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "এখনই ব্যবহার করে দেখুন";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "ওজন";

@@ -1,0 +1,336 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Agordoj";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Sendi rimarkon";
+
+/* No description supplied by the engineer */
+"action_invite" = "Inviti amikon";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Superrigardo";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historio";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Konsiletoj";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Saluton.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Saluton.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Kondiĉoj de uzado.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Lando";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Aĝo";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Sekso";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Vira";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Ina";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Alia";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Diabettipo";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tipo 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tipo 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Preferata unuo";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "SEKVA";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "KOMENCIĜI";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Aldoni sangoglukozonivelon";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Koncentriteco";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Dato";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Tempo";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Mezurita";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Antaŭ matenmanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Post matenmanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Antaŭ tagmanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Post tagmanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Antaŭ vespermanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Post vespermanĝo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Manĝeto";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Kuŝhoro";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Nokto";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Rekontroli";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Alia";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "NULIGI";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ALDONI";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Forigi";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 legado forigita";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "MALFARI";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Lasta kontrolo:";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Monato";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Tago";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Semajno";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Pri";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versio";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Kondiĉoj de uzado";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tipo";
+
+/* No description supplied by the engineer */
+"weight" = "Pezo";
+
+/* No description supplied by the engineer */
+"assistant" = "Asistanto";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "ĜISDATIGI NUN";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "BONE, KOMPRENITA";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "Sendi rimarkon";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ALDONI LEGADON";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Ĝisdatigi vian pezon";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Krei kategoriojn";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Vidi ĉi tie ofte";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Aldoni legadon";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Eksporti viajn datumojn";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Minimuma valoro";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Maksimuma valoro";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "PROVI ĜIN NUN";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Lingvo";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Inviti aliajn personojn";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Provu Glukozion";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Savkopii";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Privateco";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Pri Glukozio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Recenzu Glukozion";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Malfermitkodaj permesiloj";
+
+/* No description supplied by the engineer */
+"about_donate" = "Donacu al Glukozio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "Bone";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hipoglikemio";
+
+/* No description supplied by the engineer */
+"reading_low" = "Malalta";
+
+/* No description supplied by the engineer */
+"reading_high" = "Alta";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hiperglukozemio";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Kurado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Naĝado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Dancado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Biciklado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Piedpilkado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Korbopilkado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Skiado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Boksado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Luktado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Marŝado";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Ĝardenado";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Karbonhidratoj:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Proteino:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Sukeroj:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Graso:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Agnoskoj";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Kontribui";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Kontribui al la tradukado";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Kontribui al la programado";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "ARKIVITAJ KONSILETOJ";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Eksporti datumojn";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "De:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Al:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Elektu hodiaŭon";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EKSPORTI";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Eksporti datumojn";
+
+/* No description supplied by the engineer */
+"share_using" = "Konigi per";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glukozio-datumoj";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Eksportado";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "legadoj";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Novaj legadoj aldonitaj";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Pezo";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL-kolesterolo";

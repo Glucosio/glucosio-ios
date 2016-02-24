@@ -1,0 +1,237 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Možnosti";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Odoslať spätnú väzbu";
+
+/* No description supplied by the engineer */
+"action_invite" = "Pozvať priateľa";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Prehľad";
+
+/* No description supplied by the engineer */
+"tab_history" = "História";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tipy";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Ahoj.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Ahoj.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Podmienky používania.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Krajina";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Vek";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Prosím zadajte správny vek.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Pohlavie";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Muž";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Žena";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Iné";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Typ cukrovky";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Typ 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Typ 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Preferovaná jednotka";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Zdieľať anonymne údaje pre výskum.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Tieto nastavenia môžete neskôr zmeniť.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "ĎALEJ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ZAČÍNAME";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Pridať hladinu glukózy v krvi";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Koncentrácia";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Dátum";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Čas";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Namerané";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Pred raňajkami";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Po raňajkách";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Pred obedom";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Po obede";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Pred večerou";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Po večeri";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Noc";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Iné";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ZRUŠIŤ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "PRIDAŤ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Prosím, zadajte platnú hodnotu.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Vyplňte prosím všetky položky.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Odstrániť";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "odstránený 1 záznam";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "SPÄŤ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Posledná kontrola:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Trend za posledný mesiac:";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mesiac";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Deň";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Týždeň";
+
+/* No description supplied by the engineer */
+"preferences_about" = "O programe";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Verzia";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Podmienky používania";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Typ";
+
+/* No description supplied by the engineer */
+"weight" = "Váha";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Vlastné kategórie meraní";
+
+/* No description supplied by the engineer */
+"assistant" = "Asistent";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "AKTUALIZOVAŤ TERAZ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, ROZUMIEM";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ODOSLAŤ SPÄTNÚ VÄZBU";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "PRIDAŤ MERANIE";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Aktualizujte vašu hmotnosť";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Uistite sa, aby bola vaša váha vždy aktuálna, aby mal Glucosio čo najpresnejšie údaje.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Vytvoriť kategórie";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Ak nájdete nejaké technické problémy, alebo nám chcete zanechať spätnú väzbu o Glucosio odporúčame vám ju odoslať cez položku v nastaveniach. Pomôžete tak vylepšiť Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Pridať meranie";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Uistite sa, aby ste pravidelne pridávali hodnoty hladiny glykémie tak, aby sme vám mohli pomôcť priebežne sledovať hladiny glukózy.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Preferovaný rozsah";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Vlastný rozsah";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Minimálna hodnota";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Maximálna hodnota";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "VYSKÚŠAJTE TO";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Jazyk";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Pozvať ďalšie osoby";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Vyskúšajte Glucosio, open source aplikáciu pre výskum a správu cukrovky.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Vyskúšať Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Zálohovanie";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Súkromie";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Používaním Glucosio sa zaväzujete, že";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Váha";

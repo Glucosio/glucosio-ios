@@ -1,0 +1,240 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "ਸੈਟਿੰਗ";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ਫੀਡਬੈਕ ਭੇਜੋ";
+
+/* No description supplied by the engineer */
+"tab_overview" = "ਸੰਖੇਪ ਜਾਣਕਾਰੀ";
+
+/* No description supplied by the engineer */
+"tab_history" = "ਇਤਿਹਾਸ";
+
+/* No description supplied by the engineer */
+"tab_tips" = "ਨੁਕਤੇ";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "ਹੈਲੋ।";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "ਹੈਲੋ।";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ।";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "ਤੁਹਾਨੂੰ ਸ਼ੁਰੂ ਕਰਵਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਸਾਨੂੰ ਸਿਰਫ਼ ਕੁੱਝ ਚੀਜ਼ਾਂ ਦੀ ਜ਼ਰੂਰਤ ਹੈ।";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "ਦੇਸ਼";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "ਉਮਰ";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਉਮਰ ਦਰਜ ਕਰੋ।";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "ਲਿੰਗ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "ਮਰਦ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "ਔਰਤ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "ਹੋਰ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "ਸ਼ੂਗਰ ਦੀ ਕਿਸਮ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "ਕਿਸਮ 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "ਕਿਸਮ 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "ਤਰਜੀਹੀ ਇਕਾਈ";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "ਖੋਜ ਲਈ ਗੁਮਨਾਮ ਡਾਟਾ ਸਾਂਝਾ ਕਰੋ।";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "ਬਾਅਦ ਵਿੱਚ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "ਅੱਗੇ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ਸ਼ੁਰੂ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "ਖੂਨ ਵਿੱਚ ਗਲੂਕੋਜ਼ ਦਾ ਪੱਧਰ ਸ਼ਾਮਲ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "ਮਾਤਰਾ";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "ਮਿਤੀ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "ਸਮਾਂ";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "ਮਾਪਿਆ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "ਨਾਸ਼ਤੇ ਤੋਂ ਪਹਿਲਾਂ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "ਨਾਸ਼ਤੇ ਤੋਂ ਬਾਅਦ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "ਦੁਪਹਿਰ ਦੇ ਖਾਣੇ ਤੋਂ ਪਹਿਲਾਂ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "ਦੁਪਹਿਰ ਦੇ ਖਾਣੇ ਤੋਂ ਬਾਅਦ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "ਰਾਤ ਦੇ ਖਾਣੇ ਤੋਂ ਪਹਿਲਾਂ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "ਰਾਤ ਦੇ ਖਾਣੇ ਤੋਂ ਬਾਅਦ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "ਰਾਤ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "ਹੋਰ";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ਰੱਦ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ਸ਼ਾਮਲ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਸਹੀ ਮੁੱਲ ਦਰਜ ਕਰੋ।";
+
+/* No description supplied by the engineer */
+"dialog_error" = "ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀਆਂ ਥਾਵਾਂ ਭਰੋ।";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "ਹਟਾਓ";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 ਰੀਡਿੰਗ ਹਟਾਈ";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ਵਾਪਸ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "ਆਖਰੀ ਜਾਂਚ:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "ਪਿਛਲੇ ਮਹੀਨਾ ਦਾ ਰੁਝਾਨ:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "ਹੱਦ ਵਿੱਚ ਅਤੇ ਸਿਹਤਮੰਦ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "ਮਹੀਨਾ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "ਦਿਨ";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "ਹਫ਼ਤਾ";
+
+/* No description supplied by the engineer */
+"preferences_about" = "ਬਾਰੇ";
+
+/* No description supplied by the engineer */
+"preferences_version" = "ਵਰਜਨ";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "ਕਿਸਮ";
+
+/* No description supplied by the engineer */
+"weight" = "ਭਾਰ";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "ਮਨਪਸੰਦ ਮਾਪ ਵਰਗ";
+
+/* No description supplied by the engineer */
+"assistant" = "ਸਹਾਇਕ";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "ਹੁਣੇ ਅੱਪਡੇਟ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ਠੀਕ, ਸਮਝ ਗਿਆ";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ਫੀਡਬੈਕ ਦਿਓ";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ਰੀਡਿੰਗ ਜੋੜੋ";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "ਆਪਣਾ ਭਾਰ ਅੱਪਡੇਟ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "ਆਪਣੇ ਭਾਰ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨਾ ਯਕੀਨੀ ਬਣਾਓ ਤਾਂ ਕਿ Glucosio ਕੋਲ ਬਿਲਕੁਲ ਸਹੀ ਜਾਣਕਾਰੀ ਹੋਵੇ।";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "ਆਪਣੀ ਖੋਜ ਭਾਗੀਦਾਰੀ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "ਤੁਸੀਂ ਹਮੇਸ਼ਾ ਸ਼ੂਗਰ ਖੋਜ ਸਾਂਝੇਦਾਰੀ ਵਿੱਚ ਭਾਗ ਲੈ ਜਾਂ ਬਾਹਰ ਹੋ ਸਕਦੇ ਹੋ, ਯਾਦ ਰੱਖੋ ਸਾਂਝਾ ਕੀਤਾ ਡਾਟਾ ਪੂਰੀ ਤਰ੍ਹਾਂ ਗੁਪਤ ਹੈ। ਅਸੀਂ ਸਿਰਫ਼ ਜਨ ਅਤੇ ਗਲੂਕੋਜ਼ ਪੱਧਰ ਰੁਝਾਨ ਸਾਂਝੇ ਕਰਦੇ ਹਾਂ।";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "ਵਰਗ ਬਣਾਓ";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "ਗਲੂਕੋਜ਼ ਇਨਪੁੱਟ ਲਈ Glucosio ਮੂਲ ਵਰਗਾਂ ਨਾਲ ਆਉਂਦਾ ਹੈ ਪਰ ਤੁਸੀਂ ਆਪਣੀਆਂ ਜ਼ਰੂਰਤਾਂ ਮੁਤਾਬਿਕ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਤਰਜੀਹੀ ਵਰਗ ਬਣਾ ਸਕਦੇ ਹੋ।";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "ਇੱਥੇ ਅਕਸਰ ਵੇਖੋ";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "ਜੇਕਰ ਤੁਹਾਨੂ ਕੋਈ ਤਕਨੀਕੀ ਸਮੱਸਿਆ ਆਈ ਜਾਂ Glucosio ਬਾਰੇ ਫੀਡਬੈਕ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ Glucosio ਨੂੰ ਵਧੀਆ ਬਣਾਉਣ ਵਿੱਚ ਸਾਡੀ ਸਹਾਇਤਾ ਲਈ ਅਸੀਂ ਤੁਹਾਨੂੰ ਇਸ ਨੂੰ ਸੈਟਿੰਗ ਮੀਨੂੰ ਤੋਂ ਭੇਜਣ ਲਈ ਉਤਸ਼ਾਹਿਤ ਕਰਦੇ ਹਾਂ।";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "ਰੀਡਿੰਗ ਸ਼ਾਮਲ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "ਨਿਯਮਿਤ ਤੌਰ ਤੇ ਆਪਣੀ ਗਲੋਕੂਜ਼ ਰੀਡਿੰਗ ਸ਼ਾਮਲ ਕਰਨਾ ਯਕੀਨੀ ਬਣਾਓ ਤਾਂ ਕੀ ਅਸੀਂ ਤੁਹਾਡੀ ਗਲੂਕੋਜ਼ ਪੱਧਰਾਂ ਤੇ ਨਜ਼ਰ ਰੱਖਣ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰ ਸਕੀਏ।";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "ਤਰਜੀਹੀ ਸੀਮਾ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "ਮਨਪਸੰਦ ਸੀਮਾ";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "ਘੱਟੋ-ਘਂੱਟ ਮੁੱਲ";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "ਵੱਧੋ-ਵੱਧ ਮੁੱਲ";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "ਹੁਣੇ ਇਸ ਦੀ ਵਰਤੋਂ ਕਰੋ";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "ਭਾਰ";

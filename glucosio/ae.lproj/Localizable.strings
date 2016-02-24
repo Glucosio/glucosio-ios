@@ -1,0 +1,162 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "تنظیمات";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ارسال بازخورد";
+
+/* No description supplied by the engineer */
+"tab_overview" = "بررسی";
+
+/* No description supplied by the engineer */
+"tab_history" = "تاریخچه";
+
+/* No description supplied by the engineer */
+"tab_tips" = "نکات";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "سلام.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "سلام.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "شرایط استفاده.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "ما فقط به چند چیز کوچک قبل از شروع نیاز داریم.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "کشور";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "سن";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "لطفا سن درست را وارد کنید.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "جنسیت";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "مرد";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "زن";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "دیگر";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "نوع دیابت";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "نوع ۱";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "نوع۲";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "واحد مورد نظر";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "به اشتراک گذاشتن داده ها به صورت ناشناس جهت تحقیقات.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "شما می توانید این را بعدا در تنظیمات تغییر دهید.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "بعدی";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "شروع به کار";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "وارد کردن سطح گلوکز(قند) خون";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "غلظت";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "تاریخ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "زمان";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "اندازه گیری شده";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "قبل صبحانه";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "بعد صبحانه";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "قبل از ناهار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "بعد از ناهار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "قبل از شام";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "بعد از شام";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "شب";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "دیگر";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "لغو";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "اضافه";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "لطفا یک مقدار معتبر وارد کنید.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "لطفا تمامی بخش ها را پر کنید.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "حذف";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "برگردان";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "اخرین بررسی:";
+
+/* No description supplied by the engineer */
+"preferences_about" = "درباره";
+
+/* No description supplied by the engineer */
+"preferences_version" = "نسخه";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "شرایط استفاده";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "نوع";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "دسته سفارشی شده برای اندازه گیری";
+
+/* No description supplied by the engineer */
+"assistant" = "دستیار";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "بروزرسانی همین حالا";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "متوجه شدم";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ارسال بازخورد";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "بروزرسانی وزن";

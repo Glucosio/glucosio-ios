@@ -1,0 +1,384 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Параметри";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Надіслати відгук";
+
+/* No description supplied by the engineer */
+"action_invite" = "Запросити друга";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Огляд";
+
+/* No description supplied by the engineer */
+"tab_history" = "Історія";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Рекомендації";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Привіт.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Привіт.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Умови використання.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Декілька речей що нам потрібні перед тим, як ви зможете почати.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Країна";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Вік";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Будь ласка, вкажіть правильний вік.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Стать";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Чоловік";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Жінка";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Інше";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Тип діабету";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Тип 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Тип 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Бажані одиниці";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Поділитися анонімними даними для подальшого дослідження.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Ви можете змінити ці налаштування пізніше.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "НАСТУПНИЙ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "РОЗПОЧНЕМО";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Додати рівень глюкози в крові";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Концентрація";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Дата";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Час";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Виміряно";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Перед сніданком";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Після сніданку";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Перед обідом";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Після обіду";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Перед вечерею";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Після вечері";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Закуски";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Ніч";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Повторна перевірка";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Інше";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "СКАСУВАТИ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ДОДАТИ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Будь ласка, введіть припустиме значення.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Будь ласка, заповніть всі поля.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Вилучити";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 читання видалено";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "СКАСУВАТИ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Остання перевірка:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Тенденція за минулий місяць:";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Місяць";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "День";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Тиждень";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Про додаток";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Версія";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Умови використання";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Тип";
+
+/* No description supplied by the engineer */
+"weight" = "Вага";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Власна категорія вимірювань";
+
+/* No description supplied by the engineer */
+"assistant" = "Асистент";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "ОНОВИТИ ЗАРАЗ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ГАРАЗД, ЗРОЗУМІЛО";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "НАДІСЛАТИ ВІДГУК";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ДОДАТИ ЧИТАННЯ";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Оновити свою вагу";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Не забудьте оновити свою вагу, аби Glucosio мав найточнішу інформацію.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Додати категорії";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Якщо ви знайшли будь-які технічні недоліки або хочете написати відгук про Glucosio то ви можете зробити це в меню \"Параметри\", що допоможе нам покращити Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Додати вимірювання";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Переконайтеся, що ви регулярно подаєте ваші показники глюкози, щоб ми могли допомогти вам відстежувати ваш рівень глюкози з часом.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Бажаний діапазон";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Власний діапазон";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Мінімальне значення";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Максимальне значення";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "СПРОБУЙТЕ ЗАРАЗ";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Мова";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Запросити інших користувачів";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Спробуйте Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Резервна копія";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Приватність";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Про Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Ліцензії з відкритим вихідним кодом";
+
+/* No description supplied by the engineer */
+"about_donate" = "Пожертвувати на Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "ОК";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Гіпоглікемія";
+
+/* No description supplied by the engineer */
+"reading_low" = "Низький";
+
+/* No description supplied by the engineer */
+"reading_high" = "Високий";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Гіперглікемія";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Біг";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Плавання";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Танці";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Ковзання на роликах";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Їзда на велосипеді";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Гольф";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Софтбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Бадмінтон";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Футбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Баскетбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Волейбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Крикет";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Фрісбі";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Катання на лижах";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Бокс";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Теніс";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Настільний теніс";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Бойові мистецтва";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Скелелазіння";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Боротьба";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Піші прогулянки";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Роботу у дворі";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Вуглеводи:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Протеїн:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Цукри:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Жир:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Подяки";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Зробити внесок";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Допомогти з перекладом";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Допомогти з розрозбкою";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Приєднайтеся до нашої спільноти";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Підпишіться на нашу розсилку";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "ЗААРХІВОВАНІ ПОРАДИ";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Експорт даних";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Кому:";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "ЕКСПОРТ";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Експорт даних";
+
+/* No description supplied by the engineer */
+"share_using" = "Надіслати за допомогою";
+
+/* No description supplied by the engineer */
+"share_subject" = "Дані Glucosio";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Вага";

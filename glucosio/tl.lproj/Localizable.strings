@@ -1,0 +1,156 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Mga Setting";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Magpadala ng feedback";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Tinging-pangmalawakan";
+
+/* No description supplied by the engineer */
+"tab_history" = "Kasaysayan";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Mga tips";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Kumusta.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Kumusta.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Patakaran sa Paggamit.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Kinakailangan natin ng ilang mga bagay bago tayo magsimula.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Bansa";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Edad";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Paki lagay ang tamang edad.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Kasarian";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Lalaki";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Babae";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Iba pa";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Uri ng Diabetes";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Type 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Type 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Ninanais na unit";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Ibahagi ang mga anonymous data para sa pananaliksik.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Maaring palitang ang settings sa paglaon.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "SUSUNOD";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "MAGSIMULA";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Ilagay ang Blood Glucose Level";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Konsentrasyon";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Petsa";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Oras";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Sinukat";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Bago mag-almusal";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Matapos mag-almusal";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Bago mananghalian";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Matapos mananghalian";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Bago mag-hapunan";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Matapos maghapunan";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Gabi";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Iba pa";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "Kanselahin";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "Idagdag";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Mangyaring ilagay ang tamang value.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Paki-punan ang lahat ng kahon.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Burahin";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 reading ang binura";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "Ibalik";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Huling check:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Trend sa nakalipas na buwan:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "pasok sa range at may kalusugan";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Patungkol";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Bersyon";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Patakaran sa Paggamit";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Uri";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Kategorya ng pansariling sukatan";

@@ -1,0 +1,120 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Setingi";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Werezza obubaka";
+
+/* No description supplied by the engineer */
+"tab_history" = "Ebyafayo";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Obubonero";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Endagano ye Enkozesa";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Twetagayo ebintu bitono nga tetunakuyamba kutandika.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Ensi";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Emyaka";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Tusoba oyingizemu emyaka emitufu.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Musajja";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Mukazi";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Endala";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Ekika kya Sukali";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Ekika Ekisoka";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Ekika Eky'okubiri";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Empima Gy'oyagala";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Gaba obubaka bwa risaaki nga tekuli manya.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Osobola okukyusa setingi zino edda.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "EKIDAKO";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "TANDIKA";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Gata levo ya Sukari ali mu Musaayi wano";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Obukwafu";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Olunaku";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Essawa";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Ebipimiddwa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Nga tonanywa kyayi";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Ng'omazze kyayi";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Nga tonala ky'emisana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Ng'omazze okulya eky'emisana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Nga tonalya ky'eggulo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Ng'omazze okulya eky'eggulo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Ekiro";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Endala";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "SAZAMU";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "GATAKO";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Tusaba oyingizemu enukutta entufu.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Tusaba ojuzzemu amabanga gona.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Sazamu";

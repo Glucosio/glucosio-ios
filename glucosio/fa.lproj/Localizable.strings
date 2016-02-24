@@ -1,0 +1,387 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "تنظیمات";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ارسال پیشنهادات و انتقادات";
+
+/* No description supplied by the engineer */
+"action_invite" = "دعوت از یک دوست";
+
+/* No description supplied by the engineer */
+"tab_overview" = "نمای کلی";
+
+/* No description supplied by the engineer */
+"tab_history" = "تاريخچه";
+
+/* No description supplied by the engineer */
+"tab_tips" = "ﻧﮑﺎﺕ";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "سلام.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "سلام.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "شرایط استفاده";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "ما فقط باید چند چیز را قبل از شروع کردن نیاز داریم.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "کشور";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "سن";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "لطفا یک تاریخ معتبر وارد کنید.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "جنسیت";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "مرد";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "زن";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "سایر موارد";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "نوع دیابت";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "نوع 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "نوع 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "واحد اندازه گیری ترجیحی";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "داده های ناشناس برای تحقیقات به اشتراک بگذارید.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "شما بعد میتوانید این تنظیمات را تغییر دهید.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "بعدی";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "شروع کنید";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "اضافه کردن سطح قند خون";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "غلظت";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "تاریخ";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "زمان";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "اندازه گیری شده";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "قبل از صبحانه";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "بعد از صبحانه";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "قبل از ناهار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "بعد از ناهار";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "قبل از شام";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "بعد از شام";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "میان وعده";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "قبل از خواب";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "شب";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "قند خون ناشتا";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "بررسی مجدد";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "سایر موارد";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "لغو";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "اضافه کردن";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "لطفا مقداری معتبر وارد کنید.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "همه زمینه ها را پر کنید.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "پاک کردن";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 اندازه گیری حذف شد";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "برگرداندن";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "آخرین چک:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "روند طی ماه های گذشته:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "در محدوده و سالم";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "ماه";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "روز";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "هفته";
+
+/* No description supplied by the engineer */
+"preferences_about" = "درباره";
+
+/* No description supplied by the engineer */
+"preferences_version" = "نسخه";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "شرایط استفاده";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "نوع";
+
+/* No description supplied by the engineer */
+"weight" = "وزن";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "رده های اندازه گیری سفارشی";
+
+/* No description supplied by the engineer */
+"assistant" = "دستیار";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "اکنون به روز رسانی شود";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "خوب، فهمیدم";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ارسال بازخورد";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "اضافه کردن اندازه گیری";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "وزن خود را به روز رسانی کنید";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "ایجاد دسته";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "اینجا را مکررا بررسی کنید";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "اضافه کردن اندازه گیری";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "محدوده مورد نظر";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "محدوده سفارشی";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "حداقل مقدار";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "حداکثر مقدار";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "الان امتحان کنید";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "زبان";
+
+/* No description supplied by the engineer */
+"invitation_title" = "دعوت سایر افراد";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Glucosio نرم افزار منبع باز برای مدیریت دیابت و تحقیقات را امتحان کنید.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Glucosio را امتحان کنید";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "پشتیبان گیری";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "حریم خصوصی";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "با استفاده از Glucosio شما موافق هستید با";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "گوگل درایو";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "درباره Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "امتیاز دهی به Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "مجوزهای متن باز";
+
+/* No description supplied by the engineer */
+"about_donate" = "کمک مالی به Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "خب";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "هیپوگلیسمی";
+
+/* No description supplied by the engineer */
+"reading_low" = "پایین";
+
+/* No description supplied by the engineer */
+"reading_high" = "زیاد";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "قند خون";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "راه رفتن تفریحی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "پیاده روی سریع";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "آهسته دویدن";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "دویدن";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "شناکردن";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "رقصیدن";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "اسکیت رولر";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "دوچرخه سواری";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "گلف";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "سافتبال";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "بدمینتون";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "فوتبال";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "بسکتبال";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "والیبال";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "کریکت";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "فریزبی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "اسکی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "بوکس";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "تنیس";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "تنیس روی میز";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "هنرهای رزمی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "سنگنوردی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "کشتی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "پیاده روی";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "کار در حیاط";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "کربوهیدرات:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "پروتئین:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "قند:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "چربی:";
+
+/* No description supplied by the engineer */
+"about_credits" = "اعتبارات";
+
+/* No description supplied by the engineer */
+"about_contribute" = "مشارکت";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "مشارکت در ترجمه";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "کمک به توسعه";
+
+/* No description supplied by the engineer */
+"about_discussion" = "به گروه تبادل نظر ما ملحق شوید";
+
+/* No description supplied by the engineer */
+"about_maillist" = "در لیست ایمیلهای ما مشترک شوید";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "آرشیو نکات";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "وزن";

@@ -1,0 +1,564 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Instellingen";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Feedback verzenden";
+
+/* No description supplied by the engineer */
+"action_invite" = "Een vriend(in) uitnodigen";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Overzicht";
+
+/* No description supplied by the engineer */
+"tab_history" = "Geschiedenis";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tips";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Hallo.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Gebruiksvoorwaarden";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "We hebben even wat info nodig voordat u aan de slag kunt.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Land";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Leeftijd";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Voer een geldige leeftijd in.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Geslacht";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Man";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Vrouw";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Overig";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Type diabetes";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Type 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Type 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Voorkeurseenheid";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Anonieme gegevens delen voor onderzoek";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "U kunt dit later wijzigen in de instellingen.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "VOLGENDE";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "AAN DE SLAG";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Bloedsuikerspiegel toevoegen";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Concentratie";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Datum";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Tijd";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Gemeten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Voor het ontbijt";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Na het ontbijt";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Voor de lunch";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Na de lunch";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Voor het avondeten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Na het avondeten";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Tussendoortje";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Bedtijd";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Nacht";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Nuchtere glucose";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Opnieuw controleren";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Overig";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ANNULEREN";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "TOEVOEGEN";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Voer een geldige waarde in.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Vul alle velden in.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Verwijderen";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 uitlezing verwijderd";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ONGEDAAN MAKEN";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Laatste controle:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Trend in afgelopen maand:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "binnen bereik en gezond";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Maand";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Dag";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Week";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Over";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "Deze functies zijn experimenteel, werken mogelijk niet volledig en zijn bedoeld voor vroege tests door gebruikers. Onthoud dat u uw telefoon kunt schudden om feedback te verzenden.";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versie";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Gebruiksvoorwaarden";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Type";
+
+/* No description supplied by the engineer */
+"weight" = "Gewicht";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Categorie met eigen metingen";
+
+/* No description supplied by the engineer */
+"assistant" = "Assistent";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "NU BIJWERKEN";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, BEGREPEN";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "FEEDBACK INDIENEN";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "UITLEZING TOEVOEGEN";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Uw gewicht bijwerken";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Zorg ervoor dat u uw gewicht bijwerkt, zodat Glucosio de meest accurate gegevens bevat.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Uw onderzoeks-opt-in bijwerken";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "U kunt altijd opteren voor het delen van diabetesonderzoeksgegevens, maar onthoud dat alle gedeelde gegevens volledig anoniem zijn. We delen alleen trends in demografie en glucosegehalten.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Categorieën maken";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio bevat standaardcategorieën voor glucose-invoer, maar in de instellingen kunt u eigen categorieën maken die aan uw unieke behoeften voldoen.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Kijk hier regelmatig";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Glucosio-assistent levert regelmatig tips en wordt continu verbeterd, dus kijk altijd hier voor nuttige acties die u kunt nemen om uw Glucosio-ervaring te verbeteren en voor andere nuttige tips.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Als u technische problemen tegenkomt of feedback over Glucosio hebt, zien we graag dat u deze indient in het instellingenmenu om Glucosio te helpen verbeteren.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Een uitlezing toevoegen";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Zorg ervoor dat u regelmatig uw glucose-uitlezingen toevoegt, zodat we kunnen helpen uw glucosegehalten in de loop der tijd bij te houden.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Uw gegevens exporteren";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Deel uw gegevens met uw arts of plaats een back-up ervan op Google Drive via de exporteerfunctie.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Voorkeursbereik";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Aangepast bereik";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Min. waarde";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Max. waarde";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "NU PROBEREN";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Taal";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Anderen uitnodigen";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Probeer Glucosio, een opensource-app voor diabetesbeheer en -onderzoek.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Glucosio proberen";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Back-up maken";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Privacy";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Door Glucosio te gebruiken, gaat u akkoord met de";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Over Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Glucosio beoordelen";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Opensourcelicenties";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "FreeStyle Libre®-ondersteuning inschakelen";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "EXPERIMENTEEL: FreeStyle Libre®-ondersteuning inschakelen";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "EXPERIMENTEEL: leesbaarheid voor gebruikers met dyslexie verbeteren";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "Leesbaarheid voor gebruikers met dyslexie verbeteren";
+
+/* No description supplied by the engineer */
+"about_donate" = "Doneren aan Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hypoglykemie";
+
+/* No description supplied by the engineer */
+"reading_low" = "Laag";
+
+/* No description supplied by the engineer */
+"reading_high" = "Hoog";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hyperglykemie";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Ontspannen wandelen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Snelwandelen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Joggen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Hardlopen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Zwemmen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Dansen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Rolschaatsen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Fietsen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Golf";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Softbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badminton";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Voetbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Basketbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Volleybal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Cricket";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Frisbeeën";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Skiën";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Boksen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Tennis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Tafeltennis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Vechtsport";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Rotsklimmen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Worstelen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Wandelen";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Tuinieren";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Koolhydraten:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Proteïnen:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Suikers:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Vet:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Credits";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Meewerken";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Meewerken aan vertaling";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Meewerken aan ontwikkeling";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Deelnemen aan onze discussiegemeenschap";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Inschrijven voor onze mailinglijst";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "GEARCHIVEERDE TIPS";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Gegevens exporteren";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "Van:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Tot:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Vandaag kiezen";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EXPORTEREN";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Gegevens exporteren";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Alles exporteren";
+
+/* No description supplied by the engineer */
+"share_using" = "Delen via";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio-gegevens";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Exporteren";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "uitlezingen";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio heeft een opslagmachtiging nodig om een schermafbeelding op te slaan";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Schermafbeelding opgeslagen naar galerij";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Fout bij opslaan van schermafbeelding naar galerij";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Exportbereik";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Geen uitlezingen te exporteren.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Nieuwe uitlezing toegevoegd";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Gewicht";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Ketonen";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Minimale druk";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Maximale druk";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Totale cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL-cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL-cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Glucose-uitlezing toevoegen";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Lichaamsgewicht toevoegen";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Cholesterolspiegel toevoegen";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "HB1AC toevoegen";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Ketonen toevoegen";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Bloeddruk toevoegen";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Lichaamsgewicht";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Ketonen";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Bloeddruk";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Cholesterolspiegel";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HB1AC-uitlezing";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Bloedsuikerspiegel";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "U hebt al een vermelding voor deze tijd. Verwijder deze voordat u een correctie toevoegt.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Houd uw telefoon voor de sensor en beweeg niet totdat deze trilt.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC is uitgeschakeld.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "Fout bij openen van NFC-verbinding!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Onvoldoende gegevens om HBA1C te berekenen";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

@@ -1,0 +1,555 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "設定";
+
+/* No description supplied by the engineer */
+"action_feedback" = "フィードバックを送信";
+
+/* No description supplied by the engineer */
+"action_invite" = "友だちを招待する";
+
+/* No description supplied by the engineer */
+"tab_overview" = "概要";
+
+/* No description supplied by the engineer */
+"tab_history" = "履歴";
+
+/* No description supplied by the engineer */
+"tab_tips" = "ヒント";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "こんにちは。";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "こんにちは。";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "利用規約";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "始める前に、いくつか簡単な設定を行います。";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "国";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "年齢";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "有効な年齢を入力してください。";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "性別";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "男性";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "女性";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "その他";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "糖尿病の型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "1 型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "2 型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "使用する単位";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "研究の匿名データを共有します。";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "後でこれらの設定を変更できます。";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "次へ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "始める";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "血糖値を追加";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "濃度";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "日付";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "時刻";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "測定";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "朝食前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "朝食後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "昼食前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "昼食後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "夕食前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "夕食後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "スナック";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "就寝時";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "夜";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "空腹時血糖";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "再確認";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "その他";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "キャンセル";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "追加";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "有効な値を入力してください。";
+
+/* No description supplied by the engineer */
+"dialog_error" = "すべてのフィールドを記入してください。";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "削除";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 つ測定値を削除しました";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "元に戻す";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "最後の確認:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "過去 1 ヶ月間の推移:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "範囲と健康度で";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "月";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "日";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "週";
+
+/* No description supplied by the engineer */
+"preferences_about" = "アプリについて";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "これらの機能は実験的で完全には動作しないことがあり、ユーザーによる早期テスト用です。お使いの携帯電話を振って、フィードバックを送信することができることを覚えておいてください。";
+
+/* No description supplied by the engineer */
+"preferences_version" = "バージョン";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "利用規約";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "型";
+
+/* No description supplied by the engineer */
+"weight" = "体重";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "カスタム測定分類";
+
+/* No description supplied by the engineer */
+"assistant" = "アシスタント";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "今すぐ更新";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK、取得する";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "フィードバックを送信";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "測定値を追加";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "あなたの体重を更新";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Glucosio の情報が最も正確になるために、あなたの体重を更新するようにしてください。";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "研究の参加を更新";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "あなた常に糖尿病研究の共有に参加または解除することができますが、すべての共有されるデータは完全に匿名であることを覚えておいてください。人口統計や血糖値の動向を共有するだけです。";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "分類を作成";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio は血糖値入力のデフォルトの分類が付属していますが、設定で、お客様固有のニーズに合わせてカスタム分類を作成することができます。";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "多くの場合はこちら";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Glucosio の体験を改善するために行うことができる便利なアクションや、その他の有用なヒントを常にここで確認するため、Glucosio アシスタントは、正規のヒントを提供して改善を維持します。";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "技術的な問題を見つけたり、Glucosio についてのフィードバックをしたい場合、 Glucosio を改善するため、設定メニューでそれを送信することをお勧めします。";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "測定値を追加";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "私たちが時間をかけてあなたの血糖値を追跡できるように、血糖値の測定値を定期的に追加するようにしてください。";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "データをエクスポート";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "エクスポート機能を使用して、お医者さんとデータを共有したり、Google ドライブにデータをバックアップします。";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "使用する範囲";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "カスタムの範囲";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "最小値";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "最大値";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "今すぐ試す";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "言語";
+
+/* No description supplied by the engineer */
+"invitation_title" = "他の人を招待";
+
+/* No description supplied by the engineer */
+"invitation_message" = "糖尿病の管理と研究のためのオープンソース アプリ Glucosio を試してください。";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Glucosio を試してください";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "バックアップ";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "プライバシー";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Glucosio の使用に関して、以下に同意します";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google ドライブ";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Glucosio について";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Glucosio を評価";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "オープンソース ライセンス";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "FreeStyle Libre® サポートを有効にする";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "実験的: FreeStyle Libre® サポートを有効にする";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "実験的: 難読症のユーザー向けに可読性を向上します";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "難読症のユーザー向けに可読性を向上します";
+
+/* No description supplied by the engineer */
+"about_donate" = "Glucosio に寄付";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "低血糖";
+
+/* No description supplied by the engineer */
+"reading_low" = "低い";
+
+/* No description supplied by the engineer */
+"reading_high" = "高い";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "高血糖";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "のんびり歩く";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "早歩き";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "ジョギング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "ランニング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "水泳";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "ダンス";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "ローラースケート";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "サイクリング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "ゴルフ";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "ソフトボール";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "バドミントン";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "サッカー";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "バスケットボール";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "バレーボール";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "クリケット";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "フリスビー";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "スキー";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "ボクシング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "テニス";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "卓球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "格闘技";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "ロッククライミング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "レスリング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "ハイキング";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "庭仕事";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "炭水化物:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "タンパク質:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "糖:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "脂肪:";
+
+/* No description supplied by the engineer */
+"about_credits" = "クレジット";
+
+/* No description supplied by the engineer */
+"about_contribute" = "貢献";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "翻訳に貢献";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "開発に貢献";
+
+/* No description supplied by the engineer */
+"about_discussion" = "私たちのコミュニティに参加";
+
+/* No description supplied by the engineer */
+"about_maillist" = "私たちのメーリングリストを購読";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "アーカイブされたヒント";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "データをエクスポート";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "開始:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "終了:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "今日を選択";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "エクスポート";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "データをエクスポート";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "すべてエクスポート";
+
+/* No description supplied by the engineer */
+"share_using" = "次を使用して共有";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio データ";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "エクスポート中";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "測定値";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio は、スクリーン ショットを保存するストレージのアクセス許可が必要です";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "スクリーン ショットをギャラリーに保存しました";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "スクリーン ショットをギャラリーに保存中にエラー";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "エクスポート範囲";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "エクスポートする測定値はありません。";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "新しい測定値が追加されました";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "体重";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "ケトン";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "最低血圧";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "最高血圧";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "総コレステロール";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL コレステロール";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL コレステロール";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "血糖の測定値を追加";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "体重を追加";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "コレステ ロール値を追加";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "HB1AC を追加";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "ケトンを追加";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "血圧を追加";
+
+/* No description supplied by the engineer */
+"fab_weight" = "体重";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "ケトン";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "血圧";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "コレステロール値";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HB1AC 測定値";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "血糖値";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "既にこの時間の登録があります。修正を追加する前に削除してください。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "センサーの上に携帯電話を置いて、振動するまで動かさないでください。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC は無効です。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "NFC 接続を開くときにエラー!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "HB1AC を計算するために十分なデータがありませｎ";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HB1AC:";

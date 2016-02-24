@@ -1,0 +1,234 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Mpangilio";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Tuma mrejesho";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Maelezo ya jumla";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historia";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Vidokezi";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Maneno yaliyotumika.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Tunahitaji mambo machache ya haraka kabla ya wewe kuanza.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Nchi";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Umri";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Tafadhali andika umri sahihi.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Jinsia";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Mwanamume";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Mwanamke";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Nyingine";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Aina ya ugonjwa wa kisukari";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Aina ya kwanza";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Aina ya pili";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Kipimo kilichopendekezwa";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Tushirikishe data bila jina kwa ajili ya utafiti.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Unaweza kubadilisha haya kwenye mpangilio hapo baadaye.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "IFUATAYO";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "PATA KUANZA";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Andika kiwango cha Glukosi kilichopo kwenye damu";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Ukolezi";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Tarehe";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Muda";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Ulipima";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Kabla ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Baada ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Kabla ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Baada ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Kabla ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Baada ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Usiku";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Nyingine";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "BATILISHA";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ONGEZA";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Tafadhali ingiza thamani halali.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Tafadhali jaza maeneo yote.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Futa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "Usomi mmoja umefutwa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "TENDUA";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Kupima mara ya mwisho:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Mwenendo katika mwezi uliyopita:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "ipo kwenye kiwango sahihi na afya njema";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mwezi";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Siku";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Wiki";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Kuhusu";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Toleo";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Masharti ya matumizi";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Aina";
+
+/* No description supplied by the engineer */
+"weight" = "Uzito";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Kundi la kipimo maalum";
+
+/* No description supplied by the engineer */
+"assistant" = "Msaidizi";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "HIFADHI SASA";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "SAWA, NIMEELEWA";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "WASILISHA MREJESHO";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ONGEZA KIPIMO";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Hifadhi uzito wapi";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Hakikisha unahifadhi uzito wako ili Glucosio iwe na taarifa sahihi zaidi.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Hifadhi utafiti wako -muhimu";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Unaweza kujitoa au kujiunga na kuhadithia kuhusu utafiti wa ugonjwa wa kisukari ila kumbuka data zote unazohadithia hazitajulikana zimetoka kwa nani. Tutawaonyesha au kuwahadithia kuhusu demografia na mwenendo wa kiwango cha glukosi.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Tengeneza makundi";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio yaja na makundi yaliyoundwa tayari kwa ajili ya kuingiza kiwango cha glukosi ila unaweza pia kutengeneza makundi maalum kwneye mpangilio ili kuendana na upekee wa mahitaji yako.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Angalia hapa mara nyingi";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Wasaidizi wa Glucosio hutoa vidokezo vya mara kwa mara ambavyo vitaendelea kuboreshwa, kwa hivyo angalia hapa mara kwa mara ilikuchua nini cha kufanya ili kuboresha uzoefu wako wa Glucosio na kwa kupata vidokezo vingine muhimu.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Kama una tatizo lolote la kiufundi au mrejesho wowote kuhusu Glucosio tunakutia moyo uyawasilishe kwenye menyu ya mpangilio ili tuweze kuboresha Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Ongeza kipimo";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Hakikisha kwamba una ongeza idadi ya kipimo cha glukosi kilichopo mwilini kila wakati ili tukusaidie kufautilia viwango vyako vya glukosi muda kwa muda.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Kiwango kilichopendekezwa";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Kiwango maalum";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Thamani ya chini";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Thamani ya juu";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "JARIBU SASA";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Uzito";

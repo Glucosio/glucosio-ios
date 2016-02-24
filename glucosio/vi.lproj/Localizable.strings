@@ -1,0 +1,111 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Cài đặt";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Gửi phản hồi";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Tổng quan";
+
+/* No description supplied by the engineer */
+"tab_history" = "Lịch sử";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Mẹo";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Xin chào.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Xin chào.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Điều khoản sử dụng.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Quốc gia";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Tuổi";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Vui lòng nhập tuổi hợp lệ.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Giới tính";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Nam";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Nữ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Khác";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Chia sẻ dữ liệu ẩn danh cho nghiên cứu.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Bạn có thể thay đổi này trong cài đặt sau đó.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "TIẾP THEO";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "BẮT ĐẦU";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Thêm mức độ Glucose trong máu";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Ngày tháng";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Thời gian";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Đo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Trước khi ăn sáng";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Sau khi ăn sáng";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Trước khi ăn trưa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Sau khi ăn trưa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Trước khi ăn tối";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Sau khi ăn tối";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Buổi tối";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Khác";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "HỦY BỎ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "THÊM";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Vui lòng nhập một giá trị hợp lệ.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Xin vui lòng điền vào tất cả các mục.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Xoá";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "HOÀN TÁC";

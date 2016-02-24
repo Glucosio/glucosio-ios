@@ -1,0 +1,234 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Nizamlamalar";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Əks əlaqə";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Ön baxış";
+
+/* No description supplied by the engineer */
+"tab_history" = "Tarix";
+
+/* No description supplied by the engineer */
+"tab_tips" = "İp ucları";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Salam.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Salam.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "İstifadə şərtləri.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Başlamamışdan əvvəl bir neçə şey etməliyik.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Ölkə";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Yaş";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Lütfən doğru yaşınızı daxil edin.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Cinsiyyət";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Kişi";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Qadın";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Digər";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Diyabet tipi";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tip 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tip 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Seçilən vahid";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Araştırma üçün anonim məlumat göndər.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Bu seçimləri sonra dəyişə bilərsiniz.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "Növbəti";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "BAŞLA";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Qan qlikoza dərəcəsi əlavə et";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Qatılıq";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Tarix";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Vaxt";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Ölçülən";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Səhər, yeməkdən əvvəl";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Səhər, yeməkdən sonra";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Nahardan əvvəl";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Nahardan sonra";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Şam yeməyindən əvvəl";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Şam yeməyindən sonra";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Gecə";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Digər";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "LƏĞV ET";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ƏLAVƏ ET";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Etibarlı dəyər daxil edin.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Boş yerləri doldurun.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Sil";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 oxunma silindi";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "GERİ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Son yoxlama:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Son bir aydakı tendesiya:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "intervalında və sağlam";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Ay";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Gün";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Həftə";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Haqqında";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versiya";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "İstifadə şərtləri";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tip";
+
+/* No description supplied by the engineer */
+"weight" = "Çəki";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Şəxsi ölçü kateqoriyası";
+
+/* No description supplied by the engineer */
+"assistant" = "Köməkçi";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "İndi yenilə";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OLDU, ANLADIM";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ƏKS ƏLAQƏ GÖNDƏR";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "OXUMA ƏLAVƏ ET";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Çəkinizi yeniləyin";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Ən dəqiq informasiyaya malik olmaq üçün Glucosio-u yeniləməyi unutmayın.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Araşdırma qəbulunu yeniləyin";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Siz həmişə  diabetin birgə tədqiqatına qoşula və çıxa bilərsiniz, amma xatırladaq ki, bütün məlumatlar tamamilə anonimdir. Yalnız demoqrafiklər və qanda qlükozanın səviyyələrində tendensiyalar paylaşılır.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Kateqoriya yarat";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio, standart olaraq qlükoza kateqoriyalara bölünmüş halda gəlir, amma siz nizamlamalarda şəxsi kateqoriyalarınızı yarada bilərsiniz.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Buranı tez-tez yoxla";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Glucosio köməkçisi müntəzəm məsləhətlər verir və yaxşılaşmağa davam edəcək, buna görə hər zaman Glucosio təcrübənizi yaxşılaşdıracaq və digər faydalı şeylər üçün buranı yoxlayın.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Əgər siz hər hansı texniki problem aşkar etsəniz və ya Glucosio ilə əks əlaqə yaratmaq istəsəniz, Glucosio-u yaxşılaşdırmağa kömək etmək üçün nizamlamalardan bizə təqdim etməyinizi xahiş edirik.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Oxuma əlavə et";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Qlükozanın öz ifadələrini daim əlavə etdiyinizə əmin olun. Buna görə sizə uzun vaxt ərzində qlükozanın səviyyələrini izləməyə kömək edə bilərik.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Seçilən aralıq";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Şəxsi aralıq";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Minimum dəyər";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Maksimum dəyər";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "İNDİ SINA";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Çəki";

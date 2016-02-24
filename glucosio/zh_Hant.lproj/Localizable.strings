@@ -1,0 +1,564 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "設定";
+
+/* No description supplied by the engineer */
+"action_feedback" = "傳送意見回饋";
+
+/* No description supplied by the engineer */
+"action_invite" = "邀請朋友";
+
+/* No description supplied by the engineer */
+"tab_overview" = "概觀";
+
+/* No description supplied by the engineer */
+"tab_history" = "紀錄";
+
+/* No description supplied by the engineer */
+"tab_tips" = "秘訣";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "您好！";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "您好！";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "使用條款";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "在開始使用前要先向您詢問幾個小問題。";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "國家";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "年齡";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "請輸入有效年齡。";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "性别";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "男";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "女";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "其他";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "糖尿病類型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "第一型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "第二型";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "偏好單位";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "匿名地分享資料提供研究。";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "您以後可以更改這些設定。";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "下一步";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "開始使用";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "新增血糖值";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "濃度";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "日期";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "時間";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "測量於";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "早餐前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "早餐後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "午餐前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "午餐後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "晚餐前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "晚餐後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "吃完點心後";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "睡前";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "夜晚";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "空腹血糖";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "重新檢查";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "其他";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "取消";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "新增";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "請輸入有效的值。";
+
+/* No description supplied by the engineer */
+"dialog_error" = "請輸入所有欄位。";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "刪除";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "已刪除一筆紀錄";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "還原";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "上次檢查：";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "上個月的趨勢:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "控制數值並保持健康";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "月";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "日";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "週";
+
+/* No description supplied by the engineer */
+"preferences_about" = "關於";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "這些功能還在實驗中，有可能無法正常使用，僅供早期使用者協助測試。別忘記您可以搖晃手機傳送意見回饋給我們。";
+
+/* No description supplied by the engineer */
+"preferences_version" = "版本";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "使用條款";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "類型";
+
+/* No description supplied by the engineer */
+"weight" = "體重";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "自訂測量類別";
+
+/* No description supplied by the engineer */
+"assistant" = "小幫手";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "立刻更新";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "好，收到！";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "送出意見回饋";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "新增測量讀數";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "更新您的體重";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "記得要常在此更新您的體重，這樣 Glucosio 才能有最準確的資訊。";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "參與研究意願";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "您隨時可以選擇參與或退出糖尿病研究的資料分享，所有分享出的資料都是完全匿名的，我們只會分享基本的人口統計資料與血糖值趨勢。";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "建立分類";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio 有一些血糖值的預設分類，您也還是可以在設定中自訂分類來滿足您的需求。";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "常看看這裡";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Glucosio 血糖小幫手提供控制血糖的小祕訣，並會持續改善。請常回來看看有沒有什麼能改善您的 Glucosio 使用體驗的新鮮事，或是其他有用的小祕訣。";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "若您發現任何技術問題，或是對 Glucosio 有任何意見想說，我們相當歡迎您在設定選單告訴我們，以幫助我們改善 Glucosio。";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "新增測量值";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "務必定期紀錄血糖測量值，這樣才能幫助您追蹤血糖值。";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "匯出您的資料";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "使用匯出功能將資料分享給您的醫生，或備份至 Google 雲端硬碟。";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "建議血糖範圍標準";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "美國糖尿病協會（ADA）";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "美國臨床內分泌醫學會（AACE）";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "英國國家健康與照顧卓越研究院（NICE）";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "自訂範圍";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "最小值";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "最大值";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "立刻試試";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "語言";
+
+/* No description supplied by the engineer */
+"invitation_title" = "邀請其他人";
+
+/* No description supplied by the engineer */
+"invitation_message" = "試試 Glucosio，一套開放原始碼的糖尿病管理與研究程式。";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "試試 Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "備份";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "隱私權";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "使用 Glucosio，代表您同意";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google 雲端硬碟";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "關於 Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "幫 Glucosio 打分數";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "開放原始碼授權";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "開啟 FreeStyle Libre® 支援";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "實驗中: 開啟 FreeStyle Libre® 支援";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "實驗中: 為有讀寫困難的使用者增加可讀性";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "為有讀寫困難的使用者增加可讀性";
+
+/* No description supplied by the engineer */
+"about_donate" = "捐款給 Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "確定";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "低血糖";
+
+/* No description supplied by the engineer */
+"reading_low" = "低";
+
+/* No description supplied by the engineer */
+"reading_high" = "高";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "高血糖";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "悠閒地散步";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "快走";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "慢跑";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "跑步";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "游泳";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "跳舞";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "溜冰";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "騎自行車";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "打高爾夫";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "壘球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "羽毛球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "足球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "籃球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "排球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "板球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "飛盤";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "滑雪";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "拳擊";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "網球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "桌球";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "武術";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "攀岩";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "摔跤";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "登山";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "園藝工作";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "碳水化合物:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "蛋白質:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "糖分:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "脂肪:";
+
+/* No description supplied by the engineer */
+"about_credits" = "誌謝";
+
+/* No description supplied by the engineer */
+"about_contribute" = "貢獻";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "協助翻譯";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "協助開發";
+
+/* No description supplied by the engineer */
+"about_discussion" = "加入社群討論";
+
+/* No description supplied by the engineer */
+"about_maillist" = "訂閱我們的郵件群組";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "已封存的提示";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "匯出資料";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "自:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "至:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "選擇今日";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "匯出";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "匯出資料";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "匯出全部";
+
+/* No description supplied by the engineer */
+"share_using" = "以下列程式分享";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio 資料";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "匯出中";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "讀數";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio 需要儲存空間的存取權限才能儲存擷圖";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "已將畫面擷圖儲存至圖片庫";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "將畫面擷圖儲存至圖片庫時發生錯誤";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "匯出範圍";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "沒有可匯出的的讀數。";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "已新增讀數";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "體重";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "酮類";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "舒張壓";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "收縮壓";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "總膽固醇";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "低密度膽固醇";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "高密度膽固醇";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "糖化血色素";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "新增血糖讀數";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "新增體重讀數";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "新增膽固醇讀數";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "新增糖化血色素讀數";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "新增酮類讀數";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "新增血壓讀數";
+
+/* No description supplied by the engineer */
+"fab_weight" = "體重";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "酮類";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "血壓";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "膽固醇水準";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "糖化血色素（HbA1c）讀數";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "血糖水準";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "您在這個時間已經有一筆紀錄，請先移除該紀錄後再新增修正紀錄。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "請將您的手機放到感應器上，在震動前不要移動手機。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "已停用 NFC。";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "開啟 NFC 連線時發生錯誤！";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "沒有足夠的資料來計算糖化血色素";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HB1AC:";

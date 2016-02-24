@@ -1,0 +1,126 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "அமைவுகள்";
+
+/* No description supplied by the engineer */
+"action_feedback" = "பின்னூட்டங்களை அனுப்பு";
+
+/* No description supplied by the engineer */
+"tab_overview" = "மீள்பார்வை";
+
+/* No description supplied by the engineer */
+"tab_history" = "வரலாறு";
+
+/* No description supplied by the engineer */
+"tab_tips" = "குறிப்புகள்";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "வணக்கம்.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "வணக்கம்.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "பயன்பாட்டு முறைமை.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "நீங்கள் துவங்குவதற்கு முன் விரைவாக ஒருசில தகவல் மட்டும் தேவை.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "நாடு";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "வயது";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "சரியான வயதை உள்ளிடவும்.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "பாலினம்";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "ஆண்";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "பெண்";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "மற்ற";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "டயபிடிஸ் வகை";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "வகை 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "வகை 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "விருப்பமான அலகு";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "அடுத்து";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "தேதி";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "நேரம்";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "காலை உணவிற்க்கு முன்";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "காலை உணவிற்க்கு பின்";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "மதிய உணவிற்க்கு முன்";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "மதிய உணவிற்க்கு பின்";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "இரவு";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "மற்ற";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "இரத்து செய்";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "சேர்";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "அழி";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "மாதம்";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "நாள்";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "வாரம்";
+
+/* No description supplied by the engineer */
+"preferences_about" = "செயலி பற்றி";
+
+/* No description supplied by the engineer */
+"preferences_version" = "பதிப்பு";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "பயன்பாட்டு விதிமுறைகள்";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "வகை";
+
+/* No description supplied by the engineer */
+"weight" = "எடை";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "விருப்ப அளவீடு வகை";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "எடை";

@@ -1,0 +1,198 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "ตั้งค่า";
+
+/* No description supplied by the engineer */
+"action_feedback" = "ส่งคำติชม";
+
+/* No description supplied by the engineer */
+"tab_overview" = "ภาพรวม";
+
+/* No description supplied by the engineer */
+"tab_history" = "ประวัติ";
+
+/* No description supplied by the engineer */
+"tab_tips" = "เคล็ดลับ";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "สวัสดี";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "สวัสดี";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "เงื่อนไขการใช้";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "ประเทศ";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "อายุ";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "กรุณาระบุอายุที่ถูกต้อง";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "เพศ";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "ชาย";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "หญิง";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "อื่น ๆ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "ชนิดของโรคเบาหวาน";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "ชนิดที่ 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "ชนิดที่ 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "หน่วยที่ต้องการ";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "แบ่งปันข้อมูลนิรนามเพิ่อการวิจัย";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "คุณสามารถเปลี่ยนการตั้งค่าเหล่านี้ในภายหลัง";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "ถัดไป";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "เริ่มต้นใช้งาน";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "เพิ่มค่าระดับน้ำตาลในเลือด";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "ความเข้มข้น";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "วันที่";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "เวลา";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "วัดเมื่อ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "ก่อนอาหารเช้า";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "หลังอาหารเช้า";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "ก่อนอาหารกลางวัน";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "หลังอาหารกลางวัน";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "ก่อนอาหารเย็น";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "หลังอาหารเย็น";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "กลางคืน";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "อื่น ๆ";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ยกเลิก";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "เพิ่ม";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "กรุณาใส่ค่าถูกต้อง";
+
+/* No description supplied by the engineer */
+"dialog_error" = "กรุณากรอกข้อมูลให้ครบทุกรายการ";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "ลบ";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "ลบแล้ว 1 รายการ";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "เลิกทำ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "ตรวจสอบครั้งล่าสุด:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "แนวโน้มช่วงเดือนที่ผ่านมา:";
+
+/* No description supplied by the engineer */
+"preferences_about" = "เกี่ยวกับ";
+
+/* No description supplied by the engineer */
+"preferences_version" = "เวอร์ชั่น";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "เงื่อนไขการใช้งาน";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "ชนิด";
+
+/* No description supplied by the engineer */
+"weight" = "น้ำหนัก";
+
+/* No description supplied by the engineer */
+"assistant" = "ผู้ช่วย";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "อัพเดตเดี๋ยวนี้";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ได้ ฉันเข้าใจ";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ส่งคำติชม";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "ปรับปรุงน้ำหนักของคุณ";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "ในการที่จะช่วยให้เราปรับปรุง Glucosio หากคุณพบปัญหาทางเทคนิคหรือมีข้อเสนอแนะใด ๆ คุณสามารถส่งข้อมูลให้เราได้ในเมนูการตั้งค่า";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "เพิ่มข้อมูล";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "ตรวจสอบให้แน่ใจว่าได้บันทึกระดับน้ำตาลกลูโคสเป็นประจำ เพื่อที่เราสามารถช่วยคุณติดตามระดับน้ำตาลกลูโคสตลอดเวลา";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "ช่วงที่ต้องการ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "ช่วงที่กำหนดเอง";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "ค่าต่ำสุด";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "ค่าสูงสุด";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "น้ำหนัก";

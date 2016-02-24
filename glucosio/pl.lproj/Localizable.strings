@@ -1,0 +1,144 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Ustawienia";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Wyślij sugestie";
+
+/* No description supplied by the engineer */
+"action_invite" = "Zaproś znajomego";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Wprowadzenie";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historia";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Wskazówki";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Witamy.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Witamy.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Zasady korzystania z usługi";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Zanim zaczniemy musimy dowiedzieć sie kilku rzeczy.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Państwo";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Wiek";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Wprowadź prawidłowy wiek.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Płeć";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Mężczyzna";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Kobieta";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Inne";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Typ cukrzycy";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Typ 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Typ 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Preferowana jednostka";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Udostępnij anonimowo dane w celu badań.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Możesz zmienić te ustawienia później.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "NASTĘPNY";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ZACZNIJ";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Dodaj poziom glukozy we krwi";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Stężenie";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Data";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Czas";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Wynik pomiaru";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Przed śniadaniem";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Po śniadaniu";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Przed obiadem";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Po obiedzie";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Przed kolacją";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Po kolacji";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Przekąska";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Przed snem";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Noc";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Glukozy na czczo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Sprawdź ponownie";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Inne";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "Anuluj";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "Dodaj";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Podaj prawidłową wartość.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Proszę wypełnić wszystkie pola.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Usuń";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 czytanie usunięte";

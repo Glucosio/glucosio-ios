@@ -1,0 +1,525 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Setări";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Trimite feedback";
+
+/* No description supplied by the engineer */
+"action_invite" = "Invită un prieten";
+
+/* No description supplied by the engineer */
+"tab_overview" = "General";
+
+/* No description supplied by the engineer */
+"tab_history" = "Istoric";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Ponturi";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Salut.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Salut.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Termeni de folosire";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Avem nevoie de doar câteva lucruri rapide înainte de a începe.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Țară";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Vârsta";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Te rog introdu o vârsta validă.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Sex";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Masculin";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Feminin";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Altul";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Tipul diabetului";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tip 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tip 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Unitatea preferată";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Partajează date în mod anonim pentru cercetare.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Poți schimba aceste setări mai târziu.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "URMĂTORUL";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "CUM SĂ ÎNCEPI";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Adaugă nivelul glucozei în sânge";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Concentrație";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Dată";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Ora";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Măsurat";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Înainte de micul dejun";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "După micul dejun";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Înainte de prânz";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "După prânz";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Înainte de cină";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "După cină";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Gustare";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Ora de culcare";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Noapte";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Nivel de glucoză pe nemâncate";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Reverifică";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Altul";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "RENUNȚĂ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ADAUGĂ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Te rog introdu o valoare validă.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Te rog completează toate câmpurile.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Șterge";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "O înregistrare ștearsă";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ANULEAZĂ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Ultima verificare:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Tendința pe ultima lună:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "în medie și sănătos";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Lună";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Zi";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Săptămâna";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Despre";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versiunea";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Termeni de folosire";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tip";
+
+/* No description supplied by the engineer */
+"weight" = "Greutate";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Categorie de măsurare proprie";
+
+/* No description supplied by the engineer */
+"assistant" = "Asistent";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "Actualizaţi acum";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, AM ÎNȚELES";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "TRIMITE FEEDBACK";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ADAUGĂ ÎNREGISTRARE";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Actualizați greutatea dumneavoastră";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Asiguraţi-vă că actualizați greutatea dumneavoastră, astfel încât Glucosio să aibă informaţii cât mai precise.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Actualizați opțiunea pentru cercetare";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Puteţi întotdeauna opta pentru a ajuta studiul de cercetare a diabetului, dar țineti minte că toate datele sunt anonime. Împărtăşim numai date demografice şi tendinţele nivelului de glucoză.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Crează categorii";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio vine cu categorii implicite pentru glucoză, dar puteţi crea categorii particularizate în setări pentru a se potrivi nevoilor dumneavoastră unice.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Reveniți des";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Asistentul Glucosio oferă sfaturi regulate şi se va îmbunătăți, astfel încât întotdeauna reveniți aici pentru acţiuni utile pe care puteţi lua pentru a îmbunătăţi experienţa dumneavoastră Glucosio şi pentru alte sfaturi utile.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Dacă găsiţi orice probleme tehnice sau aveți feedback despre Glucosio vă recomandăm să-l trimiteți prin meniul de setări, pentru a ne ajuta să îmbunătăţim Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Adauga o înregistrare";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Asiguraţi-vă că adăugați în mod regulat înregistrările dumneavoastră de glucoză, astfel încât să vă putem ajuta să urmăriți nivelurile glucozei în timp.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Exportă datele tale";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Împărtășește datele tale cu doctorul, sau salvează datele pe Google Drive folosind funcția de exportare.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Gamă preferată";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Gamă proprie";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Valoare minimă";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Valoare maximă";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "ÎNCEARCĂ ACUM";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Limba";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Invită alte persoane";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Încearcă Glucosio, o aplicație cu sursă deschisă pentru gestionarea diabetului și cercetare.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Încearcă Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Copie de siguranță";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Confidențialitate";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Folosind Glucosio, ești de acord cu";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Despre Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Apreciază Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Licențe de sursă deschisă";
+
+/* No description supplied by the engineer */
+"about_donate" = "Donează la Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "Ok";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hipoglicemie";
+
+/* No description supplied by the engineer */
+"reading_low" = "Scăzută";
+
+/* No description supplied by the engineer */
+"reading_high" = "Ridicată";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hiperglicemie";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Mers lejer";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Mers rapid";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Jogging";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Alergare";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Înot";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Dans";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Mers cu rolele";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Ciclism";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Golf";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Softball";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badminton";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Fotbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Baschet";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Volei";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Crichet";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Frisbee";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Ski";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Box";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Tenis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Tenis de masă";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Arte marțiale";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Alpinism";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Lupte";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Drumeții";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Muncă în curte";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Carbohidrați:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Proteine:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Zaharuri:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Grăsimi:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Contribuitori";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Contribuie";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Contribuie la traducere";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Contribuie la dezvoltare";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Alătură-te comunității noastre de discuții";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Abonează-te la lista noastră de discuții";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "SFATURI ARHIVATE";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Export de date";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "De la:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "La:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Alege azi";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EXPORT";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Exportă date";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Exportă tot";
+
+/* No description supplied by the engineer */
+"share_using" = "Partajează folosind";
+
+/* No description supplied by the engineer */
+"share_subject" = "Date Glucosio";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Se exportă";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "citirile";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio are nevoie de permisiuni de stocare pentru a salva captura de ecran";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Captură salvată în galerie";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Eroare la salvarea capturii în galerie";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Exportă în intervalul";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Nu sunt citiri de exportat.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Noua citire a fost adăugată";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Greutate";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Ketone";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Tensiune minimă";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Tensiune maximă";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Total colesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "Colesterol LDL";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "Colesterol HDL";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Adaugă citire a glucozei";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Adaugă greutatea corporală";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Adaugă nivelul de colesterol";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Adaugă HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Adaugă ketone";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Adaugă tensiune arterială";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Greutate corporală";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Ketone";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Tensiune arterială";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Nivelul de colesterol";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "Citiri HB1AC";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Nivel de glucoză în sânge";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Ai deja o înregistrare pentru această perioadă. Te rugăm să o elimini înainte de a adăuga o corecție.";

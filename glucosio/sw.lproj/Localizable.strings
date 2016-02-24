@@ -1,0 +1,120 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Mazingira";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Taswira";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historia";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Vidokezi";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Tunahitaji tu mambo machache ya haraka kabla ya wewe kuanza.";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Umri";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Tafadhali andika umri halali.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Jinsia";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Mwanamume";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Mwanamke";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Nyengine";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Aina ya ugonjwa wa kisukari";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Aina ya kwanza";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Aina ya pili";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Kitengo unayopendelea";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Kushiriki data bila majina kwa ajili ya utafiti.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Unaweza kubadilisha mazingira haya baadaye.";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Ongeza kiwango cha Glucose katika damu";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Ukolezi";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Tarehe";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Wakati";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Tulipima";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Kabla ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Baada ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Kabla ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Baada ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Kabla ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Baada ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Nyengine";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "GHAIRI";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ONGEZA";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Tafadhali jaza maeneo yote.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Futa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "Usomaji 1 imefutwa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "Tengua";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Mwisho kuangalia:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Mwenendo zaidi ya mwezi uliopita:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "katika mbalimbali na afya njema";

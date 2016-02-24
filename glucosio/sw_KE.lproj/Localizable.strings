@@ -1,0 +1,197 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "Glucosio";
+
+/* No description supplied by the engineer */
+"action_settings" = "Mazingira";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Tuma maoni";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Muhtasari";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historia";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Vidokezo";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Habari.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Masharti ya matumizi.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Tunahitaji tu mambo machache ya haraka kabla ya wewe kuanza.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Nchi";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Umri";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Tafadhali andika umri halali.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Jinsia";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Mwanamume";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Mwanamke";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Nyingine";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Aina ya ugonjwa wa kisukari";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Aina ya kwanza";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Aina ya pili";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Kitengo unayopendelea";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Kushiriki data bila majina kwa ajili ya utafiti.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Unaweza kubadilisha mazingira haya baadaye.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "IJAYO";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "Pata kuanza";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Ongeza kiwango cha Glucose katika damu";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Ukolezi";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Tarehe";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Wakati";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Imepimwa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Kabla ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Baada ya kifungua kinywa";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Kabla ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Baada ya chakula cha mchana";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Kabla ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Baada ya chakula cha jioni";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Usiku";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Nyingine";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "GHAIRI";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ONGEZA";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Tafadhali ingiza thamani hakika.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Tafadhali jaza maeneo yote.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Futa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "usomaji 1 imefutwa";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "Tengua";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Kuangalia ya mwisho:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Mwenendo zaidi ya mwezi uliopita:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "katika mbalimbali na afya njema";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mwezi";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Siku";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Wiki";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Kuhusu";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Toleo";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Masharti ya matumizi";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Aina";
+
+/* No description supplied by the engineer */
+"weight" = "Uzito";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Kategoria ya kipimo maalum";
+
+/* No description supplied by the engineer */
+"assistant" = "Msaidizi";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "Sasisha sasa";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "SAWA, NIMEIPATA";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "WASILISHA MAONI";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ONGEZA KUSOMA";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Sasisha uzito wako";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Uzito";

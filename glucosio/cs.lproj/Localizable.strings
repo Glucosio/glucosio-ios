@@ -1,0 +1,213 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Možnosti";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Odeslat zpětnou vazbu";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Přehled";
+
+/* No description supplied by the engineer */
+"tab_history" = "Historie";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tipy";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Ahoj.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Ahoj.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Podmínky užívání.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Ještě než začneme, chtěli bychom vědět pár věcí.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Země";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Věk";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Zadejte, prosím, platný věk.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Pohlaví";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Muž";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Žena";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Jiné";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Typ cukrovky";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Typ 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Typ 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Preferovaná jednotka";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Sdílet anonymní data pro výzkum.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Tato nastavení můžete později změnit v kartě nastavení.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "DALŠÍ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ZAČÍNÁME";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Přidat hladinu glukózy v krvi";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Koncentrace";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Datum";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Čas";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Naměřeno";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Před snídaní";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Po snídani";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Před obědem";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Po obědě";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Před večeří";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Po večeři";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Noc";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Jiné";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ZRUŠIT";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "PŘIDAT";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Prosím, zadejte platnou hodnotu.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Vyplňte, prosím, všechna pole.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Odstranit";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "odstraněn 1 záznam";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ZPĚT";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Poslední kontrola:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Trend za poslední měsíc:";
+
+/* No description supplied by the engineer */
+"preferences_about" = "O programu";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Verze";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Podmínky užívání";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Typ";
+
+/* No description supplied by the engineer */
+"weight" = "Váha";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Vlastní kategorie měření";
+
+/* No description supplied by the engineer */
+"assistant" = "Asistent";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "AKTUALIZOVAT NYNÍ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, ROZUMÍM";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ODESLAT ZPĚTNOU VAZBU";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "PŘIDAT MĚŘENÍ";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Aktualizujte vaši hmotnost";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Ujistěte se, aby byla vaše váha vždy aktuální tak, aby mělo Glucosio co nejpřesnější informace.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Vytvořit kategorie";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Kontrolujte často";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Přidat měření";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Ujistěte se, aby jste pravidelně přidávali hodnoty hladiny glykémie tak, abychom vám mohli pomoci průběžně sledovat hladiny glukózy.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Upřednostňovaný rozsah";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Vlastní rozsah";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Minimální hodnota";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Nejvyšší hodnota";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Váha";

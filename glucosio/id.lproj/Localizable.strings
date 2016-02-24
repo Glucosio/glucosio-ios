@@ -1,0 +1,225 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Pengaturan";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Kirim umpan balik";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Ikhtisar";
+
+/* No description supplied by the engineer */
+"tab_history" = "Riwayat";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Kiat";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Halo.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Halo.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Ketentuan Penggunaan.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Kami hanya perlu beberapa hal sebelum Anda bisa mulai.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Negara";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Umur";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Mohon masukkan umur valid.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Gender";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Laki-laki";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Perempuan";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Lainnya";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Tipe diabetes";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tipe 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tipe 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Unit utama";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Berbagi data anonim untuk riset.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Anda dapat mengganti ini nanti di pengaturan.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "BERIKUTNYA";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "MEMULAI";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Tambah Kadar Glukosa Darah";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Konsentrasi";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Tanggal";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Waktu";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Terukur";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Sebelum sarapan";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Setelah sarapan";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Sebelum makan siang";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Setelah makan siang";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Sebelum makan malam";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Setelah makan malam";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Malam";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Lainnya";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "BATAL";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "TAMBAH";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Tolong masukan nilai yang sah.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Mohon lengkapi semua isian.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Hapus";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 bacaan dihapus";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "URUNG";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Periksa terakhir:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Kecenderungan bulan lalu:";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Bulan";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Hari";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Minggu";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Tentang";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versi";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Syarat penggunaan";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tipe";
+
+/* No description supplied by the engineer */
+"weight" = "Berat";
+
+/* No description supplied by the engineer */
+"assistant" = "Asisten";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "PERBARUI SEKARANG JUGA";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, MENGERTI";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "KIRIM UMPAN BALIK";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "TAMBAHKAN BACAAN";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Perbarui berat kamu";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Pastikan untuk memperbarui berat badanmu sehingga Glucosio akan menghasilkan informasi yang paling akurat.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Perbaharui persetujuan penelitian";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Kamu bisa kapan saja setuju atau keluar dari persetujuan penelitian diabetes, namun ingat bahwa semua data tersebut dibagikan secara anonim. Kami hanya membagikan demografi dan kecenderungan level glukosa.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Buat kategori";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio dilengkapi kategori baku untuk masukan glukosa namun kamu juga bisa membuat kategori lain di pengaturan untuk menyesuaikan kebutuhan unikmu.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Sering-seringlah memeriksa";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Asisten Glucosio memberikan kiat berkala dan akan terus berkembang, jadi pastikan untuk selalu periksa disini untuk aksi bermanfaat yang bisa kamu lakukan demi meningkatkan pengalaman Glucosio dan kiat bermanfaat lainnya.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Jika kamu menemukan masalah teknik atau umpan balik tentang Glucosio kami mengharapkan kamu untuk mengirimkannya pada menu pengaturan demi membantu kami meningkatkan Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Tambahkan bacaan";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Pastikan untuk menambahkan bacaan glukosamu secara berkala agar kami dapat membantu melacak level glukosamu.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Kisaran yang diinginkan";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Nilai minimal";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Nilai maksimal";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "COBA SEKARANG JUGA";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Berat";

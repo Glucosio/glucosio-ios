@@ -1,0 +1,564 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Настройки";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Отправить отзыв";
+
+/* No description supplied by the engineer */
+"action_invite" = "Пригласить друга";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Общие сведения";
+
+/* No description supplied by the engineer */
+"tab_history" = "История";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Подсказки";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Привет.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Привет.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Условия использования.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Для того, чтобы начать, нам нужны некоторые сведения.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Страна";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Возраст";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Пожалуйста, введите возраст правильно.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Пол";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Мужской";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Женский";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Другое";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Тип диабета";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Тип 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Тип 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Предпочитаемые единицы измерения";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Поделиться анонимными данными для исследований.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Позже вы можете изменить свои настройки.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "ДАЛЬШЕ";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "НАЧАТЬ";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Добавить уровень глюкозы в крови";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Концентрация";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Дата";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Время";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Измерено";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "До завтрака";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "После завтрака";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "До обеда";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "После обеда";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "До ужина";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "После ужина";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Перекус";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Время ложиться спать";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Ночь";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Содержание глюкозы в крови натощак";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Повторная проверка";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Другое";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "ОТМЕНА";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ДОБАВИТЬ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Введите корректное значение.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Пожалуйста, заполните все поля.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Удалить";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 запись удалена";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "ОТМЕНИТЬ";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Последняя проверка:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Тенденция по данным прошлого месяца:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "в норме";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Месяц";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "День";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Неделя";
+
+/* No description supplied by the engineer */
+"preferences_about" = "О нас";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "Эти возможности экспериментальны, они могут не работать и предназначены для тестирования. Помните, что для того, чтобы отправить отзыв, достаточно потрести телефон.";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Версия";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Условия использования";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Тип";
+
+/* No description supplied by the engineer */
+"weight" = "Вес";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Собственные категории измерений";
+
+/* No description supplied by the engineer */
+"assistant" = "Помощник";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "ОБНОВИТЬ СЕЙЧАС";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "ХОРОШО, Я ПОНЯЛ";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ОТПРАВИТЬ ОТЗЫВ";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ДОБАВИТЬ ДАННЫЕ";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Обновите свой вес";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Убедитесь, что вы обновили свой вес, и у Glucosio имеется наиболее точная информация.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Обновить согласие на участие в исследованиях";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Вы можете принять участие в исследовании диабета или отказаться от такого участия, все данных полностью анонимны. Мы делимся только демографическими данными и данными об уровне глюкозы в крови.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Создайте категории";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio содержит категории по умолчанию, но в настройках вы можете создать собственные категории так, чтобы они подходили под ваши нужды.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Регулярно обращайтесь сюда";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Помощник Glucosio предоставляет регулярные советы. Мы работаем над усовершенствованием нашего помощника, поэтому обращайтесь сюда за советами, которые вы сможете использовать для того, чтобы получить большую пользу от Glucosio, а также за другими полезными советами.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Если вы обнаружите какие-либо технические проблемы или захотите отправить отзыв о работе Glucosio, вы можете сделать это в меню настроек. Это поможет нам улучшить Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Добавить данные";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Регулярно вводите данные об уровне глюкозы, в течением времени это поможет вам отслеживать уровень глюкозы.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Экспорт данных";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Поделитесь данными с вашим доктором или сделайте резервную копию ваших данных на Google Диск, используя функцию экспорта.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Предпочтительный диапазон";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "АДА";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "ААКЭ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "НИЗиЗ";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Собственный диапазон";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Минимальное значение";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Максимальное значение";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "ПОПРОБОВАТЬ ПРЯМО СЕЙЧАС";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Язык";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Пригласить других людей";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Попробовать Glucosio, приложение с открытым исходным кодом для исследований и отслеживания диабета.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Попробовать Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Резервное копирование";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Приватность";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Используя Glucosio, вы соглашаетесь с";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Диск";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "О Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Оценить Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Лицензии на ПО с открытым исходным кодом";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "Включить поддержку FreeStyle LibreⓇ";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "ЭКСПЕРИМЕНТАЛЬНОЕ: Включить поддержку FreeStyle LibreⓇ";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "ЭКСПЕРИМЕНТАЛЬНОЕ: Улучшить читаемость для пользователей с дислексией";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "Улучшить читаемость для пользователей с дислексией";
+
+/* No description supplied by the engineer */
+"about_donate" = "Пожертвовать Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "ОК";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Пониженное содержание сахара в крови";
+
+/* No description supplied by the engineer */
+"reading_low" = "Низкий";
+
+/* No description supplied by the engineer */
+"reading_high" = "Высокий";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Повышенное содержание сахара в крови";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Медленная прогулка";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Быстрая ходьба";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Бег на месте";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Бег";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Плавание";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Танцы";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Катание на роликах";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Катание на велосипеде";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Гольф";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Софтбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Бадминтон";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Футбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Баскетбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Волейбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Крикет";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Фрисби";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Катание на лыжах";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Бокс";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Теннис";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Настольный теннис";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Боевые искусства";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Скалолазание";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Борьба";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Пешие прогулки";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Работа во дворе";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Углеводы:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Белок:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Сахара:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Жиры:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Создатели";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Внести вклад";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Помочь в переводе";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Помочь в разработке";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Присоединиться к дискуссионному сообществу";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Подписаться на наш список рассылки";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "АРХИВИРОВАННЫЕ СОВЕТЫ";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Экспорт данных";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "От:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Кому:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Выбрать сегодня";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "ЭКСПОРТ";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Экспорт данных";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Экспортировать всё";
+
+/* No description supplied by the engineer */
+"share_using" = "Поделиться через";
+
+/* No description supplied by the engineer */
+"share_subject" = "Данные Glucosio";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Экспорт";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "записей";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio требуется разрешение на доступ к хранилищу для сохранения снимка экрана";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Снимок экрана сохранён в галерее";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Ошибка сохранения снимка экрана в галерею";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Диапазон экспорта";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Нет данных для экспорта.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Добавлены новые данные";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Вес";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Кетоны";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Минимальное давление";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Максимальное давление";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Общий холестерин";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "ЛНП холестерина";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "ЛВП холестерина";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Добавить данные об уровне глюкозы";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Добавить вес тела";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Добавить уровень холестерина";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Добавить HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Добавить кетоны";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Добавить уровень кровяного давления";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Вес";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Кетоны";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Кровяное давление";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Уровень холестерина";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "Показания HB1AC";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Уровень глюкозы в крови";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Для этого времени запись уже есть. Удалите её для добавления новой записи.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Поместите ваш телефон на сенсор и не двигайте его до тех пор, пока он не завибрирует.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NDF отключён.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "Ошибка открытия соединения NFC!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Не достаточно данных для расчёта HBA1C";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

@@ -1,0 +1,120 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Arventennoù";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Alberz";
+
+/* No description supplied by the engineer */
+"tab_history" = "Istorel";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tunioù";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Demat.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Demat.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Ezhomm hon eus traoù bennak a-raok kregiñ.";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Oad";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Bizskrivit un oad talvoudek mar plij.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Rev";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Gwaz";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Maouez";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "All";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Diabetoù seurt";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Seurt 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Seurt 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Unanenn muiañ plijet";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Rannañ roadennoù dizanv evit an enklask.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Gallout a rit kemmañ an dra-se diwezhatoc'h.";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Ouzhpenn ul Live Gwad Glukoz";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Dizourañ";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Deiziad";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Eur";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Muzulet";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "A-raok dijuniñ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Goude dijuniñ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "A-raok merenn";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Goude merenn";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "A-raok pred";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Goude pred";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "All";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "NULLAÑ";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "OUZHPENN";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Leunit ar maezioù mar plij.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Dilemel";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 lenn dilezet";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "DIZOBER";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Gwiriadur diwezhañ:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Feur tremenet ar miz paseet:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "en reizh an yec'hed";

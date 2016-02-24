@@ -1,0 +1,525 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Configurações";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Enviar comentários";
+
+/* No description supplied by the engineer */
+"action_invite" = "Convidar um amigo";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Visão geral";
+
+/* No description supplied by the engineer */
+"tab_history" = "Histórico";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Dicas";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Olá.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Olá.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Termos de uso.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Precisamos de algumas coisas rápidas antes de você começar.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "País";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Idade";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Por favor, insira uma idade válida.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Sexo";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Masculino";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Feminino";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Outros";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Tipo de diabetes";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tipo 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tipo 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Unidade preferida";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Compartilhar dados anônimos para pesquisa.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Você pode fazer alterações em Configurações depois.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "PRÓXIMO";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "COMEÇAR";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Adicionar o nível de glicose no sangue";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Concentração";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Data";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Horário";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Medido";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Antes do café";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Depois do café";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Antes do almoço";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Depois do almoço";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Antes do jantar";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Depois do jantar";
+
+/* No description supplied by the engineer */
+"dialog_add_type_7" = "Lanche";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Hora de dormir";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "À noite";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Glicemia de jejum";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Verificar novamente";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Outros";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "CANCELAR";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "ADICIONAR";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Por favor, insira um valor válido.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Por favor, preencha todos os campos.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Excluir";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 leitura eliminada";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "DESFAZER";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Última verificação:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Tendência do mês passado:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "no intervalo e saudável";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mês";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Dia";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Semana";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Sobre";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Versão";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Termos de uso";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tipo";
+
+/* No description supplied by the engineer */
+"weight" = "Peso";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Categoria de medição personalizada";
+
+/* No description supplied by the engineer */
+"assistant" = "Assistente";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "ATUALIZAR AGORA";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "OK, ENTENDI";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "ENVIAR COMENTÁRIOS";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "ADICIONAR LEITURA";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Atualize seu peso";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Certifique-se de atualizar seu peso para que Glucosio tenha sempre as informações mais precisas.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Atualize seu opt-in de pesquisa";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Você pode sempre entrar ou sair do compartilhamento de pesquisas sobre diabetes, mas lembre-se que todos os dados compartilhados são totalmente anônimos. Somente compartilhamos Demografia e tendências dos níveis de glicemia.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Criar categorias";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio vem com categorias padrão para a entrada de glicose, mas você pode criar categorias personalizadas nas configurações para atender às suas necessidades exclusivas.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Confira aqui frequentemente";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "O assistente Glucosio fornece dicas regulares e vai continuar melhorando, portanto, sempre confira aqui ações úteis que você pode tomar para melhorar a sua experiência com o Glucosio e outras dicas úteis.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Se você encontrar quaisquer problemas técnicos ou tiver comentários sobre o Glucosio, nós encorajamos você a apresentá-los no menu de configuraçõesm, a fim de nos ajudar a melhorar o Glucosio.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Adicionar uma leitura";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Não se esqueça de adicionar regularmente as leituras de glicemia, para podermos ajudá-lo a controlar seus níveis de glicemia ao longo do tempo.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Exportar seus dados";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Compartilhar seus dados com o seu médico ou fazer backup de seus dados para o Google Drive, usando o recurso de exportação.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Faixa preferencial";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Faixa personalizada";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Valor mínimo";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Valor máximo";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "EXPERIMENTE AGORA";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Idioma";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Convidar outras pessoas";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Experimente o Glucosio, um aplicativo de código-aberto para o controle da diabetes e pesquisas.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Experimente o Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Backup";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Privacidade";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Ao usar o Glucosio, você concorda com os";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "Sobre Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Avalie Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Licenças de código aberto";
+
+/* No description supplied by the engineer */
+"about_donate" = "Doe para Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hipoglicemia";
+
+/* No description supplied by the engineer */
+"reading_low" = "Baixo";
+
+/* No description supplied by the engineer */
+"reading_high" = "Alto";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hiperglicemia";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Caminhada leve";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Caminhada rápida";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Corrida leve";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Corrida";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Natação";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Dança";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Patinar";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Andar de bicicleta";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Golfe";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Softball";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badminton";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Futebol";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Basquete";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Voleibol";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Críquete";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Frisbee";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Esquiar";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Boxe";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Tênis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Tênis de mesa";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Artes marciais";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Escalada";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Luta";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Caminhada";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Jardinagem";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Carboidratos:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Proteína:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Açúcares:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Gordura:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Créditos";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Contribua";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Contribua para tradução";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Contribua no desenvolvimento";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Junte-se à nossa comunidade de discussão";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Inscreva-se em nossa lista de e-mail";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "DICAS ARQUIVADAS";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Exportar dados";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "De:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Para:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Escolha hoje";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EXPORTAR";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Exportar Dados";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Exportar tudo";
+
+/* No description supplied by the engineer */
+"share_using" = "Compartilhar usando";
+
+/* No description supplied by the engineer */
+"share_subject" = "Dados do Glucosio";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Exportação";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "leituras";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "O Glucosio precisa da permissão de armazenamento para salvar uma captura de tela";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Captura de tela salva na galeria";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Erro ao salvar a captura de tela na galeria";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Intervalo de exportação";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Nenhuma leitura para exportar.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Nova leitura adicionada";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Peso";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Cetonas";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Pressão mín";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Pressão máx";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Colesterol total";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "Colesterol LDL";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "Colesterol HDL";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Adicionar leitura de glicose";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Adicionar o peso corporal";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Adicionar o nível de colesterol";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Adicionar HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Adicionar cetonas";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Adicionar a pressão arterial";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Peso corporal";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Cetonas";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Pressão arterial";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Nível de colesterol";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "Leitura de HB1AC";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Nível de glicose no sangue";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Você já tem um registro para este horário. Por favor, remova-o antes de adicionar uma correção.";

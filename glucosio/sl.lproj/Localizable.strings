@@ -1,0 +1,243 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Nastavitve";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Pošljite povratne informacije";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Pregled";
+
+/* No description supplied by the engineer */
+"tab_history" = "Zgodovina";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Nasveti";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Dobrodošli.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Dobrodošli.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Pogoji uporabe.";
+
+/* No description supplied by the engineer */
+"helloactivity_subhead" = "Preden začnete, potrebujemo nekaj podatkov.";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "Država";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Starost";
+
+/* No description supplied by the engineer */
+"helloactivity_age_invalid" = "Vnesite veljavno starost.";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Spol";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Moški";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Ženska";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Ostalo";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Sladkorna bolezen tipa";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tip 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tip 2";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit" = "Želena enota";
+
+/* No description supplied by the engineer */
+"helloactivity_share_data" = "Delite anonimne podatke za raziskave.";
+
+/* No description supplied by the engineer */
+"helloactivity_hint_settings" = "Spremenite lahko spremenite kasneje.";
+
+/* No description supplied by the engineer */
+"helloactivity_button_next" = "NASLEDNJI";
+
+/* No description supplied by the engineer */
+"helloactivity_button_start" = "ZAČNI";
+
+/* No description supplied by the engineer */
+"dialog_add_title" = "Dodaj raven glukoze v krvi";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration" = "Koncentracija";
+
+/* No description supplied by the engineer */
+"dialog_add_date" = "Datum";
+
+/* No description supplied by the engineer */
+"dialog_add_time" = "Ura";
+
+/* No description supplied by the engineer */
+"dialog_add_measured" = "Izmerjene vrednosti";
+
+/* No description supplied by the engineer */
+"dialog_add_type_1" = "Pred zajtrkom";
+
+/* No description supplied by the engineer */
+"dialog_add_type_2" = "Po zajtrku";
+
+/* No description supplied by the engineer */
+"dialog_add_type_3" = "Pred kosilom";
+
+/* No description supplied by the engineer */
+"dialog_add_type_4" = "Po kosilu";
+
+/* No description supplied by the engineer */
+"dialog_add_type_5" = "Pred večerjo";
+
+/* No description supplied by the engineer */
+"dialog_add_type_6" = "Po večerji";
+
+/* No description supplied by the engineer */
+"dialog_add_type_9" = "Noč";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Ostalo";
+
+/* No description supplied by the engineer */
+"dialog_add_cancel" = "PREKLIČI";
+
+/* No description supplied by the engineer */
+"dialog_add_add" = "DODAJ";
+
+/* No description supplied by the engineer */
+"dialog_error2" = "Vnesite veljavno vrednost.";
+
+/* No description supplied by the engineer */
+"dialog_error" = "Prosimo, izpolnite vsa polja.";
+
+/* No description supplied by the engineer */
+"dialog_delete" = "Izbriši";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_text" = "1 meritev je bila izbrisana";
+
+/* No description supplied by the engineer */
+"fragment_history_snackbar_action" = "RAZVELJAVI";
+
+/* No description supplied by the engineer */
+"fragment_overview_last_reading" = "Zadnja meritev:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend" = "Spremembe v zadnjem mesecu:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "v obsegu in zdravju";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Mesec";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Dan";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Teden";
+
+/* No description supplied by the engineer */
+"preferences_about" = "Vizitka";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Različica";
+
+/* No description supplied by the engineer */
+"preferences_terms" = "Pogoji uporabe";
+
+/* No description supplied by the engineer */
+"glucose_reading_type" = "Tip";
+
+/* No description supplied by the engineer */
+"weight" = "Teža";
+
+/* No description supplied by the engineer */
+"dialog_add_custom_type" = "Uporabnikove kategorije merjenja";
+
+/* No description supplied by the engineer */
+"assistant" = "Pomočnik";
+
+/* No description supplied by the engineer */
+"assistant_action_update" = "POSODOBI ZDAJ";
+
+/* No description supplied by the engineer */
+"assistant_action_ok" = "V REDU";
+
+/* No description supplied by the engineer */
+"assistant_action_feedback" = "POŠLJI POVRATNO INFORMACIJO";
+
+/* No description supplied by the engineer */
+"assistant_action_reading" = "DODAJ MERITEV";
+
+/* No description supplied by the engineer */
+"assistant_weight_title" = "Posodobite svojo težo";
+
+/* No description supplied by the engineer */
+"assistant_weight_desc" = "Poskrbite, da redno posodabljate svojo težo, tako, da ima aplikacija Glucosio točne informacije.";
+
+/* No description supplied by the engineer */
+"assistant_research_title" = "Posodobitev vaše raziskave";
+
+/* No description supplied by the engineer */
+"assistant_research_desc" = "Vedno lahko izbirate, če želite za namene raziskav svoje podatke deliti. Vsi podatki, ki jih delite so popolnoma anonimni. Posredujemo samo demografske podatke in gibanje sladkorja v krvi.";
+
+/* No description supplied by the engineer */
+"assistant_categories_title" = "Ustvari kategorije";
+
+/* No description supplied by the engineer */
+"assistant_categories_desc" = "Aplikacija Glucosio ima privzete kategorije za vnos glukoze, vendar si lahko ustvarite svoje lastne kategorije in jih v nastavitvah uredite, da bodo ustrezale vašim potrebam.";
+
+/* No description supplied by the engineer */
+"assistant_check_title" = "Pogosto preverite";
+
+/* No description supplied by the engineer */
+"assistant_check_desc" = "Asistent v aplikaciji Glucosio vam redno ponuja nasvete. Ker se zavedamo pomembnosti, ga bomo redno nadgrajevali, zato ga večkrat preverite in se seznanite z nasveti, ki bodo omogočili boljšo uporabniško izkušnjo in vam bili v dodatno pomoč.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Če boste imeli katero koli tehnično vprašanje ali povratno informacijo, vas prosimo, da nam jo pošljete preko menija v nastavitvah. Samo tako bomo lahko aplikacijo Glucosio redno izboljševali.";
+
+/* No description supplied by the engineer */
+"assistant_reading_title" = "Dodaj meritev";
+
+/* No description supplied by the engineer */
+"assistant_reading_desc" = "Poskrbite, da redno dodajate vaše odčitke glukoze, da vam lahko pomagamo slediti vaši ravni glukoze.";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range" = "Zaželen obseg";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "Nacionalni inštitut za varovanje zdravja v UK";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_4" = "Uporabnikov obseg";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_min" = "Najmanjša vrednost";
+
+/* No description supplied by the engineer */
+"helloactivity_preferred_range_max" = "Največja vrednost";
+
+/* No description supplied by the engineer */
+"assistant_action_try" = "Preizkusite";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Teža";
