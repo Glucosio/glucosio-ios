@@ -5,13 +5,16 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Charts
   - FMDB
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Charts: 870589b6b4bf8468baacea8869c28983d71f602c
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.39.0

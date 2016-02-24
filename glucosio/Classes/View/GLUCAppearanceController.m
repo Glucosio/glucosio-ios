@@ -2,6 +2,7 @@
 #import "GLUCAppearanceController.h"
 #import "UIColor+GLUCAdditions.h"
 #import "GLUCTabBarController.h"
+#import "SVProgressHUD.h"
 
 @implementation GLUCAppearanceController {
 
@@ -62,7 +63,10 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [self defaultFont]                                                           
                                                            } forState:UIControlStateNormal];
-
+    
+    [SVProgressHUD setBackgroundColor:[UIColor gluc_pink]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (UIFont *) valueEditorTextFieldFont {
