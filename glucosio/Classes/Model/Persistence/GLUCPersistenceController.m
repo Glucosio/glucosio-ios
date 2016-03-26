@@ -3,7 +3,65 @@
 #import "NSCalendar+GLUCAdditions.h"
 #import "NSFileManager+GLUCAdditions.h"
 
-//#define GLUC_CREATE_TEST_DATA
+/*
+ Current Database Schema as of 2016-03-26 (Mar 26 2016), as defined in Android app's Realm schema
+ 
+ class User
+ @PrimaryKey int id;
+ String name;
+ String preferred_language;
+ String country;
+ int age;
+ String gender;
+ int d_type;
+ String preferred_unit;
+ String preferred_range;
+ int custom_range_min;
+ int custom_range_max;
+ 
+ class CholesterolReading
+ @PrimaryKey long id;
+ 
+ int totalReading;
+ int LDLReading;
+ int HDLReading;
+ Date created;
+ 
+ class GlucoseReading
+ @PrimaryKey long id;
+ 
+ int reading;
+ String reading_type;
+ String notes;
+ int user_id;
+ Date created;
+ 
+ class KetoneReading
+ @PrimaryKey long id;
+ 
+ double reading;
+ Date created;
+ 
+ class PressureReading
+ @PrimaryKey long id;
+ 
+ int minReading;
+ int maxReading;
+ Date created;
+ 
+ class WeightReading
+ @PrimaryKey long id;
+ 
+ int reading;
+ Date created;
+ 
+ class HB1ACReading
+ @PrimaryKey long id;
+ double reading; <-- Convert from int to double
+ Date created;
+ ************************************************/
+
+#define GLUC_CREATE_TEST_DATA
 
 @interface GLUCPersistenceController()
 @property (strong, nonatomic, readwrite) GLUCUser *user;
