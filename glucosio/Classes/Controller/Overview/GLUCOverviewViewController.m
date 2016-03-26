@@ -76,6 +76,39 @@
     [self.tableView reloadData];
 }
 
+- (void) configureStandardDataSet:(LineChartDataSet *)dataSet {
+    //    dataSet.label = @""; // GLUCLoc(@"fragment_overview_selector_day");
+    //     set1.setColor(getResources().getColor(R.color.glucosio_pink));
+    dataSet.colors = @[[UIColor gluc_pink]];
+    //     set1.setLineWidth(2f);
+    dataSet.lineWidth = 2.0f;
+    //     set1.setCircleColor(getResources().getColor(R.color.glucosio_pink));
+    dataSet.circleColors = @[[UIColor gluc_pink]];
+    //     set1.setCircleSize(4f);
+    dataSet.circleRadius = 4.0f;
+    //     set1.setDrawCircleHole(true);
+    dataSet.drawCircleHoleEnabled = YES;
+    //     set1.disableDashedLine();
+    // ???
+    //     set1.setFillAlpha(255);
+    dataSet.fillAlpha = 0.15f;
+    //     set1.setDrawFilled(true);
+    dataSet.drawFilledEnabled = YES;
+    //     set1.setValueTextSize(0);
+    //     set1.setValueTextColor(Color.parseColor("#FFFFFF"));
+    dataSet.drawValuesEnabled = NO;
+    //     set1.setFillDrawable(getResources().getDrawable(R.drawable.graph_gradient));
+    dataSet.fillColor = [UIColor gluc_pink]; // ???
+    //     set1.setHighLightColor(getResources().getColor(R.color.glucosio_gray_light));
+    dataSet.highlightColor = [UIColor lightGrayColor];
+    //     set1.setCubicIntensity(0.2f);
+    dataSet.cubicIntensity = 0.2f;
+    //     set1.setDrawCubic(true);
+    dataSet.drawCubicEnabled = YES;
+    //    dataSet.drawValuesEnabled = NO;
+    //    dataSet.fillColor = [UIColor gluc_pink];
+
+}
 - (void) displayStandardChart:(ChartData *)data {
     [self.chartView.animator animateWithXAxisDuration:0.75f yAxisDuration:0.35f];
     self.chartView.drawGridBackgroundEnabled = NO;
@@ -83,6 +116,7 @@
     self.chartView.backgroundColor = [UIColor whiteColor];
     self.chartView.autoScaleMinMaxEnabled = YES;
     self.chartView.descriptionText = @"";
+    self.chartView.legend.enabled = NO;
     [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
     [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
     self.chartView.data = data;
@@ -127,11 +161,11 @@
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"fragment_overview_selector_day");
-    dataSet.drawFilledEnabled = YES;
-    dataSet.drawValuesEnabled = NO;
-    dataSet.fillColor = [UIColor gluc_pink];
+    
+    [self configureStandardDataSet:dataSet];
+
     LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeys dataSet:dataSet];
+    
     [self displayStandardChart:data];
 }
 
@@ -178,11 +212,9 @@
 
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
 
+    
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"fragment_overview_selector_week");
-    dataSet.drawFilledEnabled = YES;
-    dataSet.drawValuesEnabled = NO;
-    dataSet.fillColor = [UIColor gluc_pink];
+    [self configureStandardDataSet:dataSet];
     LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
     [self displayStandardChart:data];
 }
@@ -227,10 +259,7 @@
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"fragment_overview_selector_month");
-    dataSet.drawFilledEnabled = YES;
-    dataSet.drawValuesEnabled = NO;
-    dataSet.fillColor = [UIColor gluc_pink];
+    [self configureStandardDataSet:dataSet];
     LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
     [self displayStandardChart:data];
 
