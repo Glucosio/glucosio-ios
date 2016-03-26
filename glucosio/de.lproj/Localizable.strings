@@ -384,7 +384,31 @@
 "about_credits" = "Über";
 
 /* No description supplied by the engineer */
+"about_contribute" = "Mitwirken";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "An der Übersetzung mitwirken";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Zur Entwicklung beitragen";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Diskutiere mit der Glucosio-Gemeinschaft";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Aboniere unsere Mailingliste";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "Archivierte Tipps";
+
+/* No description supplied by the engineer */
 "dialog_export_title" = "Daten exportieren";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "Startdatum:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Enddatum:";
 
 /* No description supplied by the engineer */
 "dialog_export_button" = "Export";
@@ -393,10 +417,43 @@
 "title_activity_export" = "Daten exportieren";
 
 /* No description supplied by the engineer */
+"dialog_export_all" = "Alles exportieren";
+
+/* No description supplied by the engineer */
+"share_using" = "Teilen";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio Daten";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_1" = "Exportiere";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "Aufzeichnungen";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio benötigt Speicher Berechtigung um einen Screenshot zu speichern";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Screenshot in der Galerie gespeichert";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Fehler beim Speichern des Screenshot in der Galerie";
+
+/* No description supplied by the engineer */
+"dialog_export_range" = "Bereichbereich";
+
+/* No description supplied by the engineer */
+"activity_export_no_readings_snackbar" = "Keine Messungen zum exportieren.";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Neue Messungen hinzugefügt";
+
+/* No description supplied by the engineer */
 "dialog_add_weight" = "Gewicht";
 
 /* No description supplied by the engineer */
-"dialog_add_ketones" = "Keton";
+"dialog_add_ketones" = "Ketonin";
 
 /* No description supplied by the engineer */
 "dialog_add_pressure_min" = "Min. Druck";
@@ -417,6 +474,9 @@
 "dialog_add_hb1ac" = "HBA1C";
 
 /* No description supplied by the engineer */
+"title_activity_add_glucose" = "Blutzuckermessung hinzufügen";
+
+/* No description supplied by the engineer */
 "title_activity_add_weight" = "Gewicht hinzufügen";
 
 /* No description supplied by the engineer */
@@ -435,7 +495,7 @@
 "fab_weight" = "Körpergewicht";
 
 /* No description supplied by the engineer */
-"fab_ketonest" = "Keton";
+"fab_ketonest" = "Ketonin";
 
 /* No description supplied by the engineer */
 "fab_pressure" = "Blutdruck";

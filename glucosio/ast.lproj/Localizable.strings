@@ -468,6 +468,9 @@
 "dialog_add_hb1ac" = "HB1AC";
 
 /* No description supplied by the engineer */
+"title_activity_add_glucose" = "Amiestu de llectura de glucosa";
+
+/* No description supplied by the engineer */
 "title_activity_add_weight" = "Amiestu de pesu corporal";
 
 /* No description supplied by the engineer */
@@ -496,3 +499,9 @@
 
 /* No description supplied by the engineer */
 "dialog_error_duplicate" = "Yá introduxesti una entrada pa esta hora. Desaniciala enantes d'amestar una correición, por favor.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "Ta deshabilitáu'l NFC.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "¡Fallu abriendo la conexón NFC!";

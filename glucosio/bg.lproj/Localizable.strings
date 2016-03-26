@@ -1,9 +1,20 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "Glucosio";
 
 /* No description supplied by the engineer */
 "action_settings" = "Настройки";
 
 /* No description supplied by the engineer */
 "action_feedback" = "Изпрати отзив";
+
+/* No description supplied by the engineer */
+"action_invite" = "Покани приятел";
 
 /* No description supplied by the engineer */
 "tab_overview" = "Преглед";
@@ -72,6 +83,9 @@
 "helloactivity_button_start" = "НАЧАЛО";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "Все още няма данни.\nДобавете вашите стойности тук.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Добави Ниво на Кръвната Захар";
 
 /* No description supplied by the engineer */
@@ -105,7 +119,16 @@
 "dialog_add_type_6" = "След вечеря";
 
 /* No description supplied by the engineer */
+"dialog_add_type_8" = "Преди лягане";
+
+/* No description supplied by the engineer */
 "dialog_add_type_9" = "Нощ";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Глюкоза на гладно";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Повторна проверка";
 
 /* No description supplied by the engineer */
 "dialog_add_type_12" = "Друг";
@@ -216,6 +239,9 @@
 "assistant_reading_desc" = "Не забравяйте редовно да добавяте показанията на кръвната ви захар, така ще можем да ви помогнем да проследите нивата с течение на времето.";
 
 /* No description supplied by the engineer */
+"assistant_export_title" = "Експортиране на данни";
+
+/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Предпочитан диапазон";
 
 /* No description supplied by the engineer */
@@ -231,4 +257,238 @@
 "assistant_action_try" = "ИЗПРОБВАЙ СЕГА";
 
 /* No description supplied by the engineer */
+"helloactivity_language" = "Език";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Поканете други хора";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Изпробвай Glucosio, приложение с отворен код за изследване и управление на диабета.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Изпробвай Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Бекъп";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Поверително";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Използвайки Glucosio, Вие се съгласявате с";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Диск";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "За Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Оценете Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Лицензи за отворен код";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "Разреши FreeStyle Libre® подкрепа";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_low" = "Ниско";
+
+/* No description supplied by the engineer */
+"reading_high" = "Високо";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Бързо ходене";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Джогинг";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Тичане";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Плуване";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Танци";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Колоездене";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Голф";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Софтбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Бадминтон";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Футбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Баскетбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Волейбол";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Крикет";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Фризби";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Каране на ски";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Бокс";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Тенис";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Тенис на маса";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Бойни изкуства";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Скално катерене";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Борба";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Въглехидрати:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Протеин:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Захари:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Мазнини:";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "От:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "До:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Изберете днес";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "Експорт";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Експортиране на данни";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Експортирай всичко";
+
+/* No description supplied by the engineer */
+"activity_export_snackbar_2" = "записи";
+
+/* No description supplied by the engineer */
+"fragment_overview_permission_storage" = "Glucosio се нуждае от разрешение, за да запази екрана";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Екранът е записан в галерия";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Грешка при записването на екрана в галерията";
+
+/* No description supplied by the engineer */
+"wear_new_reading" = "Добавяне на ново изчисление";
+
+/* No description supplied by the engineer */
 "dialog_add_weight" = "Тегло";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Кетони";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Общ холестерол";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL холестерол";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL холестерол";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HBA1C";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Добавете измерване на глюкоза";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Добавете телесно тегло";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Добавете ниво на холестерол";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Добавете HBA1C";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Добавете кетони";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Добавете кръвно налягане";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Телесно тегло";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Кетони";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Кръвно налягане";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Ниво на холестерола";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HBA1C измерване";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Ниво на кръвната захар";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Вече имате запис за това време. Моля премахнете го преди да добавите корекция.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Моля поставете телефона на сензора и не се движете, докато вибрира.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_supported" = "Това устройство не поддържа NFC.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC е забранено.";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre" = "Добави от FreeStyle Libre";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "Грешка при отваряне на NFC връзка!";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_success" = "Успешно добавени измервания от FreeStyle Libre";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Недостатъчно данни за изчисляване на HBA1C";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_added" = "Добавено от вашия FreeStyle Libre";

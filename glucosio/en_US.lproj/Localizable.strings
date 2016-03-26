@@ -6,6 +6,9 @@
 "action_feedback" = "Send feedback";
 
 /* No description supplied by the engineer */
+"action_invite" = "Invite a friend";
+
+/* No description supplied by the engineer */
 "tab_overview" = "Overview";
 
 /* No description supplied by the engineer */
@@ -105,7 +108,19 @@
 "dialog_add_type_6" = "After dinner";
 
 /* No description supplied by the engineer */
+"dialog_add_type_7" = "Snack";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Bedtime";
+
+/* No description supplied by the engineer */
 "dialog_add_type_9" = "Night";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Fasting glucose";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Recheck";
 
 /* No description supplied by the engineer */
 "dialog_add_type_12" = "Other";
@@ -232,6 +247,63 @@
 
 /* No description supplied by the engineer */
 "assistant_action_try" = "TRY IT NOW";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Yard work";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Carbs:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Protein:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Sugars:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Fat:";
+
+/* No description supplied by the engineer */
+"about_credits" = "Credits";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Contribute";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Contribute to Translation";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Contribute to Development";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Join our discussion community";
+
+/* No description supplied by the engineer */
+"about_maillist" = "Subscribe to our mailing list";
+
+/* No description supplied by the engineer */
+"assistant_archived" = "ARCHIVED TIPS";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Export data";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "To:";
+
+/* No description supplied by the engineer */
+"dialog_export_today" = "Pick today";
+
+/* No description supplied by the engineer */
+"dialog_export_button" = "EXPORT";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Export Data";
+
+/* No description supplied by the engineer */
+"share_using" = "Share using";
+
+/* No description supplied by the engineer */
+"share_subject" = "Glucosio data";
 
 /* No description supplied by the engineer */
 "dialog_add_weight" = "Weight";

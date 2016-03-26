@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  glucosio
-  Created by Chris Walters on 10/13/15.
-  Copyright © 2015 Glucosio.org. All rights reserved.
-*/
-/* No description supplied by the engineer */
-"app_name" = "Glucosio";
 
 /* No description supplied by the engineer */
 "action_settings" = "Configuración";
@@ -71,7 +63,7 @@
 "helloactivity_spinner_preferred_unit" = "Unidad preferida";
 
 /* No description supplied by the engineer */
-"helloactivity_spinner_preferred_unit_2" = "mmol/L";
+"helloactivity_spinner_preferred_unit_1" = "mg/dl";
 
 /* No description supplied by the engineer */
 "helloactivity_share_data" = "Comparte los datos de manera anónima para la investigación.";
@@ -86,10 +78,16 @@
 "helloactivity_button_start" = "EMPEZAR";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "No hay información disponible todavía. \n Añadir tu primera lectura aquí.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Añadir el nivel de glucosa en la sangre";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "Concentración";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dl";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "Fecha";
@@ -119,19 +117,7 @@
 "dialog_add_type_6" = "Después de la cena";
 
 /* No description supplied by the engineer */
-"dialog_add_type_7" = "Tentempié";
-
-/* No description supplied by the engineer */
-"dialog_add_type_8" = "Hora de dormir";
-
-/* No description supplied by the engineer */
 "dialog_add_type_9" = "Noche";
-
-/* No description supplied by the engineer */
-"dialog_add_type_10" = "Glucosa en ayunas";
-
-/* No description supplied by the engineer */
-"dialog_add_type_11" = "Revisar";
 
 /* No description supplied by the engineer */
 "dialog_add_type_12" = "Otro";
@@ -176,7 +162,16 @@
 "fragment_overview_selector_week" = "Semana";
 
 /* No description supplied by the engineer */
+"tip_example" = "Usa menos queso en tus recetas y comidas. La mozzarella fresca empaquetada en agua y el queso suizo casi siempre son bajos en sodio.";
+
+/* No description supplied by the engineer */
 "preferences_about" = "Sobre la aplicación";
+
+/* No description supplied by the engineer */
+"preferences_experimental_title" = "Aquí hay dragones :/";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Versión";
@@ -233,6 +228,9 @@
 "assistant_check_desc" = "Asistente de Glucosio ofrece consejos regulares y seguirá mejorando, así que siempre revisa aquí para ver lo que puede hacer para mejorar su experiencia con Glucosio y para aprender otros consejos útiles.";
 
 /* No description supplied by the engineer */
+"assistant_feedback_title" = "Enviar comentarios";
+
+/* No description supplied by the engineer */
 "assistant_feedback_desc" = "Si encuentra cualquier problema técnico o tiene comentarios sobre Glucosio, le animamos a enviar sus comentarios en el menú de configuración con el fin de ayudarnos a mejorar Glucosio.";
 
 /* No description supplied by the engineer */
@@ -242,13 +240,16 @@
 "assistant_reading_desc" = "Asegúrese de añadir regularmente sus lecturas de glucosa para que podamos ayudarle a seguir sus niveles de glucosa a largo plazo.";
 
 /* No description supplied by the engineer */
-"assistant_export_title" = "Exportar datos";
-
-/* No description supplied by the engineer */
-"assistant_export_desc" = "Comparte los datos con tu médico o haz una copia de seguridad en Google Drive usando la función de exportar.";
-
-/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Gama preferida";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range_4" = "Gama personalizada";
@@ -284,208 +285,7 @@
 "helloactivity_textview_tos" = "Al usar Glucioa, acepta a los";
 
 /* No description supplied by the engineer */
-"preferences_backup_google_drive" = "Google Drive";
-
-/* No description supplied by the engineer */
-"preferences_about_glucosio" = "Sobre Glucosio";
-
-/* No description supplied by the engineer */
-"preferences_rate" = "Puntúa Glucosio";
-
-/* No description supplied by the engineer */
-"preferences_licences_open" = "Licencias de código abierto";
-
-/* No description supplied by the engineer */
-"about_donate" = "Donar a Glucosio";
-
-/* No description supplied by the engineer */
-"reading_ok" = "Bien";
-
-/* No description supplied by the engineer */
-"reading_hypo" = "Hipoglucemia";
-
-/* No description supplied by the engineer */
-"reading_low" = "Bajo";
-
-/* No description supplied by the engineer */
-"reading_high" = "Alto";
-
-/* No description supplied by the engineer */
-"reading_hyper" = "Hiperglucemia";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_1" = "Camina sin prisa";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_2" = "Caminar rápido";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_3" = "Footing";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_4" = "Correr";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_5" = "Nadar";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_6" = "Bailar";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_7" = "Ir con patines";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_8" = "Ir en bicicleta";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_9" = "Golf";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_10" = "Sóftbol";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_11" = "Badminton";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_12" = "Fútbol";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_13" = "Baloncesto";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_14" = "Vóleibol";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_15" = "Críquet";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_16" = "Frisbi";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_17" = "Esquiar";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_18" = "Boxeo";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_19" = "Tenis";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_20" = "Tenis de mesa";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_21" = "Artes marciales";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_22" = "Escalada";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_23" = "Lucha libre";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_24" = "Senderismo";
-
-/* No description supplied by the engineer */
-"dialog_add_exercisetype_25" = "Trabajo de jardinería";
-
-/* No description supplied by the engineer */
-"dialog_addfood_carbs" = "Carbohidratos:";
-
-/* No description supplied by the engineer */
-"dialog_addfood_protein" = "Proteínas:";
-
-/* No description supplied by the engineer */
-"dialog_addfood_sugars" = "Azúcares:";
-
-/* No description supplied by the engineer */
-"dialog_addfood_fat" = "Grasa:";
-
-/* No description supplied by the engineer */
-"about_credits" = "Agradecimientos";
-
-/* No description supplied by the engineer */
-"about_contribute" = "Contribuye";
-
-/* No description supplied by the engineer */
-"about_contributel10n" = "Contribuye en la traducción";
-
-/* No description supplied by the engineer */
-"about_contributedev" = "Contribuye en el desarrollo";
-
-/* No description supplied by the engineer */
-"about_discussion" = "Únete en nuestra comunidad de debate";
-
-/* No description supplied by the engineer */
-"about_maillist" = "Suscríbete a nuestra lista de correo";
-
-/* No description supplied by the engineer */
-"assistant_archived" = "CONSEJOS ARCHIVADOS";
-
-/* No description supplied by the engineer */
-"dialog_export_title" = "Exportar datos";
-
-/* No description supplied by the engineer */
-"activity_export_date_from" = "De:";
-
-/* No description supplied by the engineer */
-"dialog_export_date_to" = "Para:";
-
-/* No description supplied by the engineer */
-"dialog_export_today" = "Elegir hoy";
-
-/* No description supplied by the engineer */
-"dialog_export_button" = "EXPORTAR";
-
-/* No description supplied by the engineer */
-"title_activity_export" = "Exportar datos";
-
-/* No description supplied by the engineer */
-"dialog_export_all" = "Exportar todo";
-
-/* No description supplied by the engineer */
-"share_using" = "Compartir con";
-
-/* No description supplied by the engineer */
-"share_subject" = "Datos de Glucosio";
-
-/* No description supplied by the engineer */
-"activity_export_snackbar_1" = "Exportando";
-
-/* No description supplied by the engineer */
-"activity_export_snackbar_2" = "lecturas";
-
-/* No description supplied by the engineer */
-"fragment_overview_permission_storage" = "Glucosio necesita permisos de almacenamiento para guardar una captura de pantalla";
-
-/* No description supplied by the engineer */
-"fragment_overview_graph_export_true" = "Captura de pantalla guardada en la galería";
-
-/* No description supplied by the engineer */
-"fragment_overview_graph_export_false" = "Error al guardar la captura de pantalla en la galería";
-
-/* No description supplied by the engineer */
-"dialog_export_range" = "Exportar rango";
-
-/* No description supplied by the engineer */
-"activity_export_no_readings_snackbar" = "No hay lecturas para exportar.";
-
-/* No description supplied by the engineer */
-"wear_new_reading" = "Nueva lectura añadida";
-
-/* No description supplied by the engineer */
 "dialog_add_weight" = "Peso";
-
-/* No description supplied by the engineer */
-"dialog_add_ketones" = "Cetonas";
-
-/* No description supplied by the engineer */
-"dialog_add_pressure_min" = "Presión mínima";
-
-/* No description supplied by the engineer */
-"dialog_add_pressure_max" = "Presión máxima";
-
-/* No description supplied by the engineer */
-"dialog_add_cholesterol_total" = "Colesterol total";
 
 /* No description supplied by the engineer */
 "dialog_add_cholesterol_ldl" = "Colesterol LDL";
@@ -494,7 +294,7 @@
 "dialog_add_cholesterol_hdl" = "Colesterol HDL";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HBA1C";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Añadir lectura de glucosa";
@@ -519,18 +319,3 @@
 
 /* No description supplied by the engineer */
 "fab_ketonest" = "Cetonas";
-
-/* No description supplied by the engineer */
-"fab_pressure" = "Presión arterial";
-
-/* No description supplied by the engineer */
-"fab_cholesterol" = "Nivel de colesterol";
-
-/* No description supplied by the engineer */
-"fab_HB1AC" = "Lectura de HB1AC";
-
-/* No description supplied by the engineer */
-"fab_glucose" = "Nivel de glucosa en sangre";
-
-/* No description supplied by the engineer */
-"dialog_error_duplicate" = "Ya tienes una entrada en esa hora. Quítelo antes de añadir una corrección.";

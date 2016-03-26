@@ -1,3 +1,27 @@
 
 /* No description supplied by the engineer */
+"action_settings" = "프로필 설정";
+
+/* No description supplied by the engineer */
+"action_feedback" = "사용자 의견 보내기";
+
+/* No description supplied by the engineer */
+"action_invite" = "친구 초대하기";
+
+/* No description supplied by the engineer */
+"tab_overview" = "미리보기";
+
+/* No description supplied by the engineer */
+"tab_history" = "기록";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Tips";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "안녕하세요";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "안녕하세요";
+
+/* No description supplied by the engineer */
 "title_activity_add_glucose" = "포도 당 독서를 추가";

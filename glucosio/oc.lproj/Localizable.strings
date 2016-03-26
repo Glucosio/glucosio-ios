@@ -1,0 +1,57 @@
+
+/* No description supplied by the engineer */
+"action_settings" = "Reglatges";
+
+/* No description supplied by the engineer */
+"action_feedback" = "Mandatz vòstres comentaris";
+
+/* No description supplied by the engineer */
+"action_invite" = "Convidar un amic";
+
+/* No description supplied by the engineer */
+"tab_overview" = "Apercebut";
+
+/* No description supplied by the engineer */
+"tab_history" = "Istoric";
+
+/* No description supplied by the engineer */
+"tab_tips" = "Astúcias";
+
+/* No description supplied by the engineer */
+"title_activity_hello" = "Bonjorn.";
+
+/* No description supplied by the engineer */
+"helloactivity_headline" = "Bonjorn.";
+
+/* No description supplied by the engineer */
+"helloactivity_terms" = "Condicions d'utilizacion";
+
+/* No description supplied by the engineer */
+"helloactivity_country" = "País";
+
+/* No description supplied by the engineer */
+"helloactivity_age" = "Atge";
+
+/* No description supplied by the engineer */
+"helloactivity_gender" = "Sèxe";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_1" = "Òme";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_2" = "Femna";
+
+/* No description supplied by the engineer */
+"helloactivity_gender_list_3" = "Autre";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type" = "Tipe de diabèt";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_1" = "Tipe 1";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_diabetes_type_2" = "Tipe 2";
+
+/* No description supplied by the engineer */
+"dialog_add_type_12" = "Autre";

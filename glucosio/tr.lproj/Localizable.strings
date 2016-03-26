@@ -231,6 +231,9 @@
 "assistant_reading_desc" = "Glikoz değerlerinizi düzenli olarak eklediğinizden emin olun böylece glikoz seviyenizi takip edebilelim.";
 
 /* No description supplied by the engineer */
+"assistant_export_title" = "Verilerinizi dışarı aktar";
+
+/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Tercih edilen aralık";
 
 /* No description supplied by the engineer */
@@ -420,10 +423,61 @@
 "dialog_add_weight" = "Ağırlık";
 
 /* No description supplied by the engineer */
+"dialog_add_ketones" = "Ketonlar";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Min Basınç";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Maks Basınc";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Toplam Kolesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL Kolesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL Kolesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Vücut Ağırlığı Ekle";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Kolesterol Düzeyini Ekle";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "HB1AC Ekle";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Keton Ekle";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Kan Basıncını Ekle";
+
+/* No description supplied by the engineer */
 "fab_weight" = "Vücut Ağırlığı";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Ketonlar";
 
 /* No description supplied by the engineer */
 "fab_pressure" = "Kan Basıncı";
 
 /* No description supplied by the engineer */
 "fab_cholesterol" = "Kolesterol Düzeyi";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HBA1C Okunuyor";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC devre dışı.";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "HBA1C hesaplamak için yeterli veri yok";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

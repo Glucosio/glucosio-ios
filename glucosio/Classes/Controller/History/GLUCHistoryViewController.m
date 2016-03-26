@@ -45,6 +45,9 @@
 
                                                          }];
     
+    self.title = GLUCLoc(@"tab_history");
+
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {

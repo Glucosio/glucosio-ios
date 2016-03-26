@@ -549,7 +549,4 @@
 "freestylelibre_nfc_error" = "NFC 接続を開くときにエラー!";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "HB1AC を計算するために十分なデータがありませｎ";
-
-/* No description supplied by the engineer */
 "overview_hb1ac" = "HB1AC:";

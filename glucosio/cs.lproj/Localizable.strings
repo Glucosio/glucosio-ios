@@ -6,6 +6,9 @@
 "action_feedback" = "Odeslat zpětnou vazbu";
 
 /* No description supplied by the engineer */
+"action_invite" = "Pozvat přítele";
+
+/* No description supplied by the engineer */
 "tab_overview" = "Přehled";
 
 /* No description supplied by the engineer */
@@ -105,7 +108,19 @@
 "dialog_add_type_6" = "Po večeři";
 
 /* No description supplied by the engineer */
+"dialog_add_type_7" = "Svačina";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Čas spánku";
+
+/* No description supplied by the engineer */
 "dialog_add_type_9" = "Noc";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Hladina glukózy nalačno";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Znovu zkontrolovat";
 
 /* No description supplied by the engineer */
 "dialog_add_type_12" = "Jiné";
@@ -136,6 +151,18 @@
 
 /* No description supplied by the engineer */
 "fragment_overview_trend" = "Trend za poslední měsíc:";
+
+/* No description supplied by the engineer */
+"fragment_overview_trend_positive" = "v normálu a zdravý";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Měsíc";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Den";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Týden";
 
 /* No description supplied by the engineer */
 "preferences_about" = "O programu";
@@ -180,6 +207,9 @@
 "assistant_categories_title" = "Vytvořit kategorie";
 
 /* No description supplied by the engineer */
+"assistant_categories_desc" = "Glucosio přichází s výchozími kategoriemi pro zadávání hladin cukru, můžete však vytvořit vlastní kategorie v nastavení tak, aby odpovídaly vašim potřebám.";
+
+/* No description supplied by the engineer */
 "assistant_check_title" = "Kontrolujte často";
 
 /* No description supplied by the engineer */
@@ -187,6 +217,12 @@
 
 /* No description supplied by the engineer */
 "assistant_reading_desc" = "Ujistěte se, aby jste pravidelně přidávali hodnoty hladiny glykémie tak, abychom vám mohli pomoci průběžně sledovat hladiny glukózy.";
+
+/* No description supplied by the engineer */
+"assistant_export_title" = "Exportujte svá data";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Sdílejte data se svým lékařem nebo je pomocí funkce exportu zálohujte na disk Google.";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Upřednostňovaný rozsah";
@@ -210,4 +246,229 @@
 "helloactivity_preferred_range_max" = "Nejvyšší hodnota";
 
 /* No description supplied by the engineer */
+"assistant_action_try" = "ZKUSTE TO NYNÍ";
+
+/* No description supplied by the engineer */
+"helloactivity_language" = "Jazyk";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Pozvat další osoby";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Zkuste Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Zálohovat";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Soukromí";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "O aplikaci Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Hodnotit Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Open source licence";
+
+/* No description supplied by the engineer */
+"about_donate" = "Podpořit Glucosio";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hypoglykémie";
+
+/* No description supplied by the engineer */
+"reading_low" = "Nízká hladina";
+
+/* No description supplied by the engineer */
+"reading_high" = "Vysoká hladina";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hyperglykémie";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Pomalá chůze";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Rychlá chůze";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Jogging";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Běh";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Plavání";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Tanec";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Kolečkové brusle";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Jízda na kole";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Golf";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Softball";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badminton";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Fotbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Basketbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Volejbal";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Kriket";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Frisbee";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Lyžování";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Box";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Tenis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_20" = "Stolní tenis";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_21" = "Bojová umění";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_22" = "Horolezectví";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_23" = "Wrestling";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_24" = "Turistika";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_25" = "Práce na zahradě";
+
+/* No description supplied by the engineer */
+"dialog_addfood_carbs" = "Sacharidy:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_protein" = "Bílkoviny:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_sugars" = "Cukry:";
+
+/* No description supplied by the engineer */
+"dialog_addfood_fat" = "Tuky:";
+
+/* No description supplied by the engineer */
+"about_contribute" = "Přispějte";
+
+/* No description supplied by the engineer */
+"about_contributel10n" = "Přispějte k překladu";
+
+/* No description supplied by the engineer */
+"about_contributedev" = "Přispějte k vývoji";
+
+/* No description supplied by the engineer */
+"about_discussion" = "Připojte se k naší diskuzní komunitě";
+
+/* No description supplied by the engineer */
+"dialog_export_title" = "Exportovat data";
+
+/* No description supplied by the engineer */
+"activity_export_date_from" = "Od:";
+
+/* No description supplied by the engineer */
+"dialog_export_date_to" = "Do:";
+
+/* No description supplied by the engineer */
+"title_activity_export" = "Exportovat data";
+
+/* No description supplied by the engineer */
+"dialog_export_all" = "Exportovat vše";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_true" = "Snímek obrazovky uložen do galerie";
+
+/* No description supplied by the engineer */
+"fragment_overview_graph_export_false" = "Chyba při ukládání snímku obrazovky do galerie";
+
+/* No description supplied by the engineer */
 "dialog_add_weight" = "Váha";
+
+/* No description supplied by the engineer */
+"dialog_add_ketones" = "Ketony";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_min" = "Min. tlak";
+
+/* No description supplied by the engineer */
+"dialog_add_pressure_max" = "Max. tlak";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_total" = "Celkový cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_ldl" = "LDL cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_cholesterol_hdl" = "HDL cholesterol";
+
+/* No description supplied by the engineer */
+"dialog_add_hb1ac" = "HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_glucose" = "Přidat hodnotu cukru";
+
+/* No description supplied by the engineer */
+"title_activity_add_weight" = "Přidat tělesnou hmotnost";
+
+/* No description supplied by the engineer */
+"title_activity_add_cholesterol" = "Přidat hladinu cholesterolu";
+
+/* No description supplied by the engineer */
+"title_activity_add_hb1ac" = "Přidat HB1AC";
+
+/* No description supplied by the engineer */
+"title_activity_add_ketone" = "Přidat ketony";
+
+/* No description supplied by the engineer */
+"title_activity_add_pressure" = "Přidat krevní tlak";
+
+/* No description supplied by the engineer */
+"fab_weight" = "Tělesná hmotnost";
+
+/* No description supplied by the engineer */
+"fab_ketonest" = "Ketony";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Krevní tlak";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Hladina cholesterolu";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "Hodnota HB1AC";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Hladina glukózy v krvi";

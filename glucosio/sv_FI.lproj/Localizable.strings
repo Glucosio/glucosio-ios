@@ -532,3 +532,12 @@
 
 /* No description supplied by the engineer */
 "dialog_error_duplicate" = "Du har redan en post för denna tid. Ta bort den innan du lägger till en korrigering.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Vänligen lägg telefonen på sensorn och flytta inte förrän den vibrerar.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC är inaktiverat.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "Ett fel uppstod när NFC-anslutning skulle öppnas!";

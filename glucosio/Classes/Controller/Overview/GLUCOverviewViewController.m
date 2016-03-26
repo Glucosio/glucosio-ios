@@ -23,20 +23,25 @@
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
 
-    self.rowTitles = @[GLUCLoc(@"Latest check"), GLUCLoc(@"Trend")];
+    self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"fragment_overview_trend")];
 
     NSString *lastReading = [NSString stringWithFormat:@"%@ %@",
                     [self.model.currentUser readingValueInPreferredUnits:[self.model lastReading]],
                     [self.model.currentUser displayValueForKey:kGLUCUserPreferredUnitsPropertyKey]];;
     
-    self.rowValues = @[lastReading, @"In range and healthy"];
+    self.rowValues = @[lastReading, @"fragment_overview_trend_positive"];
     
-    self.title = GLUCLoc(@"Overview");
+    self.title = GLUCLoc(@"tab_overview");
+    
+    // Localize chart scope control
+    [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_day") forSegmentAtIndex:0];
+    [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_week") forSegmentAtIndex:1];
+    [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_month") forSegmentAtIndex:2];
     
     self.tipView = [[UITextView alloc] init];
     self.tipView.textColor = [UIColor darkGrayColor];
     self.tipView.font = [GLUCAppearanceController defaultFont];
-    self.tipView.text = [NSString stringWithFormat:@"%@: %@", GLUCLoc(@"Tip"), GLUCLoc(@"Use less cheese in your recipes and meals.")];
+    self.tipView.text = [NSString stringWithFormat:@"%@: %@", GLUCLoc(@"tab_tips"), GLUCLoc(@"tip_example")];
     self.tipView.layer.borderColor = [[UIColor gluc_pink] CGColor];
     self.tipView.layer.borderWidth = 0.25f;
     self.tipView.layer.cornerRadius = 8.0f;
@@ -49,7 +54,7 @@
 
     GLUCReading *reading = [self.model lastReading];
     NSString *valueStr = @"";
-    NSString *lastReading = GLUCLoc(@"No data available");
+    NSString *lastReading = GLUCLoc(@"fragment_empty_text");
 
     if (reading) {
         if (self.model.currentUser.needsUnitConversion) {
@@ -66,7 +71,7 @@
     }
 
 
-    self.rowValues = @[lastReading, GLUCLoc(@"In range and healthy")]; // TODO: compute actual range
+    self.rowValues = @[lastReading, GLUCLoc(@"TODO: In range and healthy")]; // TODO: compute actual range
 
     [self.tableView reloadData];
 }
@@ -122,7 +127,7 @@
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"Daily Average Readings");
+    dataSet.label = GLUCLoc(@"fragment_overview_selector_day");
     dataSet.drawFilledEnabled = YES;
     dataSet.drawValuesEnabled = NO;
     dataSet.fillColor = [UIColor gluc_pink];
@@ -171,10 +176,10 @@
         }
     }
 
-    self.chartView.noDataText = GLUCLoc(@"No data available.  Tap '+' to add a reading.");
+    self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
 
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"Weekly Average Readings");
+    dataSet.label = GLUCLoc(@"fragment_overview_selector_week");
     dataSet.drawFilledEnabled = YES;
     dataSet.drawValuesEnabled = NO;
     dataSet.fillColor = [UIColor gluc_pink];
@@ -219,10 +224,10 @@
         }
     }
     
-    self.chartView.noDataText = GLUCLoc(@"No data available.  Tap '+' to add a reading.");
+    self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    dataSet.label = GLUCLoc(@"Monthly Average Readings");
+    dataSet.label = GLUCLoc(@"fragment_overview_selector_month");
     dataSet.drawFilledEnabled = YES;
     dataSet.drawValuesEnabled = NO;
     dataSet.fillColor = [UIColor gluc_pink];

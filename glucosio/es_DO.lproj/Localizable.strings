@@ -86,6 +86,9 @@
 "helloactivity_button_start" = "EMPEZAR";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "No hay información disponible todavía. \n Añadir tu primera lectura aquí.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Agrega el nivel de glucosa en la sangre";
 
 /* No description supplied by the engineer */
@@ -179,6 +182,12 @@
 "preferences_about" = "Sobre la aplicación";
 
 /* No description supplied by the engineer */
+"preferences_experimental" = "Estas características son experimentales y pueden no funcionar correctamente, están disponibles para que los usuarios las prueben. Recuerda que puedes agitar tu teléfono para enviarnos comentarios.";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
+
+/* No description supplied by the engineer */
 "preferences_version" = "Versión";
 
 /* No description supplied by the engineer */
@@ -231,6 +240,9 @@
 
 /* No description supplied by the engineer */
 "assistant_check_desc" = "Asistente de Glucosio ofrece consejos regulares y seguirá mejorando, así que siempre revisa aquí para ver lo que puede hacer para mejorar su experiencia con Glucosio y por otros consejos útiles.";
+
+/* No description supplied by the engineer */
+"assistant_feedback_title" = "Enviar comentarios";
 
 /* No description supplied by the engineer */
 "assistant_feedback_desc" = "Si encuentra cualquier problema técnico o tiene comentarios sobre Glucosio, le animamos a enviar sus comentarios en el menú de configuración con el fin de ayudarnos a mejorar Glucosio.";
@@ -294,6 +306,18 @@
 
 /* No description supplied by the engineer */
 "preferences_licences_open" = "Licencias de código abierto";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "Habilitar soporte para FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "EXPERIMENTAL: Habilitar soporte para FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "EXPERIMENTAL: Mejorar legibilidad para usuarios con dislexia";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "Mejorar legibilidad para usuarios con dislexia";
 
 /* No description supplied by the engineer */
 "about_donate" = "Donar a Glucosio";
@@ -534,3 +558,18 @@
 
 /* No description supplied by the engineer */
 "dialog_error_duplicate" = "Ya tienes una entrada en esa hora. Quítelo antes de añadir una corrección.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Por favor, coloca el teléfono sobre el sensor y no lo muevas hasta que vibre.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC está deshabilitado.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "¡Se produjo un error al establecer la conexión NFC!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Todavía no hay datos suficientes para el cálculo de HBA1C";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

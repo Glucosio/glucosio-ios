@@ -1,3 +1,11 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "Glucosio";
 
 /* No description supplied by the engineer */
 "action_settings" = "Axustes";
@@ -63,6 +71,12 @@
 "helloactivity_spinner_preferred_unit" = "Unidade preferida";
 
 /* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_1" = "mg/dL";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_2" = "mmol/L";
+
+/* No description supplied by the engineer */
 "helloactivity_share_data" = "Compartir os datos de xeito anónimo para a investigación.";
 
 /* No description supplied by the engineer */
@@ -75,10 +89,16 @@
 "helloactivity_button_start" = "COMEZAR";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "Aínda non hai información dispoñible. \n Engade o teu primeiro rexistro aquí.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Engadir o nivel de glicosa en sangue";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "Concentración";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dL";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "Data";
@@ -165,10 +185,19 @@
 "fragment_overview_selector_week" = "Semana";
 
 /* No description supplied by the engineer */
+"tip_example" = "Bótalle menos queixo ás túas receitas. A mozzarella fresca acondicionada con auga e o queixo suízo adoitan ter menos presenza de sodio.";
+
+/* No description supplied by the engineer */
 "preferences_about" = "Acerca de";
 
 /* No description supplied by the engineer */
+"preferences_experimental_title" = "Aquí hai dragóns :/";
+
+/* No description supplied by the engineer */
 "preferences_experimental" = "Estas funcionalidades están aínda en probas e pode que non funcionen todo o correctamente que deberían. Lembra que podes enviarnos suxestións abaneando o teu teléfono.";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Versión";
@@ -225,6 +254,9 @@
 "assistant_check_desc" = "O asistente de Glucosio ofrece consellos periodicamente e seguirá mellorando, polo que ten ansia de revisar esta sección para mellorar a túa experiencia coa aplicación e recibir consellos útiles.";
 
 /* No description supplied by the engineer */
+"assistant_feedback_title" = "Enviar comentarios";
+
+/* No description supplied by the engineer */
 "assistant_feedback_desc" = "Se dás con calquera problema técnico ou tes comentarios sobre Glucosio, animámoste a envialos desde o menú dos axustes co fin de contribuír á mellora e evolución de Glucosio.";
 
 /* No description supplied by the engineer */
@@ -241,6 +273,15 @@
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Rango preferido";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range_4" = "Personalizar rango";
@@ -468,6 +509,9 @@
 "fragment_overview_graph_export_false" = "Erro ao gardar a captura de pantalla na galería";
 
 /* No description supplied by the engineer */
+"dialog_export_range" = "Intervalo de exportación";
+
+/* No description supplied by the engineer */
 "activity_export_no_readings_snackbar" = "Ningún rexistro para exportar.";
 
 /* No description supplied by the engineer */
@@ -540,13 +584,25 @@
 "freestylelibre_nfc_ready" = "Por favor, sitúa o teu teléfono sobre o sensor e non o movas ata que vibre.";
 
 /* No description supplied by the engineer */
+"freestylelibre_nfc_not_supported" = "Este dispositivo non admite NFC.";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "NFC está deshabilitado.";
 
 /* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre" = "Engadir desde FreeStyle Libre®";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_error" = "Erro ao abrir a conexión NFC!";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_success" = "Engadiuse satisfactoriamente un rexistro desde FreeStyle Libre®";
 
 /* No description supplied by the engineer */
 "overview_hb1ac_error_no_data" = "Non hai datos suficientes para calcular a HbA1c";
 
 /* No description supplied by the engineer */
 "overview_hb1ac" = "HbA1c:";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_added" = "Engadido desde FreeStyle Libre®";

@@ -17,9 +17,13 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSArray *tabItemTitlesLoc = @[GLUCLoc(@"tab_overview"), GLUCLoc(@"tab_history"), GLUCLoc(@"action_settings")];
+    int tabItemIndex = 0;
     for (UITabBarItem *tabItem in self.tabBar.items) {
         tabItem.image = [tabItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        tabItem.title = tabItemTitlesLoc[tabItemIndex++];
     }
+    
 }
 
 - (void) addReading:(id)sender {

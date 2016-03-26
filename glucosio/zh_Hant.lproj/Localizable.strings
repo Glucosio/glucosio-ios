@@ -1,3 +1,11 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "Glucosio";
 
 /* No description supplied by the engineer */
 "action_settings" = "設定";
@@ -63,6 +71,12 @@
 "helloactivity_spinner_preferred_unit" = "偏好單位";
 
 /* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_1" = "mg/dL";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_2" = "mmol/L";
+
+/* No description supplied by the engineer */
 "helloactivity_share_data" = "匿名地分享資料提供研究。";
 
 /* No description supplied by the engineer */
@@ -75,10 +89,16 @@
 "helloactivity_button_start" = "開始使用";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "還沒有資訊。\n在此新增您的第一筆血糖紀錄。";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "新增血糖值";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "濃度";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dL";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "日期";
@@ -165,10 +185,19 @@
 "fragment_overview_selector_week" = "週";
 
 /* No description supplied by the engineer */
+"tip_example" = "在菜單與食譜中少用點起司。包裝在水裡的新鮮莫札瑞拉起司以及瑞士起司通常鈉含量較低。";
+
+/* No description supplied by the engineer */
 "preferences_about" = "關於";
 
 /* No description supplied by the engineer */
+"preferences_experimental_title" = "小心設定！";
+
+/* No description supplied by the engineer */
 "preferences_experimental" = "這些功能還在實驗中，有可能無法正常使用，僅供早期使用者協助測試。別忘記您可以搖晃手機傳送意見回饋給我們。";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "版本";
@@ -223,6 +252,9 @@
 
 /* No description supplied by the engineer */
 "assistant_check_desc" = "Glucosio 血糖小幫手提供控制血糖的小祕訣，並會持續改善。請常回來看看有沒有什麼能改善您的 Glucosio 使用體驗的新鮮事，或是其他有用的小祕訣。";
+
+/* No description supplied by the engineer */
+"assistant_feedback_title" = "送出意見回饋";
 
 /* No description supplied by the engineer */
 "assistant_feedback_desc" = "若您發現任何技術問題，或是對 Glucosio 有任何意見想說，我們相當歡迎您在設定選單告訴我們，以幫助我們改善 Glucosio。";
@@ -552,13 +584,25 @@
 "freestylelibre_nfc_ready" = "請將您的手機放到感應器上，在震動前不要移動手機。";
 
 /* No description supplied by the engineer */
+"freestylelibre_nfc_not_supported" = "此裝置不支援 NFC。";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "已停用 NFC。";
 
 /* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre" = "自 FreeStyle Libre 新增";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_error" = "開啟 NFC 連線時發生錯誤！";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_success" = "已成功自 FreeStyle Libre 新增讀數";
 
 /* No description supplied by the engineer */
 "overview_hb1ac_error_no_data" = "沒有足夠的資料來計算糖化血色素";
 
 /* No description supplied by the engineer */
 "overview_hb1ac" = "HB1AC:";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_added" = "自您的 FreeStyle Libre 新增";

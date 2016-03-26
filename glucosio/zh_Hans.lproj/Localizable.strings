@@ -179,6 +179,9 @@
 "preferences_about" = "关于";
 
 /* No description supplied by the engineer */
+"preferences_experimental" = "这些实验性功能不保证能稳定工作，仅面向早期测试用户。您可以摇动手机以给我们发送反馈。";
+
+/* No description supplied by the engineer */
 "preferences_version" = "版本";
 
 /* No description supplied by the engineer */
@@ -300,6 +303,12 @@
 
 /* No description supplied by the engineer */
 "preferences_freestyle_libre_experimental" = "实验性：启用 FreeStyle Libre® 支持";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "实验性：加强对阅读障碍用户的可读性";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "加强对阅读障碍用户的可读性";
 
 /* No description supplied by the engineer */
 "about_donate" = "捐款给 Glucosio";

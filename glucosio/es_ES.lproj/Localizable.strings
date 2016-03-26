@@ -71,6 +71,9 @@
 "helloactivity_spinner_preferred_unit" = "Unidad preferida";
 
 /* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_1" = "mg/dl";
+
+/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_unit_2" = "mmol/L";
 
 /* No description supplied by the engineer */
@@ -86,10 +89,16 @@
 "helloactivity_button_start" = "EMPEZAR";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "No hay información disponible todavía. \n Añadir tu primera lectura aquí.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Añade el nivel de glucosa en la sangre";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "Concentración";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dl";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "Fecha";
@@ -176,7 +185,19 @@
 "fragment_overview_selector_week" = "Semana";
 
 /* No description supplied by the engineer */
+"tip_example" = "Usa menos queso en tus recetas y comidas. La mozzarella fresca empaquetada en agua y el queso suizo casi siempre son bajos en sodio.";
+
+/* No description supplied by the engineer */
 "preferences_about" = "Sobre la aplicación";
+
+/* No description supplied by the engineer */
+"preferences_experimental_title" = "Aquí hay dragones :/";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "Estas características son experimentales y pueden no funcionar correctamente, están disponibles para que los usuarios las prueben. Recuerda que puedes agitar tu teléfono para enviarnos comentarios.";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Versión";
@@ -233,6 +254,9 @@
 "assistant_check_desc" = "Asistente de Glucosio ofrece consejos regulares y seguirá mejorando, así que siempre revisa aquí para ver lo que puede hacer para mejorar su experiencia con Glucosio y por otros consejos útiles.";
 
 /* No description supplied by the engineer */
+"assistant_feedback_title" = "Enviar comentarios";
+
+/* No description supplied by the engineer */
 "assistant_feedback_desc" = "Si encuentra cualquier problema técnico o tiene comentarios sobre Glucosio, le animamos a enviar sus comentarios en el menú de configuración con el fin de ayudarnos a mejorar Glucosio.";
 
 /* No description supplied by the engineer */
@@ -249,6 +273,15 @@
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Rango preferido";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range_4" = "Rango a medida";
@@ -294,6 +327,18 @@
 
 /* No description supplied by the engineer */
 "preferences_licences_open" = "Licencias de código abierto";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "Habilitar soporte para FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "EXPERIMENTAL: Habilitar soporte para FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "EXPERIMENTAL: Mejorar legibilidad para usuarios con dislexia";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "Mejorar legibilidad para usuarios con dislexia";
 
 /* No description supplied by the engineer */
 "about_donate" = "Donar a Glucosio";
@@ -534,3 +579,18 @@
 
 /* No description supplied by the engineer */
 "dialog_error_duplicate" = "Ya tienes una entrada en esa hora. Quítelo antes de añadir una corrección.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Por favor, coloca el teléfono sobre el sensor y no lo muevas hasta que vibre.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC está deshabilitado.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "¡Se produjo un error al establecer la conexión NFC!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Todavía no hay datos suficientes para el cálculo de HBA1C";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

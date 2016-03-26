@@ -6,6 +6,9 @@
 "action_feedback" = "Pošaljite povratnu informaciju";
 
 /* No description supplied by the engineer */
+"action_invite" = "Pozovite prijatelja";
+
+/* No description supplied by the engineer */
 "tab_overview" = "Pregled";
 
 /* No description supplied by the engineer */
@@ -105,7 +108,19 @@
 "dialog_add_type_6" = "Nakon večere";
 
 /* No description supplied by the engineer */
+"dialog_add_type_7" = "Užina";
+
+/* No description supplied by the engineer */
+"dialog_add_type_8" = "Vrijeme za spavanje";
+
+/* No description supplied by the engineer */
 "dialog_add_type_9" = "Noć";
+
+/* No description supplied by the engineer */
+"dialog_add_type_10" = "Glukoza u postu";
+
+/* No description supplied by the engineer */
+"dialog_add_type_11" = "Ponovo provjeri";
 
 /* No description supplied by the engineer */
 "dialog_add_type_12" = "Drugo";
@@ -151,6 +166,9 @@
 
 /* No description supplied by the engineer */
 "preferences_about" = "O programu";
+
+/* No description supplied by the engineer */
+"preferences_experimental" = "Ove funkcionalnosti su eksperimentalne i možda neće u potpunosti raditi i tu su za rano testiranje. Podsjećamo vas da možete prodrmati telefon da nam pošaljete povratne informacije.";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Verzija";
@@ -216,6 +234,12 @@
 "assistant_reading_desc" = "Pobrinite se da redovno dodajete svoja očitavanja glukoze kako bismo vam pomogli da pratite vaše nivoe glukoze tokom vremena.";
 
 /* No description supplied by the engineer */
+"assistant_export_title" = "Izvezite vaše podatke";
+
+/* No description supplied by the engineer */
+"assistant_export_desc" = "Podijelite vaše podatke s doktorom ili kreirajte backup na Google Drive upotrebom funkcije izvoza.";
+
+/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Željeni raspon";
 
 /* No description supplied by the engineer */
@@ -231,4 +255,151 @@
 "assistant_action_try" = "PROBAJ ODMAH";
 
 /* No description supplied by the engineer */
+"helloactivity_language" = "Jezik";
+
+/* No description supplied by the engineer */
+"invitation_title" = "Pozovite druge ljude";
+
+/* No description supplied by the engineer */
+"invitation_message" = "Probajte Glucosio, open source aplikaciju za upravljanje i istraživanje dijabetesa.";
+
+/* No description supplied by the engineer */
+"invitation_cta" = "Isprobajte Glucosio";
+
+/* No description supplied by the engineer */
+"title_activity_backup" = "Backup";
+
+/* No description supplied by the engineer */
+"preferences_privacy" = "Privatnost";
+
+/* No description supplied by the engineer */
+"helloactivity_textview_tos" = "Korištenje Glucosia, pristajete na";
+
+/* No description supplied by the engineer */
+"preferences_backup_google_drive" = "Google Drive";
+
+/* No description supplied by the engineer */
+"preferences_about_glucosio" = "O Glucosiu";
+
+/* No description supplied by the engineer */
+"preferences_rate" = "Ocijenite Glucosio";
+
+/* No description supplied by the engineer */
+"preferences_licences_open" = "Open source licence";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre" = "Omogući podršku za FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_freestyle_libre_experimental" = "EKSPERIMENTALNO: Omogućite podršku za FreeStyle Libre®";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia_experimental" = "EKSPERIMENTALNO: Povećajte čitljivost za korisnike sa disleksijom";
+
+/* No description supplied by the engineer */
+"preferences_font_dyslexia" = "Povećajte čitljivost za korisnike sa disleksijom";
+
+/* No description supplied by the engineer */
+"about_donate" = "Donirajte Glucosiu";
+
+/* No description supplied by the engineer */
+"reading_ok" = "OK";
+
+/* No description supplied by the engineer */
+"reading_hypo" = "Hipoglikemija";
+
+/* No description supplied by the engineer */
+"reading_low" = "Nisko";
+
+/* No description supplied by the engineer */
+"reading_high" = "Visoko";
+
+/* No description supplied by the engineer */
+"reading_hyper" = "Hiperglikemija";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_1" = "Ležerno hodanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_2" = "Brzo hodanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_3" = "Džogiranje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_4" = "Trčanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_5" = "Plivanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_6" = "Plesanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_7" = "Vožnja rolera";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_8" = "Vožnja bicikla";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_9" = "Golf";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_10" = "Softbol";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_11" = "Badminton";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_12" = "Nogomet";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_13" = "Košarka";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_14" = "Odbojka";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_15" = "Kriket";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_16" = "Frizbi";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_17" = "Skijanje";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_18" = "Boks";
+
+/* No description supplied by the engineer */
+"dialog_add_exercisetype_19" = "Tenis";
+
+/* No description supplied by the engineer */
 "dialog_add_weight" = "Težina";
+
+/* No description supplied by the engineer */
+"fab_cholesterol" = "Nivo holesterola";
+
+/* No description supplied by the engineer */
+"fab_HB1AC" = "HBA1C očitanje";
+
+/* No description supplied by the engineer */
+"fab_glucose" = "Nivo šećera u krvi";
+
+/* No description supplied by the engineer */
+"dialog_error_duplicate" = "Već imate unos za ovo vrijeme. Molimo da ga uklonite prije dodavanja ispravke.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_ready" = "Molimo da stavite vaš telefon na senzor i da ga ne uklanjate dok ne zavibrira.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_not_enabled" = "NFC je onemogućen.";
+
+/* No description supplied by the engineer */
+"freestylelibre_nfc_error" = "Greška pri otvaranju NFC konekcije!";
+
+/* No description supplied by the engineer */
+"overview_hb1ac_error_no_data" = "Nema dovoljno podataka za računanje HBA1C";
+
+/* No description supplied by the engineer */
+"overview_hb1ac" = "HBA1C:";

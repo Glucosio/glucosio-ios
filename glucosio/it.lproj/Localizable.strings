@@ -71,6 +71,9 @@
 "helloactivity_spinner_preferred_unit" = "Unità preferita";
 
 /* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_1" = "mg/dL";
+
+/* No description supplied by the engineer */
 "helloactivity_spinner_preferred_unit_2" = "mmol/L";
 
 /* No description supplied by the engineer */
@@ -86,10 +89,16 @@
 "helloactivity_button_start" = "INIZIAMO";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "Nessuna informazione disponibile.\nAggiungi qui la tua prima lettura.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Aggiungi Glicemia";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "Concentrazione";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dL";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "Data";
@@ -176,10 +185,19 @@
 "fragment_overview_selector_week" = "Settimana";
 
 /* No description supplied by the engineer */
+"tip_example" = "Usa meno formaggio nelle tue ricette e nei tuoi pasti. La mozzarella fresca, ad alto contenuto d'acqua, e il formaggio svizzero contengono meno sodio.";
+
+/* No description supplied by the engineer */
 "preferences_about" = "Informazioni";
 
 /* No description supplied by the engineer */
+"preferences_experimental_title" = "Problemi in vista :/";
+
+/* No description supplied by the engineer */
 "preferences_experimental" = "Queste funzioni sono sperimentali e potrebbero non funzionare correttamente. Ricorda che puoi scuotere il dispositivo per inviarci suggerimenti e problemi relative ad esse.";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Versione";
@@ -236,6 +254,9 @@
 "assistant_check_desc" = "L'assistente di Glucosio fornisce constanti suggerimenti e continuerà a migliorare, perciò controlla sempre qui azioni che possono migliorare la tua esperienza d'uso di Glucosio e altri utili consigli.";
 
 /* No description supplied by the engineer */
+"assistant_feedback_title" = "Invia un commento";
+
+/* No description supplied by the engineer */
 "assistant_feedback_desc" = "Se trovi eventuali problemi tecnici o hai feedback su Glucosio ti invitiamo a segnalarli nel menu impostazioni, al fine di aiutarci a migliorare Glucosio.";
 
 /* No description supplied by the engineer */
@@ -252,6 +273,15 @@
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Intervallo desiderato";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_1" = "ADA";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_2" = "AACE";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_range_3" = "UK NICE";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range_4" = "Intervallo personalizzato";
@@ -554,13 +584,25 @@
 "freestylelibre_nfc_ready" = "Per favore, avvicina il telefono al sensore e non muoverlo finchè non vibra.";
 
 /* No description supplied by the engineer */
+"freestylelibre_nfc_not_supported" = "Questo dispositivo non supporta NFC.";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "NFC è disabilitato.";
 
 /* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre" = "Aggiungi da FreeStyle Libre";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_error" = "Errore durante l'apertura di una connessione NFC";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_success" = "Lettura aggiunta correttamente dal FreeStyle Libre";
 
 /* No description supplied by the engineer */
 "overview_hb1ac_error_no_data" = "Dati insufficienti";
 
 /* No description supplied by the engineer */
 "overview_hb1ac" = "Emoglobina glicata:";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_added" = "Aggiunto dal tuo FreeStyle Libre";

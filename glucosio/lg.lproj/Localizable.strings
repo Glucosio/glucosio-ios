@@ -118,3 +118,24 @@
 
 /* No description supplied by the engineer */
 "dialog_delete" = "Sazamu";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_month" = "Omwezi";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_day" = "Olunaku";
+
+/* No description supplied by the engineer */
+"fragment_overview_selector_week" = "Sabiiti";
+
+/* No description supplied by the engineer */
+"preferences_version" = "Ekyikka";
+
+/* No description supplied by the engineer */
+"weight" = "Obuzito";
+
+/* No description supplied by the engineer */
+"dialog_add_weight" = "Obuzito";
+
+/* No description supplied by the engineer */
+"fab_pressure" = "Entunnmuusi";

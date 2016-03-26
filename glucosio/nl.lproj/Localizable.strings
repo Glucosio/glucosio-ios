@@ -1,3 +1,11 @@
+/* 
+  Localizable.strings
+  glucosio
+  Created by Chris Walters on 10/13/15.
+  Copyright © 2015 Glucosio.org. All rights reserved.
+*/
+/* No description supplied by the engineer */
+"app_name" = "Glucosio";
 
 /* No description supplied by the engineer */
 "action_settings" = "Instellingen";
@@ -63,6 +71,12 @@
 "helloactivity_spinner_preferred_unit" = "Voorkeurseenheid";
 
 /* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_1" = "mg/dl";
+
+/* No description supplied by the engineer */
+"helloactivity_spinner_preferred_unit_2" = "mmol/l";
+
+/* No description supplied by the engineer */
 "helloactivity_share_data" = "Anonieme gegevens delen voor onderzoek";
 
 /* No description supplied by the engineer */
@@ -75,10 +89,16 @@
 "helloactivity_button_start" = "AAN DE SLAG";
 
 /* No description supplied by the engineer */
+"fragment_empty_text" = "Nog geen info beschikbaar. \n Voeg hier uw eerste uitlezing toe.";
+
+/* No description supplied by the engineer */
 "dialog_add_title" = "Bloedsuikerspiegel toevoegen";
 
 /* No description supplied by the engineer */
 "dialog_add_concentration" = "Concentratie";
+
+/* No description supplied by the engineer */
+"dialog_add_concentration_um" = "mg/dl";
 
 /* No description supplied by the engineer */
 "dialog_add_date" = "Datum";
@@ -165,10 +185,19 @@
 "fragment_overview_selector_week" = "Week";
 
 /* No description supplied by the engineer */
+"tip_example" = "Gebruik minder kaas in uw recepten en maaltijden. Verse mozzarella verpakt in water en Zwitserse kaas bevatten doorgaans minder natrium.";
+
+/* No description supplied by the engineer */
 "preferences_about" = "Over";
 
 /* No description supplied by the engineer */
+"preferences_experimental_title" = "Hier zijn draken :/";
+
+/* No description supplied by the engineer */
 "preferences_experimental" = "Deze functies zijn experimenteel, werken mogelijk niet volledig en zijn bedoeld voor vroege tests door gebruikers. Onthoud dat u uw telefoon kunt schudden om feedback te verzenden.";
+
+/* No description supplied by the engineer */
+"version" = "0.9.3 (Imli)";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Versie";
@@ -225,7 +254,10 @@
 "assistant_check_desc" = "Glucosio-assistent levert regelmatig tips en wordt continu verbeterd, dus kijk altijd hier voor nuttige acties die u kunt nemen om uw Glucosio-ervaring te verbeteren en voor andere nuttige tips.";
 
 /* No description supplied by the engineer */
-"assistant_feedback_desc" = "Als u technische problemen tegenkomt of feedback over Glucosio hebt, zien we graag dat u deze indient in het instellingenmenu om Glucosio te helpen verbeteren.";
+"assistant_feedback_title" = "Feedback indienen";
+
+/* No description supplied by the engineer */
+"assistant_feedback_desc" = "Als u technische problemen tegenkomt of feedback over Glucosio hebt, zien we graag dat u deze indient om Glucosio te helpen verbeteren.";
 
 /* No description supplied by the engineer */
 "assistant_reading_title" = "Een uitlezing toevoegen";
@@ -237,7 +269,7 @@
 "assistant_export_title" = "Uw gegevens exporteren";
 
 /* No description supplied by the engineer */
-"assistant_export_desc" = "Deel uw gegevens met uw arts of plaats een back-up ervan op Google Drive via de exporteerfunctie.";
+"assistant_export_desc" = "Deel uw gegevens met uw arts of plaats een back-up ervan op Google Drive via de exportfunctie.";
 
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_range" = "Voorkeursbereik";
@@ -552,13 +584,25 @@
 "freestylelibre_nfc_ready" = "Houd uw telefoon voor de sensor en beweeg niet totdat deze trilt.";
 
 /* No description supplied by the engineer */
+"freestylelibre_nfc_not_supported" = "Dit apparaat ondersteunt geen NFC.";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "NFC is uitgeschakeld.";
 
 /* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre" = "Toevoegen vanuit FreeStyle Libre";
+
+/* No description supplied by the engineer */
 "freestylelibre_nfc_error" = "Fout bij openen van NFC-verbinding!";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_success" = "Uitlezing met succes toegevoegd vanuit FreeStyle Libre";
 
 /* No description supplied by the engineer */
 "overview_hb1ac_error_no_data" = "Onvoldoende gegevens om HBA1C te berekenen";
 
 /* No description supplied by the engineer */
 "overview_hb1ac" = "HBA1C:";
+
+/* No description supplied by the engineer */
+"dialog_add_glucose_freestylelibre_added" = "Toegevoegd vanuit uw FreeStyle Libre";
