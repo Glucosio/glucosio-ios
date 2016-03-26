@@ -145,7 +145,8 @@
                 retVal = @(index);
             }
         } else {
-            retVal = val;
+            if (val)
+                retVal = val;
         }
     }
 

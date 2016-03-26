@@ -71,7 +71,9 @@
     NSString *measurementType = @"";
     if (self.editedObject && [self.editedObject.glucId integerValue] == -1 && !self.useEditedValue) {
         NSInteger currentHour = [[NSCalendar currentCalendar] gluc_hourFromDate:editDate];
-        measurementType = [self.editedObject readingTypeForId:[self.editedObject readingTypeIdForHourOfDay:currentHour]];
+        NSUInteger readingTypeId = [self.editedObject readingTypeIdForHourOfDay:currentHour];
+        self.editedObject.readingTypeId = [NSNumber numberWithInteger:readingTypeId];
+        measurementType = [self.editedObject readingTypeForId:readingTypeId];
     } else {
         measurementType = [self.editedObject displayValueForKey:kGLUCReadingReadingTypeIdPropertyKey];
     }
