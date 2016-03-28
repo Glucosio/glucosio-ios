@@ -125,7 +125,7 @@ static NSString *const kGLUCGLUCIndexedCellIdentifier = @"ItemCell";
 
 - (void)setupUI
 {
-    self.tableView.tintColor = [UIColor gluc_pink];
+    self.tableView.tintColor = [UIColor glucosio_pink];
 }
 
 - (void)indexItems:(NSArray *)items

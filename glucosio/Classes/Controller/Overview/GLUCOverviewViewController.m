@@ -42,7 +42,7 @@
     self.tipView.textColor = [UIColor darkGrayColor];
     self.tipView.font = [GLUCAppearanceController defaultFont];
     self.tipView.text = [NSString stringWithFormat:@"%@: %@", GLUCLoc(@"tab_tips"), GLUCLoc(@"tip_example")];
-    self.tipView.layer.borderColor = [[UIColor gluc_pink] CGColor];
+    self.tipView.layer.borderColor = [[UIColor glucosio_pink] CGColor];
     self.tipView.layer.borderWidth = 0.25f;
     self.tipView.layer.cornerRadius = 8.0f;
     [self.tipView sizeToFit];
@@ -52,7 +52,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    GLUCReading *reading = [self.model lastReading];
+    GLUCBloodGlucoseReading *reading = [self.model lastReading];
     NSString *valueStr = @"";
     NSString *lastReading = GLUCLoc(@"fragment_empty_text");
 
@@ -79,11 +79,11 @@
 - (void) configureStandardDataSet:(LineChartDataSet *)dataSet {
     //    dataSet.label = @""; // GLUCLoc(@"fragment_overview_selector_day");
     //     set1.setColor(getResources().getColor(R.color.glucosio_pink));
-    dataSet.colors = @[[UIColor gluc_pink]];
+    dataSet.colors = @[[UIColor glucosio_pink]];
     //     set1.setLineWidth(2f);
     dataSet.lineWidth = 2.0f;
     //     set1.setCircleColor(getResources().getColor(R.color.glucosio_pink));
-    dataSet.circleColors = @[[UIColor gluc_pink]];
+    dataSet.circleColors = @[[UIColor glucosio_pink]];
     //     set1.setCircleSize(4f);
     dataSet.circleRadius = 4.0f;
     //     set1.setDrawCircleHole(true);
@@ -98,15 +98,15 @@
     //     set1.setValueTextColor(Color.parseColor("#FFFFFF"));
     dataSet.drawValuesEnabled = NO;
     //     set1.setFillDrawable(getResources().getDrawable(R.drawable.graph_gradient));
-    dataSet.fillColor = [UIColor gluc_pink]; // ???
+    dataSet.fillColor = [UIColor glucosio_pink]; // ???
     //     set1.setHighLightColor(getResources().getColor(R.color.glucosio_gray_light));
     dataSet.highlightColor = [UIColor lightGrayColor];
     //     set1.setCubicIntensity(0.2f);
     dataSet.cubicIntensity = 0.2f;
     //     set1.setDrawCubic(true);
-    dataSet.drawCubicEnabled = YES;
+    dataSet.drawCubicEnabled = NO;
     //    dataSet.drawValuesEnabled = NO;
-    //    dataSet.fillColor = [UIColor gluc_pink];
+    //    dataSet.fillColor = [UIColor glucosio_pink];
 
 }
 - (void) displayStandardChart:(ChartData *)data {
@@ -118,7 +118,11 @@
     self.chartView.descriptionText = @"";
     self.chartView.legend.enabled = NO;
     [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
+    [[self.chartView getAxis:AxisDependencyLeft] setDrawGridLinesEnabled:NO];
     [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
+    [[self.chartView getAxis:AxisDependencyRight] setEnabled:NO];
+    [self.chartView.xAxis setLabelPosition:XAxisLabelPositionBottom];
+    [self.chartView.xAxis setDrawGridLinesEnabled:NO];
     self.chartView.data = data;
 }
 
@@ -130,11 +134,12 @@
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     
-    for (GLUCReading *reading in allReadings) {
+    for (GLUCBloodGlucoseReading *reading in allReadings) {
         if ([reading.creationDate gluc_isOnOrAfter:startOfMonth]) {
-            NSInteger day = [[NSCalendar currentCalendar] gluc_dayOfYearFromDate:reading.creationDate];
+            NSInteger day = [[NSCalendar currentCalendar] gluc_dayFromDate:reading.creationDate];
+            NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
             NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
-            NSString *dayKey = [NSString stringWithFormat:@"%04ld (%02ld)", (long)year, (long)day];
+            NSString *dayKey = [NSString stringWithFormat:@"%04ld (%02ld/%02ld)", (long)year, (long)month, (long)day];
             NSMutableArray *averageForWeek = [buckets valueForKey:dayKey];
             if (!averageForWeek) {
                 averageForWeek = [NSMutableArray array];
@@ -176,7 +181,7 @@
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
 
-    for (GLUCReading *reading in allReadings) {
+    for (GLUCBloodGlucoseReading *reading in allReadings) {
         NSInteger week = [[NSCalendar currentCalendar] gluc_weekFromDate:reading.creationDate];
         NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
         NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
@@ -226,7 +231,7 @@
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     
-    for (GLUCReading *reading in allReadings) {
+    for (GLUCBloodGlucoseReading *reading in allReadings) {
         NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
         NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
         NSDate *startOfMonth = [[NSCalendar currentCalendar] gluc_startOfMonth:month inYear:year];
@@ -318,7 +323,7 @@
             cell.detailTextLabel.font = [GLUCAppearanceController defaultBoldFont];
             break;
         case 1:
-            cell.detailTextLabel.textColor = [UIColor gluc_green];
+            cell.detailTextLabel.textColor = [UIColor glucosio_reading_ok];
             cell.detailTextLabel.font = [GLUCAppearanceController defaultFont];
             break;
         default:

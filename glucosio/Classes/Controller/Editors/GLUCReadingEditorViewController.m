@@ -43,7 +43,7 @@
     [super viewWillAppear:animated];
 
     [self.valueField setFont:[GLUCAppearanceController valueEditorTextFieldFont]];
-    [self.valueField setTextColor:[UIColor gluc_pink]];
+    [self.valueField setTextColor:[UIColor glucosio_pink]];
 
     NSDate *editDate = [NSDate date];
     if (self.editedObject) {
