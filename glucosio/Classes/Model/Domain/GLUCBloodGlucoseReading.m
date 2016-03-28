@@ -1,7 +1,7 @@
-#import "GLUCReading.h"
+#import "GLUCBloodGlucoseReading.h"
 #import "GLUCLoc.h"
 
-@implementation GLUCReading
+@implementation GLUCBloodGlucoseReading
 
 + (NSArray *) readingTypes {
     return @[
@@ -35,7 +35,7 @@
                             kGLUCModelAttributeKey : kGLUCReadingReadingTypeIdPropertyKey,
                             kGLUCModelAttributeTitleKey : @"dialog_add_measured",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : [GLUCReading readingTypes],
+                            kGLUCModelPotentialValuesKey : [GLUCBloodGlucoseReading readingTypes],
                             kGLUCModelDefaultIndexKey : @0
 
                     },

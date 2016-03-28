@@ -29,7 +29,7 @@
 		551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B61BC3EF60007CD147 /* GLUCHealthTip.m */; };
 		551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B81BC3EF60007CD147 /* GLUCModel.m */; };
 		551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BA1BC3EF60007CD147 /* GLUCRange.m */; };
-		551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BC1BC3EF60007CD147 /* GLUCReading.m */; };
+		551193D21BC3EF60007CD147 /* GLUCBloodGlucoseReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193BC1BC3EF60007CD147 /* GLUCBloodGlucoseReading.m */; };
 		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; };
 		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; };
 		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
@@ -118,8 +118,8 @@
 		551193B81BC3EF60007CD147 /* GLUCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCModel.m; sourceTree = "<group>"; };
 		551193B91BC3EF60007CD147 /* GLUCRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCRange.h; sourceTree = "<group>"; };
 		551193BA1BC3EF60007CD147 /* GLUCRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCRange.m; sourceTree = "<group>"; };
-		551193BB1BC3EF60007CD147 /* GLUCReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReading.h; sourceTree = "<group>"; };
-		551193BC1BC3EF60007CD147 /* GLUCReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReading.m; sourceTree = "<group>"; };
+		551193BB1BC3EF60007CD147 /* GLUCBloodGlucoseReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBloodGlucoseReading.h; sourceTree = "<group>"; };
+		551193BC1BC3EF60007CD147 /* GLUCBloodGlucoseReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCBloodGlucoseReading.m; sourceTree = "<group>"; };
 		551193BF1BC3EF60007CD147 /* GLUCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCUser.h; sourceTree = "<group>"; };
 		551193C01BC3EF60007CD147 /* GLUCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCUser.m; sourceTree = "<group>"; };
 		551193C21BC3EF60007CD147 /* GLUCPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCPersistenceController.h; sourceTree = "<group>"; };
@@ -622,8 +622,8 @@
 				551193B81BC3EF60007CD147 /* GLUCModel.m */,
 				551193B91BC3EF60007CD147 /* GLUCRange.h */,
 				551193BA1BC3EF60007CD147 /* GLUCRange.m */,
-				551193BB1BC3EF60007CD147 /* GLUCReading.h */,
-				551193BC1BC3EF60007CD147 /* GLUCReading.m */,
+				551193BB1BC3EF60007CD147 /* GLUCBloodGlucoseReading.h */,
+				551193BC1BC3EF60007CD147 /* GLUCBloodGlucoseReading.m */,
 				551193BF1BC3EF60007CD147 /* GLUCUser.h */,
 				551193C01BC3EF60007CD147 /* GLUCUser.m */,
 			);
@@ -1265,7 +1265,7 @@
 				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
 				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
 				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
-				551193D21BC3EF60007CD147 /* GLUCReading.m in Sources */,
+				551193D21BC3EF60007CD147 /* GLUCBloodGlucoseReading.m in Sources */,
 				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
 				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
 				551193691BC2D2B9007CD147 /* main.m in Sources */,

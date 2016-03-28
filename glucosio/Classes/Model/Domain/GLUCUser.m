@@ -1,6 +1,6 @@
 #import "GLUCUser.h"
 #import "GLUCRange.h"
-#import "GLUCReading.h"
+#import "GLUCBloodGlucoseReading.h"
 
 @interface GLUCUser ()
 @end
@@ -143,14 +143,14 @@
     return ((BOOL)[self.preferredUnifOfMeasure intValue]);
 }
 
-- (NSNumber *)readingValueInPreferredUnits:(GLUCReading *)reading {
+- (NSNumber *)readingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
     if ([self needsUnitConversion]) {
         return @([reading.value intValue] / 18.0f);
     }
     return reading.value;
 }
 
-- (void) setNewValue:(NSNumber *)value inReading:(GLUCReading *)reading {
+- (void) setNewValue:(NSNumber *)value inReading:(GLUCBloodGlucoseReading *)reading {
     NSNumber *newValue = value;
     if ([self needsUnitConversion]) {
         newValue = [NSNumber numberWithInteger:([value floatValue] * 18.0f)];

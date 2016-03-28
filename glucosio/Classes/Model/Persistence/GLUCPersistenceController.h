@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GLUCUser.h"
-#import "GLUCReading.h"
+#import "GLUCBloodGlucoseReading.h"
 #import <FMDB/FMDB.h>
 
 @interface GLUCPersistenceController : NSObject
@@ -19,10 +19,10 @@
 - (BOOL) deleteUser:(GLUCUser *)aUser;
 
 // create reading
-- (BOOL) saveReading:(GLUCReading *)reading;
-- (BOOL) deleteReading:(GLUCReading *)reading;
+- (BOOL) saveReading:(GLUCBloodGlucoseReading *)reading;
+- (BOOL) deleteReading:(GLUCBloodGlucoseReading *)reading;
 - (NSArray *) allReadings:(BOOL)ascending;
-- (GLUCReading *) lastReading;
+- (GLUCBloodGlucoseReading *) lastReading;
 
 - (void) saveAll;
 

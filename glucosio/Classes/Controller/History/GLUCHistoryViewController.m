@@ -82,7 +82,7 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier:kGLUCHistoryCellIdentifier];
     
-    GLUCReading *reading = nil;
+    GLUCBloodGlucoseReading *reading = nil;
     
     if (indexPath.row >= 0 && indexPath.row < self.readings.count) {
         reading = self.readings[(NSUInteger) indexPath.row];

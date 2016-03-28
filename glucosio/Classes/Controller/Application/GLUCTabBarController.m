@@ -32,7 +32,7 @@
         GLUCReadingEditorViewController *editorVC = (GLUCReadingEditorViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:kGLUCReadingEditorViewControllerIdentifier];
         if (editorVC) {
             editorVC.title = GLUCLoc(@"assistant_action_reading");
-            editorVC.editedObject = [[GLUCReading alloc] init];
+            editorVC.editedObject = [[GLUCBloodGlucoseReading alloc] init];
             UINavigationController *editorNavCtrl = [[UINavigationController alloc] initWithRootViewController:editorVC];
             [self presentViewController:editorNavCtrl animated:YES completion:^{
             }];

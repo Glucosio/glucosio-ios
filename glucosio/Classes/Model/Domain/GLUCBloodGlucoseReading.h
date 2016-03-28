@@ -6,7 +6,7 @@ static NSString *const kGLUCReadingModelValuePropertyKey = @"value";
 static NSString *const kGLUCReadingNotesPropertyKey = @"notes";
 static NSString *const kGLUCReadingModelCustomTypeNamePropertyKey = @"readingCustomTypeName";
 
-@interface GLUCReading : GLUCModel
+@interface GLUCBloodGlucoseReading : GLUCModel
 
 @property (nonatomic, readwrite, strong) NSNumber *value;
 @property (nonatomic, readwrite, strong) NSNumber *readingTypeId;

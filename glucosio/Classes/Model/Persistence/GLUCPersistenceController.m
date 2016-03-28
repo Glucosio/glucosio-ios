@@ -247,7 +247,7 @@
 
 // read, update, delete reading
 
-- (BOOL) saveReading:(GLUCReading *)reading {
+- (BOOL) saveReading:(GLUCBloodGlucoseReading *)reading {
     if (reading && reading.value) {
         if ([reading.glucId intValue] == -1) {
             [self.db executeUpdate:@"INSERT INTO reading (reading,reading_date,reading_type) VALUES(?,?,?)",
@@ -260,7 +260,7 @@
     return YES;
 }
 
-- (BOOL) deleteReading:(GLUCReading *)reading {
+- (BOOL) deleteReading:(GLUCBloodGlucoseReading *)reading {
     if (reading) {
         if ([reading.glucId intValue] != -1) {
             [self.db executeUpdate:@"DELETE FROM reading where reading_id = ?", reading.glucId, nil];
@@ -269,7 +269,7 @@
     return YES;
 }
 
-- (void) fillReading:(GLUCReading *)aReading fromResults:(FMResultSet *) results {
+- (void) fillReading:(GLUCBloodGlucoseReading *)aReading fromResults:(FMResultSet *) results {
     if (aReading && results) {
         aReading.glucId = @([results intForColumn:@"reading_id"]);
         aReading.value = [NSNumber numberWithInt:[results intForColumn:@"reading"]];
@@ -290,7 +290,7 @@
         results = [self.db executeQuery:@"SELECT * from reading order by datetime(reading_date) DESC"];
     }
     while ([results next]) {
-        GLUCReading *reading = [[GLUCReading alloc] init];
+        GLUCBloodGlucoseReading *reading = [[GLUCBloodGlucoseReading alloc] init];
 
         [self fillReading:reading fromResults:results];
         [readings addObject:reading];
@@ -299,11 +299,11 @@
     return (NSArray *)readings;
 }
 
-- (GLUCReading *) lastReading {
-    GLUCReading *retVal = nil;
+- (GLUCBloodGlucoseReading *) lastReading {
+    GLUCBloodGlucoseReading *retVal = nil;
     FMResultSet *results = [self.db executeQuery:@"SELECT * from reading where reading_date = ?", [self mostRecentDate]];
     while ([results next]) {
-        GLUCReading *reading = [[GLUCReading alloc] init];
+        GLUCBloodGlucoseReading *reading = [[GLUCBloodGlucoseReading alloc] init];
 
         [self fillReading:reading fromResults:results];
 

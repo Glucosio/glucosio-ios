@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "GLUCModel.h"
 
-@class GLUCReading;
+@class GLUCBloodGlucoseReading;
 
 
 static NSString *const kGLUCUserCountryPreferenceKey = @"countryPreference";
@@ -33,7 +33,7 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 - (BOOL) validateAge:(id *)ioValue error:(NSError **)outError;
 
 - (BOOL) needsUnitConversion;
-- (NSNumber *)readingValueInPreferredUnits:(GLUCReading *)reading;
-- (void) setNewValue:(NSNumber *)value inReading:(GLUCReading *)reading;
+- (NSNumber *)readingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading;
+- (void) setNewValue:(NSNumber *)value inReading:(GLUCBloodGlucoseReading *)reading;
 
 @end
