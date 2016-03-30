@@ -8,4 +8,4 @@ xcode_workspace: glucosio.xcworkspace
 xcode_scheme: glucosio
 
 script:
-    - xctool -workspace glucosio.xcworkspace -scheme glucosio build test -sdk iphonesimulator
+    - xctool -workspace glucosio.xcworkspace -scheme glucosio build test -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" ONLY_ACTIVE_ARCH=NO
