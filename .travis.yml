@@ -6,3 +6,6 @@ podfile: Podfile
 
 xcode_workspace: glucosio.xcworkspace
 xcode_scheme: glucosio
+
+script:
+    - xctool -workspace glucosio.xcworkspace -scheme glucosio build test -sdk iphonesimulator
