@@ -8,4 +8,4 @@ before_install:
     - gem install xcpretty-travis-formatter --no-document
 
 script:
-    - xcodebuild -workspace glucosio.xcworkspace -scheme glucosip -sdk iphonesimulator -configuration Release | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
+    - xcodebuild -workspace glucosio.xcworkspace -scheme glucosio -sdk iphonesimulator -configuration Release | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
