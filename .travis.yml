@@ -9,3 +9,4 @@ before_install:
 
 script:
     - xcodebuild -workspace glucosio.xcworkspace -scheme glucosio -sdk iphonesimulator -configuration Release | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
+    - xcodebuild -workspace glucosio.xcworkspace -scheme glucosio -sdk iphonesimulator -enableCodeCoverage YES test | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
