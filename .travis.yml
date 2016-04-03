@@ -5,7 +5,7 @@ cache: cocoapods
 podfile: Podfile
 
 before_install:
-    - gem install xcpretty-travis-formatter --no-document
+    - gem install xcpretty -N
 
 script:
-    - xcodebuild -workspace glucosio.xcworkspace -scheme glucosio -sdk iphonesimulator -configuration Release test | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
+    - xcodebuild -workspace glucosio.xcworkspace -scheme glucosio -sdk iphonesimulator test | xcpretty -c
