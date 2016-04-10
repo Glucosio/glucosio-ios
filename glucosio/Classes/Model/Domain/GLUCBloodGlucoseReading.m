@@ -55,22 +55,22 @@
 
 }
 
++ (NSString *) entityName {
+    return @"blood_glucose_reading";
+}
+
 - (instancetype) init {
     if ((self = [super init]) != nil) {
         [self setupDefaultData];
-
-        self.creationDate = [NSDate date];
-        self.modificationDate = self.creationDate;
-        self.glucId = @(-1);
     }
     return self;
 }
 
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId {
-    NSString *retVal = GLUCLoc(@"dialog_add_type_12");
+    NSString *retVal = GLUCLoc(@"dialog_add_type_12"); // default is "Other"
     NSArray *types = [[self class] readingTypes];
     if (readingTypeId >= 0 && readingTypeId < types.count)
-        retVal = types[readingTypeId];
+        retVal = types[(NSUInteger)readingTypeId];
     return retVal;
 }
 

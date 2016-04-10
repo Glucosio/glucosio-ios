@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C717FEC6A53D6692424E /* GLUCViewController.m */; };
 		42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */; };
+		42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CE7D8B33A6B5A258BC5E /* GLUCBodyWeightReading.m */; };
 		42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */; };
 		42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */; };
 		42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */; };
 		42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */; };
+		42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CE8337DE4EDB125B7CDB /* GLUCReading.m */; };
 		42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */; };
 		5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */; };
 		551193691BC2D2B9007CD147 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193681BC2D2B9007CD147 /* main.m */; };
@@ -70,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42B3C05E98BF24DADF350865 /* GLUCBodyWeightReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBodyWeightReading.h; sourceTree = "<group>"; };
 		42B3C0C2FE36FC4F4F0327AD /* GLUCPersistenceDDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCPersistenceDDL.h; sourceTree = "<group>"; };
 		42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAppearanceController.h; sourceTree = "<group>"; };
 		42B3C144BA070A08A3EBDF2C /* GLUCReadingEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReadingEditorViewController.h; sourceTree = "<group>"; };
@@ -83,6 +86,9 @@
 		42B3CA6A126FD897A0E739A7 /* GLUCListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCListEditorViewController.h; sourceTree = "<group>"; };
 		42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReadingEditorViewController.m; sourceTree = "<group>"; };
 		42B3CD95FBA708D0B283F8C7 /* GLUCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEditorViewController.h; sourceTree = "<group>"; };
+		42B3CE7D8B33A6B5A258BC5E /* GLUCBodyWeightReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCBodyWeightReading.m; sourceTree = "<group>"; };
+		42B3CE8337DE4EDB125B7CDB /* GLUCReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReading.m; sourceTree = "<group>"; };
+		42B3CF3DDA7C8CFCA8AAF32A /* GLUCReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReading.h; sourceTree = "<group>"; };
 		42B3CFADEECD38EC70948DC8 /* GLUCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCViewController.h; sourceTree = "<group>"; };
 		44416E140D3C3C50BF35DA28 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -626,6 +632,10 @@
 				551193BC1BC3EF60007CD147 /* GLUCBloodGlucoseReading.m */,
 				551193BF1BC3EF60007CD147 /* GLUCUser.h */,
 				551193C01BC3EF60007CD147 /* GLUCUser.m */,
+				42B3CE7D8B33A6B5A258BC5E /* GLUCBodyWeightReading.m */,
+				42B3C05E98BF24DADF350865 /* GLUCBodyWeightReading.h */,
+				42B3CE8337DE4EDB125B7CDB /* GLUCReading.m */,
+				42B3CF3DDA7C8CFCA8AAF32A /* GLUCReading.h */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1279,6 +1289,8 @@
 				42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */,
 				42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */,
 				42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */,
+				42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */,
+				42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

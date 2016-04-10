@@ -79,7 +79,8 @@
     NSDate *retVal = nil;
 
     if (self.db) {
-        retVal = [self.db dateForQuery:@"SELECT MAX(reading_date) FROM reading"];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(reading_date) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        retVal = [self.db dateForQuery:queryStr];
     }
     
     return retVal;
@@ -88,7 +89,8 @@
 - (int) lastRowId {
     int retVal = 0;
     if (self.db) {
-        retVal = [self.db intForQuery:@"SELECT MAX(reading_id) FROM reading"];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(reading_id) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        retVal = [self.db intForQuery:queryStr];
     }
     return retVal;
 }
@@ -96,15 +98,17 @@
 - (int) numberOfReadings {
     int retVal = 0;
     if (self.db) {
-        retVal = [self.db intForQuery:@"SELECT COUNT(reading) FROM reading"];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT COUNT(reading) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        retVal = [self.db intForQuery:queryStr];
     }
     return retVal;
 }
 
 - (void) execDDL {
+
     if (self.db) {
         NSLog(@"Creating reading table");
-        NSString *createDDL = [GLUCPersistenceDDL createReadingTable];
+        NSString *createDDL = [GLUCPersistenceDDL createReadingTableNamed:[GLUCBloodGlucoseReading entityName]];
         NSLog(@"%@", createDDL);
         [self.db executeUpdate:createDDL];
 
@@ -113,7 +117,8 @@
             NSDate *today = [[NSCalendar currentCalendar] gluc_dateByAddingMonths:(arc4random_uniform(12)*-1) toDate:[NSDate date]];
             NSDate *readingDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:(arc4random_uniform(45)*-1) toDate:today];
             int reading = arc4random_uniform(30) + 70;
-            [self.db executeUpdate:@"INSERT INTO reading (reading,reading_date,reading_type) VALUES(?,?,?)",
+            NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO %@ (reading, reading_date,reading_type) VALUES(?,?,?)", [GLUCBloodGlucoseReading entityName]];
+            [self.db executeUpdate:queryStr,
              @(reading), [[NSCalendar currentCalendar] gluc_dateByAddingMinutes:(arc4random_uniform(58)) toDate:readingDate], @(arc4random_uniform(9)), nil];
         }
 #endif
@@ -161,7 +166,9 @@
             aUser.age = [standardDefaults valueForKey:kGLUCUserAgePropertyKey];
             aUser.gender = [standardDefaults valueForKey:kGLUCUserGenderPropertyKey];
             aUser.illnessType = [standardDefaults valueForKey:kGLUCUserIllnessTypePropertyKey];
-            aUser.preferredUnifOfMeasure = [standardDefaults valueForKey:kGLUCUserPreferredUnitsPropertyKey];
+            aUser.preferredBloodGlucoseUnitOfMeasure = [standardDefaults valueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey];
+            aUser.preferredBodyWeightUnitOfMeasure = [standardDefaults valueForKey:kGLUCUserPreferredBodyWeightUnitsPropertyKey];
+            aUser.preferredA1CUnitOfMeasure = [standardDefaults valueForKey:kGLUCUserPreferredA1CUnitsPropertyKey];
             aUser.rangeType = [standardDefaults valueForKey:kGLUCUserRangeTypePropertyKey];
             aUser.rangeMin = [standardDefaults valueForKey:kGLUCUserRangeMinPropertyKey];
             aUser.rangeMax = [standardDefaults valueForKey:kGLUCUserRangeMaxPropertyKey];
@@ -210,8 +217,14 @@
             if (aUser.illnessType) {
                 [defaults setValue:aUser.illnessType forKey:kGLUCUserIllnessTypePropertyKey];
             }
-            if (aUser.preferredUnifOfMeasure) {
-                [defaults setValue:aUser.preferredUnifOfMeasure forKey:kGLUCUserPreferredUnitsPropertyKey];
+            if (aUser.preferredBloodGlucoseUnitOfMeasure) {
+                [defaults setValue:aUser.preferredBloodGlucoseUnitOfMeasure forKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey];
+            }
+            if (aUser.preferredBodyWeightUnitOfMeasure) {
+                [defaults setValue:aUser.preferredBodyWeightUnitOfMeasure forKey:kGLUCUserPreferredBodyWeightUnitsPropertyKey];
+            }
+            if (aUser.preferredA1CUnitOfMeasure) {
+                [defaults setValue:aUser.preferredA1CUnitOfMeasure forKey:kGLUCUserPreferredA1CUnitsPropertyKey];
             }
             if (aUser.rangeType) {
                 [defaults setValue:aUser.rangeType forKey:kGLUCUserRangeTypePropertyKey];
@@ -247,29 +260,32 @@
 
 // read, update, delete reading
 
-- (BOOL) saveReading:(GLUCBloodGlucoseReading *)reading {
+- (BOOL)saveBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
     if (reading && reading.value) {
         if ([reading.glucId intValue] == -1) {
-            [self.db executeUpdate:@"INSERT INTO reading (reading,reading_date,reading_type) VALUES(?,?,?)",
+            NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO %@ (reading,reading_date,reading_type) VALUES(?,?,?)", [[reading class] entityName]];
+            [self.db executeUpdate:queryStr,
                     reading.value, reading.creationDate, reading.readingTypeId, nil];
         } else {
-            [self.db executeUpdate:@"UPDATE reading set reading = ?, reading_date = ?, reading_type = ? WHERE reading_id = ?",
+            NSString *queryStr = [NSString stringWithFormat:@"UPDATE %@ set reading = ?, reading_date = ?, reading_type = ? WHERE reading_id = ?", [[reading class] entityName]];
+            [self.db executeUpdate:queryStr,
                     reading.value, reading.creationDate, reading.readingTypeId, reading.glucId, nil];
         }
     }
     return YES;
 }
 
-- (BOOL) deleteReading:(GLUCBloodGlucoseReading *)reading {
+- (BOOL)deleteBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
     if (reading) {
         if ([reading.glucId intValue] != -1) {
-            [self.db executeUpdate:@"DELETE FROM reading where reading_id = ?", reading.glucId, nil];
+            NSString *queryStr = [NSString stringWithFormat:@"DELETE FROM %@ where reading_id = ?", [[reading class] entityName]];
+            [self.db executeUpdate:queryStr, reading.glucId, nil];
         }
     }
     return YES;
 }
 
-- (void) fillReading:(GLUCBloodGlucoseReading *)aReading fromResults:(FMResultSet *) results {
+- (void)fillBloodGlucoseReading:(GLUCBloodGlucoseReading *)aReading fromResults:(FMResultSet *) results {
     if (aReading && results) {
         aReading.glucId = @([results intForColumn:@"reading_id"]);
         aReading.value = [NSNumber numberWithInt:[results intForColumn:@"reading"]];
@@ -280,32 +296,35 @@
     }
 }
 
-- (NSArray *) allReadings:(BOOL)ascending {
+- (NSArray *)allBloodGlucoseReadings:(BOOL)ascending {
     NSMutableArray *readings = [NSMutableArray array];
     FMResultSet *results = nil;
+    NSString *queryStr = @"";
     
     if (ascending) {
-        results = [self.db executeQuery:@"SELECT * from reading order by datetime(reading_date)"];
+        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(reading_date)", [GLUCBloodGlucoseReading entityName]];
+        results = [self.db executeQuery:queryStr];
     } else {
-        results = [self.db executeQuery:@"SELECT * from reading order by datetime(reading_date) DESC"];
+        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(reading_date) DESC", [GLUCBloodGlucoseReading entityName]];
+        results = [self.db executeQuery:queryStr];
     }
     while ([results next]) {
         GLUCBloodGlucoseReading *reading = [[GLUCBloodGlucoseReading alloc] init];
 
-        [self fillReading:reading fromResults:results];
+        [self fillBloodGlucoseReading:reading fromResults:results];
         [readings addObject:reading];
     }
     
     return (NSArray *)readings;
 }
 
-- (GLUCBloodGlucoseReading *) lastReading {
+- (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {
     GLUCBloodGlucoseReading *retVal = nil;
-    FMResultSet *results = [self.db executeQuery:@"SELECT * from reading where reading_date = ?", [self mostRecentDate]];
+    FMResultSet *results = [self.db executeQuery:[NSString stringWithFormat:@"SELECT * from %@ where reading_date = ?", [GLUCBloodGlucoseReading entityName]], [self mostRecentDate]];
     while ([results next]) {
         GLUCBloodGlucoseReading *reading = [[GLUCBloodGlucoseReading alloc] init];
 
-        [self fillReading:reading fromResults:results];
+        [self fillBloodGlucoseReading:reading fromResults:results];
 
         retVal = reading;
     }

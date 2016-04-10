@@ -19,9 +19,9 @@
     
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                            title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-                                                               [self.model deleteReading:self.readings[(NSUInteger) indexPath.row]];
+                [self.model deleteBloodGlucoseReading:self.readings[(NSUInteger) indexPath.row]];
                                                                self.historyTableView.editing = NO;
-                                                               self.readings = [self.model allReadings:NO];
+                                                               self.readings = [self.model allBloodGlucoseReadings:NO];
                                                                [self.historyTableView reloadData];
     }];
     
@@ -34,7 +34,7 @@
                                                                  if (editorVC) {
                                                                      NSString *title = GLUCLoc(@"Edit reading");
                                                                      editorVC.title = [NSString stringWithFormat:@"%@ (%@)", title,
-                                                                                       [self.model.currentUser displayValueForKey:kGLUCUserPreferredUnitsPropertyKey]];
+                                                                                       [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];
                                                                      
                                                                      editorVC.editedObject = self.readings[(NSUInteger) indexPath.row];
                                                                      UINavigationController *editorNavCtrl = [[UINavigationController alloc] initWithRootViewController:editorVC];
@@ -51,7 +51,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.readings = [self.model allReadings:NO];
+    self.readings = [self.model allBloodGlucoseReadings:NO];
 
     [self.historyTableView reloadData];
     [super viewWillAppear:animated];
@@ -101,13 +101,13 @@
                                                        dateStyle:NSDateFormatterShortStyle
                                                        timeStyle:NSDateFormatterShortStyle]];
         typeLabel.text = [reading readingType];
-        NSString *valueStr = (self.model.currentUser.needsUnitConversion) ?
-                [self.numberFormatter stringFromNumber:[self.model.currentUser readingValueInPreferredUnits:reading]] :
-                [NSString stringWithFormat:@"%@", [self.model.currentUser readingValueInPreferredUnits:reading]];
+        NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ?
+                [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]] :
+                [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
 
         NSString *readingValueStr = [NSString stringWithFormat:@"%@ %@",
                                                            valueStr,
-                                                           [self.model.currentUser displayValueForKey:kGLUCUserPreferredUnitsPropertyKey]];;
+                                                           [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
 
         valueLabel.text = readingValueStr;
         

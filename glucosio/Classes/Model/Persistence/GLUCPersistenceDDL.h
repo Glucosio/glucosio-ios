@@ -2,7 +2,7 @@
 
 @interface GLUCPersistenceDDL : NSObject
 
-+ (NSString *) createReadingTable;
-+ (NSString *) dropReadingTable;
++ (NSString *) createReadingTableNamed:(NSString *)tableName;
++ (NSString *) dropReadingTable:(NSString *)tableName;
 
 @end

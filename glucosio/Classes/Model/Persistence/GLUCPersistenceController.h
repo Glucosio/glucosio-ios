@@ -19,10 +19,10 @@
 - (BOOL) deleteUser:(GLUCUser *)aUser;
 
 // create reading
-- (BOOL) saveReading:(GLUCBloodGlucoseReading *)reading;
-- (BOOL) deleteReading:(GLUCBloodGlucoseReading *)reading;
-- (NSArray *) allReadings:(BOOL)ascending;
-- (GLUCBloodGlucoseReading *) lastReading;
+- (BOOL)saveBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading;
+- (BOOL)deleteBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading;
+- (NSArray *)allBloodGlucoseReadings:(BOOL)ascending;
+- (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 
 - (void) saveAll;
 

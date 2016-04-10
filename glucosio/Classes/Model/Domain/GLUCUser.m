@@ -10,11 +10,13 @@
 - (void)setupDefaultData {
     self.schema = @{
             kGLUCModelSettingsPropertiesKey : @[kGLUCUserCountryPreferenceKey, kGLUCUserAgePropertyKey, 
-                    kGLUCUserGenderPropertyKey, kGLUCUserIllnessTypePropertyKey, kGLUCUserPreferredUnitsPropertyKey,
+                    kGLUCUserGenderPropertyKey, kGLUCUserIllnessTypePropertyKey, kGLUCUserPreferredBloodGlucoseUnitsPropertyKey,
+                    kGLUCUserPreferredBodyWeightUnitsPropertyKey, kGLUCUserPreferredA1CUnitsPropertyKey,
                     kGLUCUserRangeTypePropertyKey, kGLUCUserRangeMinPropertyKey, kGLUCUserRangeMaxPropertyKey, kGLUCUserAllowResearchUsePropertyKey],
 
             kGLUCModelRequiredStartPropertiesKey : @[kGLUCUserCountryPreferenceKey, kGLUCUserAgePropertyKey,
-                    kGLUCUserGenderPropertyKey, kGLUCUserIllnessTypePropertyKey, kGLUCUserPreferredUnitsPropertyKey,
+                    kGLUCUserGenderPropertyKey, kGLUCUserIllnessTypePropertyKey, kGLUCUserPreferredBloodGlucoseUnitsPropertyKey,
+                    kGLUCUserPreferredBodyWeightUnitsPropertyKey, kGLUCUserPreferredA1CUnitsPropertyKey,
                     kGLUCUserAllowResearchUsePropertyKey],
 
             kGLUCModelSchemaPropertiesKey : @{
@@ -49,13 +51,28 @@
                             kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_diabetes_type_1"), GLUCLoc(@"helloactivity_spinner_diabetes_type_2")],
                             kGLUCModelDefaultIndexKey : @1,
                     },
-                    kGLUCUserPreferredUnitsPropertyKey : @{
-                            kGLUCModelAttributeKey : kGLUCUserPreferredUnitsPropertyKey,
+                    kGLUCUserPreferredBloodGlucoseUnitsPropertyKey : @{
+                            kGLUCModelAttributeKey : kGLUCUserPreferredBloodGlucoseUnitsPropertyKey,
                             kGLUCModelAttributeTitleKey : @"helloactivity_spinner_preferred_unit",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_preferred_unit_1"), GLUCLoc(@"helloactivity_spinner_preferred_unit_2")],
                             kGLUCModelDefaultIndexKey : @0,
                     },
+                    kGLUCUserPreferredBodyWeightUnitsPropertyKey : @{
+                            kGLUCModelAttributeKey : kGLUCUserPreferredBodyWeightUnitsPropertyKey,
+                            kGLUCModelAttributeTitleKey : @"Preferred Weight Unit", // TODO: localise properly
+                            kGLUCModelAttributeTypeKey : @"NSNumber",
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"Kilograms"), GLUCLoc(@"Pounds")],
+                            kGLUCModelDefaultIndexKey : @0,
+                    },
+                    kGLUCUserPreferredA1CUnitsPropertyKey : @{
+                            kGLUCModelAttributeKey : kGLUCUserPreferredA1CUnitsPropertyKey,
+                            kGLUCModelAttributeTitleKey : @"Preferred A1C Unit",
+                            kGLUCModelAttributeTypeKey : @"NSNumber",
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"Percentage"), GLUCLoc(@"mmol/mol")],
+                            kGLUCModelDefaultIndexKey : @0,
+                    },
+
                     kGLUCUserRangeTypePropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserRangeTypePropertyKey,
                             kGLUCModelAttributeTitleKey : @"helloactivity_spinner_preferred_range",
@@ -93,7 +110,9 @@
         self.age = nil;
         self.gender = [self defaultLookupIndexValueForKey:kGLUCUserGenderPropertyKey];
         self.illnessType = [self defaultLookupIndexValueForKey:kGLUCUserIllnessTypePropertyKey];
-        self.preferredUnifOfMeasure = [self defaultLookupIndexValueForKey:kGLUCUserPreferredUnitsPropertyKey];
+        self.preferredBloodGlucoseUnitOfMeasure = [self defaultLookupIndexValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey];
+        self.preferredBodyWeightUnitOfMeasure = [self defaultLookupIndexValueForKey:kGLUCUserPreferredBodyWeightUnitsPropertyKey];
+        self.preferredA1CUnitOfMeasure = [self defaultLookupIndexValueForKey:kGLUCUserPreferredA1CUnitsPropertyKey];
         self.allowResearchUse = [self defaultValueForKey:kGLUCUserAllowResearchUsePropertyKey];
         self.rangeType = @0;
         self.rangeMin = @70;
@@ -139,20 +158,20 @@
     return retVal;
 }
 
-- (BOOL)needsUnitConversion {
-    return ((BOOL)[self.preferredUnifOfMeasure intValue]);
+- (BOOL)needsBloodGlucoseReadingUnitConversion {
+    return ((BOOL)[self.preferredBloodGlucoseUnitOfMeasure intValue]);
 }
 
-- (NSNumber *)readingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
-    if ([self needsUnitConversion]) {
+- (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
+    if ([self needsBloodGlucoseReadingUnitConversion]) {
         return @([reading.value intValue] / 18.0f);
     }
     return reading.value;
 }
 
-- (void) setNewValue:(NSNumber *)value inReading:(GLUCBloodGlucoseReading *)reading {
+- (void)setNewValue:(NSNumber *)value inBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
     NSNumber *newValue = value;
-    if ([self needsUnitConversion]) {
+    if ([self needsBloodGlucoseReadingUnitConversion]) {
         newValue = [NSNumber numberWithInteger:([value floatValue] * 18.0f)];
     }
     if (reading && newValue) {

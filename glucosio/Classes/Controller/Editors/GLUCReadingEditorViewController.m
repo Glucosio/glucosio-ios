@@ -49,8 +49,8 @@
     if (self.editedObject) {
         editDate = [self.editedObject creationDate];
         if ([self.editedObject.value integerValue] != 0) {
-            NSString *valueStr = (self.model.currentUser.needsUnitConversion) ? [self.numberFormatter stringFromNumber:[self.model.currentUser readingValueInPreferredUnits:self.editedObject]] :
-                    [NSString stringWithFormat:@"%@", [self.model.currentUser readingValueInPreferredUnits:self.editedObject]];
+            NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ? [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]] :
+                    [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]];
 
             self.valueField.text = valueStr;
         } else {
@@ -112,7 +112,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:TRUE];
     [self.valueField resignFirstResponder];
     [self.valueField setFont:[GLUCAppearanceController valueEditorTextFieldFont]];
-    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:self.editedObject];
+    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inBloodGlucoseReading:self.editedObject];
     self.useEditedValue = YES;
     
     switch (indexPath.row) {
@@ -182,8 +182,8 @@
 
 - (IBAction)save:(UIButton *)sender {
     [self.valueField resignFirstResponder];
-    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:self.editedObject];
-    [self.model saveReading:self.editedObject];
+    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inBloodGlucoseReading:self.editedObject];
+    [self.model saveBloodGlucoseReading:self.editedObject];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -6,6 +6,9 @@
 
 @implementation GLUCModel
 
++ (NSString *) entityName {
+    return nil;
+}
 
 - (instancetype) init {
     if ((self = [super init]) != nil) {

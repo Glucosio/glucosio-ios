@@ -1,17 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "GLUCModel.h"
+#import "GLUCReading.h"
 
 static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
-static NSString *const kGLUCReadingModelValuePropertyKey = @"value";
-static NSString *const kGLUCReadingNotesPropertyKey = @"notes";
 static NSString *const kGLUCReadingModelCustomTypeNamePropertyKey = @"readingCustomTypeName";
 
-@interface GLUCBloodGlucoseReading : GLUCModel
+@interface GLUCBloodGlucoseReading : GLUCReading
 
-@property (nonatomic, readwrite, strong) NSNumber *value;
 @property (nonatomic, readwrite, strong) NSNumber *readingTypeId;
-@property (nonatomic, readwrite, strong) NSString *notes;
-@property (nonatomic, readwrite, strong) NSNumber *ownerId;
 @property (nonatomic, readwrite, strong) NSString *readingCustomTypeName;
 
 + (NSArray *) readingTypes;

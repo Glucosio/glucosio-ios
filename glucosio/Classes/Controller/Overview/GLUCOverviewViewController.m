@@ -26,8 +26,8 @@
     self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"fragment_overview_trend")];
 
     NSString *lastReading = [NSString stringWithFormat:@"%@ %@",
-                    [self.model.currentUser readingValueInPreferredUnits:[self.model lastReading]],
-                    [self.model.currentUser displayValueForKey:kGLUCUserPreferredUnitsPropertyKey]];;
+                    [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:[self.model lastBloodGlucoseReading]],
+                    [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
     
     self.rowValues = @[lastReading, @"fragment_overview_trend_positive"];
     
@@ -52,21 +52,21 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    GLUCBloodGlucoseReading *reading = [self.model lastReading];
+    GLUCBloodGlucoseReading *reading = [self.model lastBloodGlucoseReading];
     NSString *valueStr = @"";
     NSString *lastReading = GLUCLoc(@"fragment_empty_text");
 
     if (reading) {
-        if (self.model.currentUser.needsUnitConversion) {
-            valueStr = [self.numberFormatter stringFromNumber:[self.model.currentUser readingValueInPreferredUnits:reading]];
+        if (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) {
+            valueStr = [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
         }
         else {
             valueStr = [NSString stringWithFormat:@"%@",
-                            [self.model.currentUser readingValueInPreferredUnits:reading]];
+                            [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
         }
 
         lastReading = [NSString stringWithFormat:@"%@ %@", valueStr,
-                        [self.model.currentUser displayValueForKey:kGLUCUserPreferredUnitsPropertyKey]];;
+                        [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
 
     }
 
@@ -130,7 +130,7 @@
     NSDate *startOfMonth = [[NSCalendar currentCalendar] gluc_firstDayOfMonthForDate:[NSDate date]];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allReadings:YES];
+    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     
@@ -145,7 +145,7 @@
                 averageForWeek = [NSMutableArray array];
                 [buckets setValue:averageForWeek forKey:dayKey];
             }
-            [averageForWeek addObject:[self.model.currentUser readingValueInPreferredUnits:reading]];
+            [averageForWeek addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
             
         }
     }
@@ -177,7 +177,7 @@
 - (void) chartWeeklyAverage {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allReadings:YES];
+    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
 
@@ -196,7 +196,7 @@
             averageForWeek = [NSMutableArray array];
             [buckets setValue:averageForWeek forKey:weekKey];
         }
-        [averageForWeek addObject:[self.model.currentUser readingValueInPreferredUnits:reading]];
+        [averageForWeek addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
     }
     
     NSMutableArray *yVals = [NSMutableArray array];
@@ -227,7 +227,7 @@
 - (void) chartMonthlyAverage {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allReadings:YES];
+    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     
@@ -242,7 +242,7 @@
             averageForMonth = [NSMutableArray array];
             [buckets setValue:averageForMonth forKey:monthKey];
         }
-        [averageForMonth addObject:[self.model.currentUser readingValueInPreferredUnits:reading]];
+        [averageForMonth addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
     }
     
     NSMutableArray *yVals = [NSMutableArray array];
