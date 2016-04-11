@@ -2,6 +2,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GLUCUser.h"
+#import "GLUCReading.h"
 #import "GLUCBloodGlucoseReading.h"
 #import <FMDB/FMDB.h>
 
@@ -19,8 +20,9 @@
 - (BOOL) deleteUser:(GLUCUser *)aUser;
 
 // create reading
-- (BOOL)saveBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading;
-- (BOOL)deleteBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading;
+- (BOOL)saveReading:(GLUCReading *)reading;
+- (BOOL)deleteReading:(GLUCReading *)reading;
+
 - (NSArray *)allBloodGlucoseReadings:(BOOL)ascending;
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 

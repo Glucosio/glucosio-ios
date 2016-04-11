@@ -19,7 +19,7 @@
     
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                            title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-                [self.model deleteBloodGlucoseReading:self.readings[(NSUInteger) indexPath.row]];
+                [self.model deleteReading:self.readings[(NSUInteger) indexPath.row]];
                                                                self.historyTableView.editing = NO;
                                                                self.readings = [self.model allBloodGlucoseReadings:NO];
                                                                [self.historyTableView reloadData];

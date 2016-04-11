@@ -260,7 +260,7 @@
 
 // read, update, delete reading
 
-- (BOOL)saveBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
+- (BOOL)saveReading:(GLUCReading *)reading {
     if (reading && reading.value) {
         if ([reading.glucId intValue] == -1) {
             NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO %@ (reading,reading_date,reading_type) VALUES(?,?,?)", [[reading class] entityName]];
@@ -275,7 +275,7 @@
     return YES;
 }
 
-- (BOOL)deleteBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
+- (BOOL)deleteReading:(GLUCBloodGlucoseReading *)reading {
     if (reading) {
         if ([reading.glucId intValue] != -1) {
             NSString *queryStr = [NSString stringWithFormat:@"DELETE FROM %@ where reading_id = ?", [[reading class] entityName]];

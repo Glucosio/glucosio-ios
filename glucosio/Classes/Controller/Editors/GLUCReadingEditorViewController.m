@@ -183,7 +183,7 @@
 - (IBAction)save:(UIButton *)sender {
     [self.valueField resignFirstResponder];
     [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inBloodGlucoseReading:self.editedObject];
-    [self.model saveBloodGlucoseReading:self.editedObject];
+    [self.model saveReading:self.editedObject];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
