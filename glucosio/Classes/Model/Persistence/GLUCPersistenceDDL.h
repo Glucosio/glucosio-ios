@@ -3,6 +3,7 @@
 @interface GLUCPersistenceDDL : NSObject
 
 + (NSString *) createReadingTableNamed:(NSString *)tableName;
-+ (NSString *) dropReadingTable:(NSString *)tableName;
++ (NSString *) createBloodGlucoseReadingTableNamed:(NSString *) readingTableName;
++ (NSString *) dropReadingTableNamed:(NSString *) readingTableName;
 
 @end

@@ -2,6 +2,12 @@
 #import "GLUCPersistenceDDL.h"
 #import "NSCalendar+GLUCAdditions.h"
 #import "NSFileManager+GLUCAdditions.h"
+#import "GLUCBodyWeightReading.h"
+#import "GLUCBloodPressureReading.h"
+#import "GLUCCholesterolReading.h"
+#import "GLUCHB1ACReading.h"
+#import "GLUCInsulinIntakeReading.h"
+#import "GLUCKetonesReading.h"
 
 /*
  Current Database Schema as of 2016-03-26 (Mar 26 2016), as defined in Android app's Realm schema
@@ -79,7 +85,7 @@
     NSDate *retVal = nil;
 
     if (self.db) {
-        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(reading_date) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(creationDate) FROM %@", [GLUCBloodGlucoseReading entityName]];
         retVal = [self.db dateForQuery:queryStr];
     }
     
@@ -89,40 +95,82 @@
 - (int) lastRowId {
     int retVal = 0;
     if (self.db) {
-        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(reading_id) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT MAX(glucId) FROM %@", [GLUCBloodGlucoseReading entityName]];
         retVal = [self.db intForQuery:queryStr];
     }
     return retVal;
 }
 
-- (int) numberOfReadings {
+- (int) numberOfReadingsForEntityName:(NSString *)entityName {
     int retVal = 0;
     if (self.db) {
-        NSString *queryStr = [NSString stringWithFormat:@"SELECT COUNT(reading) FROM %@", [GLUCBloodGlucoseReading entityName]];
+        NSString *queryStr = [NSString stringWithFormat:@"SELECT COUNT(reading) FROM %@", entityName];
         retVal = [self.db intForQuery:queryStr];
     }
     return retVal;
 }
 
+- (void) insertSampleReadingsOfType:(Class)readingType {
+    for (int i = 0; i < 100; ++i) {
+        NSDate *today = [[NSCalendar currentCalendar] gluc_dateByAddingMonths:(arc4random_uniform(12)*-1) toDate:[NSDate date]];
+        NSDate *readingDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:(arc4random_uniform(45)*-1) toDate:today];
+        int reading = arc4random_uniform(30) + 110;
+        GLUCReading *dummyReading = [[readingType alloc] init];
+        if (dummyReading) {
+            dummyReading.reading = [NSNumber numberWithInt:reading];
+            dummyReading.creationDate = readingDate;
+            dummyReading.modificationDate = readingDate;
+            [self saveReading:dummyReading];
+        }
+    }
+
+}
 - (void) execDDL {
 
     if (self.db) {
-        NSLog(@"Creating reading table");
-        NSString *createDDL = [GLUCPersistenceDDL createReadingTableNamed:[GLUCBloodGlucoseReading entityName]];
+        NSArray *standardReadingTypes = @[
+                GLUCBloodPressureReading.class,
+                GLUCBodyWeightReading.class,
+                GLUCCholesterolReading.class,
+                GLUCHB1ACReading.class,
+                GLUCInsulinIntakeReading.class,
+                GLUCKetonesReading.class
+        ];
+
+        NSLog(@"Creating blood glucose reading table");
+        NSString *createDDL = [GLUCPersistenceDDL createBloodGlucoseReadingTableNamed:[GLUCBloodGlucoseReading entityName]];
         NSLog(@"%@", createDDL);
         [self.db executeUpdate:createDDL];
+        for (Class readingClass in standardReadingTypes) {
+            NSLog(@"Creating %@ table for %@", [readingClass entityName], NSStringFromClass(readingClass));
+            createDDL = [GLUCPersistenceDDL createReadingTableNamed:[readingClass entityName]];
+            NSLog(@"%@", createDDL);
+            [self.db executeUpdate:createDDL];
+        }
 
 #ifdef GLUC_CREATE_TEST_DATA
+        // create some test blood glucose readings
         for (int i = 0; i < 1000; ++i) {
             NSDate *today = [[NSCalendar currentCalendar] gluc_dateByAddingMonths:(arc4random_uniform(12)*-1) toDate:[NSDate date]];
             NSDate *readingDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:(arc4random_uniform(45)*-1) toDate:today];
             int reading = arc4random_uniform(30) + 70;
-            NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO %@ (reading, reading_date,reading_type) VALUES(?,?,?)", [GLUCBloodGlucoseReading entityName]];
-            [self.db executeUpdate:queryStr,
-             @(reading), [[NSCalendar currentCalendar] gluc_dateByAddingMinutes:(arc4random_uniform(58)) toDate:readingDate], @(arc4random_uniform(9)), nil];
+            GLUCBloodGlucoseReading *testReading = [[GLUCBloodGlucoseReading alloc] init];
+            if (testReading) {
+                testReading.reading = [NSNumber numberWithInt:reading];
+                testReading.readingTypeId = @(arc4random_uniform(9));
+                testReading.creationDate = readingDate;
+                testReading.modificationDate = readingDate;
+                [self saveReading:testReading];
+            }
         }
+        // create some other standard readings
+        for (Class readingClass in standardReadingTypes) {
+            [self insertSampleReadingsOfType:readingClass];
+            NSLog(@"%@ Readings: %d", [readingClass entityName], [self numberOfReadingsForEntityName:[readingClass entityName]]);
+        }
+
 #endif
-        NSLog(@"Readings: %d", [self numberOfReadings]);
+        NSLog(@"Blood Glucose Readings: %d", [self numberOfReadingsForEntityName:[GLUCBloodGlucoseReading entityName]]);
     }
 }
 
@@ -137,10 +185,11 @@
     if (!self.db) {
         self.db = [FMDatabase databaseWithPath:[self databasePath]];
         if (self.db) {
+            // self.db.traceExecution = YES;
             if (![self.db open]) {
                 self.db = nil;
             } else {
-                int count = [self numberOfReadings];
+                int count = [self numberOfReadingsForEntityName:[GLUCBloodGlucoseReading entityName]];
                 if (count == 0) {
                     [self execDDL];
                 }
@@ -258,41 +307,89 @@
     return retVal;
 }
 
+- (NSString *) bindingStringForKeys:(NSArray *) anArrayOfKeys {
+    NSMutableArray *bindings = [NSMutableArray arrayWithCapacity:anArrayOfKeys.count];
+    for (NSString *key in anArrayOfKeys) {
+        NSString *bindName = [NSString stringWithFormat:@":%@", key];
+        [bindings addObject:bindName];
+    }
+    return [bindings componentsJoinedByString:@","];
+}
+
+- (NSString *) updateBindingStringForKeys:(NSArray *)anArrayOfKeys {
+    NSMutableArray *bindings = [NSMutableArray arrayWithCapacity:anArrayOfKeys.count];
+    for (NSString *key in anArrayOfKeys) {
+        NSString *bindName = [NSString stringWithFormat:@"%@ = :%@", key, key];
+        [bindings addObject:bindName];
+    }
+    return [bindings componentsJoinedByString:@","];
+
+}
+- (NSString *) updateSqlForEntity:(NSString *)entityName withParameters:(NSDictionary *)parameters {
+    // UPDATE %@ set reading = ?, reading_date = ?, reading_type = ? WHERE reading_id = ?
+    NSString *updateBindings = [self updateBindingStringForKeys:[parameters allKeys]];
+    NSString *qualifier = @"glucID = :glucID";
+    NSString *retVal = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@", entityName, updateBindings, qualifier];
+    return retVal;
+}
+- (NSString *) insertSqlForEntity:(NSString *)entityName withParameters:(NSDictionary *)parameters {
+    NSString *attributeValues = [self bindingStringForKeys:[parameters allKeys]];
+
+    NSString *retVal = [NSString stringWithFormat:@"INSERT INTO %@ (%@) VALUES (%@)", entityName, [[parameters allKeys] componentsJoinedByString:@","], attributeValues];
+
+    return retVal;
+}
 // read, update, delete reading
 
 - (BOOL)saveReading:(GLUCReading *)reading {
-    if (reading && reading.value) {
-        if ([reading.glucId intValue] == -1) {
-            NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO %@ (reading,reading_date,reading_type) VALUES(?,?,?)", [[reading class] entityName]];
-            [self.db executeUpdate:queryStr,
-                    reading.value, reading.creationDate, reading.readingTypeId, nil];
+    BOOL retVal = NO;
+    if (reading && reading.reading) {
+        NSString *entityName = [[reading class] entityName];
+        if ([reading.glucID intValue] == -1) {
+            NSDictionary *insertParameters = [reading insertParameters];
+            NSString *insertSql = [self insertSqlForEntity:entityName withParameters:insertParameters];
+            if (insertSql && insertSql.length) {
+                retVal = [self.db executeUpdate:insertSql withParameterDictionary:insertParameters];
+            }
         } else {
-            NSString *queryStr = [NSString stringWithFormat:@"UPDATE %@ set reading = ?, reading_date = ?, reading_type = ? WHERE reading_id = ?", [[reading class] entityName]];
-            [self.db executeUpdate:queryStr,
-                    reading.value, reading.creationDate, reading.readingTypeId, reading.glucId, nil];
+            NSMutableDictionary *insertParameters = [NSMutableDictionary dictionaryWithDictionary:[reading insertParameters]];
+            [insertParameters setValue:[reading glucID] forKey:kGLUCModelIdKey];
+
+            NSString *updateSql = [self updateSqlForEntity:entityName withParameters:insertParameters];
+            if (updateSql && updateSql.length) {
+                retVal = [self.db executeUpdate:updateSql withParameterDictionary:insertParameters];
+            }
         }
     }
-    return YES;
+    return retVal;
 }
 
 - (BOOL)deleteReading:(GLUCBloodGlucoseReading *)reading {
     if (reading) {
-        if ([reading.glucId intValue] != -1) {
-            NSString *queryStr = [NSString stringWithFormat:@"DELETE FROM %@ where reading_id = ?", [[reading class] entityName]];
-            [self.db executeUpdate:queryStr, reading.glucId, nil];
+        if ([reading.glucID intValue] != -1) {
+            NSString *queryStr = [NSString stringWithFormat:@"DELETE FROM %@ where glucID = ?", [[reading class] entityName]];
+            [self.db executeUpdate:queryStr, reading.glucID, nil];
         }
     }
     return YES;
 }
 
-- (void)fillBloodGlucoseReading:(GLUCBloodGlucoseReading *)aReading fromResults:(FMResultSet *) results {
+- (void)fillReading:(GLUCReading *)aReading fromResults:(FMResultSet *)results {
     if (aReading && results) {
-        aReading.glucId = @([results intForColumn:@"reading_id"]);
-        aReading.value = [NSNumber numberWithInt:[results intForColumn:@"reading"]];
-        aReading.readingTypeId = @([results intForColumn:@"reading_type"]);
-        aReading.creationDate = [results dateForColumn:@"reading_date"];
+        aReading.glucID = @([results intForColumn:@"glucID"]);
+        aReading.reading = @([results intForColumn:@"reading"]);
+        aReading.creationDate = [results dateForColumn:@"creationDate"];
+        aReading.modificationDate = [results dateForColumn:@"modificationDate"];
         aReading.ownerId = @1;
         aReading.notes = [results stringForColumn:@"notes"];
+    }
+
+}
+
+- (void)fillBloodGlucoseReading:(GLUCBloodGlucoseReading *)aReading fromResults:(FMResultSet *) results {
+    if (aReading && results) {
+        [self fillReading:(GLUCReading *)aReading fromResults:results];
+        aReading.readingTypeId = @([results intForColumn:@"readingTypeId"]);
     }
 }
 
@@ -302,10 +399,10 @@
     NSString *queryStr = @"";
     
     if (ascending) {
-        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(reading_date)", [GLUCBloodGlucoseReading entityName]];
+        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(creationDate)", [GLUCBloodGlucoseReading entityName]];
         results = [self.db executeQuery:queryStr];
     } else {
-        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(reading_date) DESC", [GLUCBloodGlucoseReading entityName]];
+        queryStr = [NSString stringWithFormat:@"SELECT * from %@ order by datetime(creationDate) DESC", [GLUCBloodGlucoseReading entityName]];
         results = [self.db executeQuery:queryStr];
     }
     while ([results next]) {
@@ -320,7 +417,7 @@
 
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {
     GLUCBloodGlucoseReading *retVal = nil;
-    FMResultSet *results = [self.db executeQuery:[NSString stringWithFormat:@"SELECT * from %@ where reading_date = ?", [GLUCBloodGlucoseReading entityName]], [self mostRecentDate]];
+    FMResultSet *results = [self.db executeQuery:[NSString stringWithFormat:@"SELECT * from %@ where creationDate = ?", [GLUCBloodGlucoseReading entityName]], [self mostRecentDate]];
     while ([results next]) {
         GLUCBloodGlucoseReading *reading = [[GLUCBloodGlucoseReading alloc] init];
 

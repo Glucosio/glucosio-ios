@@ -14,15 +14,13 @@ static NSString *const kGLUCModelDefaultValueKey = @"default";
 static NSString *const kGLUCModelDefaultIndexKey = @"defaultIndex";
 static NSString *const kGLUCModelAttributeValidRangeKey = @"validRange";
 
-static NSString *const kGLUCModelIdKey = @"glucId";
+static NSString *const kGLUCModelIdKey = @"glucID";
 static NSString *const kGLUCModelCreationDateKey = @"creationDate";
 static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
-static NSString *const kGLUCReadingNotesPropertyKey = @"notes";
-static NSString *const kGLUCReadingModelValuePropertyKey = @"value";
 
 @interface GLUCModel : NSObject
 
-@property (nonatomic, readwrite, strong) NSNumber *glucId;
+@property (nonatomic, readwrite, strong) NSNumber *glucID;
 @property (nonatomic, readwrite, strong) NSDate *creationDate;
 @property (nonatomic, readwrite, strong) NSDate *modificationDate;
 
@@ -31,7 +29,11 @@ static NSString *const kGLUCReadingModelValuePropertyKey = @"value";
 @property (nonatomic, readwrite, strong) NSNumber *ownerId;
 
 + (NSString *) entityName; // subclasses must override
++ (NSString *) title; // subclasses must override
+
 - (instancetype) init;
+
+- (NSDictionary *) insertParameters; // key/values
 
 - (NSArray *)potentialDisplayValuesForKey:(NSString *)key;
 

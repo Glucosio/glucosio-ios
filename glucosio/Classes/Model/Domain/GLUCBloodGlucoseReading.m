@@ -20,10 +20,19 @@
              ];
 }
 
+- (NSDictionary *)insertParameters {
+    NSDictionary *readingParameters = @{
+            kGLUCReadingReadingTypeIdPropertyKey : self.readingTypeId
+    };
+    NSMutableDictionary *retVal = [NSMutableDictionary dictionaryWithDictionary:[super insertParameters]];
+    [retVal addEntriesFromDictionary:readingParameters];
+    return [NSDictionary dictionaryWithDictionary:retVal];
+}
+
 - (void)setupDefaultData {
     self.schema = @{
             kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey, 
-                    kGLUCModelCreationDateKey,kGLUCReadingReadingTypeIdPropertyKey, kGLUCReadingNotesPropertyKey, kGLUCReadingModelCustomTypeNamePropertyKey],
+                    kGLUCModelCreationDateKey,kGLUCReadingReadingTypeIdPropertyKey, kGLUCReadingNotesPropertyKey],
 
             kGLUCModelSchemaPropertiesKey : @{
                     kGLUCReadingModelValuePropertyKey : @{
@@ -44,15 +53,14 @@
                             kGLUCModelAttributeTitleKey : @"Notes",
                             kGLUCModelAttributeTypeKey : @"NSString"
                     },
-                    kGLUCReadingModelCustomTypeNamePropertyKey : @{
-                            kGLUCModelAttributeKey : kGLUCReadingModelCustomTypeNamePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"dialog_add_custom_type",
-                            kGLUCModelAttributeTypeKey : @"NSString"
-
-                    }
             }
     };
 
+    self.readingTypeId = @0;
+}
+
++ (NSString *)title {
+    return GLUCLoc(@"Blood Glucose Level");
 }
 
 + (NSString *) entityName {

@@ -48,7 +48,7 @@
     NSDate *editDate = [NSDate date];
     if (self.editedObject) {
         editDate = [self.editedObject creationDate];
-        if ([self.editedObject.value integerValue] != 0) {
+        if ([self.editedObject.reading integerValue] != 0) {
             NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ? [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]] :
                     [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]];
 
@@ -69,7 +69,7 @@
     NSString *editTimeString = [self.dateFormatter stringFromDate:editDate];
 
     NSString *measurementType = @"";
-    if (self.editedObject && [self.editedObject.glucId integerValue] == -1 && !self.useEditedValue) {
+    if (self.editedObject && [self.editedObject.glucID integerValue] == -1 && !self.useEditedValue) {
         NSInteger currentHour = [[NSCalendar currentCalendar] gluc_hourFromDate:editDate];
         NSInteger readingTypeId = [self.editedObject readingTypeIdForHourOfDay:currentHour];
         self.editedObject.readingTypeId = [NSNumber numberWithInteger:readingTypeId];

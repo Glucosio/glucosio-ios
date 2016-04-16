@@ -6,17 +6,29 @@
 
 @implementation GLUCModel
 
+
 + (NSString *) entityName {
+    return nil;
+}
+
++ (NSString *)title {
     return nil;
 }
 
 - (instancetype) init {
     if ((self = [super init]) != nil) {
-        self.glucId = @(-1);
+        self.glucID = @(-1);
         self.creationDate = [NSDate date];
         self.modificationDate = self.creationDate;
     }
     return self;
+}
+
+- (NSDictionary *)insertParameters {
+    return @{
+            kGLUCModelCreationDateKey : self.creationDate,
+            kGLUCModelModificationDateKey : self.modificationDate,
+    };
 }
 
 

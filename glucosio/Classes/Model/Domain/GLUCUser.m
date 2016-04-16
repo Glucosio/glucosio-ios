@@ -164,9 +164,9 @@
 
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
     if ([self needsBloodGlucoseReadingUnitConversion]) {
-        return @([reading.value intValue] / 18.0f);
+        return @([reading.reading intValue] / 18.0f);
     }
-    return reading.value;
+    return reading.reading;
 }
 
 - (void)setNewValue:(NSNumber *)value inBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
@@ -175,7 +175,7 @@
         newValue = [NSNumber numberWithInteger:([value floatValue] * 18.0f)];
     }
     if (reading && newValue) {
-        reading.value = newValue;
+        reading.reading = newValue;
     }
 }
 

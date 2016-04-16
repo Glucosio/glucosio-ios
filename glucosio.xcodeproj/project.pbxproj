@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42B3C01DE173A65EE923381B /* GLUCKetonesReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C7135174B36D04575DB8 /* GLUCKetonesReading.m */; };
 		42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C717FEC6A53D6692424E /* GLUCViewController.m */; };
 		42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */; };
 		42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CE7D8B33A6B5A258BC5E /* GLUCBodyWeightReading.m */; };
+		42B3C7D6323CCAE20D63B88B /* GLUCHB1ACReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C1A6E8CDF82AE4E15CC4 /* GLUCHB1ACReading.m */; };
 		42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */; };
 		42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */; };
 		42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */; };
 		42B3CA809EC683238C688D64 /* GLUCPersistenceDDL.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */; };
+		42B3CC3DD9F894EC8CDB09D4 /* GLUCBloodPressureReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C3E53619E42DC5FA7E7B /* GLUCBloodPressureReading.m */; };
 		42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3CE8337DE4EDB125B7CDB /* GLUCReading.m */; };
+		42B3CD76A2F2FBBAB494D071 /* GLUCInsulinIntakeReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C2B3958E31875DEC82DF /* GLUCInsulinIntakeReading.m */; };
+		42B3CF7EA614BB87178681F3 /* GLUCCholesterolReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C27144C1378C393A2566 /* GLUCCholesterolReading.m */; };
 		42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */; };
 		5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */; };
 		551193691BC2D2B9007CD147 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193681BC2D2B9007CD147 /* main.m */; };
@@ -73,17 +78,27 @@
 
 /* Begin PBXFileReference section */
 		42B3C05E98BF24DADF350865 /* GLUCBodyWeightReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBodyWeightReading.h; sourceTree = "<group>"; };
+		42B3C0BF4F0C48B357B04DCF /* GLUCBloodPressureReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBloodPressureReading.h; sourceTree = "<group>"; };
 		42B3C0C2FE36FC4F4F0327AD /* GLUCPersistenceDDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCPersistenceDDL.h; sourceTree = "<group>"; };
 		42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAppearanceController.h; sourceTree = "<group>"; };
 		42B3C144BA070A08A3EBDF2C /* GLUCReadingEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReadingEditorViewController.h; sourceTree = "<group>"; };
+		42B3C1A6E8CDF82AE4E15CC4 /* GLUCHB1ACReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCHB1ACReading.m; sourceTree = "<group>"; };
+		42B3C27144C1378C393A2566 /* GLUCCholesterolReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCCholesterolReading.m; sourceTree = "<group>"; };
+		42B3C2B3958E31875DEC82DF /* GLUCInsulinIntakeReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCInsulinIntakeReading.m; sourceTree = "<group>"; };
 		42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCAppearanceController.m; sourceTree = "<group>"; };
+		42B3C3E53619E42DC5FA7E7B /* GLUCBloodPressureReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCBloodPressureReading.m; sourceTree = "<group>"; };
 		42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEditorViewController.m; sourceTree = "<group>"; };
 		42B3C45A88607FBB2A3CA5EC /* GLUCPersistenceDDL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCPersistenceDDL.m; sourceTree = "<group>"; };
 		42B3C60171F35E0187A05BEA /* GLUCListEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCListEditorViewController.m; sourceTree = "<group>"; };
 		42B3C6251907FB92A95499C0 /* GLUCValueEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCValueEditorViewController.m; sourceTree = "<group>"; };
 		42B3C6E11F3CF2E80BF1FC1E /* GLUCValueEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCValueEditorViewController.h; sourceTree = "<group>"; };
+		42B3C7135174B36D04575DB8 /* GLUCKetonesReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCKetonesReading.m; sourceTree = "<group>"; };
 		42B3C717FEC6A53D6692424E /* GLUCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCViewController.m; sourceTree = "<group>"; };
+		42B3C7688DDA66A220E8497F /* GLUCCholesterolReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCCholesterolReading.h; sourceTree = "<group>"; };
+		42B3C8D9BF6D17CD3072A00B /* GLUCKetonesReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCKetonesReading.h; sourceTree = "<group>"; };
+		42B3CA2CF7F396DD6B569268 /* GLUCInsulinIntakeReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCInsulinIntakeReading.h; sourceTree = "<group>"; };
 		42B3CA6A126FD897A0E739A7 /* GLUCListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCListEditorViewController.h; sourceTree = "<group>"; };
+		42B3CB4FB479419E84455EDC /* GLUCHB1ACReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCHB1ACReading.h; sourceTree = "<group>"; };
 		42B3CB784F17EB2E61E10FFA /* GLUCReadingEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCReadingEditorViewController.m; sourceTree = "<group>"; };
 		42B3CD95FBA708D0B283F8C7 /* GLUCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEditorViewController.h; sourceTree = "<group>"; };
 		42B3CE7D8B33A6B5A258BC5E /* GLUCBodyWeightReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCBodyWeightReading.m; sourceTree = "<group>"; };
@@ -636,6 +651,16 @@
 				42B3C05E98BF24DADF350865 /* GLUCBodyWeightReading.h */,
 				42B3CE8337DE4EDB125B7CDB /* GLUCReading.m */,
 				42B3CF3DDA7C8CFCA8AAF32A /* GLUCReading.h */,
+				42B3C7135174B36D04575DB8 /* GLUCKetonesReading.m */,
+				42B3C8D9BF6D17CD3072A00B /* GLUCKetonesReading.h */,
+				42B3C3E53619E42DC5FA7E7B /* GLUCBloodPressureReading.m */,
+				42B3C0BF4F0C48B357B04DCF /* GLUCBloodPressureReading.h */,
+				42B3C27144C1378C393A2566 /* GLUCCholesterolReading.m */,
+				42B3C7688DDA66A220E8497F /* GLUCCholesterolReading.h */,
+				42B3C1A6E8CDF82AE4E15CC4 /* GLUCHB1ACReading.m */,
+				42B3CB4FB479419E84455EDC /* GLUCHB1ACReading.h */,
+				42B3C2B3958E31875DEC82DF /* GLUCInsulinIntakeReading.m */,
+				42B3CA2CF7F396DD6B569268 /* GLUCInsulinIntakeReading.h */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1291,6 +1316,11 @@
 				42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */,
 				42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */,
 				42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */,
+				42B3C01DE173A65EE923381B /* GLUCKetonesReading.m in Sources */,
+				42B3CC3DD9F894EC8CDB09D4 /* GLUCBloodPressureReading.m in Sources */,
+				42B3CF7EA614BB87178681F3 /* GLUCCholesterolReading.m in Sources */,
+				42B3C7D6323CCAE20D63B88B /* GLUCHB1ACReading.m in Sources */,
+				42B3CD76A2F2FBBAB494D071 /* GLUCInsulinIntakeReading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

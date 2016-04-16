@@ -14,6 +14,10 @@
     return @"body_weight_reading";
 }
 
++ (NSString *)title {
+    return GLUCLoc(@"Body Weight");
+}
+
 - (void)setupDefaultData {
     self.schema = @{
             kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey,
