@@ -107,6 +107,7 @@
         else
             typeLabel.text = [self.readingClass title];
 
+        // TODO - this is wrong for a generic reading editor
         NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ?
                 [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]] :
                 [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
