@@ -1,3 +1,4 @@
+#import <Realm/RLMObject_Private.h>
 #import "GLUCBloodGlucoseReading.h"
 #import "GLUCLoc.h"
 
@@ -18,15 +19,6 @@
              GLUCLoc(@"dialog_add_type_11"), // "Recheck"
              GLUCLoc(@"dialog_add_type_12"), // "Other"
              ];
-}
-
-- (NSDictionary *)insertParameters {
-    NSDictionary *readingParameters = @{
-            kGLUCReadingReadingTypeIdPropertyKey : self.readingTypeId
-    };
-    NSMutableDictionary *retVal = [NSMutableDictionary dictionaryWithDictionary:[super insertParameters]];
-    [retVal addEntriesFromDictionary:readingParameters];
-    return [NSDictionary dictionaryWithDictionary:retVal];
 }
 
 - (void)setupDefaultData {
@@ -56,15 +48,11 @@
             }
     };
 
-    self.readingTypeId = @0;
+//    self.readingTypeId = @0;
 }
 
 + (NSString *)title {
     return GLUCLoc(@"Blood Glucose Level");
-}
-
-+ (NSString *) entityName {
-    return @"blood_glucose_reading";
 }
 
 - (instancetype) init {
@@ -73,6 +61,25 @@
     }
     return self;
 }
+
+- (instancetype)initWithValue:(id)value {
+    self = [super initWithValue:value];
+    if (self) {
+        [self setupDefaultData];
+    }
+
+    return self;
+}
+
+- (instancetype)initWithRealm:(__unsafe_unretained RLMRealm *const)realm schema:(__unsafe_unretained RLMObjectSchema *const)schema {
+    self = [super initWithRealm:realm schema:schema];
+    if (self) {
+        [self setupDefaultData];
+    }
+
+    return self;
+}
+
 
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId {
     NSString *retVal = GLUCLoc(@"dialog_add_type_12"); // default is "Other"

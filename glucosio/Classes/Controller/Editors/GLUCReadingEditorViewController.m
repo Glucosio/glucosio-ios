@@ -1,3 +1,4 @@
+#import <Realm/RLMRealm.h>
 #import "GLUCAppDelegate.h"
 #import "UIColor+GLUCAdditions.h"
 #import "GLUCReadingEditorViewController.h"
@@ -69,14 +70,17 @@
     NSString *editTimeString = [self.dateFormatter stringFromDate:editDate];
 
     NSString *measurementType = @"";
-    if (self.editedObject && [self.editedObject.glucID integerValue] == -1 && !self.useEditedValue) {
+    if (self.editedObject && !self.useEditedValue) {
         NSInteger currentHour = [[NSCalendar currentCalendar] gluc_hourFromDate:editDate];
         NSInteger readingTypeId = [self.editedObject readingTypeIdForHourOfDay:currentHour];
-        self.editedObject.readingTypeId = [NSNumber numberWithInteger:readingTypeId];
+        [[RLMRealm defaultRealm] beginWriteTransaction];
+        self.editedObject.readingTypeId = (NSNumber <RLMInt> *)[NSNumber numberWithInteger:readingTypeId];
+        [[RLMRealm defaultRealm] commitWriteTransaction];
         measurementType = [self.editedObject readingTypeForId:readingTypeId];
     } else {
         measurementType = [self.editedObject displayValueForKey:kGLUCReadingReadingTypeIdPropertyKey];
     }
+    measurementType = [self.editedObject displayValueForKey:kGLUCReadingReadingTypeIdPropertyKey];
 
     self.values = @[editDateString, editTimeString, measurementType];
 

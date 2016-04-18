@@ -10,10 +10,6 @@
 
 }
 
-+ (NSString *)entityName {
-    return @"ketones_reading";
-}
-
 + (NSString *)title {
     return GLUCLoc(@"Ketones");
 }

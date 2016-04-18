@@ -10,10 +10,6 @@
 
 }
 
-+ (NSString *)entityName {
-    return @"hb1ac_reading";
-}
-
 + (NSString *)title {
     return GLUCLoc(@"HB1AC Reading");
 }

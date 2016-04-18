@@ -3,6 +3,7 @@
 // Copyright (c) 2016 Glucosio.org. All rights reserved.
 //
 
+#import <Realm/Realm.h>
 #import "GLUCReading.h"
 
 
@@ -20,14 +21,5 @@
     return self;
 }
 
-- (NSDictionary *)insertParameters {
-    NSDictionary *readingParameters = @{
-            kGLUCReadingModelValuePropertyKey : self.reading,
-            kGLUCReadingNotesPropertyKey : self.notes,
-    };
-    NSMutableDictionary *retVal = [NSMutableDictionary dictionaryWithDictionary:[super insertParameters]];
-    [retVal addEntriesFromDictionary:readingParameters];
-    return [NSDictionary dictionaryWithDictionary:retVal];
-}
 
 @end

@@ -1,3 +1,4 @@
+#import <Realm/Realm.h>
 #import "GLUCUser.h"
 #import "GLUCModel.h"
 
@@ -7,28 +8,26 @@
 @implementation GLUCModel
 
 
-+ (NSString *) entityName {
-    return nil;
-}
-
 + (NSString *)title {
     return nil;
 }
 
++ (NSString *)primaryKey {
+    return kGLUCModelIdKey;
+}
+
++ (NSArray *)ignoredProperties {
+    return @[@"schema", @"ownerId"];
+}
+
+
 - (instancetype) init {
     if ((self = [super init]) != nil) {
-        self.glucID = @(-1);
+        self.glucID = [[NSUUID UUID] UUIDString];
         self.creationDate = [NSDate date];
         self.modificationDate = self.creationDate;
     }
     return self;
-}
-
-- (NSDictionary *)insertParameters {
-    return @{
-            kGLUCModelCreationDateKey : self.creationDate,
-            kGLUCModelModificationDateKey : self.modificationDate,
-    };
 }
 
 
@@ -114,20 +113,6 @@
         if (retVal) {
             if ([[self indirectLookupKeys] containsObject:key]) {
                 retVal = [[NSLocale currentLocale] displayNameForKey:NSLocaleCountryCode value:retVal];
-            }
-        }
-    }
-    return retVal;
-}
-
-- (NSNumber *)lookupIndexFromSortedDisplayValue:(NSString *)displayValue forKey:(NSString *)key {
-    NSNumber *retVal = nil;
-    if (key && key.length && displayValue && displayValue.length && self.schema) {
-        NSArray *displayValues = [[self potentialDisplayValuesForKey:key] sortedArrayUsingSelector:@selector(compare:)];
-        if (displayValues && displayValues.count) {
-            NSUInteger index = [displayValues indexOfObject:displayValue];
-            if (index != NSNotFound) {
-                retVal = @(index);
             }
         }
     }
@@ -258,12 +243,14 @@
 
 - (void)setValueFromLookupAtIndex:(NSNumber *)index forKey:(NSString *)key {
     if (key && key.length && self.schema) {
+        [[self realm] beginWriteTransaction];
         if ([[self indirectLookupKeys] containsObject:key]) {
             id val = [self lookupAtIndex:index forKey:key];
             [self setValue:val forKey:key];
         } else {
             [self setValue:index forKey:key];
         }
+        [[self realm] commitWriteTransaction];
     }
 }
 

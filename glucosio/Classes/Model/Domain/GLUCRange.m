@@ -1,3 +1,4 @@
+#import <Realm/Realm.h>
 #import "GLUCRange.h"
 
 @implementation GLUCRange

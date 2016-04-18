@@ -8,7 +8,7 @@
 
 @interface GLUCPersistenceController : NSObject
 
-@property (strong, nonatomic) FMDatabase *db;
+//@property (strong, nonatomic) FMDatabase *db;
 
 - (instancetype) init;
 
@@ -23,6 +23,7 @@
 - (BOOL)saveReading:(GLUCReading *)reading;
 - (BOOL)deleteReading:(GLUCReading *)reading;
 
+- (NSArray *)allReadingsOfType:(Class)readingType;
 - (NSArray *)allBloodGlucoseReadings:(BOOL)ascending;
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 

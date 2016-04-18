@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
+#import <Realm/RLMObject.h>
 #import "GLUCLoc.h"
+
+@protocol RLMInt;
 
 static NSString *const kGLUCModelInitialSettingsCompletedKey = @"initialSettingsCompleted";
 
@@ -18,9 +21,9 @@ static NSString *const kGLUCModelIdKey = @"glucID";
 static NSString *const kGLUCModelCreationDateKey = @"creationDate";
 static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 
-@interface GLUCModel : NSObject
+@interface GLUCModel : RLMObject
 
-@property (nonatomic, readwrite, strong) NSNumber *glucID;
+@property (nonatomic, readwrite, strong) NSString *glucID;
 @property (nonatomic, readwrite, strong) NSDate *creationDate;
 @property (nonatomic, readwrite, strong) NSDate *modificationDate;
 
@@ -28,12 +31,9 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 
 @property (nonatomic, readwrite, strong) NSNumber *ownerId;
 
-+ (NSString *) entityName; // subclasses must override
 + (NSString *) title; // subclasses must override
 
 - (instancetype) init;
-
-- (NSDictionary *) insertParameters; // key/values
 
 - (NSArray *)potentialDisplayValuesForKey:(NSString *)key;
 
@@ -41,7 +41,6 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 
 - (NSNumber *)lookupIndexForKey:(NSString *)key;
 - (NSNumber *)lookupIndexFromDisplayValue:(NSString *)displayValue forKey:(NSString *)key;
-- (NSNumber *)lookupIndexFromSortedDisplayValue:(NSString *)displayValue forKey:(NSString *)key;
 
 - (id)defaultValueForKey:(NSString *)key;
 

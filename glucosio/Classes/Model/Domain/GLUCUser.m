@@ -1,3 +1,4 @@
+#import <Realm/Realm.h>
 #import "GLUCUser.h"
 #import "GLUCRange.h"
 #import "GLUCBloodGlucoseReading.h"
@@ -6,6 +7,10 @@
 @end
 
 @implementation GLUCUser
+
++ (NSString *)title {
+    return GLUCLoc(@"User");
+}
 
 - (void)setupDefaultData {
     self.schema = @{
@@ -164,7 +169,7 @@
 
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
     if ([self needsBloodGlucoseReadingUnitConversion]) {
-        return @([reading.reading intValue] / 18.0f);
+        return @([reading.reading floatValue] / 18.0f);
     }
     return reading.reading;
 }
@@ -172,10 +177,12 @@
 - (void)setNewValue:(NSNumber *)value inBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading {
     NSNumber *newValue = value;
     if ([self needsBloodGlucoseReadingUnitConversion]) {
-        newValue = [NSNumber numberWithInteger:([value floatValue] * 18.0f)];
+        newValue = [NSNumber numberWithFloat:([value floatValue] * 18.0f)];
     }
     if (reading && newValue) {
+        [[RLMRealm defaultRealm] beginWriteTransaction];
         reading.reading = newValue;
+        [[RLMRealm defaultRealm] commitWriteTransaction];
     }
 }
 

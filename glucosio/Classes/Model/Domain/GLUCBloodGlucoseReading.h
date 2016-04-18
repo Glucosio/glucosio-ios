@@ -6,7 +6,7 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 
 @interface GLUCBloodGlucoseReading : GLUCReading
 
-@property (nonatomic, readwrite, strong) NSNumber *readingTypeId;
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *readingTypeId;
 
 + (NSArray *) readingTypes;
 - (NSString *) readingType;

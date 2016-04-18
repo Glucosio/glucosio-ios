@@ -1,3 +1,4 @@
+#import <Realm/RLMArray.h>
 #import "GLUCHistoryViewController.h"
 #import "GLUCAppDelegate.h"
 #import "GLUCAppearanceController.h"
@@ -12,7 +13,9 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
+
+    self.readingClass = GLUCBloodGlucoseReading.class;
+
     if (!self.model) {
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
@@ -47,11 +50,10 @@
     
     self.title = GLUCLoc(@"tab_history");
 
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.readings = [self.model allBloodGlucoseReadings:NO];
+    self.readings = [self.model allReadingsOfType:self.readingClass];
 
     [self.historyTableView reloadData];
     [super viewWillAppear:animated];
@@ -82,7 +84,7 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier:kGLUCHistoryCellIdentifier];
     
-    GLUCBloodGlucoseReading *reading = nil;
+    GLUCReading *reading = nil;
     
     if (indexPath.row >= 0 && indexPath.row < self.readings.count) {
         reading = self.readings[(NSUInteger) indexPath.row];
@@ -100,7 +102,11 @@
                         [NSDateFormatter localizedStringFromDate:[reading creationDate]
                                                        dateStyle:NSDateFormatterShortStyle
                                                        timeStyle:NSDateFormatterShortStyle]];
-        typeLabel.text = [reading readingType];
+        if ([reading respondsToSelector:@selector(readingType)])
+            typeLabel.text = [(id)reading readingType];
+        else
+            typeLabel.text = [self.readingClass title];
+
         NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ?
                 [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]] :
                 [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];

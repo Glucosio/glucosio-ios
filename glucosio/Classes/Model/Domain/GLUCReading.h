@@ -6,10 +6,12 @@
 #import <Foundation/Foundation.h>
 #import "GLUCModel.h"
 
+@protocol RLMFloat;
+
 static NSString *const kGLUCReadingNotesPropertyKey = @"notes";
 static NSString *const kGLUCReadingModelValuePropertyKey = @"reading";
 
 @interface GLUCReading : GLUCModel
-@property (nonatomic, readwrite, strong) NSNumber *reading;
+@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *reading;
 @property (nonatomic, readwrite, strong) NSString *notes;
 @end

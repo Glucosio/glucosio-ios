@@ -1,20 +1,18 @@
 PODS:
   - Charts (2.1.4)
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Charts
-  - FMDB
+  - Realm
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Charts: 870589b6b4bf8468baacea8869c28983d71f602c
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.39.0.rc.1

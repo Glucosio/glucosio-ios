@@ -10,10 +10,6 @@
 
 }
 
-+ (NSString *)entityName {
-    return @"insulin_intake_reading";
-}
-
 + (NSString *)title {
     return GLUCLoc(@"Insulin Intake");
 }

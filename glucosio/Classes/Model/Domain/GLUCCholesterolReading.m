@@ -10,10 +10,6 @@
 
 }
 
-+ (NSString *)entityName {
-    return @"cholesterol_reading";
-}
-
 + (NSString *)title {
     return GLUCLoc(@"Cholesterol Level");
 }

@@ -7,5 +7,6 @@ static NSString *const kGLUCHistoryCellIdentifier = @"HistoryCell";
 
 @property (strong, nonatomic, readwrite) IBOutlet UITableView *historyTableView;
 @property (strong, nonatomic) NSArray *readings;
+@property (strong, nonatomic) Class readingClass;
 
 @end

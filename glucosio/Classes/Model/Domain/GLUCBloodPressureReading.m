@@ -10,10 +10,6 @@
 
 }
 
-+ (NSString *)entityName {
-    return @"blood_pressure_reading";
-}
-
 + (NSString *)title {
     return GLUCLoc(@"Blood Pressure");
 }

@@ -2,6 +2,7 @@
 #import "GLUCModel.h"
 
 @class GLUCBloodGlucoseReading;
+@protocol RLMDouble;
 
 
 static NSString *const kGLUCUserCountryPreferenceKey = @"countryPreference";
@@ -20,16 +21,16 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 @interface GLUCUser : GLUCModel
 
 @property (nonatomic, readwrite, strong) NSString *countryPreference; // ISO code (language choice)
-@property (nonatomic, readwrite, strong) NSNumber *age;
-@property (nonatomic, readwrite, strong) NSNumber *gender; // 0 - male, 1 - female, 2 - other
-@property (nonatomic, readwrite, strong) NSNumber *illnessType; // 0 - type 1, 1 - type 2
-@property (nonatomic, readwrite, strong) NSNumber *preferredBloodGlucoseUnitOfMeasure; // 0 - mg/dL, 1 - mmol/L
-@property (nonatomic, readwrite, strong) NSNumber *preferredBodyWeightUnitOfMeasure; // 0 - kilograms, 1 - pounds
-@property (nonatomic, readwrite, strong) NSNumber *preferredA1CUnitOfMeasure; // 0 - percentage, 1 - mmol/mol
-@property (nonatomic, readwrite, strong) NSNumber *rangeType; // 0 - ADA, 1 - AACE, 2 - UK NICE, 3 - custom
-@property (nonatomic, readwrite, strong) NSNumber *rangeMin;
-@property (nonatomic, readwrite, strong) NSNumber *rangeMax;
-@property (nonatomic, readwrite, strong) NSNumber *allowResearchUse; // allow anonymous data sharing
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *age;
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *gender; // 0 - male, 1 - female, 2 - other
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *illnessType; // 0 - type 1, 1 - type 2
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredBloodGlucoseUnitOfMeasure; // 0 - mg/dL, 1 - mmol/L
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredBodyWeightUnitOfMeasure; // 0 - kilograms, 1 - pounds
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredA1CUnitOfMeasure; // 0 - percentage, 1 - mmol/mol
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *rangeType; // 0 - ADA, 1 - AACE, 2 - UK NICE, 3 - custom
+@property (nonatomic, readwrite, strong) NSNumber<RLMDouble> *rangeMin;
+@property (nonatomic, readwrite, strong) NSNumber<RLMDouble> *rangeMax;
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *allowResearchUse; // allow anonymous data sharing
 
 - (NSArray *)settingsProperties;
 - (NSArray *)requiredStartProperties;
