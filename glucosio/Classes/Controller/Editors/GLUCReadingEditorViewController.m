@@ -6,10 +6,10 @@
 #import "GLUCListEditorViewController.h"
 #import "GLUCDateTimeEditorViewController.h"
 #import "GLUCAppearanceController.h"
+#import "GLUCValueEditorViewController.h"
 
 @interface GLUCReadingEditorViewController ()
 @property (strong, nonatomic) NSArray *rowKeys;
-@property (strong, nonatomic) NSArray *values;
 @property (assign, nonatomic) BOOL useEditedValue;
 @end
 
@@ -20,7 +20,6 @@
 
 @dynamic editedObject;
 
-
 - (void) viewDidLoad {
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
@@ -28,10 +27,9 @@
     if (!self.model) {
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
-    
-    self.rowKeys = @[GLUCLoc(@"dialog_add_date"), GLUCLoc(@"dialog_add_time"), GLUCLoc(@"dialog_add_measured")];
-    self.values = @[@"", @"", @""];
-    
+
+    self.rowKeys = [self rowKeysForReadingType:self.editedObject.class];
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     
@@ -46,12 +44,10 @@
     [self.valueField setFont:[GLUCAppearanceController valueEditorTextFieldFont]];
     [self.valueField setTextColor:[UIColor glucosio_pink]];
 
-    NSDate *editDate = [NSDate date];
-    if (self.editedObject) {
-        editDate = [self.editedObject creationDate];
-        if ([self.editedObject.reading integerValue] != 0) {
-            NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ? [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]] :
-                    [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:self.editedObject]];
+    GLUCReading *editedReading = (GLUCReading *)self.editedObject;
+    if (editedReading) {
+        if ([editedReading.reading integerValue] != 0) {
+            NSString *valueStr = [self.model.currentUser displayValueForReading:editedReading];
 
             self.valueField.text = valueStr;
         } else {
@@ -60,29 +56,6 @@
     } else {
         self.valueField.text = @"";
     }
-    
-    self.dateFormatter.dateStyle = NSDateFormatterShortStyle;
-    self.dateFormatter.timeStyle = NSDateFormatterNoStyle;
-    NSString *editDateString = [self.dateFormatter stringFromDate:editDate];
-
-    self.dateFormatter.dateStyle = NSDateFormatterNoStyle;
-    self.dateFormatter.timeStyle = NSDateFormatterShortStyle;
-    NSString *editTimeString = [self.dateFormatter stringFromDate:editDate];
-
-    NSString *measurementType = @"";
-    if (self.editedObject && !self.useEditedValue) {
-        NSInteger currentHour = [[NSCalendar currentCalendar] gluc_hourFromDate:editDate];
-        NSInteger readingTypeId = [self.editedObject readingTypeIdForHourOfDay:currentHour];
-        [[RLMRealm defaultRealm] beginWriteTransaction];
-        self.editedObject.readingTypeId = (NSNumber <RLMInt> *)[NSNumber numberWithInteger:readingTypeId];
-        [[RLMRealm defaultRealm] commitWriteTransaction];
-        measurementType = [self.editedObject readingTypeForId:readingTypeId];
-    } else {
-        measurementType = [self.editedObject displayValueForKey:kGLUCReadingReadingTypeIdPropertyKey];
-    }
-    measurementType = [self.editedObject displayValueForKey:kGLUCReadingReadingTypeIdPropertyKey];
-
-    self.values = @[editDateString, editTimeString, measurementType];
 
     [self.editorTableView reloadData];
     
@@ -116,20 +89,17 @@
     [tableView deselectRowAtIndexPath:indexPath animated:TRUE];
     [self.valueField resignFirstResponder];
     [self.valueField setFont:[GLUCAppearanceController valueEditorTextFieldFont]];
-    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inBloodGlucoseReading:self.editedObject];
+    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
     self.useEditedValue = YES;
     
-    switch (indexPath.row) {
-        case 0:
-            [self editCreationDate:NO];
-            break;
-        case 1:
-            [self editCreationDate:YES];
-            break;
-        case 2: {
-            NSString *targetKey = kGLUCReadingReadingTypeIdPropertyKey;
-            GLUCListEditorViewController *editor = 
-                    (GLUCListEditorViewController *) [[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCListEditorViewControllerIdentifier];
+    NSString *targetKey = self.rowKeys[indexPath.row];
+    
+    if ([self.editedObject isDateKey:targetKey] || [self.editedObject isTimeKey:targetKey]) {
+        [self editCreationDate:[self.editedObject isTimeKey:self.rowKeys[indexPath.row]]];
+    } else {
+        if ([self.editedObject propertyIsLookup:targetKey] || [self.editedObject propertyIsIndirectLookup:targetKey]) {
+            GLUCListEditorViewController *editor =
+            (GLUCListEditorViewController *) [[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCListEditorViewControllerIdentifier];
             editor.editedObject = self.editedObject;
             editor.editedProperty = targetKey;
             editor.title = [self.editedObject titleForKey:targetKey];
@@ -146,11 +116,16 @@
             
             self.navigationItem.backBarButtonItem = [self cancelButtonItem];
             [self.navigationController pushViewController:editor animated:YES];
+        } else {
+            GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
+            editor.editedObject = self.editedObject;
+            editor.editedProperty = targetKey;
+            editor.title = [self.model.currentUser titleForKey:targetKey];
+            editor.model = self.model;
+            self.navigationItem.backBarButtonItem = [self cancelButtonItem];
+            [self.navigationController pushViewController:editor animated:YES];
 
-            break;
         }
-        default:
-            break;
     }
 }
 
@@ -165,14 +140,39 @@
     }
     
     if (indexPath.row >= 0 && indexPath.row < self.rowKeys.count) {
-        cell.textLabel.text = self.rowKeys[(NSUInteger) indexPath.row];
-        cell.detailTextLabel.text = self.values[(NSUInteger) indexPath.row];
+        cell.textLabel.text = [self titleForRowWithKey:self.rowKeys[(NSUInteger)indexPath.row]];
+        cell.detailTextLabel.text = [self displayValueForRowWithKey:self.rowKeys[(NSUInteger)indexPath.row]];
         cell.textLabel.font = [GLUCAppearanceController defaultFont];
         cell.detailTextLabel.font = [GLUCAppearanceController defaultFont];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;
+}
+
+
+
+- (NSString *)displayValueForRowWithKey:(NSString *)key {
+    NSString *retVal = @"???";
+    NSDictionary *schema = [self.editedObject.class schema];
+    if (schema) {
+        if ([self.editedObject isDateKey:key]) {
+            self.dateFormatter.dateStyle = NSDateFormatterShortStyle;
+            self.dateFormatter.timeStyle = NSDateFormatterNoStyle;
+            retVal = [self.editedObject displayValueForDateKey:schema[kGLUCModelSchemaPropertiesKey][key][kGLUCModelAttributeKey] withDateFormatter:self.dateFormatter];
+        } else {
+            if ([self.editedObject isTimeKey:key]) {
+                self.dateFormatter.dateStyle = NSDateFormatterNoStyle;
+                self.dateFormatter.timeStyle = NSDateFormatterShortStyle;
+                retVal = [self.editedObject displayValueForDateKey:schema[kGLUCModelSchemaPropertiesKey][key][kGLUCModelAttributeKey] withDateFormatter:self.dateFormatter];
+            } else {
+                retVal = [self.editedObject displayValueForKey:schema[kGLUCModelSchemaPropertiesKey][key][kGLUCModelAttributeKey]];
+            }
+        }
+
+    }
+
+    return retVal;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -186,8 +186,8 @@
 
 - (IBAction)save:(UIButton *)sender {
     [self.valueField resignFirstResponder];
-    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inBloodGlucoseReading:self.editedObject];
-    [self.model saveReading:self.editedObject];
+    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
+    [self.model saveReading:(GLUCReading *)self.editedObject];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

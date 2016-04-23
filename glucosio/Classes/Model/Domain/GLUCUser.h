@@ -3,6 +3,7 @@
 
 @class GLUCBloodGlucoseReading;
 @protocol RLMDouble;
+@class GLUCReading;
 
 
 static NSString *const kGLUCUserCountryPreferenceKey = @"countryPreference";
@@ -32,6 +33,8 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 @property (nonatomic, readwrite, strong) NSNumber<RLMDouble> *rangeMax;
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *allowResearchUse; // allow anonymous data sharing
 
+@property (strong, nonatomic) NSNumberFormatter *numberFormatter;
+
 - (NSArray *)settingsProperties;
 - (NSArray *)requiredStartProperties;
 
@@ -39,6 +42,10 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 
 - (BOOL)needsBloodGlucoseReadingUnitConversion;
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading;
-- (void)setNewValue:(NSNumber *)value inBloodGlucoseReading:(GLUCBloodGlucoseReading *)reading;
+- (void)setNewValue:(NSNumber *)value inReading:(GLUCReading *)reading;
+- (NSString *) displayValueForReading:(GLUCReading *)reading;
+- (NSString *) displayUnitsForReading:(GLUCReading *)reading;
+
+- (NSArray *) readingTypes;
 
 @end

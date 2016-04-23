@@ -6,6 +6,12 @@
 #import <Foundation/Foundation.h>
 #import "GLUCReading.h"
 
+static NSString *const kGLUCReadingLDLReadingPropertyKey = @"ldlReading";
+static NSString *const kGLUCReadingHDLReadingPropertyKey = @"hdlReading";
 
 @interface GLUCCholesterolReading : GLUCReading
+
+@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *ldlReading;
+@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *hdlReading;
+
 @end

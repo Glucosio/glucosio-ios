@@ -3,10 +3,18 @@
 #import "GLUCAppDelegate.h"
 #import "GLUCAppearanceController.h"
 #import "GLUCReadingEditorViewController.h"
+#import "GLUCBloodGlucoseReading.h"
+#import "GLUCHB1ACReading.h"
+#import "GLUCCholesterolReading.h"
+#import "GLUCBloodPressureReading.h"
+#import "GLUCKetonesReading.h"
+#import "GLUCBodyWeightReading.h"
+#import "GLUCInsulinIntakeReading.h"
 
 @interface GLUCHistoryViewController ()
 @property (strong, nonatomic) UITableViewRowAction *deleteAction;
 @property (strong, nonatomic) UITableViewRowAction *editAction;
+@property (strong, nonatomic) NSArray *readingTypes;
 @end
 
 @implementation GLUCHistoryViewController
@@ -14,11 +22,12 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
-    self.readingClass = GLUCBloodGlucoseReading.class;
+    self.readingClass = GLUCBodyWeightReading .class;
 
     if (!self.model) {
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
+    self.readingTypes = [self.model.currentUser readingTypes];    
     
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                            title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
@@ -37,8 +46,8 @@
                                                                  if (editorVC) {
                                                                      NSString *title = GLUCLoc(@"Edit reading");
                                                                      editorVC.title = [NSString stringWithFormat:@"%@ (%@)", title,
-                                                                                       [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];
-                                                                     
+                                                                             [self.model.currentUser displayValueForReading:self.readings[(NSUInteger)indexPath.row]]];
+
                                                                      editorVC.editedObject = self.readings[(NSUInteger) indexPath.row];
                                                                      UINavigationController *editorNavCtrl = [[UINavigationController alloc] initWithRootViewController:editorVC];
                                                                      [self presentViewController:editorNavCtrl animated:YES completion:^{
@@ -57,6 +66,25 @@
 
     [self.historyTableView reloadData];
     [super viewWillAppear:animated];
+}
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.readingTypes.count;
+}
+
+- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.readingTypes[row] title];
+}
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.readingClass = self.readingTypes[row];
+    self.readings = [self.model allReadingsOfType:self.readingClass];
+
+    [self.historyTableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -107,14 +135,9 @@
         else
             typeLabel.text = [self.readingClass title];
 
-        // TODO - this is wrong for a generic reading editor
-        NSString *valueStr = (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) ?
-                [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]] :
-                [NSString stringWithFormat:@"%@", [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
-
-        NSString *readingValueStr = [NSString stringWithFormat:@"%@ %@",
-                                                           valueStr,
-                                                           [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
+        NSString *valueStr = [self.model.currentUser displayValueForReading:reading];
+        NSString *unitsStr = [self.model.currentUser displayUnitsForReading:reading];
+        NSString *readingValueStr = [NSString stringWithFormat:@"%@ %@", valueStr, unitsStr];
 
         valueLabel.text = readingValueStr;
         

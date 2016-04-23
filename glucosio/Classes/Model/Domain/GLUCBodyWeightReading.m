@@ -10,6 +10,8 @@
 
 }
 
+
+
 + (NSString *)title {
     return GLUCLoc(@"Body Weight");
 }

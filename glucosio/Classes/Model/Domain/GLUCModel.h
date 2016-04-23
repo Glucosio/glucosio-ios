@@ -8,17 +8,23 @@ static NSString *const kGLUCModelInitialSettingsCompletedKey = @"initialSettings
 
 static NSString *const kGLUCModelPotentialValuesKey = @"potentialValues";
 static NSString *const kGLUCModelSettingsPropertiesKey = @"settingsProperties";
+static NSString *const kGLUCModelEditorPropertiesKey = @"editorProperties";
+static NSString *const kGLUCModelEditorRowsPropertiesKey = @"editorRows";
 static NSString *const kGLUCModelSchemaPropertiesKey = @"properties";
 static NSString *const kGLUCModelRequiredStartPropertiesKey = @"requiredStartProperties";
 static NSString *const kGLUCModelAttributeKey = @"key";
 static NSString *const kGLUCModelAttributeTitleKey = @"title";
 static NSString *const kGLUCModelAttributeTypeKey = @"type";
+static NSString *const kGLUCModelAttributeDateTypeKey = @"date";
+static NSString *const kGLUCModelAttributeTimeTypeKey = @"time";
 static NSString *const kGLUCModelDefaultValueKey = @"default";
 static NSString *const kGLUCModelDefaultIndexKey = @"defaultIndex";
 static NSString *const kGLUCModelAttributeValidRangeKey = @"validRange";
 
 static NSString *const kGLUCModelIdKey = @"glucID";
 static NSString *const kGLUCModelCreationDateKey = @"creationDate";
+static NSString *const kGLUCModelCreationDatePropertyKey = @"readingDate";
+static NSString *const kGLUCModelCreationTimePropertyKey = @"readingTime";
 static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 
 @interface GLUCModel : RLMObject
@@ -27,9 +33,9 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 @property (nonatomic, readwrite, strong) NSDate *creationDate;
 @property (nonatomic, readwrite, strong) NSDate *modificationDate;
 
-@property (strong, nonatomic) NSDictionary *schema;
-
 @property (nonatomic, readwrite, strong) NSNumber *ownerId;
+
++ (NSDictionary *) schema; // subclasses can customize
 
 + (NSString *) title; // subclasses must override
 
@@ -47,6 +53,7 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 - (NSString *)defaultStringValueForKey:(NSString *)key;
 
 - (NSString *)displayValueForKey:(NSString *)key;
+- (NSString *)displayValueForDateKey:(NSString *)key withDateFormatter:(NSDateFormatter *)aFormatter;
 - (NSNumber *)defaultLookupIndexValueForKey:(NSString *)key;
 
 - (void)setValueFromLookupAtIndex:(NSNumber *)index forKey:(NSString *)key;
@@ -57,4 +64,7 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 - (NSNumber *) minimumOfRangeForKey:(NSString *)key;
 - (NSNumber *) maximumOfRangeForKey:(NSString *)key;
 
+- (BOOL) isKey:(NSString *)key ofType:(NSString *)type;
+- (BOOL) isDateKey:(NSString *)key;
+- (BOOL) isTimeKey:(NSString *)key;
 @end

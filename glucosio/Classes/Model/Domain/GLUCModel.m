@@ -7,6 +7,9 @@
 
 @implementation GLUCModel
 
++ (NSDictionary *)schema {
+    return nil;
+}
 
 + (NSString *)title {
     return nil;
@@ -17,7 +20,7 @@
 }
 
 + (NSArray *)ignoredProperties {
-    return @[@"schema", @"ownerId"];
+    return @[@"ownerId"];
 }
 
 
@@ -34,8 +37,8 @@
 - (NSArray *)potentialValuesForKey:(NSString *)key {
     NSArray *retVal = nil;
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             retVal = [attributes valueForKey:kGLUCModelPotentialValuesKey];
         }
@@ -46,8 +49,8 @@
 - (NSArray *)potentialDisplayValuesForKey:(NSString *)key {
     NSArray *retVal = nil;
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             retVal = [attributes valueForKey:kGLUCModelPotentialValuesKey];
             if ([[self indirectLookupKeys] containsObject:key]) {
@@ -65,8 +68,8 @@
 - (NSString *)titleForKey:(NSString *)key {
     NSString *retVal = nil;
 
-    if (key && key.length && self.schema) {
-        NSString *nonLocalizedTitle = [[[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key] valueForKey:@"title"];
+    if (key && key.length && [[self class] schema]) {
+        NSString *nonLocalizedTitle = [[[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key] valueForKey:@"title"];
         if (nonLocalizedTitle) {
             retVal = GLUCLoc(nonLocalizedTitle);
         }
@@ -78,8 +81,8 @@
 - (BOOL)propertyIsLookup:(NSString *)key {
     BOOL retVal = NO;
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             NSArray *potentialValues = [self potentialValuesForKey:key];
             if (potentialValues && potentialValues.count) {
@@ -108,7 +111,7 @@
 - (id)transformedValueForKey:(NSString *) key {
     id retVal = nil;
 
-    if (key && key.length && self.schema) {
+    if (key && key.length && [[self class] schema]) {
         retVal = [self valueForKey:key];
         if (retVal) {
             if ([[self indirectLookupKeys] containsObject:key]) {
@@ -121,7 +124,7 @@
 
 - (NSNumber *)lookupIndexFromDisplayValue:(NSString *)displayValue forKey:(NSString *)key {
     NSNumber *retVal = nil;
-    if (key && key.length && displayValue && displayValue.length && self.schema) {
+    if (key && key.length && displayValue && displayValue.length && [[self class] schema]) {
         NSArray *displayValues = [self potentialDisplayValuesForKey:key];
         if (displayValues && displayValues.count) {
             NSUInteger index = [displayValues indexOfObject:displayValue];
@@ -136,7 +139,7 @@
 - (NSNumber *)lookupIndexForKey:(NSString *)key {
     NSNumber *retVal = @0;
 
-    if (key && key.length && self.schema) {
+    if (key && key.length && [[self class] schema]) {
         id val = [self valueForKey:key];
         if ([[self indirectLookupKeys] containsObject:key]) {
             NSArray *potentialValues = [self potentialValuesForKey:key];
@@ -156,8 +159,8 @@
 - (NSNumber *)defaultLookupIndexValueForKey:(NSString *)key {
     NSNumber *retVal = @0;
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             retVal = [attributes valueForKey:kGLUCModelDefaultValueKey];
             if (!retVal) {
@@ -179,8 +182,8 @@
 - (id)defaultValueForKey:(NSString *)key {
     id retVal = @"";
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             retVal = [attributes valueForKey:kGLUCModelDefaultValueKey];
             if (!retVal) {
@@ -210,8 +213,8 @@
 - (id)lookupAtIndex:(NSNumber *)anIndex forKey:(NSString *)key {
     id retVal = @"";
 
-    if (anIndex && key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (anIndex && key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             NSArray *potentialValues = [self potentialValuesForKey:key];
             NSUInteger index = [anIndex unsignedIntegerValue];
@@ -222,6 +225,7 @@
     }
     return retVal;
 }
+
 
 - (NSString *)displayValueForKey:(NSString *)key {
     NSString *retVal = @"";
@@ -241,8 +245,21 @@
     return retVal;
 }
 
+- (NSString *)displayValueForDateKey:(NSString *)key withDateFormatter:(NSDateFormatter *)aFormatter {
+    NSString *retVal = @"";
+    if (!aFormatter) {
+        retVal =  [self displayValueForKey:key];
+    } else {
+        id val = [self valueForKey:key];
+        if ([val isKindOfClass:[NSDate class]]) {
+            retVal = [aFormatter stringFromDate:(NSDate *)val];
+        }
+    }
+    return retVal;
+}
+
 - (void)setValueFromLookupAtIndex:(NSNumber *)index forKey:(NSString *)key {
-    if (key && key.length && self.schema) {
+    if (key && key.length && [[self class] schema]) {
         [[self realm] beginWriteTransaction];
         if ([[self indirectLookupKeys] containsObject:key]) {
             id val = [self lookupAtIndex:index forKey:key];
@@ -261,8 +278,8 @@
 - (NSNumber *) rangeElement:(NSString *)elementName forKey:(NSString *)key {
     NSNumber *retVal = nil;
 
-    if (key && key.length && self.schema) {
-        NSDictionary *attributes = [[self.schema valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
+    if (key && key.length && [[self class] schema]) {
+        NSDictionary *attributes = [[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key];
         if (attributes) {
             NSDictionary *rangeValues = [attributes valueForKey:kGLUCModelAttributeValidRangeKey];
             if (rangeValues) {
@@ -284,5 +301,23 @@
     return [self rangeElement:@"max" forKey:key];
 }
 
+- (BOOL) isKey:(NSString *)key ofType:(NSString *)type {
+    BOOL retVal = NO;
+    NSDictionary *schema = [[self class] schema];
+    if (schema) {
+        NSString *attributeType = schema[kGLUCModelSchemaPropertiesKey][key][kGLUCModelAttributeTypeKey];
+        if (attributeType && attributeType.length && [attributeType.uppercaseString isEqualToString:type.uppercaseString])
+            retVal = YES;
+    }
+    return retVal;
 
+}
+
+- (BOOL) isDateKey:(NSString *)key {
+    return [self isKey:key ofType:kGLUCModelAttributeDateTypeKey];
+}
+
+- (BOOL) isTimeKey:(NSString *)key {
+    return [self isKey:key ofType:kGLUCModelAttributeTimeTypeKey];
+}
 @end

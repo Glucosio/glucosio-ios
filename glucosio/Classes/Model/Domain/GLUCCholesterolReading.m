@@ -14,4 +14,50 @@
     return GLUCLoc(@"Cholesterol Level");
 }
 
++ (NSDictionary *)schema {
+    NSDictionary *propertiesDict = @{
+                                     kGLUCReadingModelValuePropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCReadingModelValuePropertyKey,
+                                             kGLUCModelAttributeTitleKey : @"dialog_add_concentration",
+                                             kGLUCModelAttributeTypeKey : @"NSNumber",
+                                             },
+                                     kGLUCReadingLDLReadingPropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCReadingLDLReadingPropertyKey,
+                                             kGLUCModelAttributeTitleKey : @"LDL Reading",
+                                             kGLUCModelAttributeTypeKey : @"NSNumber",
+                                             },
+                                     kGLUCReadingHDLReadingPropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCReadingHDLReadingPropertyKey,
+                                             kGLUCModelAttributeTitleKey : @"HDL Reading",
+                                             kGLUCModelAttributeTypeKey : @"NSNumber",
+                                             },
+                                     kGLUCReadingNotesPropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCReadingNotesPropertyKey,
+                                             kGLUCModelAttributeTitleKey : @"Notes",
+                                             kGLUCModelAttributeTypeKey : @"NSString"
+                                             },
+                                     kGLUCModelCreationDatePropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCModelCreationDateKey,
+                                             kGLUCModelAttributeTitleKey : @"dialog_add_date",
+                                             kGLUCModelAttributeTypeKey : kGLUCModelAttributeDateTypeKey
+                                             },
+                                     kGLUCModelCreationTimePropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCModelCreationDateKey,
+                                             kGLUCModelAttributeTitleKey : @"dialog_add_time",
+                                             kGLUCModelAttributeTypeKey : kGLUCModelAttributeTimeTypeKey
+                                             },
+                                     
+                                     };
+    
+    return @{
+             kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey,
+                                                 kGLUCModelCreationDateKey, kGLUCReadingNotesPropertyKey],
+             
+             kGLUCModelSchemaPropertiesKey : propertiesDict,
+             
+             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingLDLReadingPropertyKey, kGLUCReadingHDLReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey],
+             
+             };
+}
+
 @end

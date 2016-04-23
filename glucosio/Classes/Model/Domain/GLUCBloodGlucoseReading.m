@@ -1,6 +1,7 @@
 #import <Realm/RLMObject_Private.h>
 #import "GLUCBloodGlucoseReading.h"
 #import "GLUCLoc.h"
+#import "NSCalendar+GLUCAdditions.h"
 
 @implementation GLUCBloodGlucoseReading
 
@@ -21,35 +22,50 @@
              ];
 }
 
-- (void)setupDefaultData {
-    self.schema = @{
-            kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey, 
-                    kGLUCModelCreationDateKey,kGLUCReadingReadingTypeIdPropertyKey, kGLUCReadingNotesPropertyKey],
++ (NSDictionary *)schema {
+    NSDictionary *propertiesDict = @{
+            kGLUCReadingModelValuePropertyKey : @{
+                    kGLUCModelAttributeKey : kGLUCReadingModelValuePropertyKey,
+                    kGLUCModelAttributeTitleKey : @"dialog_add_concentration",
+                    kGLUCModelAttributeTypeKey : @"NSNumber",
+            },
+            kGLUCReadingReadingTypeIdPropertyKey : @{
+                    kGLUCModelAttributeKey : kGLUCReadingReadingTypeIdPropertyKey,
+                    kGLUCModelAttributeTitleKey : @"dialog_add_measured",
+                    kGLUCModelAttributeTypeKey : @"NSNumber",
+                    kGLUCModelPotentialValuesKey : [GLUCBloodGlucoseReading readingTypes],
+                    kGLUCModelDefaultIndexKey : @0
 
-            kGLUCModelSchemaPropertiesKey : @{
-                    kGLUCReadingModelValuePropertyKey : @{
-                            kGLUCModelAttributeKey : kGLUCReadingModelValuePropertyKey,
-                            kGLUCModelAttributeTitleKey : @"dialog_add_concentration",
-                            kGLUCModelAttributeTypeKey : @"NSNumber",
-                    },
-                    kGLUCReadingReadingTypeIdPropertyKey : @{
-                            kGLUCModelAttributeKey : kGLUCReadingReadingTypeIdPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"dialog_add_measured",
-                            kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : [GLUCBloodGlucoseReading readingTypes],
-                            kGLUCModelDefaultIndexKey : @0
+            },
+            kGLUCReadingNotesPropertyKey : @{
+                    kGLUCModelAttributeKey : kGLUCReadingNotesPropertyKey,
+                    kGLUCModelAttributeTitleKey : @"Notes",
+                    kGLUCModelAttributeTypeKey : @"NSString"
+            },
+            kGLUCModelCreationDatePropertyKey : @{
+                    kGLUCModelAttributeKey : kGLUCModelCreationDateKey,
+                    kGLUCModelAttributeTitleKey : @"dialog_add_date",
+                    kGLUCModelAttributeTypeKey : kGLUCModelAttributeDateTypeKey
+            },
+            kGLUCModelCreationTimePropertyKey : @{
+                    kGLUCModelAttributeKey : kGLUCModelCreationDateKey,
+                    kGLUCModelAttributeTitleKey : @"dialog_add_time",
+                    kGLUCModelAttributeTypeKey : kGLUCModelAttributeTimeTypeKey
+            },
 
-                    },
-                    kGLUCReadingNotesPropertyKey : @{
-                            kGLUCModelAttributeKey : kGLUCReadingNotesPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Notes",
-                            kGLUCModelAttributeTypeKey : @"NSString"
-                    },
-            }
     };
 
-//    self.readingTypeId = @0;
+    return @{
+            kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey,
+                    kGLUCModelCreationDateKey,kGLUCReadingReadingTypeIdPropertyKey, kGLUCReadingNotesPropertyKey],
+
+            kGLUCModelSchemaPropertiesKey : propertiesDict,
+
+            kGLUCModelEditorRowsPropertiesKey : @[kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingReadingTypeIdPropertyKey],
+
+    };
 }
+
 
 + (NSString *)title {
     return GLUCLoc(@"Blood Glucose Level");
@@ -57,7 +73,8 @@
 
 - (instancetype) init {
     if ((self = [super init]) != nil) {
-        [self setupDefaultData];
+        NSInteger rTypeId = [self readingTypeIdForHourOfDay:[[NSCalendar currentCalendar] gluc_hourFromDate:[NSDate date]]];
+        self.readingTypeId = (NSNumber <RLMInt> *) @(rTypeId);
     }
     return self;
 }
@@ -65,7 +82,6 @@
 - (instancetype)initWithValue:(id)value {
     self = [super initWithValue:value];
     if (self) {
-        [self setupDefaultData];
     }
 
     return self;
@@ -74,7 +90,6 @@
 - (instancetype)initWithRealm:(__unsafe_unretained RLMRealm *const)realm schema:(__unsafe_unretained RLMObjectSchema *const)schema {
     self = [super initWithRealm:realm schema:schema];
     if (self) {
-        [self setupDefaultData];
     }
 
     return self;

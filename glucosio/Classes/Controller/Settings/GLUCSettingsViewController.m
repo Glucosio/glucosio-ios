@@ -104,6 +104,8 @@
  
     [self hintRequiredRows];
 }
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger retVal  = 6;
     switch (section) {

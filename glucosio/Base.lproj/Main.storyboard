@@ -17,8 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-bk-sB9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="3zH-XN-3jy" id="SIH-0Z-EBL"/>
+                                    <outlet property="delegate" destination="3zH-XN-3jy" id="a8Y-AR-U3X"/>
+                                </connections>
+                            </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VN3-wv-E93">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="170" width="600" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="52" id="VgL-rG-Y8A">
@@ -68,8 +78,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="topMargin" id="Jfu-KY-q0q"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="leading" secondItem="VN3-wv-E93" secondAttribute="leading" id="BRz-zd-ZOj"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="top" id="HPH-Pi-7GJ"/>
+                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="topMargin" constant="170" id="Jfu-KY-q0q"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="trailing" secondItem="VN3-wv-E93" secondAttribute="trailing" id="cC8-Xy-n2e"/>
                             <constraint firstItem="VN3-wv-E93" firstAttribute="leading" secondItem="bSD-dY-mzN" secondAttribute="leadingMargin" constant="-20" id="eQe-h2-xlS"/>
+                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="zfN-bk-sB9" secondAttribute="bottom" constant="8" symbolic="YES" id="gvT-yG-CLI"/>
                             <constraint firstItem="m5B-RK-O69" firstAttribute="top" secondItem="VN3-wv-E93" secondAttribute="bottom" id="kL5-tl-79a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VN3-wv-E93" secondAttribute="trailing" constant="-20" id="smI-ay-ZBF"/>
                         </constraints>
@@ -77,6 +91,7 @@
                     <tabBarItem key="tabBarItem" title="History" image="HistoryIcon" id="mjH-jc-o8T"/>
                     <connections>
                         <outlet property="historyTableView" destination="VN3-wv-E93" id="re3-1h-hsi"/>
+                        <outlet property="readingTypePicker" destination="zfN-bk-sB9" id="lIC-Js-Hu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQM-kT-tBG" userLabel="First Responder" sceneMemberID="firstResponder"/>

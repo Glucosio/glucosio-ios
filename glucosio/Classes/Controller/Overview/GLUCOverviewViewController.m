@@ -25,6 +25,7 @@
 
     self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"fragment_overview_trend")];
 
+    // TODO: too specific to blood glucose readings
     NSString *lastReading = [NSString stringWithFormat:@"%@ %@",
                     [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:[self.model lastBloodGlucoseReading]],
                     [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;

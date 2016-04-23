@@ -8,6 +8,5 @@ static NSString *const kGLUCReadingEditorTableViewCellIdentifier = @"ReadingEdit
 
 @property (nonatomic, readwrite, strong) IBOutlet UITableView *editorTableView;
 @property (nonatomic, readwrite, strong) IBOutlet UITextField *valueField;
-@property (nonatomic, readwrite, strong) GLUCBloodGlucoseReading *editedObject;
 
 @end
