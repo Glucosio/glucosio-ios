@@ -65,6 +65,11 @@
         }];
         [readingTypeSelector addAction:action];
     }
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [self dismissViewControllerAnimated:YES
+                                 completion:NULL];
+    }];
+    [readingTypeSelector addAction:cancelAction];
     [self presentViewController:readingTypeSelector animated:YES completion:NULL];
 }
 
