@@ -131,7 +131,7 @@
     NSDate *startOfMonth = [[NSCalendar currentCalendar] gluc_firstDayOfMonthForDate:[NSDate date]];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     
@@ -178,7 +178,7 @@
 - (void) chartWeeklyAverage {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
 
@@ -228,7 +228,7 @@
 - (void) chartMonthlyAverage {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    NSArray *allReadings = [self.model allBloodGlucoseReadings:YES];
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
     

@@ -268,24 +268,15 @@
 }
 
 
-- (NSArray *)allReadingsOfType:(Class)readingType {
+- (RLMResults <GLUCReading *> *)allReadingsOfType:(Class)readingType {
     RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
 
-    NSMutableArray *readings = [NSMutableArray array];
-    for (GLUCReading *reading in allReadings) {
-        [readings addObject:reading];
-    }
-    return (NSArray *) readings;
-
+    return allReadings;
 }
-- (NSArray *)allBloodGlucoseReadings:(BOOL)ascending {
-    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
 
-    NSMutableArray *readings = [NSMutableArray array];
-    for (GLUCBloodGlucoseReading *reading in allReadings) {
-        [readings addObject:reading];
-    }
-    return (NSArray *) readings;
+- (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending {
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    return allReadings;
 }
 
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {

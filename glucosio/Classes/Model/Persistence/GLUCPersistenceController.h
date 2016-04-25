@@ -4,7 +4,7 @@
 #import "GLUCUser.h"
 #import "GLUCReading.h"
 #import "GLUCBloodGlucoseReading.h"
-#import <FMDB/FMDB.h>
+#import <Realm/Realm.h>
 
 @interface GLUCPersistenceController : NSObject
 
@@ -23,8 +23,8 @@
 - (BOOL)saveReading:(GLUCReading *)reading;
 - (BOOL)deleteReading:(GLUCReading *)reading;
 
-- (NSArray *)allReadingsOfType:(Class)readingType;
-- (NSArray *)allBloodGlucoseReadings:(BOOL)ascending;
+- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType;
+- (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending;
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 
 - (void) saveAll;

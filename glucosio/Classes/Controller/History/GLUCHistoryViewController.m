@@ -22,18 +22,19 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
-    self.readingClass = GLUCBodyWeightReading .class;
 
     if (!self.model) {
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
-    self.readingTypes = [self.model.currentUser readingTypes];    
-    
+    self.readingTypes = [self.model.currentUser readingTypes];
+    self.readingClass = self.readingTypes.firstObject;
+
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                            title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
                 [self.model deleteReading:self.readings[(NSUInteger) indexPath.row]];
                                                                self.historyTableView.editing = NO;
-                                                               self.readings = [self.model allBloodGlucoseReadings:NO];
+
+                                                               self.readings = [self.model allReadingsOfType:self.readingClass];
                                                                [self.historyTableView reloadData];
     }];
     
