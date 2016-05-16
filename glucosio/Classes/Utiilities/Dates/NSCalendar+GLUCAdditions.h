@@ -52,4 +52,5 @@
 - (float) gluc_roundedUpPercentageOfEntireDayForDate:(NSDate *)aDate;
 - (float) gluc_percentageOfEntireDayForDate:(NSDate *)aDate;
 
+- (NSInteger) gluc_monthsBetween:(NSDate *)aDate andDate:(NSDate*)aDate;
 @end

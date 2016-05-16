@@ -533,5 +533,9 @@
     return incrementedDate;    
 }
 
+- (NSInteger)gluc_monthsBetween:(NSDate *)aDate andDate:(NSDate *)anotherDate {
+    return abs([[self components:NSCalendarUnitMonth fromDate:aDate toDate:anotherDate options:nil] month]);
+}
+
 
 @end

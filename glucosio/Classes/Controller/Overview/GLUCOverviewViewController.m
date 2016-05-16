@@ -23,7 +23,7 @@
         self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
     }
 
-    self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"fragment_overview_trend")];
+    self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1C:")];
 
     // TODO: too specific to blood glucose readings
     NSString *lastReading = [NSString stringWithFormat:@"%@ %@",
@@ -72,7 +72,7 @@
     }
 
 
-    self.rowValues = @[lastReading, GLUCLoc(@"TODO: In range and healthy")]; // TODO: compute actual range
+    self.rowValues = @[lastReading, [self hb1acAverageValue]]; // TODO: compute actual range
 
     [self.tableView reloadData];
 }
@@ -128,13 +128,14 @@
 }
 
 - (void) chartDaily {
-    NSDate *startOfMonth = [[NSCalendar currentCalendar] gluc_firstDayOfMonthForDate:[NSDate date]];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDate *startOfMonth = [cal gluc_firstDayOfMonthForDate:[cal gluc_dateByAddingMonths:-1 toDate:[NSDate date]]];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
     RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
     [df setDateStyle:NSDateFormatterShortStyle];
     [df setTimeStyle:NSDateFormatterNoStyle];
-    
+
     for (GLUCBloodGlucoseReading *reading in allReadings) {
         if ([reading.creationDate gluc_isOnOrAfter:startOfMonth]) {
             NSInteger day = [[NSCalendar currentCalendar] gluc_dayFromDate:reading.creationDate];
@@ -225,46 +226,61 @@
     [self displayStandardChart:data];
 }
 
+// TODO: refactor
+- (NSString *) hb1acAverageValue {
+    NSInteger h1bacUnits = [[[self.model currentUser] preferredA1CUnitOfMeasure] integerValue];
+    NSString *suffix = (h1bacUnits == 0) ? @"%" : @" mmol/mol";
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    NSString *retVal = @"";
+
+    NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
+
+    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMaximumFractionDigits:2];
+
+    if (averages && [averages count]) {
+        NSDictionary *lastMonth = [averages lastObject];
+        if (lastMonth) {
+            NSNumber *avg = [lastMonth valueForKey:@"average"];
+            if (avg) {
+                NSNumber *h1bacValue = nil;
+                if (h1bacUnits == 0) {
+                    // TODO: refactor
+                    h1bacValue = @(([avg doubleValue] + 46.7) / 28.7);
+                } else {
+                    double glucToA1C = ([avg doubleValue] + 46.7) / 28.7;
+                    h1bacValue = @((glucToA1C - 2.152) / 0.09148);
+                }
+
+
+                retVal = [formatter stringFromNumber:h1bacValue];
+            }
+        }
+    }
+
+    if (retVal.length == 0) {
+        retVal = GLUCLoc(@"Not enough data to calculate HBA1C");
+        suffix = @"";
+    }
+
+    return [retVal stringByAppendingString:suffix];
+}
+
 - (void) chartMonthlyAverage {
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
-    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
-    [df setDateStyle:NSDateFormatterShortStyle];
-    [df setTimeStyle:NSDateFormatterNoStyle];
-    
-    for (GLUCBloodGlucoseReading *reading in allReadings) {
-        NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
-        NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
-        NSDate *startOfMonth = [[NSCalendar currentCalendar] gluc_startOfMonth:month inYear:year];
-        NSString *monthKey = [startOfMonth gluc_RFC2445String];
+    NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
 
-        NSMutableArray *averageForMonth = [buckets valueForKey:monthKey];
-        if (!averageForMonth) {
-            averageForMonth = [NSMutableArray array];
-            [buckets setValue:averageForMonth forKey:monthKey];
-        }
-        [averageForMonth addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
+    LineChartDataSet *dataSet = [[LineChartDataSet alloc] init];
+    NSMutableArray *bucketKeyLabels = [NSMutableArray array];
+    for (NSDictionary *bucket in averages) {
+        ChartDataEntry *chartEntry = [[ChartDataEntry alloc] init];
+        chartEntry.value = [[bucket valueForKey:@"average"] doubleValue];
+        chartEntry.xIndex = [[bucket valueForKey:@"index"] intValue];
+        [dataSet addEntry:chartEntry];
+        [bucketKeyLabels addObject:[bucket valueForKey:@"title"]];
     }
-    
-    NSMutableArray *yVals = [NSMutableArray array];
-    
-    NSArray *bucketKeys = [buckets.allKeys sortedArrayUsingSelector:@selector(compare:)];
-    NSMutableArray *bucketKeyLabels = [NSMutableArray arrayWithCapacity:bucketKeys.count];
 
-    if (buckets && buckets.allKeys.count) {
-        int i = 0;
-        for (NSString *bucketKey in bucketKeys) {
-            NSDate *bucketKeyDate = [NSDate gluc_dateForRFC2445String:bucketKey];
-            NSNumber *bucketAvg = [[buckets valueForKey:bucketKey] valueForKeyPath:@"@avg.intValue"];
-            [bucketKeyLabels addObject:[NSDateFormatter localizedStringFromDate:bucketKeyDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
-            [buckets setValue:bucketAvg forKey:bucketKey];
-            [yVals addObject:[[ChartDataEntry alloc] initWithValue:[bucketAvg doubleValue] xIndex:i++ data:nil]];
-        }
-    }
-    
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
     
-    LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
     [self configureStandardDataSet:dataSet];
     LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
     [self displayStandardChart:data];
@@ -326,6 +342,7 @@
         case 1:
             cell.detailTextLabel.textColor = [UIColor glucosio_reading_ok];
             cell.detailTextLabel.font = [GLUCAppearanceController defaultFont];
+            cell.detailTextLabel.numberOfLines = 0;
             break;
         default:
             break;

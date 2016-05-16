@@ -14,4 +14,6 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId;
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour;
 
++ (NSArray *) averageMonthlyReadings;
+
 @end

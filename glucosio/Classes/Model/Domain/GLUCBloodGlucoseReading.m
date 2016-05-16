@@ -1,4 +1,6 @@
 #import <Realm/RLMObject_Private.h>
+#import <Realm/RLMRealm_Dynamic.h>
+#import <Realm/RLMResults.h>
 #import "GLUCBloodGlucoseReading.h"
 #import "GLUCLoc.h"
 #import "NSCalendar+GLUCAdditions.h"
@@ -95,6 +97,39 @@
     return self;
 }
 
++ (NSArray *) averageMonthlyReadings {
+    RLMResults<GLUCBloodGlucoseReading *> *allBloodGlucoseReadings = [self allObjects];
+    NSMutableArray *averageReadings = [NSMutableArray array];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+
+    df.dateFormat = @"yyyy-MM";
+
+    NSDate *minDate = [cal gluc_firstMinuteOfDayForDate:[cal gluc_firstDayOfMonthForDate:[allBloodGlucoseReadings minOfProperty:@"creationDate"]]];
+    NSDate *maxDate = [cal gluc_lastMinuteOfDayForDate:[cal gluc_lastDayOfMonthForDate:[allBloodGlucoseReadings maxOfProperty:@"creationDate"]]];
+
+    NSInteger monthsBetween = [[NSCalendar currentCalendar] gluc_monthsBetween:minDate andDate:maxDate];
+
+    for (NSInteger monthIndex = 0; monthIndex < monthsBetween; ++monthIndex) {
+        NSDate *startDate = [cal gluc_dateByAddingMonths:monthIndex toDate:minDate];
+        NSDate *endDate = [cal gluc_dateByAddingMonths:1 toDate:startDate];
+
+        RLMResults<GLUCBloodGlucoseReading *> *monthReadings =
+                [allBloodGlucoseReadings objectsWhere:@"creationDate BETWEEN {%@, %@}", startDate, endDate];
+        if (monthReadings) {
+            [averageReadings addObject:@{
+                    @"index" : @(monthIndex),
+                    @"startDate" : startDate,
+                    @"endDate" : endDate,
+                    @"title" : [df stringFromDate:startDate],
+                    @"numReadings" : @(monthReadings.count),
+                    @"average" : [monthReadings averageOfProperty:@"reading"]
+            }];
+        }
+    }
+
+    return [NSArray arrayWithArray:averageReadings];
+}
 
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId {
     NSString *retVal = GLUCLoc(@"dialog_add_type_12"); // default is "Other"
