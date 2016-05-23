@@ -68,7 +68,7 @@
  Date created;
  ************************************************/
 
-#define GLUC_CREATE_TEST_DATA
+//#define GLUC_CREATE_TEST_DATA
 
 @interface GLUCPersistenceController ()
 @property(strong, nonatomic, readwrite) GLUCUser *user;
