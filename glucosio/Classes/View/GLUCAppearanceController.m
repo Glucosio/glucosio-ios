@@ -66,7 +66,6 @@
     
     [SVProgressHUD setBackgroundColor:[UIColor glucosio_pink]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (UIFont *) valueEditorTextFieldFont {
