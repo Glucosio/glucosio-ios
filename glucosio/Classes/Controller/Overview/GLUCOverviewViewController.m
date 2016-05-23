@@ -6,39 +6,41 @@
 #import "GLUCAppDelegate.h"
 
 @interface GLUCOverviewViewController ()
-@property (strong, nonatomic) NSArray *rowTitles;
-@property (strong, nonatomic) NSArray *rowValues;
-@property (strong, nonatomic) UITextView *tipView;
+@property(strong, nonatomic) NSArray *rowTitles;
+@property(strong, nonatomic) NSArray *rowValues;
+@property(strong, nonatomic) UITextView *tipView;
 @end
 
 @implementation GLUCOverviewViewController
 
-- (void) viewDidLoad {
-    
+- (void)viewDidLoad {
+
     [super viewDidLoad];
 
     self.navigationController.navigationBar.translucent = NO;
-    
+
     if (!self.model) {
-        self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
+        self.model = [(GLUCAppDelegate *) [[UIApplication sharedApplication] delegate] appModel];
     }
 
     self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1C:")];
 
-    // TODO: too specific to blood glucose readings
+    // TODO: too specific to blood glucose readings.  For now the overview controller only shows glucose,
+    // but at some point other readings will probably need to be displayed.
+
     NSString *lastReading = [NSString stringWithFormat:@"%@ %@",
-                    [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:[self.model lastBloodGlucoseReading]],
-                    [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
-    
+                                                       [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:[self.model lastBloodGlucoseReading]],
+                                                       [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
+
     self.rowValues = @[lastReading, @"fragment_overview_trend_positive"];
-    
+
     self.title = GLUCLoc(@"tab_overview");
-    
+
     // Localize chart scope control
     [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_day") forSegmentAtIndex:0];
     [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_week") forSegmentAtIndex:1];
     [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_month") forSegmentAtIndex:2];
-    
+
     self.tipView = [[UITextView alloc] init];
     self.tipView.textColor = [UIColor darkGrayColor];
     self.tipView.font = [GLUCAppearanceController defaultFont];
@@ -50,7 +52,7 @@
     self.tipView.editable = false;
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     GLUCBloodGlucoseReading *reading = [self.model lastBloodGlucoseReading];
@@ -63,21 +65,21 @@
         }
         else {
             valueStr = [NSString stringWithFormat:@"%@",
-                            [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
+                                                  [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
         }
 
         lastReading = [NSString stringWithFormat:@"%@ %@", valueStr,
-                        [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
+                                                 [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
 
     }
 
 
-    self.rowValues = @[lastReading, [self hb1acAverageValue]]; // TODO: compute actual range
+    self.rowValues = @[lastReading, [self hb1acAverageValue]];
 
     [self.tableView reloadData];
 }
 
-- (void) configureStandardDataSet:(LineChartDataSet *)dataSet {
+- (void)configureStandardDataSet:(LineChartDataSet *)dataSet {
     //    dataSet.label = @""; // GLUCLoc(@"fragment_overview_selector_day");
     //     set1.setColor(getResources().getColor(R.color.glucosio_pink));
     dataSet.colors = @[[UIColor glucosio_pink]];
@@ -110,8 +112,10 @@
     //    dataSet.fillColor = [UIColor glucosio_pink];
 
 }
-- (void) displayStandardChart:(ChartData *)data {
-    [self.chartView.animator animateWithXAxisDuration:0.75f yAxisDuration:0.35f];
+
+- (void)displayStandardChart:(ChartData *)data {
+    [self.chartView clear];
+    //ye[self.chartView.animator animateWithXAxisDuration:0.75f yAxisDuration:0.35f];
     self.chartView.drawGridBackgroundEnabled = NO;
     self.chartView.drawBordersEnabled = NO;
     self.chartView.backgroundColor = [UIColor whiteColor];
@@ -124,10 +128,11 @@
     [[self.chartView getAxis:AxisDependencyRight] setEnabled:NO];
     [self.chartView.xAxis setLabelPosition:XAxisLabelPositionBottom];
     [self.chartView.xAxis setDrawGridLinesEnabled:NO];
-    self.chartView.data = data;
+    if (data)
+        self.chartView.data = data;
 }
 
-- (void) chartDaily {
+- (void)chartDaily {
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDate *startOfMonth = [cal gluc_firstDayOfMonthForDate:[cal gluc_dateByAddingMonths:-1 toDate:[NSDate date]]];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -141,21 +146,21 @@
             NSInteger day = [[NSCalendar currentCalendar] gluc_dayFromDate:reading.creationDate];
             NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
             NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
-            NSString *dayKey = [NSString stringWithFormat:@"%04ld (%02ld/%02ld)", (long)year, (long)month, (long)day];
+            NSString *dayKey = [NSString stringWithFormat:@"%04ld (%02ld/%02ld)", (long) year, (long) month, (long) day];
             NSMutableArray *averageForWeek = [buckets valueForKey:dayKey];
             if (!averageForWeek) {
                 averageForWeek = [NSMutableArray array];
                 [buckets setValue:averageForWeek forKey:dayKey];
             }
             [averageForWeek addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
-            
+
         }
     }
 
     NSMutableArray *yVals = [NSMutableArray array];
-    
+
     NSArray *bucketKeys = [buckets.allKeys sortedArrayUsingSelector:@selector(compare:)];
-    
+
     if (buckets && buckets.allKeys.count) {
         int i = 0;
         for (NSString *bucketKey in bucketKeys) {
@@ -164,19 +169,22 @@
             [yVals addObject:[[ChartDataEntry alloc] initWithValue:[bucketAvg doubleValue] xIndex:i++ data:nil]];
         }
     }
-    
-    self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
-    
-    LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    
-    [self configureStandardDataSet:dataSet];
 
-    LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeys dataSet:dataSet];
-    
-    [self displayStandardChart:data];
+    self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
+
+    LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
+
+    if (dataSet) {
+        [self configureStandardDataSet:dataSet];
+
+        LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeys dataSet:dataSet];
+
+        [self displayStandardChart:data];
+
+    }
 }
 
-- (void) chartWeeklyAverage {
+- (void)chartWeeklyAverage {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     NSMutableDictionary *buckets = [NSMutableDictionary dictionary];
     RLMResults <GLUCBloodGlucoseReading *> *allReadings = [self.model allBloodGlucoseReadings:YES];
@@ -200,12 +208,12 @@
         }
         [averageForWeek addObject:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
     }
-    
+
     NSMutableArray *yVals = [NSMutableArray array];
 
     NSArray *bucketKeys = [buckets.allKeys sortedArrayUsingSelector:@selector(compare:)];
     NSMutableArray *bucketKeyLabels = [NSMutableArray arrayWithCapacity:bucketKeys.count];
-    
+
     if (buckets && buckets.allKeys.count) {
         int i = 0;
         for (NSString *bucketKey in bucketKeys) {
@@ -219,54 +227,19 @@
 
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
 
-    
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
-    [self configureStandardDataSet:dataSet];
-    LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
-    [self displayStandardChart:data];
+    if (dataSet) {
+        [self configureStandardDataSet:dataSet];
+        LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
+        [self displayStandardChart:data];
+    }
 }
 
-// TODO: refactor
-- (NSString *) hb1acAverageValue {
-    NSInteger h1bacUnits = [[[self.model currentUser] preferredA1CUnitOfMeasure] integerValue];
-    NSString *suffix = (h1bacUnits == 0) ? @"%" : @" mmol/mol";
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    NSString *retVal = @"";
-
-    NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
-
-    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
-    [formatter setMaximumFractionDigits:2];
-
-    if (averages && [averages count]) {
-        NSDictionary *lastMonth = [averages lastObject];
-        if (lastMonth) {
-            NSNumber *avg = [lastMonth valueForKey:@"average"];
-            if (avg) {
-                NSNumber *h1bacValue = nil;
-                if (h1bacUnits == 0) {
-                    // TODO: refactor
-                    h1bacValue = @(([avg doubleValue] + 46.7) / 28.7);
-                } else {
-                    double glucToA1C = ([avg doubleValue] + 46.7) / 28.7;
-                    h1bacValue = @((glucToA1C - 2.152) / 0.09148);
-                }
-
-
-                retVal = [formatter stringFromNumber:h1bacValue];
-            }
-        }
-    }
-
-    if (retVal.length == 0) {
-        retVal = GLUCLoc(@"Not enough data to calculate HBA1C");
-        suffix = @"";
-    }
-
-    return [retVal stringByAppendingString:suffix];
+- (NSString *)hb1acAverageValue {
+    return [[self.model currentUser] hb1acAverageValue];
 }
 
-- (void) chartMonthlyAverage {
+- (void)chartMonthlyAverage {
     NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
 
     LineChartDataSet *dataSet = [[LineChartDataSet alloc] init];
@@ -280,14 +253,16 @@
     }
 
     self.chartView.noDataText = GLUCLoc(@"fragment_empty_text");
-    
-    [self configureStandardDataSet:dataSet];
-    LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
-    [self displayStandardChart:data];
+
+    if (dataSet && bucketKeyLabels.count) {
+        [self configureStandardDataSet:dataSet];
+        LineChartData *data = [[LineChartData alloc] initWithXVals:bucketKeyLabels dataSet:dataSet];
+        [self displayStandardChart:data];
+    }
 
 }
 
-- (void) updateChart {
+- (void)updateChart {
     switch ([self.chartScopeControl selectedSegmentIndex]) {
         case 0:
         default:
@@ -306,7 +281,7 @@
     [self updateChart];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     [self updateChart];
@@ -323,19 +298,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
-    
+
     cell = [tableView dequeueReusableCellWithIdentifier:kGLUCOverviewCellIdentifier];
-    
+
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kGLUCOverviewCellIdentifier];
     }
-    
+
     cell.textLabel.text = self.rowTitles[indexPath.row];
     cell.detailTextLabel.text = self.rowValues[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.font = [GLUCAppearanceController defaultFont];
 
-    switch(indexPath.row) {
+    switch (indexPath.row) {
         case 0:
             cell.detailTextLabel.font = [GLUCAppearanceController defaultBoldFont];
             break;
@@ -354,12 +329,12 @@
     return 1;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     CGSize size = [self.tipView sizeThatFits:CGSizeMake(self.tableView.frame.size.width, FLT_MAX)];
     return size.height;
 }
 
-- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return self.tipView;
 }
 

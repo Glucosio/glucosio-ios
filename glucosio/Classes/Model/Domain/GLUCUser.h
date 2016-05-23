@@ -48,4 +48,6 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 
 - (NSArray *) readingTypes;
 
+- (NSString *) hb1acAverageValue;
+
 @end

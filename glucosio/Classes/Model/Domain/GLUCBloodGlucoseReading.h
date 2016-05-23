@@ -16,4 +16,7 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 
 + (NSArray *) averageMonthlyReadings;
 
++ (NSNumber *) glucoseToA1CAsPercentage:(NSNumber *)mgDl_glucose;
++ (NSNumber *) glucoseToA1CAsMmolMol:(NSNumber *)mgDl_glucose;
+
 @end

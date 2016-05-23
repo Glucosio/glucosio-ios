@@ -233,4 +233,40 @@
     return @[GLUCBloodGlucoseReading.class, GLUCHB1ACReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class, GLUCInsulinIntakeReading.class];
 }
 
+- (NSString *) hb1acAverageValue {
+    NSInteger h1bacUnits = [[self preferredA1CUnitOfMeasure] integerValue];
+    NSString *suffix = (h1bacUnits == 0) ? @"%" : @" mmol/mol";
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    NSString *retVal = @"";
+
+    NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
+
+    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMaximumFractionDigits:2];
+
+    if (averages && [averages count]) {
+        NSDictionary *lastMonth = [averages lastObject];
+        if (lastMonth) {
+            NSNumber *avg = [lastMonth valueForKey:@"average"];
+            if (avg) {
+                NSNumber *h1bacValue = nil;
+                if (h1bacUnits == 0) {
+                    h1bacValue = [GLUCBloodGlucoseReading glucoseToA1CAsPercentage:avg];
+                } else {
+                    h1bacValue = [GLUCBloodGlucoseReading glucoseToA1CAsMmolMol:avg];
+                }
+
+
+                retVal = [formatter stringFromNumber:h1bacValue];
+            }
+        }
+    }
+
+    if (retVal.length == 0) {
+        retVal = GLUCLoc(@"Not enough data to calculate HBA1C");
+        suffix = @"";
+    }
+
+    return [retVal stringByAppendingString:suffix];
+}
 @end

@@ -105,8 +105,9 @@
 
     df.dateFormat = @"yyyy-MM";
 
-    NSDate *minDate = [cal gluc_firstMinuteOfDayForDate:[cal gluc_firstDayOfMonthForDate:[allBloodGlucoseReadings minOfProperty:@"creationDate"]]];
-    NSDate *maxDate = [cal gluc_lastMinuteOfDayForDate:[cal gluc_lastDayOfMonthForDate:[allBloodGlucoseReadings maxOfProperty:@"creationDate"]]];
+    // Use same date technique for averaging as Glucosio for Android
+    NSDate *minDate = [allBloodGlucoseReadings minOfProperty:@"creationDate"];
+    NSDate *maxDate = [allBloodGlucoseReadings maxOfProperty:@"creationDate"];
 
     NSInteger monthsBetween = [[NSCalendar currentCalendar] gluc_monthsBetween:minDate andDate:maxDate];
 
@@ -142,6 +143,20 @@
 - (NSString *) readingType {
     return [self readingTypeForId:[self.readingTypeId integerValue]];
 }
+
++ (NSNumber *) glucoseToA1CAsPercentage:(NSNumber *)mgDl_glucose {
+    NSNumber *h1bacValue = @(0);
+    if (mgDl_glucose) {
+        h1bacValue = @(([mgDl_glucose doubleValue] + 46.7) / 28.7);
+    }
+    return h1bacValue;
+}
+
++ (NSNumber *)glucoseToA1CAsMmolMol:(NSNumber *)mgDl_glucose {
+    double glucToA1C = [[self glucoseToA1CAsPercentage:mgDl_glucose] doubleValue];
+    return @((glucToA1C - 2.152) / 0.09148);
+}
+
 
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour {
     NSInteger retVal = -1; // other
