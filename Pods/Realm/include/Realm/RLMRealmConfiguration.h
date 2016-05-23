@@ -19,7 +19,7 @@
 #import <Foundation/Foundation.h>
 #import <Realm/RLMRealm.h>
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  An `RLMRealmConfiguration` is used to describe the different options used to
@@ -53,8 +53,8 @@ RLM_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Properties
 
-/// The path to the realm file. Mutually exclusive with `inMemoryIdentifier`.
-@property (nonatomic, copy, nullable) NSString *path;
+/// The local URL to the realm file. Mutually exclusive with `inMemoryIdentifier`.
+@property (nonatomic, copy, nullable) NSURL *fileURL;
 
 /// A string used to identify a particular in-memory Realm. Mutually exclusive with `path`.
 @property (nonatomic, copy, nullable) NSString *inMemoryIdentifier;
@@ -71,9 +71,19 @@ RLM_ASSUME_NONNULL_BEGIN
 /// The block which migrates the Realm to the current version.
 @property (nonatomic, copy, nullable) RLMMigrationBlock migrationBlock;
 
+/**
+ Recreate the Realm file with the provided schema if a migration is required.
+ This is the case when the stored schema differs from the provided schema or
+ the stored schema version differs from the version on this configuration.
+ This deletes the file if a migration would otherwise be required or run.
+
+ @note This doesn't disable file format migrations.
+ */
+@property (nonatomic) BOOL deleteRealmIfMigrationNeeded;
+
 /// The classes persisted in the Realm.
 @property (nonatomic, copy, nullable) NSArray *objectClasses;
 
 @end
 
-RLM_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

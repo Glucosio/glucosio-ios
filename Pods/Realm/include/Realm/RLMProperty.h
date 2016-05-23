@@ -18,9 +18,8 @@
 
 #import <Foundation/Foundation.h>
 #import <Realm/RLMConstants.h>
-#import <Realm/RLMDefines.h>
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /// :nodoc:
 @protocol RLMInt
@@ -79,6 +78,11 @@ RLM_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy, nullable) NSString *objectClassName;
 
 /**
+ Property name of the origin of a link. Specified for linking objects properties.
+ */
+@property (nonatomic, readonly, copy, nullable) NSString *linkOriginPropertyName;
+
+/**
  Whether this property is optional.
  */
 @property (nonatomic, readonly) BOOL optional;
@@ -92,4 +96,26 @@ RLM_ASSUME_NONNULL_BEGIN
 
 @end
 
-RLM_ASSUME_NONNULL_END
+
+/**
+ This class describes a specific property on a given class.
+ */
+@interface RLMPropertyDescriptor : NSObject
+
+/**
+ Creates a property descriptor.
+
+ @param objectClass  The class of this property descriptor.
+ @param propertyName The name of this property descriptor.
+ */
++ (instancetype)descriptorWithClass:(Class)objectClass propertyName:(NSString *)propertyName;
+
+/// The class of the property.
+@property (nonatomic, readonly) Class objectClass;
+
+/// The name of the property.
+@property (nonatomic, readonly) NSString *propertyName;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -99,14 +99,6 @@ static inline bool nsnumber_is_like_double(__unsafe_unretained NSNumber *const o
            data_type == *@encode(unsigned long long);
 }
 
-static inline bool object_has_valid_type(__unsafe_unretained id const obj)
-{
-    return ([obj isKindOfClass:[NSString class]] ||
-            [obj isKindOfClass:[NSNumber class]] ||
-            [obj isKindOfClass:[NSDate class]] ||
-            [obj isKindOfClass:[NSData class]]);
-}
-
 BOOL RLMIsObjectValidForProperty(__unsafe_unretained id const obj,
                                  __unsafe_unretained RLMProperty *const property) {
     if (property.optional && !RLMCoerceToNil(obj)) {
@@ -141,8 +133,9 @@ BOOL RLMIsObjectValidForProperty(__unsafe_unretained id const obj,
         case RLMPropertyTypeData:
             return [obj isKindOfClass:[NSData class]];
         case RLMPropertyTypeAny:
-            return object_has_valid_type(obj);
-        case RLMPropertyTypeObject: {
+            return NO;
+        case RLMPropertyTypeObject:
+        case RLMPropertyTypeLinkingObjects: {
             // only NSNull, nil, or objects which derive from RLMObject and match the given
             // object class are valid
             RLMObjectBase *objBase = RLMDynamicCast<RLMObjectBase>(obj);
@@ -195,53 +188,6 @@ NSDictionary *RLMDefaultValuesForObjectSchema(__unsafe_unretained RLMObjectSchem
     return defaults;
 }
 
-NSArray *RLMCollectionValueForKey(id<RLMFastEnumerable> collection, NSString *key) {
-    size_t count = collection.count;
-    if (count == 0) {
-        return @[];
-    }
-
-    RLMRealm *realm = collection.realm;
-    RLMObjectSchema *objectSchema = collection.objectSchema;
-
-    NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
-    if ([key isEqualToString:@"self"]) {
-        for (size_t i = 0; i < count; i++) {
-            size_t rowIndex = [collection indexInSource:i];
-            [results addObject:RLMCreateObjectAccessor(realm, objectSchema, rowIndex) ?: NSNull.null];
-        }
-        return results;
-    }
-
-    RLMObjectBase *accessor = [[objectSchema.accessorClass alloc] initWithRealm:realm schema:objectSchema];
-    realm::Table *table = objectSchema.table;
-    for (size_t i = 0; i < count; i++) {
-        size_t rowIndex = [collection indexInSource:i];
-        accessor->_row = (*table)[rowIndex];
-        RLMInitializeSwiftAccessorGenerics(accessor);
-        [results addObject:[accessor valueForKey:key] ?: NSNull.null];
-    }
-
-    return results;
-}
-
-void RLMCollectionSetValueForKey(id<RLMFastEnumerable> collection, NSString *key, id value) {
-    realm::TableView tv = [collection tableView];
-    if (tv.size() == 0) {
-        return;
-    }
-
-    RLMRealm *realm = collection.realm;
-    RLMObjectSchema *objectSchema = collection.objectSchema;
-    RLMObjectBase *accessor = [[objectSchema.accessorClass alloc] initWithRealm:realm schema:objectSchema];
-    for (size_t i = 0; i < tv.size(); i++) {
-        accessor->_row = tv[i];
-        RLMInitializeSwiftAccessorGenerics(accessor);
-        [accessor setValue:value forKey:key];
-    }
-}
-
-
 static NSException *RLMException(NSString *reason, NSDictionary *additionalUserInfo) {
     NSMutableDictionary *userInfo = @{RLMRealmVersionKey: REALM_COCOA_VERSION,
                                       RLMRealmCoreVersionKey: @REALM_VERSION}.mutableCopy;
@@ -282,18 +228,39 @@ NSError *RLMMakeError(RLMError code, const realm::util::File::AccessError& excep
 }
 
 NSError *RLMMakeError(RLMError code, const realm::RealmFileException& exception) {
+    // Errors for `open()` now include the path in the exception message, but
+    // RealmFileException's message already has the path, so remove the second
+    // copy as it makes errors much less readable.
+    NSString *underlying;
+    auto pathPos = exception.underlying().find(exception.path());
+    if (pathPos != std::string::npos) {
+        auto trimmed = exception.underlying();
+        trimmed.replace(pathPos, exception.path().size(), "");
+        underlying = @(trimmed.c_str());
+    }
+    else {
+        underlying = @(exception.underlying().c_str());
+    }
+
+    NSString *msg = underlying.length ? [NSString stringWithFormat:@"%s: %@", exception.what(), underlying] : @(exception.what());
     return [NSError errorWithDomain:RLMErrorDomain
                                code:code
-                           userInfo:@{NSLocalizedDescriptionKey: @(exception.what()),
+                           userInfo:@{NSLocalizedDescriptionKey: msg,
                                       NSFilePathErrorKey: @(exception.path().c_str()),
-                                      @"Error Code": @(code)}];
+                                      @"Error Code": @(code),
+                                      @"Underlying": underlying.length == 0 ? @"n/a" : underlying}];
 }
 
 NSError *RLMMakeError(std::system_error const& exception) {
-    return [NSError errorWithDomain:RLMErrorDomain
+    BOOL isGenericCategoryError = (exception.code().category() == std::generic_category());
+    NSString *category = @(exception.code().category().name());
+    NSString *errorDomain = isGenericCategoryError ? NSPOSIXErrorDomain : RLMUnknownSystemErrorDomain;
+
+    return [NSError errorWithDomain:errorDomain
                                code:exception.code().value()
                            userInfo:@{NSLocalizedDescriptionKey: @(exception.what()),
-                                      @"Error Code": @(exception.code().value())}];
+                                      @"Error Code": @(exception.code().value()),
+                                      @"Category": category}];
 }
 
 NSError *RLMMakeError(NSException *exception) {
@@ -321,8 +288,34 @@ static inline BOOL RLMIsSubclass(Class class1, Class class2) {
     return RLMIsKindOfClass(class1, class2);
 }
 
+static bool treatFakeObjectAsRLMObject = false;
+
+void RLMSetTreatFakeObjectAsRLMObject(BOOL flag) {
+    treatFakeObjectAsRLMObject = flag;
+}
+
+BOOL RLMIsObjectOrSubclass(Class klass) {
+    if (RLMIsKindOfClass(klass, RLMObjectBase.class)) {
+        return YES;
+    }
+
+    if (treatFakeObjectAsRLMObject) {
+        static Class FakeObjectClass = NSClassFromString(@"FakeObject");
+        return RLMIsKindOfClass(klass, FakeObjectClass);
+    }
+    return NO;
+}
+
 BOOL RLMIsObjectSubclass(Class klass) {
-    return RLMIsSubclass(class_getSuperclass(klass), RLMObjectBase.class);
+    if (RLMIsSubclass(class_getSuperclass(klass), RLMObjectBase.class)) {
+        return YES;
+    }
+
+    if (treatFakeObjectAsRLMObject) {
+        static Class FakeObjectClass = NSClassFromString(@"FakeObject");
+        return RLMIsSubclass(klass, FakeObjectClass);
+    }
+    return NO;
 }
 
 BOOL RLMIsDebuggerAttached()
@@ -352,7 +345,7 @@ id RLMMixedToObjc(realm::Mixed const& mixed) {
     switch (mixed.get_type()) {
         case realm::type_String:
             return RLMStringDataToNSString(mixed.get_string());
-        case realm::type_Int: {
+        case realm::type_Int:
             return @(mixed.get_int());
         case realm::type_Float:
             return @(mixed.get_float());
@@ -360,15 +353,13 @@ id RLMMixedToObjc(realm::Mixed const& mixed) {
             return @(mixed.get_double());
         case realm::type_Bool:
             return @(mixed.get_bool());
-        case realm::type_DateTime:
-            return RLMDateTimeToNSDate(mixed.get_datetime());
-        case realm::type_Binary: {
+        case realm::type_Timestamp:
+            return RLMTimestampToNSDate(mixed.get_timestamp());
+        case realm::type_Binary:
             return RLMBinaryDataToNSData(mixed.get_binary());
-        }
         case realm::type_Link:
         case realm::type_LinkList:
         default:
             @throw RLMException(@"Invalid data type for RLMPropertyTypeAny property.");
-        }
     }
 }

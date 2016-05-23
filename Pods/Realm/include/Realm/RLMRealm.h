@@ -17,17 +17,16 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import <Realm/RLMDefines.h>
 
 @class RLMRealmConfiguration, RLMObject, RLMSchema, RLMMigration, RLMNotificationToken;
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  An RLMRealm instance (also referred to as "a realm") represents a Realm
  database.
 
- Realms can either be stored on disk (see +[RLMRealm realmWithPath:]) or in
+ Realms can either be stored on disk (see +[RLMRealm realmWithURL:]) or in
  memory (see RLMRealmConfiguration).
 
  RLMRealm instances are cached internally, and constructing equivalent RLMRealm
@@ -79,23 +78,13 @@ RLM_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)realmWithConfiguration:(RLMRealmConfiguration *)configuration error:(NSError **)error;
 
 /**
- Obtains an `RLMRealm` instance persisted at a specific file path.
+ Obtains an `RLMRealm` instance persisted at a specific file URL.
 
- @param path Path to the file you want the data saved in.
+ @param fileURL Local URL to the file you want the data saved in.
 
  @return An `RLMRealm` instance.
  */
-+ (instancetype)realmWithPath:(NSString *)path;
-
-/**
- Path to the file where this Realm is persisted.
- */
-@property (nonatomic, readonly) NSString *path;
-
-/**
- Indicates if this Realm was opened in read-only mode.
- */
-@property (nonatomic, readonly, getter = isReadOnly) BOOL readOnly;
++ (instancetype)realmWithURL:(NSURL *)fileURL;
 
 /**
  The RLMSchema used by this RLMRealm.
@@ -154,16 +143,7 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
  @return A token object which must be stored as long as you wish to continue
          receiving change notifications.
  */
-- (RLMNotificationToken *)addNotificationBlock:(RLMNotificationBlock)block RLM_WARN_UNUSED_RESULT;
-
-/**
- Remove a previously registered notification handler using the token returned
- from `-addNotificationBlock:`
-
- @param notificationToken   The token returned from `-addNotificationBlock:`
-                            corresponding to the notification block to remove.
- */
-- (void)removeNotification:(RLMNotificationToken *)notificationToken;
+- (RLMNotificationToken *)addNotificationBlock:(RLMNotificationBlock)block __attribute__((warn_unused_result));
 
 #pragma mark - Transactions
 
@@ -197,7 +177,7 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 
  @warning This method can only be called during a write transaction.
  */
-- (void)commitWriteTransaction RLM_SWIFT_UNAVAILABLE("");
+- (void)commitWriteTransaction NS_SWIFT_UNAVAILABLE("");
 
 /**
  Commits all write operations in the current write transaction, and ends the
@@ -243,10 +223,10 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 /**
  Helper to perform a block within a transaction.
  */
-- (void)transactionWithBlock:(RLM_NOESCAPE void(^)(void))block RLM_SWIFT_UNAVAILABLE("");
+- (void)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block NS_SWIFT_UNAVAILABLE("");
 
 /**
- Performs actions contained within the given block inside a write transation.
+ Performs actions contained within the given block inside a write transaction.
  
  Write transactions cannot be nested, and trying to execute a write transaction 
  on a `RLMRealm` which is already in a write transaction will throw an 
@@ -265,7 +245,7 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 
  @return Whether the transaction succeeded.
  */
-- (BOOL)transactionWithBlock:(RLM_NOESCAPE void(^)(void))block error:(NSError **)error;
+- (BOOL)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block error:(NSError **)error;
 
 /**
  Update an `RLMRealm` and outstanding objects to point to the most recent data for this `RLMRealm`.
@@ -306,33 +286,24 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 @property (nonatomic) BOOL autorefresh;
 
 /**
- Write a compacted copy of the RLMRealm to the given path.
+ Write a compacted and optionally encrypted copy of the RLMRealm to the given
+ local URL.
 
  The destination file cannot already exist.
 
  Note that if this is called from within a write transaction it writes the
  *current* data, and not data when the last write transaction was committed.
 
- @param path Path to save the Realm to.
- @param error On input, a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+ @param fileURL Local URL to save the Realm to.
+ @param key     Optional 64-byte encryption key to encrypt the new file with.
+ @param error   On input, a pointer to an error object. If an error occurs,
+                this pointer is set to an actual error object containing the
+                error information. You may specify nil for this parameter if you
+                do not want the error information.
+
  @return YES if the realm was copied successfully. Returns NO if an error occurred.
 */
-- (BOOL)writeCopyToPath:(NSString *)path error:(NSError **)error;
-
-/**
- Write an encrypted and compacted copy of the RLMRealm to the given path.
-
- The destination file cannot already exist.
-
- Note that if this is called from within a write transaction it writes the
- *current* data, and not data when the last write transaction was committed.
-
- @param path Path to save the Realm to.
- @param key 64-byte encryption key to encrypt the new file with
- @param error On input, a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
- @return YES if the realm was copied successfully. Returns NO if an error occurred.
-*/
-- (BOOL)writeCopyToPath:(NSString *)path encryptionKey:(NSData *)key error:(NSError **)error;
+- (BOOL)writeCopyToURL:(NSURL *)fileURL encryptionKey:(nullable NSData *)key error:(NSError **)error;
 
 /**
  Invalidate all RLMObjects and RLMResults read from this Realm.
@@ -463,29 +434,17 @@ typedef void (^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 typedef void (^RLMMigrationBlock)(RLMMigration *migration, uint64_t oldSchemaVersion);
 
 /**
- Get the schema version for a Realm at a given path.
+ Get the schema version for a Realm at a given local URL.
 
- @param realmPath   Path to a Realm file
- @param error       If an error occurs, upon return contains an `NSError` object
-                    that describes the problem. If you are not interested in
-                    possible errors, pass in `NULL`.
+ @param fileURL Local URL to a Realm file.
+ @param key     64-byte key used to encrypt the file, or nil if it is unencrypted.
+ @param error   If an error occurs, upon return contains an `NSError` object
+                that describes the problem. If you are not interested in
+                possible errors, pass in `NULL`.
 
- @return            The version of the Realm at `realmPath` or RLMNotVersioned if the version cannot be read.
+ @return The version of the Realm at `fileURL` or RLMNotVersioned if the version cannot be read.
  */
-+ (uint64_t)schemaVersionAtPath:(NSString *)realmPath error:(NSError **)error;
-
-/**
- Get the schema version for an encrypted Realm at a given path.
-
- @param realmPath   Path to a Realm file
- @param key         64-byte encryption key.
- @param error       If an error occurs, upon return contains an `NSError` object
-                    that describes the problem. If you are not interested in
-                    possible errors, pass in `NULL`.
-
- @return            The version of the Realm at `realmPath` or RLMNotVersioned if the version cannot be read.
- */
-+ (uint64_t)schemaVersionAtPath:(NSString *)realmPath encryptionKey:(nullable NSData *)key error:(NSError **)error;
++ (uint64_t)schemaVersionAtURL:(NSURL *)fileURL encryptionKey:(nullable NSData *)key error:(NSError **)error;
 
 /**
  Performs the given Realm configuration's migration block on a Realm at the given path.
@@ -516,4 +475,4 @@ typedef void (^RLMMigrationBlock)(RLMMigration *migration, uint64_t oldSchemaVer
 - (void)stop;
 @end
 
-RLM_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

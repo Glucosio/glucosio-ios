@@ -92,24 +92,23 @@ static inline void RLMVerifyInWriteTransaction(__unsafe_unretained RLMRealm *con
 }
 
 void RLMInitializeSwiftAccessorGenerics(__unsafe_unretained RLMObjectBase *const object) {
-    if (!object || !object->_row || !object->_objectSchema.isSwiftClass) {
+    if (!object || !object->_row || !object->_objectSchema->_isSwiftClass) {
         return;
     }
 
-    static Class s_swiftObjectClass = NSClassFromString(@"RealmSwiftObject");
-    if (![object isKindOfClass:s_swiftObjectClass]) {
-        return; // Is a Swift class using the obj-c API
-    }
-
-    for (RLMProperty *prop in object->_objectSchema.properties) {
-        if (prop.type == RLMPropertyTypeArray) {
+    for (RLMProperty *prop in object->_objectSchema.swiftGenericProperties) {
+        if (prop->_type == RLMPropertyTypeArray) {
             RLMArray *array = [RLMArrayLinkView arrayWithObjectClassName:prop.objectClassName
                                                                     view:object->_row.get_linklist(prop.column)
                                                                    realm:object->_realm
                                                                      key:prop.name
                                                             parentSchema:object->_objectSchema];
             [RLMObjectUtilClass(YES) initializeListProperty:object property:prop array:array];
-        } else if (prop.swiftIvar) {
+        }
+        else if (prop.type == RLMPropertyTypeLinkingObjects) {
+            [RLMObjectUtilClass(YES) initializeLinkingObjectsProperty:object property:prop];
+        }
+        else {
             [RLMObjectUtilClass(YES) initializeOptionalProperty:object property:prop];
         }
     }
@@ -207,7 +206,6 @@ void RLMAddObjectToRealm(__unsafe_unretained RLMObjectBase *const object,
             value = [object valueForKey:prop.getterName];
         }
 
-        // FIXME: Add condition to check for Mixed once it can support a nil value.
         if (!value && !prop.optional) {
             @throw RLMException(@"No value or default value specified for property '%@' in '%@'",
                                 prop.name, schema.className);
@@ -284,7 +282,6 @@ static void RLMValidateValueForProperty(__unsafe_unretained id const obj,
         case RLMPropertyTypeFloat:
         case RLMPropertyTypeDouble:
         case RLMPropertyTypeData:
-        case RLMPropertyTypeAny:
             if (!RLMIsObjectValidForProperty(obj, prop)) {
                 @throw RLMException(@"Invalid value '%@' for property '%@'", obj, prop.name);
             }
@@ -308,6 +305,9 @@ static void RLMValidateValueForProperty(__unsafe_unretained id const obj,
             }
             break;
         }
+        case RLMPropertyTypeAny:
+        case RLMPropertyTypeLinkingObjects:
+            @throw RLMException(@"Invalid value '%@' for property '%@'", obj, prop.name);
     }
 }
 

@@ -19,11 +19,10 @@
 #import <Foundation/Foundation.h>
 
 #import <Realm/RLMCollection.h>
-#import <Realm/RLMDefines.h>
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
-@class RLMObject, RLMRealm, RLMResults RLM_GENERIC_COLLECTION, RLMNotificationToken;
+@class RLMObject, RLMRealm, RLMResults<RLMObjectType: RLMObject *>, RLMNotificationToken;
 
 /**
 
@@ -59,10 +58,10 @@ RLM_ASSUME_NONNULL_BEGIN
  object. Instead, you can call the mutation methods on the RLMArray directly.
  */
 
-@interface RLMArray RLM_GENERIC_COLLECTION : NSObject<RLMCollection, NSFastEnumeration>
+@interface RLMArray<RLMObjectType: RLMObject *> : NSObject<RLMCollection, NSFastEnumeration>
 
 #pragma mark - Properties
- 
+
 /**
  Number of objects in the array.
  */
@@ -123,7 +122,7 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @param object  An RLMObject of the type contained in this RLMArray.
  */
-- (void)addObject:(RLMObjectArgument)object;
+- (void)addObject:(RLMObjectType)object;
 
 /**
  Adds an array of objects at the end of the array.
@@ -145,7 +144,7 @@ RLM_ASSUME_NONNULL_BEGIN
  @param anObject  An RLMObject of the type contained in this RLMArray.
  @param index   The array index at which the object is inserted.
  */
-- (void)insertObject:(RLMObjectArgument)anObject atIndex:(NSUInteger)index;
+- (void)insertObject:(RLMObjectType)anObject atIndex:(NSUInteger)index;
 
 /**
  Removes an object at a given index.
@@ -182,7 +181,7 @@ RLM_ASSUME_NONNULL_BEGIN
  @param index       The array index of the object to be replaced.
  @param anObject    An object (of the same type as returned from the objectClassName selector).
  */
-- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(RLMObjectArgument)anObject;
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(RLMObjectType)anObject;
 
 /**
  Moves the object at the given source index to the given destination index.
@@ -217,7 +216,7 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @param object  An object (of the same type as returned from the objectClassName selector).
  */
-- (NSUInteger)indexOfObject:(RLMObjectArgument)object;
+- (NSUInteger)indexOfObject:(RLMObjectType)object;
 
 /**
  Gets the index of the first object matching the predicate.
@@ -247,10 +246,10 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @return                An RLMResults of objects that match the given predicate
  */
-- (RLMResults RLM_GENERIC_RETURN*)objectsWhere:(NSString *)predicateFormat, ...;
+- (RLMResults<RLMObjectType> *)objectsWhere:(NSString *)predicateFormat, ...;
 
 /// :nodoc:
-- (RLMResults RLM_GENERIC_RETURN*)objectsWhere:(NSString *)predicateFormat args:(va_list)args;
+- (RLMResults<RLMObjectType> *)objectsWhere:(NSString *)predicateFormat args:(va_list)args;
 
 /**
  Get objects matching the given predicate in the RLMArray.
@@ -259,7 +258,7 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @return            An RLMResults of objects that match the given predicate
  */
-- (RLMResults RLM_GENERIC_RETURN*)objectsWithPredicate:(NSPredicate *)predicate;
+- (RLMResults<RLMObjectType> *)objectsWithPredicate:(NSPredicate *)predicate;
 
 /**
  Get a sorted RLMResults from an RLMArray
@@ -269,7 +268,7 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @return    An RLMResults sorted by the specified property.
  */
-- (RLMResults RLM_GENERIC_RETURN*)sortedResultsUsingProperty:(NSString *)property ascending:(BOOL)ascending;
+- (RLMResults<RLMObjectType> *)sortedResultsUsingProperty:(NSString *)property ascending:(BOOL)ascending;
 
 /**
  Get a sorted RLMResults from an RLMArray
@@ -278,7 +277,7 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @return    An RLMResults sorted by the specified properties.
  */
-- (RLMResults RLM_GENERIC_RETURN*)sortedResultsUsingDescriptors:(NSArray *)properties;
+- (RLMResults<RLMObjectType> *)sortedResultsUsingDescriptors:(NSArray *)properties;
 
 /// :nodoc:
 - (RLMObjectType)objectAtIndexedSubscript:(NSUInteger)index;
@@ -292,18 +291,60 @@ RLM_ASSUME_NONNULL_BEGIN
  Register a block to be called each time the RLMArray changes.
 
  The block will be asynchronously called with the initial array, and then
- called again after each write transaction which changes the array or any
- items contained in the array. You must retain the returned token for as long as
- you want the block to continue to be called. To stop receiving updates, call
- `-stop` on the token.
+ called again after each write transaction which changes any of the objects in
+ the array, which objects are in the results, or the order of the objects in the
+ array.
 
- The error parameter will always be `nil`, and is present only for compatiblity
- with the RLMResults version of this method, which can potentially fail.
+ The change parameter will be `nil` the first time the block is called with the
+ initial array. For each call after that, it will contain information about
+ which rows in the array were added, removed or modified. If a write transaction
+ did not modify any objects in this array, the block is not called at all.
+ See the RLMCollectionChange documentation for information on how the changes
+ are reported and an example of updating a UITableView.
+
+ If an error occurs the block will be called with `nil` for the results
+ parameter and a non-`nil` error. Currently the only errors that can occur are
+ when opening the RLMRealm on the background worker thread.
+
+ Notifications are delivered via the standard run loop, and so can't be
+ delivered while the run loop is blocked by other activity. When
+ notifications can't be delivered instantly, multiple notifications may be
+ coalesced into a single notification. This can include the notification
+ with the initial results. For example, the following code performs a write
+ transaction immediately after adding the notification block, so there is no
+ opportunity for the initial notification to be delivered first. As a
+ result, the initial notification will reflect the state of the Realm after
+ the write transaction.
+
+     Person *person = [[Person allObjectsInRealm:realm] firstObject];
+     NSLog(@"person.dogs.count: %zu", person.dogs.count); // => 0
+     self.token = [person.dogs addNotificationBlock(RLMArray<Dog *> *dogs,
+                                                    RLMCollectionChange *changes,
+                                                    NSError *error) {
+         // Only fired once for the example
+         NSLog(@"dogs.count: %zu", dogs.count) // => 1
+     }];
+     [realm transactionWithBlock:^{
+         Dog *dog = [[Dog alloc] init];
+         dog.name = @"Rex";
+         [person.dogs addObject:dog];
+     }];
+     // end of run loop execution context
+
+ You must retain the returned token for as long as you want updates to continue
+ to be sent to the block. To stop receiving updates, call `-stop` on the token.
+
+ @warning This method cannot be called during a write transaction, or when the
+          containing realm is read-only.
+ @warning This method can only be called on RLMArray object which has been add
+          to or retrieved from a Realm.
 
  @param block The block to be called each time the array changes.
- @return A token which must be held for as long as you want notifications to be delivered.
+ @return A token which must be held for as long as you want updates to be delivered.
  */
-- (RLMNotificationToken *)addNotificationBlock:(void (^)(RLMArray RLM_GENERIC_RETURN *array, NSError *))block RLM_WARN_UNUSED_RESULT;
+- (RLMNotificationToken *)addNotificationBlock:(void (^)(RLMArray<RLMObjectType> *__nullable array,
+                                                         RLMCollectionChange *__nullable changes,
+                                                         NSError *__nullable error))block __attribute__((warn_unused_result));
 
 #pragma mark - Unavailable Methods
 
@@ -321,44 +362,10 @@ RLM_ASSUME_NONNULL_BEGIN
 
 @end
 
-/**
- An RLMSortDescriptor stores a property name and a sort order for use with
- `sortedResultsUsingDescriptors:`. It is similar to NSSortDescriptor, but supports
- only the subset of functionality which can be efficiently run by the query
- engine. RLMSortDescriptor instances are immutable.
- */
-@interface RLMSortDescriptor : NSObject
-
-#pragma mark - Properties
- 
-/**
- The name of the property which this sort descriptor orders results by.
- */
-@property (nonatomic, readonly) NSString *property;
-
-/**
- Whether this descriptor sorts in ascending or descending order.
- */
-@property (nonatomic, readonly) BOOL ascending;
-
-#pragma mark - Methods
-
-/**
- Returns a new sort descriptor for the given property name and order.
- */
-+ (instancetype)sortDescriptorWithProperty:(NSString *)propertyName ascending:(BOOL)ascending;
-
-/**
- Returns a copy of the receiver with the sort order reversed.
- */
-- (instancetype)reversedSortDescriptor;
-
-@end
-
 /// :nodoc:
 @interface RLMArray (Swift)
 // for use only in Swift class definitions
 - (instancetype)initWithObjectClassName:(NSString *)objectClassName;
 @end
 
-RLM_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

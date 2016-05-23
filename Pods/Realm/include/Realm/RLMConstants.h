@@ -45,17 +45,19 @@ typedef NS_ENUM(int32_t, RLMPropertyType) {
     RLMPropertyTypeString = 2,
     /** Data type: NSData */
     RLMPropertyTypeData   = 4,
-    /** Any type: id, **not supported in Swift** */
+    /** Any type: id. No longer supported in models, but can be migrated from */
     RLMPropertyTypeAny    = 6,
     /** Date type: NSDate */
-    RLMPropertyTypeDate   = 7,
+    RLMPropertyTypeDate   = 8,
 
 #pragma mark - Array/Linked object types
 
     /** Object type. See [Realm Models](https://realm.io/docs/objc/latest/#models) */
     RLMPropertyTypeObject = 12,
-    /** Array type. See [Realm Models](http://realms.io/docs/objc/latest/#models) */
+    /** Array type. See [Realm Models](https://realm.io/docs/objc/latest/#models) */
     RLMPropertyTypeArray  = 13,
+    /** Linking objects. See [Realm Models](https://realm.io/docs/objc/latest/#models) */
+    RLMPropertyTypeLinkingObjects = 14,
 };
 
 /**
@@ -75,12 +77,16 @@ typedef NS_ENUM(NSInteger, RLMError) {
         read-only or if the directory part of the specified path was not
         found when a copy should be written. */
     RLMErrorFileNotFound          = 5,
-    /** Returned by RLMRealm if a file format upgrade is required to open the file, but upgrades were explicilty disabled. */
+    /** Returned by RLMRealm if a file format upgrade is required to open the file, but upgrades were explicitly disabled. */
     RLMErrorFileFormatUpgradeRequired = 6,
     /** Returned by RLMRealm if the database file is currently open in another
         process which cannot share with the current process due to an
         architecture mismatch. */
     RLMErrorIncompatibleLockFile  = 8,
+    /** Returned by RLMRealm if there is insufficient available address space. */
+    RLMErrorAddressSpaceExhausted = 9,
+    /** Returned by RLMRealm if there is a schema version mismatch, so that a migration is required. */
+    RLMErrorSchemaMismatch = 10,
 };
 
 #pragma mark - Constants
@@ -117,6 +123,9 @@ extern const uint64_t RLMNotVersioned;
 
 /** Error domain used in Realm. */
 extern NSString * const RLMErrorDomain;
+
+/** Error domain used for non-specific system errors. */
+extern NSString * const RLMUnknownSystemErrorDomain;
 
 /** Key for name of Realm exceptions. */
 extern NSString * const RLMExceptionName;

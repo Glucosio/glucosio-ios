@@ -27,12 +27,13 @@
 #import "shared_realm.hpp"
 
 static NSString *const c_RLMRealmConfigurationProperties[] = {
-    @"path",
+    @"fileURL",
     @"inMemoryIdentifier",
     @"encryptionKey",
     @"readOnly",
     @"schemaVersion",
     @"migrationBlock",
+    @"deleteRealmIfMigrationNeeded",
     @"dynamic",
     @"customSchema",
 };
@@ -40,15 +41,15 @@ static NSString *const c_RLMRealmConfigurationProperties[] = {
 static NSString *const c_defaultRealmFileName = @"default.realm";
 RLMRealmConfiguration *s_defaultConfiguration;
 
-NSString *RLMRealmPathForFileAndBundleIdentifier(NSString *fileName, NSString *bundleIdentifier) {
+static NSString *defaultDirectoryForBundleIdentifier(NSString *bundleIdentifier) {
 #if TARGET_OS_TV
     (void)bundleIdentifier;
     // tvOS prohibits writing to the Documents directory, so we use the Library/Caches directory instead.
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+    return NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
 #elif TARGET_OS_IPHONE
     (void)bundleIdentifier;
     // On iOS the Documents directory isn't user-visible, so put files there
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 #else
     // On OS X it is, so put files in Application Support. If we aren't running
     // in a sandbox, put it in a subdirectory based on the bundle identifier
@@ -70,12 +71,18 @@ NSString *RLMRealmPathForFileAndBundleIdentifier(NSString *fileName, NSString *b
                                                    attributes:nil
                                                         error:nil];
     }
+    return path;
 #endif
-    return [path stringByAppendingPathComponent:fileName];
+}
+
+NSString *RLMRealmPathForFileAndBundleIdentifier(NSString *fileName, NSString *bundleIdentifier) {
+    return [defaultDirectoryForBundleIdentifier(bundleIdentifier)
+            stringByAppendingPathComponent:fileName];
 }
 
 NSString *RLMRealmPathForFile(NSString *fileName) {
-    return RLMRealmPathForFileAndBundleIdentifier(fileName, nil);
+    static NSString *directory = defaultDirectoryForBundleIdentifier(nil);
+    return [directory stringByAppendingPathComponent:fileName];
 }
 
 @implementation RLMRealmConfiguration {
@@ -117,8 +124,8 @@ NSString *RLMRealmPathForFile(NSString *fileName) {
 - (instancetype)init {
     self = [super init];
     if (self) {
-        static NSString *defaultRealmPath = RLMRealmPathForFile(c_defaultRealmFileName);
-        self.path = defaultRealmPath;
+        static NSURL *defaultRealmURL = [NSURL fileURLWithPath:RLMRealmPathForFile(c_defaultRealmFileName)];
+        self.fileURL = defaultRealmURL;
         self.schemaVersion = 0;
     }
 
@@ -145,10 +152,6 @@ NSString *RLMRealmPathForFile(NSString *fileName) {
     return [string stringByAppendingString:@"}"];
 }
 
-- (NSString *)path {
-    return _config.in_memory ? nil :@(_config.path.c_str());
-}
-
 static void RLMNSStringToStdString(std::string &out, NSString *in) {
     out.resize([in maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
     if (out.empty()) {
@@ -164,7 +167,12 @@ static void RLMNSStringToStdString(std::string &out, NSString *in) {
     out.resize(size);
 }
 
-- (void)setPath:(NSString *)path {
+- (NSURL *)fileURL {
+    return _config.in_memory ? nil : [NSURL fileURLWithPath:@(_config.path.c_str())];
+}
+
+- (void)setFileURL:(NSURL *)fileURL {
+    NSString *path = fileURL.path;
     if (path.length == 0) {
         @throw RLMException(@"Realm path must not be empty");
     }
@@ -220,6 +228,14 @@ static void RLMNSStringToStdString(std::string &out, NSString *in) {
         @throw RLMException(@"Cannot set schema version to %llu (RLMNotVersioned)", RLMNotVersioned);
     }
     _config.schema_version = schemaVersion;
+}
+
+- (BOOL)deleteRealmIfMigrationNeeded {
+    return _config.delete_realm_if_migration_needed;
+}
+
+- (void)setDeleteRealmIfMigrationNeeded:(BOOL)deleteRealmIfMigrationNeeded {
+    _config.delete_realm_if_migration_needed = deleteRealmIfMigrationNeeded;
 }
 
 - (NSArray *)objectClasses {

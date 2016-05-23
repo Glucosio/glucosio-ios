@@ -17,9 +17,8 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import <Realm/RLMDefines.h>
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @class RLMSchema;
 @class RLMArray;
@@ -82,7 +81,7 @@ typedef void (^RLMObjectMigrationBlock)(RLMObject * __nullable oldObject, RLMObj
 
                     When passing in an NSArray, all properties must be present, valid and in the same order as the properties defined in the model.
  */
--(RLMObject *)createObject:(NSString *)className withValue:(id)value;
+- (RLMObject *)createObject:(NSString *)className withValue:(id)value;
 
 /**
  Delete an object from a Realm during a migration. This can be called within `enumerateObjects:block:`.
@@ -102,6 +101,18 @@ typedef void (^RLMObjectMigrationBlock)(RLMObject * __nullable oldObject, RLMObj
  */
 - (BOOL)deleteDataForClassName:(NSString *)name;
 
+/**
+ Rename property of the given class from `oldName` to `newName`.
+
+ @param className Class for which the property is to be renamed. Must be present
+                  in both the old and new Realm schemas.
+ @param oldName   Old name for the property to be renamed. Must not be present
+                  in the new Realm.
+ @param newName   New name for the property to be renamed. Must not be present
+                  in the old Realm.
+ */
+- (void)renamePropertyForClass:(NSString *)className oldName:(NSString *)oldName newName:(NSString *)newName;
+
 @end
 
-RLM_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

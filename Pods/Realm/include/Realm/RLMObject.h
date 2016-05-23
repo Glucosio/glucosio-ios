@@ -20,8 +20,9 @@
 
 #import <Realm/RLMObjectBase.h>
 
-RLM_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
+@class RLMPropertyDescriptor;
 @class RLMRealm;
 @class RLMResults;
 @class RLMObjectSchema;
@@ -30,7 +31,7 @@ RLM_ASSUME_NONNULL_BEGIN
  
  In Realm you define your model classes by subclassing `RLMObject` and adding properties to be persisted.
  You then instantiate and use your custom subclasses instead of using the `RLMObject` class directly.
- 
+
      // Dog.h
      @interface Dog : RLMObject
      @property NSString *name;
@@ -232,11 +233,11 @@ RLM_ASSUME_NONNULL_BEGIN
 #pragma mark - Customizing your Objects
 
 /**
- Return an array of property names for properties which should be indexed. Only supported
- for strings, integers, booleans and NSDate properties.
+ Return an array of property names for properties which should be indexed.
+ Only supported for string, integer, boolean, and NSDate properties.
  @return    NSArray of property names.
  */
-+ (NSArray RLM_GENERIC(NSString *) *)indexedProperties;
++ (NSArray<NSString *> *)indexedProperties;
 
 /**
  Implement to indicate the default values to be used for each property.
@@ -261,7 +262,7 @@ RLM_ASSUME_NONNULL_BEGIN
  
  @return    NSArray of property names to ignore.
  */
-+ (nullable NSArray RLM_GENERIC(NSString *) *)ignoredProperties;
++ (nullable NSArray<NSString *> *)ignoredProperties;
 
 /**
  Implement to return an array of property names that should not allow storing nil.
@@ -276,7 +277,22 @@ RLM_ASSUME_NONNULL_BEGIN
 
  @return    NSArray of property names that are required.
  */
-+ (NSArray RLM_GENERIC(NSString *) *)requiredProperties;
++ (NSArray<NSString *> *)requiredProperties;
+
+/**
+ Implement to return a dictionary providing information related to linking objects properties.
+
+ Properties of type RLMLinkingObjects must have a corresponding entry in the dictionary to provide
+ information about the origin of the link that they represent. Their corresponding value in the
+ dictionary must be an instance of RLMPropertyDescriptor that describes a property that forms a
+ relationship with this class:
+
+     return @{ @"owners": [RLMPropertyDescriptor descriptorWithClass:Owner.class propertyName:@"dogs"] };
+
+
+ @return     NSDictionary mapping property names to RLMPropertyDescriptor objects.
+ */
++ (NSDictionary<NSString *, RLMPropertyDescriptor *> *)linkingObjectsProperties;
 
 
 #pragma mark - Getting & Querying Objects from the Default Realm
@@ -376,17 +392,6 @@ RLM_ASSUME_NONNULL_BEGIN
 #pragma mark - Other Instance Methods
 
 /**
- Get an `NSArray` of objects of type `className` which have this object as the given property value. This can
- be used to get the inverse relationship value for `RLMObject` and `RLMArray` properties.
-
- @param className   The type of object on which the relationship to query is defined.
- @param property    The name of the property which defines the relationship.
-
- @return    An NSArray of objects of type `className` which have this object as their value for the `property` property.
- */
-- (NSArray *)linkingObjectsOfClass:(NSString *)className forProperty:(NSString *)property;
-
-/**
  Returns YES if another RLMObject points to the same object in an RLMRealm. For RLMObject types
  with a primary, key, `isEqual:` is overridden to use this method (along with a corresponding
  implementation for `hash`.
@@ -422,4 +427,4 @@ RLM_ASSUME_NONNULL_BEGIN
 @protocol RLM_OBJECT_SUBCLASS <NSObject>   \
 @end
 
-RLM_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

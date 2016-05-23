@@ -15,21 +15,22 @@ import Foundation
 import CoreGraphics
 
 /// The ScatterChart. Draws dots, triangles, squares and custom shapes into the chartview.
-public class ScatterChartView: BarLineChartViewBase, ScatterChartRendererDelegate
+public class ScatterChartView: BarLineChartViewBase, ScatterChartDataProvider
 {
     public override func initialize()
     {
         super.initialize()
         
-        renderer = ScatterChartRenderer(delegate: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        renderer = ScatterChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
         _chartXMin = -0.5
     }
 
     public override func calcMinMax()
     {
         super.calcMinMax()
+        guard let data = _data else { return }
 
-        if (_deltaX == 0.0 && _data.yValCount > 0)
+        if (_deltaX == 0.0 && data.yValCount > 0)
         {
             _deltaX = 1.0
         }
@@ -38,45 +39,7 @@ public class ScatterChartView: BarLineChartViewBase, ScatterChartRendererDelegat
         _deltaX = CGFloat(abs(_chartXMax - _chartXMin))
     }
     
-    // MARK: - ScatterChartRendererDelegate
+    // MARK: - ScatterChartDataProbider
     
-    public func scatterChartRendererData(renderer: ScatterChartRenderer) -> ScatterChartData!
-    {
-        return _data as! ScatterChartData!
-    }
-    
-    public func scatterChartRenderer(renderer: ScatterChartRenderer, transformerForAxis which: ChartYAxis.AxisDependency) -> ChartTransformer!
-    {
-        return getTransformer(which)
-    }
-    
-    public func scatterChartDefaultRendererValueFormatter(renderer: ScatterChartRenderer) -> NSNumberFormatter!
-    {
-        return self._defaultValueFormatter
-    }
-    
-    public func scatterChartRendererChartYMax(renderer: ScatterChartRenderer) -> Double
-    {
-        return self.chartYMax
-    }
-    
-    public func scatterChartRendererChartYMin(renderer: ScatterChartRenderer) -> Double
-    {
-        return self.chartYMin
-    }
-    
-    public func scatterChartRendererChartXMax(renderer: ScatterChartRenderer) -> Double
-    {
-        return self.chartXMax
-    }
-    
-    public func scatterChartRendererChartXMin(renderer: ScatterChartRenderer) -> Double
-    {
-        return self.chartXMin
-    }
-    
-    public func scatterChartRendererMaxVisibleValueCount(renderer: ScatterChartRenderer) -> Int
-    {
-        return self.maxVisibleValueCount
-    }
+    public var scatterData: ScatterChartData? { return _data as? ScatterChartData }
 }
