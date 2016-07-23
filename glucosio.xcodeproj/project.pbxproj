@@ -52,7 +52,7 @@
 		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; };
 		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; };
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
-		A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44416E140D3C3C50BF35DA28 /* Pods.framework */; };
+		73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A360826019661824371D0886 /* Pods_glucosio.framework */; };
 		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
 		DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */; };
 		DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */; };
@@ -76,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EF56D3C7ACC49C44655DFDB /* Pods-glucosio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.debug.xcconfig"; sourceTree = "<group>"; };
 		42B3C05E98BF24DADF350865 /* GLUCBodyWeightReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBodyWeightReading.h; sourceTree = "<group>"; };
 		42B3C0BF4F0C48B357B04DCF /* GLUCBloodPressureReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCBloodPressureReading.h; sourceTree = "<group>"; };
 		42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCAppearanceController.h; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		42B3CF3DDA7C8CFCA8AAF32A /* GLUCReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCReading.h; sourceTree = "<group>"; };
 		42B3CFADEECD38EC70948DC8 /* GLUCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCViewController.h; sourceTree = "<group>"; };
 		44416E140D3C3C50BF35DA28 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5511291B1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCDateTimeEditorViewController.h; sourceTree = "<group>"; };
 		5511291C1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCDateTimeEditorViewController.m; sourceTree = "<group>"; };
 		551193641BC2D2B9007CD147 /* glucosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glucosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,7 +414,8 @@
 		55ECF7D81C7DB8B800311A12 /* sq-XK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-XK"; path = "sq-XK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7D91C7DB8C100311A12 /* sq-MK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-MK"; path = "sq-MK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7DA1C7DBD0200311A12 /* am */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = am; path = am.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6D6365B48E939E015DFC960F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A360826019661824371D0886 /* Pods_glucosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
 		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
 		DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCPrivacyViewController.m; path = Privacy/GLUCPrivacyViewController.m; sourceTree = "<group>"; };
 		DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCWebViewController.h; path = WebViewController/GLUCWebViewController.h; sourceTree = "<group>"; };
@@ -428,7 +429,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CCD6BD8645A5A524F47ADD /* Pods.framework in Frameworks */,
+				73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,8 +476,8 @@
 				551193801BC2D2B9007CD147 /* glucosioTests */,
 				5511938B1BC2D2B9007CD147 /* glucosioUITests */,
 				551193651BC2D2B9007CD147 /* Products */,
-				624868642F71D8AD6046612F /* Pods */,
 				E361650FCAC6BC1A71F98212 /* Frameworks */,
+				8EF3A7B0E2A3FAB6667EA2ED /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -755,11 +756,11 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		624868642F71D8AD6046612F /* Pods */ = {
+		8EF3A7B0E2A3FAB6667EA2ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */,
-				6D6365B48E939E015DFC960F /* Pods.release.xcconfig */,
+				1EF56D3C7ACC49C44655DFDB /* Pods-glucosio.debug.xcconfig */,
+				B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -786,6 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				44416E140D3C3C50BF35DA28 /* Pods.framework */,
+				A360826019661824371D0886 /* Pods_glucosio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -797,12 +799,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 551193911BC2D2B9007CD147 /* Build configuration list for PBXNativeTarget "glucosio" */;
 			buildPhases = (
-				0B569EE24C6DA98B639115CB /* Check Pods Manifest.lock */,
+				7A5AD3461D7EA4607F414AE2 /* [CP] Check Pods Manifest.lock */,
 				551193601BC2D2B9007CD147 /* Sources */,
 				551193611BC2D2B9007CD147 /* Frameworks */,
 				551193621BC2D2B9007CD147 /* Resources */,
-				D579F9D590F5B59A5C4B1743 /* Embed Pods Frameworks */,
-				7C49C61FB2A0F762EB1C4A7B /* Copy Pods Resources */,
+				128F5F06FA932C4552097ADA /* [CP] Embed Pods Frameworks */,
+				F9E9A972240F357FE40CF15E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -860,7 +862,7 @@
 				TargetAttributes = {
 					551193631BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = BJF5PGS7VQ;
+						DevelopmentTeam = 5QFGKN2X54;
 					};
 					5511937C1BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1224,14 +1226,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B569EE24C6DA98B639115CB /* Check Pods Manifest.lock */ = {
+		128F5F06FA932C4552097ADA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-glucosio/Pods-glucosio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5AD3461D7EA4607F414AE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1239,34 +1256,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7C49C61FB2A0F762EB1C4A7B /* Copy Pods Resources */ = {
+		F9E9A972240F357FE40CF15E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D579F9D590F5B59A5C4B1743 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-glucosio/Pods-glucosio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1717,7 +1719,7 @@
 		};
 		551193921BC2D2B9007CD147 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49A4DBB1387491D3DC4C35B3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1EF56D3C7ACC49C44655DFDB /* Pods-glucosio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1725,7 +1727,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = glucosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.idjump.glucosio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1733,7 +1735,7 @@
 		};
 		551193931BC2D2B9007CD147 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D6365B48E939E015DFC960F /* Pods.release.xcconfig */;
+			baseConfigurationReference = B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1741,7 +1743,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = glucosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.idjump.glucosio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
