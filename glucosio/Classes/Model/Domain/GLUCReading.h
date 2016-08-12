@@ -1,23 +1,17 @@
+//
+// Created by Chris Walters on 4/10/16.
+// Copyright (c) 2016 Glucosio.org. All rights reserved.
+//
+
 #import <Foundation/Foundation.h>
 #import "GLUCModel.h"
 
-static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
-static NSString *const kGLUCReadingModelValuePropertyKey = @"value";
+@protocol RLMFloat;
+
 static NSString *const kGLUCReadingNotesPropertyKey = @"notes";
-static NSString *const kGLUCReadingModelCustomTypeNamePropertyKey = @"readingCustomTypeName";
+static NSString *const kGLUCReadingModelValuePropertyKey = @"reading";
 
 @interface GLUCReading : GLUCModel
-
-@property (nonatomic, readwrite, strong) NSNumber *value;
-@property (nonatomic, readwrite, strong) NSNumber *readingTypeId;
+@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *reading;
 @property (nonatomic, readwrite, strong) NSString *notes;
-@property (nonatomic, readwrite, strong) NSNumber *ownerId;
-@property (nonatomic, readwrite, strong) NSString *readingCustomTypeName;
-
-+ (NSArray *) readingTypes;
-- (NSString *) readingType;
-
-- (NSString *) readingTypeForId:(NSInteger) readingTypeId;
-- (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour;
-
 @end

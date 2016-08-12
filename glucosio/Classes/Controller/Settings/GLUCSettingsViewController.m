@@ -69,7 +69,7 @@
 - (IBAction)getStarted:(id)sender {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kGLUCModelInitialSettingsCompletedKey];
     [self.model saveAll];
-    [self gotoEULAViewRequireConfirmation:YES];
+    [self gotoOverview];
 }
 
 - (BOOL) validToGetStarted {
@@ -104,6 +104,8 @@
  
     [self hintRequiredRows];
 }
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger retVal  = 6;
     switch (section) {
@@ -118,6 +120,9 @@
     return retVal;
 }
 
+- (void) gotoOverview {
+    [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] showOverview];
+}
 
 - (void) gotoEULAViewRequireConfirmation:(BOOL)requireConfirmation {
     self.navigationItem.backBarButtonItem = nil;
@@ -231,8 +236,10 @@
     UITableViewCell *cell = nil;
 
     if (self.welcomeMode) {
-        if (indexPath.row == 6) {
+        unsigned long startingCellRow = (self.settingKeys.count);
+        if (indexPath.row == startingCellRow) {
             cell = self.getStartedButtonCell;
+            return cell;
         }
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:kGLUCSettingsCellIdentifier];
@@ -288,7 +295,8 @@
         cell.detailTextLabel.text = @"";
     } else {
         if (self.welcomeMode) {
-            if (indexPath.row != 6)
+            unsigned long starting_row = self.settingKeys.count + 1;
+            if (indexPath.row != starting_row)
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         } else {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

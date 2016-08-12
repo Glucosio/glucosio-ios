@@ -15,7 +15,7 @@ import Foundation
 import CoreGraphics
 
 /// This chart class allows the combination of lines, bars, scatter and candle data all displayed in one chart area.
-public class CombinedChartView: BarLineChartViewBase
+public class CombinedChartView: BarLineChartViewBase, LineChartDataProvider, BarChartDataProvider, ScatterChartDataProvider, CandleChartDataProvider, BubbleChartDataProvider
 {
     /// the fill-formatter used for determining the position of the fill-line
     internal var _fillFormatter: ChartFillFormatter!
@@ -35,9 +35,11 @@ public class CombinedChartView: BarLineChartViewBase
     {
         super.initialize()
         
-        _highlighter = CombinedHighlighter(chart: self)
+        self.highlighter = CombinedHighlighter(chart: self)
         
-        _fillFormatter = BarLineChartFillFormatter(chart: self)
+        /// WORKAROUND: Swift 2.0 compiler malfunctions when optimizations are enabled, and assigning directly to _fillFormatter causes a crash with a EXC_BAD_ACCESS. See https://github.com/danielgindi/ios-charts/issues/406
+        let workaroundFormatter = ChartDefaultFillFormatter()
+        _fillFormatter = workaroundFormatter
         
         renderer = CombinedChartRenderer(chart: self, animator: _animator, viewPortHandler: _viewPortHandler)
     }
@@ -45,15 +47,16 @@ public class CombinedChartView: BarLineChartViewBase
     override func calcMinMax()
     {
         super.calcMinMax()
+        guard let data = _data else { return }
         
         if (self.barData !== nil || self.candleData !== nil || self.bubbleData !== nil)
         {
             _chartXMin = -0.5
-            _chartXMax = Double(_data.xVals.count) - 0.5
+            _chartXMax = Double(data.xVals.count) - 0.5
             
             if (self.bubbleData !== nil)
             {
-                for set in self.bubbleData.dataSets as! [BubbleChartDataSet]
+                for set in self.bubbleData?.dataSets as! [IBubbleChartDataSet]
                 {
                     let xmin = set.xMin
                     let xmax = set.xMax
@@ -69,8 +72,13 @@ public class CombinedChartView: BarLineChartViewBase
                     }
                 }
             }
-
-            _deltaX = CGFloat(abs(_chartXMax - _chartXMin))
+        }
+        
+        _deltaX = CGFloat(abs(_chartXMax - _chartXMin))
+        
+        if (_deltaX == 0.0 && self.lineData?.yValCount > 0)
+        {
+            _deltaX = 1.0
         }
     }
     
@@ -96,14 +104,16 @@ public class CombinedChartView: BarLineChartViewBase
         set
         {
             _fillFormatter = newValue
-            if (_fillFormatter === nil)
+            if (_fillFormatter == nil)
             {
-                _fillFormatter = BarLineChartFillFormatter(chart: self)
+                _fillFormatter = ChartDefaultFillFormatter()
             }
         }
     }
     
-    public var lineData: LineChartData!
+    // MARK: - LineChartDataProvider
+    
+    public var lineData: LineChartData?
     {
         get
         {
@@ -115,7 +125,9 @@ public class CombinedChartView: BarLineChartViewBase
         }
     }
     
-    public var barData: BarChartData!
+    // MARK: - BarChartDataProvider
+    
+    public var barData: BarChartData?
     {
         get
         {
@@ -127,7 +139,9 @@ public class CombinedChartView: BarLineChartViewBase
         }
     }
     
-    public var scatterData: ScatterChartData!
+    // MARK: - ScatterChartDataProvider
+    
+    public var scatterData: ScatterChartData?
     {
         get
         {
@@ -139,7 +153,9 @@ public class CombinedChartView: BarLineChartViewBase
         }
     }
     
-    public var candleData: CandleChartData!
+    // MARK: - CandleChartDataProvider
+    
+    public var candleData: CandleChartData?
     {
         get
         {
@@ -151,7 +167,9 @@ public class CombinedChartView: BarLineChartViewBase
         }
     }
     
-    public var bubbleData: BubbleChartData!
+    // MARK: - BubbleChartDataProvider
+    
+    public var bubbleData: BubbleChartData?
     {
         get
         {
@@ -163,27 +181,27 @@ public class CombinedChartView: BarLineChartViewBase
         }
     }
     
-    // MARK: Accessors
+    // MARK: - Accessors
     
     /// flag that enables or disables the highlighting arrow
     public var drawHighlightArrowEnabled: Bool
     {
-        get { return (renderer as! CombinedChartRenderer!).drawHighlightArrowEnabled; }
-        set { (renderer as! CombinedChartRenderer!).drawHighlightArrowEnabled = newValue; }
+        get { return (renderer as! CombinedChartRenderer!).drawHighlightArrowEnabled }
+        set { (renderer as! CombinedChartRenderer!).drawHighlightArrowEnabled = newValue }
     }
     
     /// if set to true, all values are drawn above their bars, instead of below their top
     public var drawValueAboveBarEnabled: Bool
         {
-        get { return (renderer as! CombinedChartRenderer!).drawValueAboveBarEnabled; }
-        set { (renderer as! CombinedChartRenderer!).drawValueAboveBarEnabled = newValue; }
+        get { return (renderer as! CombinedChartRenderer!).drawValueAboveBarEnabled }
+        set { (renderer as! CombinedChartRenderer!).drawValueAboveBarEnabled = newValue }
     }
     
-    /// if set to true, a grey area is darawn behind each bar that indicates the maximum value
+    /// if set to true, a grey area is drawn behind each bar that indicates the maximum value
     public var drawBarShadowEnabled: Bool
     {
-        get { return (renderer as! CombinedChartRenderer!).drawBarShadowEnabled; }
-        set { (renderer as! CombinedChartRenderer!).drawBarShadowEnabled = newValue; }
+        get { return (renderer as! CombinedChartRenderer!).drawBarShadowEnabled }
+        set { (renderer as! CombinedChartRenderer!).drawBarShadowEnabled = newValue }
     }
     
     /// - returns: true if drawing the highlighting arrow is enabled, false if not

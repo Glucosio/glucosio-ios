@@ -3,11 +3,12 @@
 
 #import "GLUCUser.h"
 #import "GLUCReading.h"
-#import <FMDB/FMDB.h>
+#import "GLUCBloodGlucoseReading.h"
+#import <Realm/Realm.h>
 
 @interface GLUCPersistenceController : NSObject
 
-@property (strong, nonatomic) FMDatabase *db;
+//@property (strong, nonatomic) FMDatabase *db;
 
 - (instancetype) init;
 
@@ -19,10 +20,12 @@
 - (BOOL) deleteUser:(GLUCUser *)aUser;
 
 // create reading
-- (BOOL) saveReading:(GLUCReading *)reading;
-- (BOOL) deleteReading:(GLUCReading *)reading;
-- (NSArray *) allReadings:(BOOL)ascending;
-- (GLUCReading *) lastReading;
+- (BOOL)saveReading:(GLUCReading *)reading;
+- (BOOL)deleteReading:(GLUCReading *)reading;
+
+- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType;
+- (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending;
+- (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 
 - (void) saveAll;
 

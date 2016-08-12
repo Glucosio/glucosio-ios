@@ -1,3 +1,4 @@
+#import <Realm/RLMRealm.h>
 #import "GLUCDateTimeEditorViewController.h"
 
 @implementation GLUCDateTimeEditorViewController {
@@ -24,7 +25,9 @@
 
 - (IBAction)save:(UIButton *)sender {
     if (self.editedObject) {
+        [[self.editedObject realm] beginWriteTransaction];
         [self.editedObject setValue:self.editedDate forKey:self.editedProperty];
+        [[self.editedObject realm] commitWriteTransaction];
     }
     
     [super save:sender];
