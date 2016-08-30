@@ -198,7 +198,7 @@
 "preferences_experimental" = "These features are experimental and may not fully work and are for early testing by users. Remember that you can shake your phone to send us feedback.";
 
 /* No description supplied by the engineer */
-"version" = "0.9.3 (Imli)";
+"version_label" = "Version: ";
 
 /* No description supplied by the engineer */
 "preferences_version" = "Version";

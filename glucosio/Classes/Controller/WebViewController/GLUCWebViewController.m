@@ -11,6 +11,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:request];
@@ -24,6 +25,13 @@
 }
 
 #pragma mark - UIWebViewDelegate
+
+// Prevent navigation away from the first page specified.
+// URL's must match request to prevent navigation - check trailing '/'
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return self.allowLinks ? YES : ([request.URL.absoluteString isEqualToString:self.url.absoluteString]);
+}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     self.loading = YES;

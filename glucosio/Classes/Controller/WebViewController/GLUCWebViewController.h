@@ -13,4 +13,10 @@
  */
 - (NSURL *)url;
 
+/**
+ * Allow user to navigate away from initial page or not
+ */
+
+@property (nonatomic, assign) BOOL allowLinks;
+
 @end
