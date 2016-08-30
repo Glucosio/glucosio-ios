@@ -8,6 +8,8 @@
 @property (strong, nonatomic, readwrite) GLUCModel *editedObject;
 @property (strong, nonatomic) NSString *editedProperty;
 
+@property (strong, nonatomic) NSString *unitName;
+
 - (IBAction)save:(UIButton *)sender;
 
 - (NSString *)titleForRowWithKey:(NSString *)rowKey;

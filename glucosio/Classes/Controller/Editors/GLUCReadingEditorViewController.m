@@ -46,14 +46,17 @@
 
     GLUCReading *editedReading = (GLUCReading *)self.editedObject;
     if (editedReading) {
+        self.unitsLabel.text = [self.model.currentUser displayUnitsForReading:editedReading];
         if ([editedReading.reading integerValue] != 0) {
             NSString *valueStr = [self.model.currentUser displayValueForReading:editedReading];
 
             self.valueField.text = valueStr;
+            
         } else {
             self.valueField.text = @"";
         }
     } else {
+        self.unitsLabel.text = @"";
         self.valueField.text = @"";
     }
 
