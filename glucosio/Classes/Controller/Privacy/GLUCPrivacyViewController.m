@@ -14,6 +14,11 @@
 
 @implementation GLUCPrivacyViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.allowLinks = NO;
+}
+
 - (NSURL *)url {
     return [NSURL URLWithString:kGLUCPrivacyUrlString];
 }

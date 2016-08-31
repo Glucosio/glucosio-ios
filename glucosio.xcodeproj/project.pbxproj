@@ -54,6 +54,7 @@
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
 		73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A360826019661824371D0886 /* Pods_glucosio.framework */; };
 		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
+		DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */; };
 		DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */; };
 		DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */; };
 /* End PBXBuildFile section */
@@ -418,6 +419,8 @@
 		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
 		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
 		DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCPrivacyViewController.m; path = Privacy/GLUCPrivacyViewController.m; sourceTree = "<group>"; };
+		DFAED14C1D77037D0042708D /* WKWebViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewWrapper.h; sourceTree = "<group>"; };
+		DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewWrapper.m; sourceTree = "<group>"; };
 		DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCWebViewController.h; path = WebViewController/GLUCWebViewController.h; sourceTree = "<group>"; };
 		DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCWebViewController.m; path = WebViewController/GLUCWebViewController.m; sourceTree = "<group>"; };
 		DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCIndexedListEditorViewController.h; sourceTree = "<group>"; };
@@ -678,6 +681,7 @@
 				551193C51BC3EF60007CD147 /* Extensions */,
 				42B3C3AC6A37795DD60B8FFF /* GLUCAppearanceController.m */,
 				42B3C0E318C24F4D2BEC85EA /* GLUCAppearanceController.h */,
+				DFAED14B1D77037D0042708D /* WKWebViewWrapper */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,6 +767,15 @@
 				B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFAED14B1D77037D0042708D /* WKWebViewWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED14C1D77037D0042708D /* WKWebViewWrapper.h */,
+				DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */,
+			);
+			path = WKWebViewWrapper;
 			sourceTree = "<group>";
 		};
 		DFC3CE801C762CC5003A22D9 /* Privacy */ = {
@@ -1297,6 +1310,7 @@
 				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
 				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
 				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
+				DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */,
 				551193D21BC3EF60007CD147 /* GLUCBloodGlucoseReading.m in Sources */,
 				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
 				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
