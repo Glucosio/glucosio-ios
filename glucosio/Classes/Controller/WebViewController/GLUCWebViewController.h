@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
+#import "WKWebViewWrapper.h"
 #import "GLUCEditorViewController.h"
 
-@interface GLUCWebViewController : GLUCEditorViewController <UIWebViewDelegate>
+@interface GLUCWebViewController : GLUCEditorViewController
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-
+@property (strong, nonatomic) IBOutlet WKWebViewWrapper *webViewWrappper;
 
 /**
  *  Return the url that webView have to load. You MUST implement this method in your subclass.
