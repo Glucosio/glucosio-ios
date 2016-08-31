@@ -7,6 +7,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.allowLinks = NO;
     [self.saveButton setTitle:GLUCLoc(@"helloactivity_button_next") forState:UIControlStateNormal];
 }
 
@@ -22,7 +23,7 @@
 - (void)setupUI {
     if (!self.requireConfirmation) {
         [self.saveButton removeFromSuperview];
-        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.webView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.webViewWrappper attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
         [self.view addConstraint:bottom];
     }
 }
