@@ -33,6 +33,8 @@
             NSForegroundColorAttributeName: [UIColor whiteColor],
             NSFontAttributeName: [self defaultFont]
     }];
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
 
     [[UIButton appearance] setTintColor:[UIColor glucosio_pink]];
 

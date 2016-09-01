@@ -422,53 +422,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Fj-BK-Vcv">
-                                <rect key="frame" x="0.0" y="54" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="30" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="467197793.92442">
                                     <!--2015-10-22 09:09:53 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-qI-EM5">
-                                <rect key="frame" x="283" y="278" width="34" height="30"/>
+                                <rect key="frame" x="283" y="254" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="save:" destination="n2C-S8-bsE" eventType="touchUpInside" id="3h2-PX-zDn"/>
                                     <action selector="save:" destination="6h6-GR-YG4" eventType="touchUpInside" id="vCM-Ln-Rge"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoW-mw-QNE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Nh0-zo-TzO"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EoW-mw-QNE" firstAttribute="leading" secondItem="6c6-nt-EGC" secondAttribute="leading" id="72f-bg-37w"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Fj-BK-Vcv" secondAttribute="trailing" id="Ee4-UX-twg"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="top" secondItem="EoW-mw-QNE" secondAttribute="bottom" constant="10" id="F6I-aX-8b5"/>
-                            <constraint firstItem="EoW-mw-QNE" firstAttribute="top" secondItem="6c6-nt-EGC" secondAttribute="top" id="G3u-Ex-cxn"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="leading" secondItem="6c6-nt-EGC" secondAttribute="leadingMargin" id="Gq0-nw-tme"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="top" secondItem="6c6-nt-EGC" secondAttribute="topMargin" id="Q4l-Jm-GDj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EoW-mw-QNE" secondAttribute="trailing" id="Y7k-Zg-LoE"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="leading" secondItem="EoW-mw-QNE" secondAttribute="leading" id="c4W-uN-dyI"/>
-                            <constraint firstAttribute="trailing" secondItem="EoW-mw-QNE" secondAttribute="trailing" id="fDc-m1-l0X"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="top" secondItem="EoW-mw-QNE" secondAttribute="bottom" id="ka6-Me-9U6"/>
+                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="top" secondItem="Jw2-1d-k5M" secondAttribute="bottom" constant="10" id="S7k-xf-2Au"/>
+                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="centerX" secondItem="6c6-nt-EGC" secondAttribute="centerX" id="d7I-Bm-Vmq"/>
+                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="leading" secondItem="6c6-nt-EGC" secondAttribute="leading" id="duN-3Q-Sa7"/>
+                            <constraint firstItem="ahJ-qI-EM5" firstAttribute="centerX" secondItem="4Fj-BK-Vcv" secondAttribute="centerX" id="fHb-vK-DU2"/>
                             <constraint firstItem="ahJ-qI-EM5" firstAttribute="top" secondItem="4Fj-BK-Vcv" secondAttribute="bottom" constant="8" symbolic="YES" id="oWI-wI-Ru2"/>
-                            <constraint firstItem="EoW-mw-QNE" firstAttribute="leading" secondItem="6c6-nt-EGC" secondAttribute="leadingMargin" id="tTE-jx-3EL"/>
-                            <constraint firstItem="ahJ-qI-EM5" firstAttribute="centerX" secondItem="4Fj-BK-Vcv" secondAttribute="centerX" id="uRH-LH-QJt"/>
-                            <constraint firstItem="4Fj-BK-Vcv" firstAttribute="trailing" secondItem="EoW-mw-QNE" secondAttribute="trailing" id="uyO-CV-xSU"/>
-                            <constraint firstItem="ahJ-qI-EM5" firstAttribute="top" secondItem="4Fj-BK-Vcv" secondAttribute="bottom" constant="8" id="zAz-Dh-DLm"/>
+                            <constraint firstAttribute="trailing" secondItem="4Fj-BK-Vcv" secondAttribute="trailing" id="r5M-eC-ceQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Y7k-Zg-LoE"/>
-                                <exclude reference="tTE-jx-3EL"/>
-                                <exclude reference="Ee4-UX-twg"/>
-                                <exclude reference="Gq0-nw-tme"/>
-                                <exclude reference="Q4l-Jm-GDj"/>
-                                <exclude reference="ka6-Me-9U6"/>
-                                <exclude reference="zAz-Dh-DLm"/>
+                                <exclude reference="d7I-Bm-Vmq"/>
                             </mask>
                         </variation>
                     </view>
