@@ -8,7 +8,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
@@ -256,7 +256,7 @@ public class ChartXAxisRendererHorizontalBarChart: ChartXAxisRendererBarChart
         
         var position = CGPoint(x: 0.0, y: 0.0)
         
-        for (var i = 0; i < limitLines.count; i++)
+        for i in 0 ..< limitLines.count
         {
             let l = limitLines[i]
             
@@ -290,7 +290,7 @@ public class ChartXAxisRendererHorizontalBarChart: ChartXAxisRendererBarChart
             let label = l.label
             
             // if drawing the limit-value label is enabled
-            if (label.characters.count > 0)
+            if (l.drawLabelEnabled && label.characters.count > 0)
             {
                 let labelLineHeight = l.valueFont.lineHeight
                 

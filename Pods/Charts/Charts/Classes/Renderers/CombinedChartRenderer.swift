@@ -8,7 +8,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
@@ -29,7 +29,7 @@ public class CombinedChartRenderer: ChartDataRendererBase
     
     internal var _renderers = [ChartDataRendererBase]()
     
-    internal var _drawOrder: [CombinedChartView.CombinedChartDrawOrder] = [.Bar, .Bubble, .Line, .Candle, .Scatter]
+    internal var _drawOrder: [CombinedChartView.DrawOrder] = [.Bar, .Bubble, .Line, .Candle, .Scatter]
     
     public init(chart: CombinedChartView, animator: ChartAnimator, viewPortHandler: ChartViewPortHandler)
     {
@@ -121,11 +121,38 @@ public class CombinedChartRenderer: ChartDataRendererBase
     {
         for renderer in _renderers
         {
-            renderer.drawHighlighted(context: context, indices: indices)
+            var data: ChartData?
+            
+            if renderer is BarChartRenderer
+            {
+                data = (renderer as! BarChartRenderer).dataProvider?.barData
+            }
+            else if renderer is LineChartRenderer
+            {
+                data = (renderer as! LineChartRenderer).dataProvider?.lineData
+            }
+            else if renderer is CandleStickChartRenderer
+            {
+                data = (renderer as! CandleStickChartRenderer).dataProvider?.candleData
+            }
+            else if renderer is ScatterChartRenderer
+            {
+                data = (renderer as! ScatterChartRenderer).dataProvider?.scatterData
+            }
+            else if renderer is BubbleChartRenderer
+            {
+                data = (renderer as! BubbleChartRenderer).dataProvider?.bubbleData
+            }
+            
+            let dataIndex = data == nil ? nil : (chart?.data as? CombinedChartData)?.allData.indexOf(data!)
+            
+            let dataIndices = indices.filter{ $0.dataIndex == dataIndex || $0.dataIndex == -1 }
+            
+            renderer.drawHighlighted(context: context, indices: dataIndices)
         }
     }
     
-    public override func calcXBounds(chart chart: BarLineChartViewBase, xAxisModulus: Int)
+    public override func calcXBounds(chart chart: BarLineScatterCandleBubbleChartDataProvider, xAxisModulus: Int)
     {
         for renderer in _renderers
         {
@@ -167,7 +194,7 @@ public class CombinedChartRenderer: ChartDataRendererBase
     /// the order in which the provided data objects should be drawn.
     /// The earlier you place them in the provided array, the further they will be in the background.
     /// e.g. if you provide [DrawOrder.Bar, DrawOrder.Line], the bars will be drawn behind the lines.
-    public var drawOrder: [CombinedChartView.CombinedChartDrawOrder]
+    public var drawOrder: [CombinedChartView.DrawOrder]
     {
         get
         {

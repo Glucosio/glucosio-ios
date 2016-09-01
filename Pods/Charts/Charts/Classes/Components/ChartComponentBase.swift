@@ -8,7 +8,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
@@ -34,5 +34,5 @@ public class ChartComponentBase: NSObject
         super.init()
     }
 
-    public var isEnabled: Bool { return enabled; }
+    public var isEnabled: Bool { return enabled }
 }

@@ -49,13 +49,13 @@ static bool RLMInitializedObjectSchema(RLMObjectBase *obj) {
         }
     }
 
-    // set standalone accessor class
-    object_setClass(obj, obj->_objectSchema.standaloneClass);
+    // set unmanaged accessor class
+    object_setClass(obj, obj->_objectSchema.unmanagedClass);
     return true;
 }
 
 @implementation RLMObjectBase
-// standalone init
+// unmanaged init
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -252,7 +252,7 @@ static id RLMValidatedObjectForProperty(id obj, RLMProperty *prop, RLMSchema *sc
 }
 
 - (BOOL)isInvalidated {
-    // if not standalone and our accessor has been detached, we have been deleted
+    // if not unmanaged and our accessor has been detached, we have been deleted
     return self.class == _objectSchema.accessorClass && !_row.is_attached();
 }
 
@@ -321,20 +321,8 @@ static id RLMValidatedObjectForProperty(id obj, RLMProperty *prop, RLMSchema *sc
 
 @end
 
-void RLMObjectBaseSetRealm(__unsafe_unretained RLMObjectBase *object, __unsafe_unretained RLMRealm *realm) {
-    if (object) {
-        object->_realm = realm;
-    }
-}
-
 RLMRealm *RLMObjectBaseRealm(__unsafe_unretained RLMObjectBase *object) {
     return object ? object->_realm : nil;
-}
-
-void RLMObjectBaseSetObjectSchema(__unsafe_unretained RLMObjectBase *object, __unsafe_unretained RLMObjectSchema *objectSchema) {
-    if (object) {
-        object->_objectSchema = objectSchema;
-    }
 }
 
 RLMObjectSchema *RLMObjectBaseObjectSchema(__unsafe_unretained RLMObjectBase *object) {
