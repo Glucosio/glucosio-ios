@@ -68,6 +68,9 @@
 /* No description supplied by the engineer */
 "helloactivity_spinner_diabetes_type_2" = "Type 2";
 
+"helloactivity_spinner_diabetes_type_3" = "Gestational";
+"helloactivity_spinner_diabetes_type_4" = "LADA";
+
 /* No description supplied by the engineer */
 "helloactivity_spinner_preferred_unit" = "Preferred unit";
 

@@ -60,7 +60,9 @@
                             kGLUCModelAttributeKey : kGLUCUserIllnessTypePropertyKey,
                             kGLUCModelAttributeTitleKey : @"helloactivity_spinner_diabetes_type",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_diabetes_type_1"), GLUCLoc(@"helloactivity_spinner_diabetes_type_2")],
+                            kGLUCModelPotentialValuesKey : @[GLUCLoc(@"helloactivity_spinner_diabetes_type_1"), GLUCLoc(@"helloactivity_spinner_diabetes_type_2"),
+                                GLUCLoc(@"helloactivity_spinner_diabetes_type_3"),
+                                GLUCLoc(@"helloactivity_spinner_diabetes_type_4")],
                             kGLUCModelDefaultIndexKey : @1,
                     },
                     kGLUCUserPreferredBloodGlucoseUnitsPropertyKey : @{

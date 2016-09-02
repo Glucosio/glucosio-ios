@@ -24,7 +24,7 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 @property (nonatomic, readwrite, strong) NSString *countryPreference; // ISO code (language choice)
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *age;
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *gender; // 0 - male, 1 - female, 2 - other
-@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *illnessType; // 0 - type 1, 1 - type 2
+@property (nonatomic, readwrite, strong) NSNumber<RLMInt> *illnessType; // 0 - type 1, 1 - type 2, 2 - Gestational, 3 - LADA
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredBloodGlucoseUnitOfMeasure; // 0 - mg/dL, 1 - mmol/L
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredBodyWeightUnitOfMeasure; // 0 - kilograms, 1 - pounds
 @property (nonatomic, readwrite, strong) NSNumber<RLMInt> *preferredA1CUnitOfMeasure; // 0 - percentage, 1 - mmol/mol
