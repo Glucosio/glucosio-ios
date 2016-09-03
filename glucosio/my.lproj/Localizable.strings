@@ -537,7 +537,7 @@
 "freestylelibre_nfc_not_enabled" = "NFC ကို ပိတ်ထားပါသည်။";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "HBA1C တွက်ရန် အချက်အလက် မလုံလောက်ပါ";
+"overview_hb1ac_error_no_data" = "HbA1c တွက်ရန် အချက်အလက် မလုံလောက်ပါ";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

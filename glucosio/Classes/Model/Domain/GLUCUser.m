@@ -81,7 +81,7 @@
                     },
                     kGLUCUserPreferredA1CUnitsPropertyKey : @{
                             kGLUCModelAttributeKey : kGLUCUserPreferredA1CUnitsPropertyKey,
-                            kGLUCModelAttributeTitleKey : @"Preferred A1C Unit",
+                            kGLUCModelAttributeTitleKey : @"Preferred HbA1c Unit",
                             kGLUCModelAttributeTypeKey : @"NSNumber",
                             kGLUCModelPotentialValuesKey : @[GLUCLoc(@"Percentage"), GLUCLoc(@"mmol/mol")],
                             kGLUCModelDefaultIndexKey : @0,
@@ -265,7 +265,7 @@
     }
 
     if (retVal.length == 0) {
-        retVal = GLUCLoc(@"Not enough data to calculate HBA1C");
+        retVal = GLUCLoc(@"Not enough data to calculate HbA1c");
         suffix = @"";
     }
 

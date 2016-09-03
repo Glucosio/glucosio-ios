@@ -512,7 +512,7 @@
 "freestylelibre_nfc_not_enabled" = "NFC ໄດ້ຖືກປິດນຳໃຊ້.";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "ບໍ່ມີຂໍ້ມູນພຽງພໍໃນການປະມວນຜົນ HBA1C";
+"overview_hb1ac_error_no_data" = "ບໍ່ມີຂໍ້ມູນພຽງພໍໃນການປະມວນຜົນ HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

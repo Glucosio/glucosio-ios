@@ -23,7 +23,7 @@
         self.model = [(GLUCAppDelegate *) [[UIApplication sharedApplication] delegate] appModel];
     }
 
-    self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1C:")];
+    self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1c:")];
 
     // TODO: too specific to blood glucose readings.  For now the overview controller only shows glucose,
     // but at some point other readings will probably need to be displayed.

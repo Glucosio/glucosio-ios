@@ -381,7 +381,7 @@
 "fab_cholesterol" = "Nivo holesterola";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HBA1C očitanje";
+"fab_HB1AC" = "HbA1c očitanje";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Nivo šećera u krvi";
@@ -399,7 +399,7 @@
 "freestylelibre_nfc_error" = "Greška pri otvaranju NFC konekcije!";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Nema dovoljno podataka za računanje HBA1C";
+"overview_hb1ac_error_no_data" = "Nema dovoljno podataka za računanje HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

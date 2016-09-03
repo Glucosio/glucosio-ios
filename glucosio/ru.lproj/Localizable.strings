@@ -558,7 +558,7 @@
 "freestylelibre_nfc_error" = "Ошибка открытия соединения NFC!";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Не достаточно данных для расчёта HBA1C";
+"overview_hb1ac_error_no_data" = "Не достаточно данных для расчёта HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

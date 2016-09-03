@@ -425,7 +425,7 @@
 "dialog_add_cholesterol_hdl" = "HDL холестерол";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HBA1C";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Добавете измерване на глюкоза";
@@ -437,7 +437,7 @@
 "title_activity_add_cholesterol" = "Добавете ниво на холестерол";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Добавете HBA1C";
+"title_activity_add_hb1ac" = "Добавете HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Добавете кетони";
@@ -458,7 +458,7 @@
 "fab_cholesterol" = "Ниво на холестерола";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HBA1C измерване";
+"fab_HB1AC" = "HbA1c измерване";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Ниво на кръвната захар";
@@ -485,10 +485,10 @@
 "dialog_add_glucose_freestylelibre_success" = "Успешно добавени измервания от FreeStyle Libre";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Недостатъчно данни за изчисляване на HBA1C";
+"overview_hb1ac_error_no_data" = "Недостатъчно данни за изчисляване на HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";
 
 /* No description supplied by the engineer */
 "dialog_add_glucose_freestylelibre_added" = "Добавено от вашия FreeStyle Libre";

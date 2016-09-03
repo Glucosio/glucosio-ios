@@ -599,10 +599,10 @@
 "dialog_add_glucose_freestylelibre_success" = "Adăugat cu succes citirea de la FreeSyle Libre";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Nu sunt suficiente date pentru a calcula HBA1C";
+"overview_hb1ac_error_no_data" = "Nu sunt suficiente date pentru a calcula HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";
 
 /* No description supplied by the engineer */
 "dialog_add_glucose_freestylelibre_added" = "Adăugat de FreeStyle Libre®";

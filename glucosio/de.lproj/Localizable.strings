@@ -471,7 +471,7 @@
 "dialog_add_cholesterol_hdl" = "HDL Cholesterin";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HBA1C";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Blutzuckermessung hinzufügen";
@@ -483,7 +483,7 @@
 "title_activity_add_cholesterol" = "Cholesterinwert hinzufügen";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "HBA1C hinzufügen";
+"title_activity_add_hb1ac" = "HbA1c hinzufügen";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Kotonin hinzufügen";
@@ -522,7 +522,7 @@
 "freestylelibre_nfc_error" = "Fehler bei der NFC Verbindung!";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Nicht genug Daten vorhanden um den HBA1C zu berechnen";
+"overview_hb1ac_error_no_data" = "Nicht genug Daten vorhanden um den HbA1c zu berechnen";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

@@ -471,13 +471,13 @@
 "fab_cholesterol" = "Kolesterol Düzeyi";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HBA1C Okunuyor";
+"fab_HB1AC" = "HbA1c Okunuyor";
 
 /* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "NFC devre dışı.";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "HBA1C hesaplamak için yeterli veri yok";
+"overview_hb1ac_error_no_data" = "HbA1c hesaplamak için yeterli veri yok";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";

@@ -541,7 +541,7 @@
 "dialog_add_cholesterol_hdl" = "HDL Cholesterol";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HBA1C";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Add Glucose reading";
@@ -553,7 +553,7 @@
 "title_activity_add_cholesterol" = "Add Cholesterol Level";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Add HBA1C";
+"title_activity_add_hb1ac" = "Add HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Add Ketones";
@@ -574,7 +574,7 @@
 "fab_cholesterol" = "Cholesterol Level";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HBA1C Reading";
+"fab_HB1AC" = "HbA1c Reading";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Blood Glucose Level";
@@ -601,10 +601,10 @@
 "dialog_add_glucose_freestylelibre_success" = "Successfully added reading from FreeStyle Libre";
 
 /* No description supplied by the engineer */
-"overview_hb1ac_error_no_data" = "Not enough data to calculate HBA1C";
+"overview_hb1ac_error_no_data" = "Not enough data to calculate HbA1c";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HBA1C:";
+"overview_hb1ac" = "HbA1c:";
 
 /* No description supplied by the engineer */
 "dialog_add_glucose_freestylelibre_added" = "Added from your FreeStyle Libre";
