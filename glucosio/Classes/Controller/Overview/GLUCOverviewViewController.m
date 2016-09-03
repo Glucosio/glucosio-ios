@@ -24,7 +24,7 @@
     }
 
     self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1C:")];
-
+    
     // TODO: too specific to blood glucose readings.  For now the overview controller only shows glucose,
     // but at some point other readings will probably need to be displayed.
 
@@ -91,6 +91,7 @@
     dataSet.circleRadius = 4.0f;
     //     set1.setDrawCircleHole(true);
     dataSet.drawCircleHoleEnabled = YES;
+    dataSet.circleHoleRadius = 2.0f;
     //     set1.disableDashedLine();
     // ???
     //     set1.setFillAlpha(255);
@@ -119,9 +120,10 @@
     self.chartView.drawGridBackgroundEnabled = NO;
     self.chartView.drawBordersEnabled = NO;
     self.chartView.backgroundColor = [UIColor whiteColor];
-    self.chartView.autoScaleMinMaxEnabled = YES;
+    self.chartView.autoScaleMinMaxEnabled = NO;
     self.chartView.descriptionText = @"";
-    self.chartView.legend.enabled = NO;
+    self.chartView.pinchZoomEnabled = YES;
+    self.chartView.legend.enabled = YES;
     [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
     [[self.chartView getAxis:AxisDependencyLeft] setDrawGridLinesEnabled:NO];
     [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
@@ -130,6 +132,8 @@
     [self.chartView.xAxis setDrawGridLinesEnabled:NO];
     if (data)
         self.chartView.data = data;
+    [self.chartView setVisibleXRangeMaximum:20];
+    [self.chartView moveViewToX:data.xValCount];
 }
 
 - (void)chartDaily {
@@ -143,10 +147,7 @@
 
     for (GLUCBloodGlucoseReading *reading in allReadings) {
         if ([reading.creationDate gluc_isOnOrAfter:startOfMonth]) {
-            NSInteger day = [[NSCalendar currentCalendar] gluc_dayFromDate:reading.creationDate];
-            NSInteger month = [[NSCalendar currentCalendar] gluc_monthFromDate:reading.creationDate];
-            NSInteger year = [[NSCalendar currentCalendar] gluc_yearFromDate:reading.creationDate];
-            NSString *dayKey = [NSString stringWithFormat:@"%04ld (%02ld/%02ld)", (long) year, (long) month, (long) day];
+            NSString *dayKey = [df stringFromDate:reading.creationDate];
             NSMutableArray *averageForWeek = [buckets valueForKey:dayKey];
             if (!averageForWeek) {
                 averageForWeek = [NSMutableArray array];

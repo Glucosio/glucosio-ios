@@ -23,8 +23,12 @@
 - (BOOL)saveReading:(GLUCReading *)reading;
 - (BOOL)deleteReading:(GLUCReading *)reading;
 
-- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType;
+- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType sortByDateAscending:(BOOL)ascending;
+
+- (RLMResults<GLUCReading *> *)readingsOfType:(Class)readingType fromDate:(NSDate *)from toDate:(NSDate *)to sortByDateAscending:(BOOL)ascending;
+
 - (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending;
+
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 
 - (void) saveAll;

@@ -96,12 +96,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQM-kT-tBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="29"/>
+            <point key="canvasLocation" x="1640" y="177"/>
         </scene>
         <!--Overview-->
         <scene sceneID="Kcj-35-uQX">
             <objects>
-                <viewController storyboardIdentifier="Overview" title="Overview" id="gMQ-s1-gWH" customClass="GLUCOverviewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Overview" title="Overview" id="gMQ-s1-gWH" customClass="OverViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0us-Xl-nBC"/>
                         <viewControllerLayoutGuide type="bottom" id="pr5-LY-EZ8"/>
@@ -118,7 +118,7 @@
                                     <segment title="Month"/>
                                 </segments>
                                 <connections>
-                                    <action selector="updateChartScope:" destination="gMQ-s1-gWH" eventType="valueChanged" id="lN3-Py-1Ng"/>
+                                    <action selector="updateChartScope:" destination="gMQ-s1-gWH" eventType="valueChanged" id="OhT-S0-mxu"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-9r-JaW" customClass="LineChartView" customModule="Charts">
@@ -129,33 +129,43 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-zg-nQX">
-                                <rect key="frame" x="20" y="283" width="560" height="268"/>
+                                <rect key="frame" x="20" y="375" width="560" height="176"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="BJz-wv-enh"/>
-                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="XhO-35-FDH"/>
-                                </connections>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-BT-yuf">
+                                <rect key="frame" x="0.0" y="275" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ehk-5T-hdX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="4DF-fH-yjc"/>
+                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="2vG-RG-gFz"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="7fR-2R-e0w" secondAttribute="trailing" id="0gO-rd-0VJ"/>
+                            <constraint firstItem="5Dx-zg-nQX" firstAttribute="top" secondItem="yJX-BT-yuf" secondAttribute="bottom" id="1v4-lc-iCQ"/>
                             <constraint firstItem="5Dx-zg-nQX" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="8iT-OF-n3S"/>
                             <constraint firstItem="7fR-2R-e0w" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="8rx-jR-C5G"/>
+                            <constraint firstItem="yJX-BT-yuf" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leading" id="P15-OE-k5r"/>
                             <constraint firstItem="7fR-2R-e0w" firstAttribute="top" secondItem="GZt-RN-3CF" secondAttribute="topMargin" constant="10" id="Pda-sw-Z0y"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="YiA-E8-pJV"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="trailing" secondItem="GZt-RN-3CF" secondAttribute="trailingMargin" id="ZoM-o2-Pk1"/>
-                            <constraint firstItem="5Dx-zg-nQX" firstAttribute="top" secondItem="hdc-9r-JaW" secondAttribute="bottom" constant="8" id="cMh-hJ-Zcx"/>
                             <constraint firstItem="5Dx-zg-nQX" firstAttribute="trailing" secondItem="GZt-RN-3CF" secondAttribute="trailingMargin" id="jdV-R6-b8W"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="top" secondItem="7fR-2R-e0w" secondAttribute="bottom" constant="8" id="v6z-cu-6UZ"/>
+                            <constraint firstItem="yJX-BT-yuf" firstAttribute="top" secondItem="hdc-9r-JaW" secondAttribute="bottom" id="w4z-ai-JKU"/>
                             <constraint firstItem="pr5-LY-EZ8" firstAttribute="top" secondItem="5Dx-zg-nQX" secondAttribute="bottom" id="wNY-F7-dop"/>
+                            <constraint firstAttribute="trailing" secondItem="yJX-BT-yuf" secondAttribute="trailing" id="xdq-gn-yy9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="OverviewIcon" id="Htv-gh-Mqa"/>
                     <connections>
-                        <outlet property="chartScopeControl" destination="7fR-2R-e0w" id="ye0-hi-Bzj"/>
-                        <outlet property="chartView" destination="hdc-9r-JaW" id="lWf-h2-Z6a"/>
-                        <outlet property="tableView" destination="5Dx-zg-nQX" id="N8I-BA-UTX"/>
+                        <outlet property="chartScopeControl" destination="7fR-2R-e0w" id="Iv9-5g-3AZ"/>
+                        <outlet property="chartView" destination="hdc-9r-JaW" id="wAT-ZK-o0I"/>
+                        <outlet property="graphPicker" destination="yJX-BT-yuf" id="FDy-xf-4Tu"/>
+                        <outlet property="tableView" destination="5Dx-zg-nQX" id="whc-pa-NKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x11-Ds-9Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,14 +182,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gMQ-s1-gWH" kind="relationship" relationship="viewControllers" id="8v0-7x-Hg1"/>
+                        <segue destination="gMQ-s1-gWH" kind="relationship" relationship="viewControllers" id="0L4-TJ-jAK"/>
                         <segue destination="3zH-XN-3jy" kind="relationship" relationship="viewControllers" id="Nwb-TY-dNG"/>
                         <segue destination="1u4-v0-Rl5" kind="relationship" relationship="viewControllers" id="ZiY-V0-sKS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hn-O8-deJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="375"/>
+            <point key="canvasLocation" x="678" y="366"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yMi-LM-mRX">
@@ -189,7 +199,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVQ-yh-Wi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516.5" y="608"/>
+            <point key="canvasLocation" x="1640.5" y="668"/>
         </scene>
         <!--Reading Editor View Controller-->
         <scene sceneID="0eF-4u-A8e">
@@ -251,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbs-fC-nD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="-454"/>
+            <point key="canvasLocation" x="644" y="-518"/>
         </scene>
     </scenes>
     <resources>

@@ -34,7 +34,7 @@
                 [self.model deleteReading:self.readings[(NSUInteger) indexPath.row]];
                                                                self.historyTableView.editing = NO;
 
-                                                               self.readings = [self.model allReadingsOfType:self.readingClass];
+                                                               self.readings = [self.model allReadingsOfType:self.readingClass sortByDateAscending:NO];
                                                                [self.historyTableView reloadData];
     }];
     
@@ -63,7 +63,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.readings = [self.model allReadingsOfType:self.readingClass];
+    self.readings = [self.model allReadingsOfType:self.readingClass sortByDateAscending:NO];
 
     [self.historyTableView reloadData];
     [super viewWillAppear:animated];
@@ -83,7 +83,7 @@
 }
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.readingClass = self.readingTypes[row];
-    self.readings = [self.model allReadingsOfType:self.readingClass];
+    self.readings = [self.model allReadingsOfType:self.readingClass sortByDateAscending:NO];
 
     [self.historyTableView reloadData];
 }
