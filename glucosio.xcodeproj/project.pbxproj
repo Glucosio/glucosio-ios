@@ -545,7 +545,7 @@
 		5511939D1BC3EF60007CD147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DFC3CE811C763191003A22D9 /* GLUCWebViewController */,
+				DFC3CE811C763191003A22D9 /* Web */,
 				5511939E1BC3EF60007CD147 /* About */,
 				551193A11BC3EF60007CD147 /* Application */,
 				551193A41BC3EF60007CD147 /* Feedback */,
@@ -787,13 +787,13 @@
 			name = Privacy;
 			sourceTree = "<group>";
 		};
-		DFC3CE811C763191003A22D9 /* GLUCWebViewController */ = {
+		DFC3CE811C763191003A22D9 /* Web */ = {
 			isa = PBXGroup;
 			children = (
 				DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */,
 				DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */,
 			);
-			name = GLUCWebViewController;
+			name = Web;
 			sourceTree = "<group>";
 		};
 		E361650FCAC6BC1A71F98212 /* Frameworks */ = {
