@@ -136,6 +136,26 @@
 
 // Initial setup
 - (void)configureModel {
+    
+    // Perform any required schema migrations...
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    config.schemaVersion = kGLUCModelSchemaVersion;
+    
+    config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+        if (oldSchemaVersion < kGLUCModelSchemaVersion) {
+            // Nothing to do yet
+            // Realm will automatically detect new properties and removed properties
+            // And will update the schema on disk automatically
+        }
+    };
+    
+    // Tell Realm to use this new configuration object for the default Realm
+    [RLMRealmConfiguration setDefaultConfiguration:config];
+    
+    // Now that we've told Realm how to handle the schema change, opening the file
+    // will automatically perform the migration
+    [RLMRealm defaultRealm];
+    
     RLMResults<GLUCBloodGlucoseReading *> *blood_glucose_readings = [GLUCBloodGlucoseReading allObjects];
 
     if (blood_glucose_readings.count == 0) {

@@ -27,17 +27,24 @@ static NSString *const kGLUCModelCreationDatePropertyKey = @"readingDate";
 static NSString *const kGLUCModelCreationTimePropertyKey = @"readingTime";
 static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 
+static NSString *const kGLUCModelAPISubmissionDateKey = @"apiSubmissionDate";
+
 @interface GLUCModel : RLMObject
 
 @property (nonatomic, readwrite, strong) NSString *glucID;
 @property (nonatomic, readwrite, strong) NSDate *creationDate;
 @property (nonatomic, readwrite, strong) NSDate *modificationDate;
+// Added to support tracking whether a reading has been sent to the API or not
+@property (nonatomic, readwrite, strong) NSDate *apiSubmissionDate;
 
 @property (nonatomic, readwrite, strong) NSNumber *ownerId;
 
 + (NSDictionary *) schema; // subclasses can customize
 
 + (NSString *) title; // subclasses must override
+
+// We will potentially restrict API submission by reading type
++ (BOOL) allowResearchCollection; // subclasses must override
 
 - (instancetype) init;
 
@@ -67,4 +74,6 @@ static NSString *const kGLUCModelModificationDateKey = @"modificationDate";
 - (BOOL) isKey:(NSString *)key ofType:(NSString *)type;
 - (BOOL) isDateKey:(NSString *)key;
 - (BOOL) isTimeKey:(NSString *)key;
+
+
 @end

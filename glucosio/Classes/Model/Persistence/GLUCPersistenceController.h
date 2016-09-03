@@ -6,6 +6,9 @@
 #import "GLUCBloodGlucoseReading.h"
 #import <Realm/Realm.h>
 
+// Increment this for each schema change
+static NSInteger const kGLUCModelSchemaVersion = 1;
+
 @interface GLUCPersistenceController : NSObject
 
 //@property (strong, nonatomic) FMDatabase *db;
