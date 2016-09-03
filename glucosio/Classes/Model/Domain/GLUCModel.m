@@ -23,6 +23,9 @@
     return @[@"ownerId"];
 }
 
++ (BOOL) allowResearchCollection {
+    return true;
+}
 
 - (instancetype) init {
     if ((self = [super init]) != nil) {
