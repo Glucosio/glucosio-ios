@@ -524,7 +524,7 @@
 "fab_cholesterol" = "Taux de cholestérol";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "Valeur de l'Hb1Ac";
+"fab_HbA1c" = "Valeur de l'Hb1Ac";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Glycémie";

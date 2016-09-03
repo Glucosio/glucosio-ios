@@ -539,7 +539,7 @@
 "dialog_add_cholesterol_hdl" = "Colesterolo HDL";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Aggiungi livello di Glucosio";
@@ -572,7 +572,7 @@
 "fab_cholesterol" = "Livello di colesterolo";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "Emoglobina glicata (HB1AC)";
+"fab_HbA1c" = "Emoglobina glicata (HbA1c)";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Glicemia";

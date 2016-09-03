@@ -572,7 +572,7 @@
 "fab_cholesterol" = "Razina kolesterola";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HB1AC očitanja";
+"fab_HbA1c" = "HbA1c očitanja";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Razina glukoze u krvi";

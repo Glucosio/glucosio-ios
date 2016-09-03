@@ -4,7 +4,7 @@
 #import "GLUCHistoryViewController.h"
 #import "NSCalendar+GLUCAdditions.h"
 #import "GLUCBloodGlucoseReading.h"
-#import "GLUCHB1ACReading.h"
+#import "GLUCHbA1cReading.h"
 #import "GLUCCholesterolReading.h"
 #import "GLUCBloodPressureReading.h"
 #import "GLUCKetonesReading.h"

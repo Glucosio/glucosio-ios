@@ -539,7 +539,7 @@
 "dialog_add_cholesterol_hdl" = "Colesterol HDL";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Adaugă citire a glucozei";
@@ -551,7 +551,7 @@
 "title_activity_add_cholesterol" = "Adaugă nivelul de colesterol";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Adaugă HB1AC";
+"title_activity_add_hb1ac" = "Adaugă HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Adaugă ketone";
@@ -572,7 +572,7 @@
 "fab_cholesterol" = "Nivelul de colesterol";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "Citiri HB1AC";
+"fab_HbA1c" = "Citiri HbA1c";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Nivel de glucoză în sânge";

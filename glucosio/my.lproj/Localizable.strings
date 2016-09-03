@@ -489,7 +489,7 @@
 "dialog_add_cholesterol_hdl" = "HDL ကိုလက်စထရော";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "ဂလူးကို့စ် ဖတ်ခြင်း ထည့်ရန်";
@@ -501,7 +501,7 @@
 "title_activity_add_cholesterol" = "ကိုလက်စထရော အဆင့် ထည့်ရန်";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "HB1AC ထည့်ရန်";
+"title_activity_add_hb1ac" = "HbA1c ထည့်ရန်";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Ketone များ ထည့်ရန်";
@@ -522,7 +522,7 @@
 "fab_cholesterol" = "ကိုလက်စထရော အဆင့်";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HB1AC မှတ်သားချက်";
+"fab_HbA1c" = "HbA1c မှတ်သားချက်";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "သွေးရှိ ဂလူးကို့စ် အဆင့်";

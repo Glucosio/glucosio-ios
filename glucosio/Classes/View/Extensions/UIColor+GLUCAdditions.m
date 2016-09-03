@@ -45,8 +45,8 @@
     return UIColorWithHEX(0xE84579);
 }
 
-//    <color name="glucoso_fab_HB1AC">#E86445</color>
-+ (UIColor *)glucosio_fab_HB1AC {
+//    <color name="glucoso_fab_HbA1c">#E86445</color>
++ (UIColor *)glucosio_fab_HbA1c {
     return UIColorWithHEX(0xE86445);
 }
 

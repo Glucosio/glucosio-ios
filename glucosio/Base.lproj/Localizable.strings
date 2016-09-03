@@ -576,7 +576,7 @@
 "fab_cholesterol" = "Cholesterol Level";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HbA1c Reading";
+"fab_HbA1c" = "HbA1c Reading";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Blood Glucose Level";

@@ -381,7 +381,7 @@
 "fab_cholesterol" = "Nivo holesterola";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HbA1c očitanje";
+"fab_HbA1c" = "HbA1c očitanje";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Nivo šećera u krvi";

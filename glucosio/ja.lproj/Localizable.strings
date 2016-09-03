@@ -498,7 +498,7 @@
 "dialog_add_cholesterol_hdl" = "HDL コレステロール";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "血糖の測定値を追加";
@@ -510,7 +510,7 @@
 "title_activity_add_cholesterol" = "コレステ ロール値を追加";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "HB1AC を追加";
+"title_activity_add_hb1ac" = "HbA1c を追加";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "ケトンを追加";
@@ -531,7 +531,7 @@
 "fab_cholesterol" = "コレステロール値";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HB1AC 測定値";
+"fab_HbA1c" = "HbA1c 測定値";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "血糖値";
@@ -549,4 +549,4 @@
 "freestylelibre_nfc_error" = "NFC 接続を開くときにエラー!";
 
 /* No description supplied by the engineer */
-"overview_hb1ac" = "HB1AC:";
+"overview_hb1ac" = "HbA1c:";

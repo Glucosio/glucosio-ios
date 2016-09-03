@@ -441,7 +441,7 @@
 "dialog_add_cholesterol_hdl" = "HDL Kolesterol";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_weight" = "Vücut Ağırlığı Ekle";
@@ -450,7 +450,7 @@
 "title_activity_add_cholesterol" = "Kolesterol Düzeyini Ekle";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "HB1AC Ekle";
+"title_activity_add_hb1ac" = "HbA1c Ekle";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Keton Ekle";
@@ -471,7 +471,7 @@
 "fab_cholesterol" = "Kolesterol Düzeyi";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HbA1c Okunuyor";
+"fab_HbA1c" = "HbA1c Okunuyor";
 
 /* No description supplied by the engineer */
 "freestylelibre_nfc_not_enabled" = "NFC devre dışı.";

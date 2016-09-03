@@ -435,7 +435,7 @@
 "dialog_add_cholesterol_hdl" = "HDL cholesterol";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Přidat hodnotu cukru";
@@ -447,7 +447,7 @@
 "title_activity_add_cholesterol" = "Přidat hladinu cholesterolu";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Přidat HB1AC";
+"title_activity_add_hb1ac" = "Přidat HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Přidat ketony";
@@ -468,7 +468,7 @@
 "fab_cholesterol" = "Hladina cholesterolu";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "Hodnota HB1AC";
+"fab_HbA1c" = "Hodnota HbA1c";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Hladina glukózy v krvi";

@@ -483,7 +483,7 @@
 "dialog_add_cholesterol_hdl" = "כולסטרול HDL";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "הוספת קריאת סוכר";
@@ -495,7 +495,7 @@
 "title_activity_add_cholesterol" = "הוספת רמת כולסטרול";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "הוספת HB1AC";
+"title_activity_add_hb1ac" = "הוספת HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_pressure" = "הוספת לחץ דם";
@@ -513,7 +513,7 @@
 "fab_cholesterol" = "רמת הכולסטרול";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "קריאת HB1AC";
+"fab_HbA1c" = "קריאת HbA1c";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "רמת סוכר בדם";

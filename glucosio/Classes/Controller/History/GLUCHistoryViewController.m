@@ -4,7 +4,7 @@
 #import "GLUCAppearanceController.h"
 #import "GLUCReadingEditorViewController.h"
 #import "GLUCBloodGlucoseReading.h"
-#import "GLUCHB1ACReading.h"
+#import "GLUCHBA1CReading.h"
 #import "GLUCCholesterolReading.h"
 #import "GLUCBloodPressureReading.h"
 #import "GLUCKetonesReading.h"

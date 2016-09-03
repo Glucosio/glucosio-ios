@@ -11,7 +11,7 @@
 + (UIColor *)glucosio_pink_dark;
 + (UIColor *)glucosio_accent;
 + (UIColor *)glucosio_fab_glucose;
-+ (UIColor *)glucosio_fab_HB1AC;
++ (UIColor *)glucosio_fab_HbA1c;
 + (UIColor *)glucosio_fab_cholesterol;
 + (UIColor *)glucosio_fab_pressure;
 + (UIColor *)glucosio_fab_ketonest;

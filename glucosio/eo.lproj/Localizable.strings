@@ -348,7 +348,7 @@
 "dialog_add_cholesterol_hdl" = "HDL-kolesterolo";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Aldoni legedon de glukozo";
@@ -357,7 +357,7 @@
 "title_activity_add_cholesterol" = "Aldoni kolesterolnivelon";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Aldoni HB1AC";
+"title_activity_add_hb1ac" = "Aldoni HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_ketone" = "Aldoni ketonojn";
@@ -375,7 +375,7 @@
 "fab_cholesterol" = "Kolesterolnivelo";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HB1AC-legado";
+"fab_HbA1c" = "HbA1c-legado";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Sangoglukozonivelo";

@@ -458,7 +458,7 @@
 "fab_cholesterol" = "Ниво на холестерола";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HbA1c измерване";
+"fab_HbA1c" = "HbA1c измерване";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Ниво на кръвната захар";

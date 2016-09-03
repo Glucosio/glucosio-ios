@@ -3,7 +3,7 @@
 #import "GLUCRange.h"
 #import "GLUCReading.h"
 #import "GLUCBloodGlucoseReading.h"
-#import "GLUCHB1ACReading.h"
+#import "GLUCHbA1cReading.h"
 #import "GLUCCholesterolReading.h"
 #import "GLUCBloodPressureReading.h"
 #import "GLUCKetonesReading.h"
@@ -232,7 +232,7 @@
 
 // all supported reading types
 - (NSArray *) readingTypes {
-    return @[GLUCBloodGlucoseReading.class, GLUCHB1ACReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class, GLUCInsulinIntakeReading.class];
+    return @[GLUCBloodGlucoseReading.class, GLUCHbA1cReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class, GLUCInsulinIntakeReading.class];
 }
 
 - (NSString *) hb1acAverageValue {

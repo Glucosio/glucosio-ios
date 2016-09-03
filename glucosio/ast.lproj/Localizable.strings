@@ -465,7 +465,7 @@
 "dialog_add_cholesterol_hdl" = "Colesterol HDL";
 
 /* No description supplied by the engineer */
-"dialog_add_hb1ac" = "HB1AC";
+"dialog_add_hb1ac" = "HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_glucose" = "Amiestu de llectura de glucosa";
@@ -477,7 +477,7 @@
 "title_activity_add_cholesterol" = "Amiestu de nivel de colesterol";
 
 /* No description supplied by the engineer */
-"title_activity_add_hb1ac" = "Amiestu de HB1AC";
+"title_activity_add_hb1ac" = "Amiestu de HbA1c";
 
 /* No description supplied by the engineer */
 "title_activity_add_pressure" = "Amestadura de presión del sangre";
@@ -492,7 +492,7 @@
 "fab_cholesterol" = "Nivel de colesterol";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "Llectura HB1AC";
+"fab_HbA1c" = "Llectura HbA1c";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Nivel de glucosa en sangre";

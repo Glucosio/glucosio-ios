@@ -504,7 +504,7 @@
 "fab_cholesterol" = "Cholesterinspiegel";
 
 /* No description supplied by the engineer */
-"fab_HB1AC" = "HB1AC Wert";
+"fab_HbA1c" = "HbA1c Wert";
 
 /* No description supplied by the engineer */
 "fab_glucose" = "Blutzuckerspiegel";

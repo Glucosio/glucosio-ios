@@ -5,7 +5,7 @@
 #import "GLUCBodyWeightReading.h"
 #import "GLUCBloodPressureReading.h"
 #import "GLUCCholesterolReading.h"
-#import "GLUCHB1ACReading.h"
+#import "GLUCHbA1cReading.h"
 #import "GLUCInsulinIntakeReading.h"
 #import "GLUCKetonesReading.h"
 #import "GLUCBloodGlucoseReading.h"
@@ -62,7 +62,7 @@
  int reading;
  Date created;
  
- class HB1ACReading
+ class HbA1cReading
  @PrimaryKey long id;
  double reading; <-- Convert from int to double
  Date created;
@@ -105,7 +105,7 @@
             GLUCBloodPressureReading.class,
             GLUCBodyWeightReading.class,
             GLUCCholesterolReading.class,
-            GLUCHB1ACReading.class,
+            GLUCHbA1cReading.class,
             GLUCInsulinIntakeReading.class,
             GLUCKetonesReading.class
     ];
