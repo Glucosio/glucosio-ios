@@ -7,5 +7,5 @@
 #import "GLUCReading.h"
 
 
-@interface GLUCHB1ACReading : GLUCReading
+@interface GLUCHbA1cReading : GLUCReading
 @end

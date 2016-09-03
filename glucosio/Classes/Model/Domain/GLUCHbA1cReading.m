@@ -3,15 +3,15 @@
 // Copyright (c) 2016 Glucosio.org. All rights reserved.
 //
 
-#import "GLUCHB1ACReading.h"
+#import "GLUCHbA1cReading.h"
 
 
-@implementation GLUCHB1ACReading {
+@implementation GLUCHbA1cReading {
 
 }
 
 + (NSString *)title {
-    return GLUCLoc(@"HB1AC Reading");
+    return GLUCLoc(@"HbA1c Reading");
 }
 
 @end
