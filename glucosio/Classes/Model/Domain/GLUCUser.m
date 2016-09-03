@@ -137,7 +137,7 @@
 
 - (NSArray *)requiredStartProperties {
     NSArray *retVal = nil;
-    NSDictionary *mySchema = [[self class] schema];
+    NSDictionary *mySchema = [[(id)self class] schema];
     if (mySchema) {
         retVal = mySchema[kGLUCModelRequiredStartPropertiesKey];
     }
@@ -153,7 +153,7 @@
 
 - (NSArray *)settingsProperties {
     NSArray *retVal = nil;
-    NSDictionary *mySchema = [[self class] schema];
+    NSDictionary *mySchema = [[(id)self class] schema];
     if (mySchema) {
         retVal = mySchema[kGLUCModelSettingsPropertiesKey];
     }
