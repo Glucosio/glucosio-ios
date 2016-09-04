@@ -77,6 +77,13 @@
     self.rowValues = @[lastReading, [self hb1acAverageValue]];
 
     [self.tableView reloadData];
+    
+    // Fixes an issue (not reported by anybody yet) where the
+    // chart isn't displayed correctly when the app is launched
+    // Moved from viewDidAppear:
+    
+    [self updateChart];
+
 }
 
 - (void)configureStandardDataSet:(LineChartDataSet *)dataSet {
@@ -284,7 +291,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    [self updateChart];
 
 }
 
