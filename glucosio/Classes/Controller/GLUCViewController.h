@@ -22,4 +22,11 @@ static NSString *const kGLUCSettingsStoryboardIdentifier = @"Settings";
 
 - (UIBarButtonItem *) cancelButtonItem;
 
+
 @end
+
+@protocol GLUCViewControllerRecordCreation
+
+- (IBAction)add:(id)sender;
+
+@end;

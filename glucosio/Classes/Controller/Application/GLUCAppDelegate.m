@@ -33,11 +33,22 @@
     }
 }
 
+- (void) registerAppForNotifications:(UIApplication *)app {
+    UIUserNotificationType types = (UIUserNotificationType) (UIUserNotificationTypeBadge |
+                                                             UIUserNotificationTypeSound |
+                                                             UIUserNotificationTypeAlert);
+    
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [app registerUserNotificationSettings:mySettings];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     BOOL showSettingsViewController = ![[NSUserDefaults standardUserDefaults] boolForKey:kGLUCModelInitialSettingsCompletedKey];
 
     [GLUCAppearanceController setAppearanceDefaults];
 
+    [self registerAppForNotifications:application];
+    
     if (showSettingsViewController) {
         UIStoryboard *settingsStoryboard = [UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil];
         if (settingsStoryboard) {
@@ -59,5 +70,30 @@
     return YES;
 }
 
+-(void)showSimpleAlertMessage:(NSString*)message withTitle:(NSString *)title
+{
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Ok") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    }];
+    
+    [alert addAction:okAction];
+    UIViewController *vc = [self.window rootViewController];
+    [vc presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    if (application.applicationState == UIApplicationStateActive) {
+        [self showSimpleAlertMessage:notification.alertBody withTitle:notification.alertTitle];
+    } else {
+        // TODO: go ahead and navigate to the add reading view controller for the
+        // type of reading specified in the user dict.
+    }
+}
 
 @end

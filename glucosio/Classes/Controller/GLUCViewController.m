@@ -1,6 +1,7 @@
 #import "GLUCViewController.h"
 
 
+
 @implementation GLUCViewController {
 
 }
@@ -17,4 +18,5 @@
 - (UIBarButtonItem *) cancelButtonItem {
     return [[UIBarButtonItem alloc] initWithTitle:GLUCLoc(@"dialog_add_cancel") style:UIBarButtonItemStylePlain target:nil action:nil];
 }
+
 @end

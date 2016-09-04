@@ -1,4 +1,5 @@
 #import "GLUCTabBarController.h"
+#import "GLUCViewController.h"
 #import "GLUCLoc.h"
 #import "GLUCReadingEditorViewController.h"
 #import "GLUCHistoryViewController.h"
@@ -26,7 +27,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSArray *tabItemTitlesLoc = @[GLUCLoc(@"tab_overview"), GLUCLoc(@"tab_history"), GLUCLoc(@"action_settings")];
+    NSArray *tabItemTitlesLoc = @[GLUCLoc(@"tab_overview"), GLUCLoc(@"tab_history"), GLUCLoc(@"action_settings"), GLUCLoc(@"tab_scheduler")];
     int tabItemIndex = 0;
     for (UITabBarItem *tabItem in self.tabBar.items) {
         tabItem.image = [tabItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -34,6 +35,7 @@
     }
     
 }
+
 
 - (void) addReadingOfSelectedType:(Class)readingType {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kGLUCMainStoryboardIdentifier bundle:nil];
@@ -52,25 +54,31 @@
     }
     
 }
+
 - (void) addReading:(id)sender {
-    NSArray *readingTypes = [self.model.currentUser readingTypes];
-    
-    UIAlertController *readingTypeSelector = [UIAlertController alertControllerWithTitle:GLUCLoc(@"Choose Measurement")
-                                                                                 message:GLUCLoc(@"Select a reading type")
-                                                                          preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    for (Class readingType in readingTypes) {
-        UIAlertAction *action = [UIAlertAction actionWithTitle:[readingType title] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self addReadingOfSelectedType:readingType];
+    UIViewController *currentViewController = self.selectedViewController;
+    if (currentViewController && [currentViewController conformsToProtocol:@protocol(GLUCViewControllerRecordCreation)]) {
+        [currentViewController performSelector:@selector(add:) withObject:self afterDelay:0];
+    } else {
+        NSArray *readingTypes = [self.model.currentUser readingTypes];
+        
+        UIAlertController *readingTypeSelector = [UIAlertController alertControllerWithTitle:GLUCLoc(@"Choose Measurement")
+                                                                                     message:GLUCLoc(@"Select a reading type")
+                                                                              preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        for (Class readingType in readingTypes) {
+            UIAlertAction *action = [UIAlertAction actionWithTitle:[readingType title] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self addReadingOfSelectedType:readingType];
+            }];
+            [readingTypeSelector addAction:action];
+        }
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self dismissViewControllerAnimated:YES
+                                     completion:NULL];
         }];
-        [readingTypeSelector addAction:action];
+        [readingTypeSelector addAction:cancelAction];
+        [self presentViewController:readingTypeSelector animated:YES completion:NULL];        
     }
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        [self dismissViewControllerAnimated:YES
-                                 completion:NULL];
-    }];
-    [readingTypeSelector addAction:cancelAction];
-    [self presentViewController:readingTypeSelector animated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {

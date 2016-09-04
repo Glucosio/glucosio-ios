@@ -39,6 +39,7 @@
 		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; };
 		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; };
 		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
+		552B8ADB1D7C444300494735 /* GLUCSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */; };
 		555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */; };
 		555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */; };
 		555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */; };
@@ -145,6 +146,8 @@
 		551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCPersistenceController.m; sourceTree = "<group>"; };
 		551193C61BC3EF60007CD147 /* UIColor+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLUCAdditions.h"; sourceTree = "<group>"; };
 		551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLUCAdditions.m"; sourceTree = "<group>"; };
+		552B8AD91D7C444300494735 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
+		552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSchedulerViewController.m; sourceTree = "<group>"; };
 		555CA3551BD28BC80052A865 /* NSCalendar+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+GLUCAdditions.h"; sourceTree = "<group>"; };
 		555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+GLUCAdditions.m"; sourceTree = "<group>"; };
 		555CA3571BD28BC80052A865 /* NSDate+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GLUCAdditions.h"; sourceTree = "<group>"; };
@@ -545,6 +548,7 @@
 		5511939D1BC3EF60007CD147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				552B8AD81D7C444300494735 /* Scheduler */,
 				DFC3CE811C763191003A22D9 /* Web */,
 				5511939E1BC3EF60007CD147 /* About */,
 				551193A11BC3EF60007CD147 /* Application */,
@@ -693,6 +697,15 @@
 				551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		552B8AD81D7C444300494735 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				552B8AD91D7C444300494735 /* GLUCSchedulerViewController.h */,
+				552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */,
+			);
+			path = Scheduler;
 			sourceTree = "<group>";
 		};
 		555CA3531BD28BC80052A865 /* Utiilities */ = {
@@ -1298,6 +1311,7 @@
 				DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */,
 				DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */,
 				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
+				552B8ADB1D7C444300494735 /* GLUCSchedulerViewController.m in Sources */,
 				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
 				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
 				555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */,

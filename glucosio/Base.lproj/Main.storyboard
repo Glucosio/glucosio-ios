@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VgL-rG-Y8A" id="H8l-dX-sK9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/15 4:39pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-cS-vcM">
@@ -175,6 +175,7 @@
                         <segue destination="gMQ-s1-gWH" kind="relationship" relationship="viewControllers" id="8v0-7x-Hg1"/>
                         <segue destination="3zH-XN-3jy" kind="relationship" relationship="viewControllers" id="Nwb-TY-dNG"/>
                         <segue destination="1u4-v0-Rl5" kind="relationship" relationship="viewControllers" id="ZiY-V0-sKS"/>
+                        <segue destination="JzK-py-poN" kind="relationship" relationship="viewControllers" id="c5f-aR-hyD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hn-O8-deJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,10 +253,89 @@
             </objects>
             <point key="canvasLocation" x="428" y="-358"/>
         </scene>
+        <!--Scheduler-->
+        <scene sceneID="3c5-y7-bak">
+            <objects>
+                <viewController storyboardIdentifier="SchedulerView" title="Scheduler" id="JzK-py-poN" customClass="GLUCSchedulerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gyX-LV-Na1"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZh-Oq-WBH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bp0-FL-EaD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-3F-jxP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchedulerCell" rowHeight="52" id="Ydb-XQ-P03">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ydb-XQ-P03" id="74t-0r-cJ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/15 4:39pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJe-hu-zJZ">
+                                                    <rect key="frame" x="15" y="7" width="103" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkK-gK-sW3">
+                                                    <rect key="frame" x="15" y="16" width="99" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78 mg/dL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wro-eN-2co">
+                                                    <rect key="frame" x="483" y="1" width="78" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kkK-gK-sW3" firstAttribute="top" secondItem="74t-0r-cJ6" secondAttribute="topMargin" constant="8" id="2RV-Ve-mxS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Wro-eN-2co" secondAttribute="bottom" constant="-6" id="TDD-Hn-zZw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Wro-eN-2co" secondAttribute="trailing" constant="31" id="Wp1-ik-RGJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kkK-gK-sW3" secondAttribute="bottom" constant="-2" id="iFO-ms-PQW"/>
+                                                <constraint firstItem="OJe-hu-zJZ" firstAttribute="top" secondItem="74t-0r-cJ6" secondAttribute="topMargin" constant="-1" id="lje-XV-VCa"/>
+                                                <constraint firstItem="kkK-gK-sW3" firstAttribute="leading" secondItem="74t-0r-cJ6" secondAttribute="leadingMargin" constant="7" id="rVh-Up-CUz"/>
+                                                <constraint firstItem="Wro-eN-2co" firstAttribute="top" secondItem="74t-0r-cJ6" secondAttribute="topMargin" constant="-7" id="t3f-Oj-b5Y"/>
+                                                <constraint firstItem="OJe-hu-zJZ" firstAttribute="leading" secondItem="74t-0r-cJ6" secondAttribute="leadingMargin" constant="7" id="vAw-vS-ruh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JzK-py-poN" id="v8t-wf-yie"/>
+                                    <outlet property="delegate" destination="JzK-py-poN" id="7co-Kp-wLN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BhU-3F-jxP" firstAttribute="leading" secondItem="Bp0-FL-EaD" secondAttribute="leadingMargin" constant="-20" id="4ct-fb-Jli"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BhU-3F-jxP" secondAttribute="trailing" constant="-20" id="5DS-PE-wci"/>
+                            <constraint firstItem="BhU-3F-jxP" firstAttribute="top" secondItem="Bp0-FL-EaD" secondAttribute="topMargin" id="A4U-a2-U3c"/>
+                            <constraint firstItem="pZh-Oq-WBH" firstAttribute="top" secondItem="BhU-3F-jxP" secondAttribute="bottom" id="yvi-e0-WL1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scheduler" image="SchedulerIcon" id="QDM-fS-qhr"/>
+                    <connections>
+                        <outlet property="notificationTableView" destination="BhU-3F-jxP" id="ENf-OC-cj2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySQ-FB-NIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="389"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HistoryIcon" width="24" height="24"/>
         <image name="OverviewIcon" width="24" height="24"/>
+        <image name="SchedulerIcon" width="32" height="32"/>
         <image name="SettingsIcon" width="24" height="24"/>
     </resources>
 </document>
