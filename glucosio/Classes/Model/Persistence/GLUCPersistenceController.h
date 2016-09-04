@@ -27,6 +27,10 @@
 
 - (RLMResults<GLUCReading *> *)readingsOfType:(Class)readingType fromDate:(NSDate *)from toDate:(NSDate *)to sortByDateAscending:(BOOL)ascending;
 
+- (GLUCReading *)lastReadingOfType:(Class)readingType;
+
+- (GLUCReading *)firstReadingOfType:(Class)readingType;
+
 - (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending;
 
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;

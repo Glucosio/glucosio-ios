@@ -14,6 +14,15 @@
 #import "GLUCAppDelegate.h"
 #import "GraphDataGenerator.h"
 
+// import readings
+#import "GLUCBloodGlucoseReading.h"
+#import "GLUCHB1ACReading.h"
+#import "GLUCCholesterolReading.h"
+#import "GLUCBloodPressureReading.h"
+#import "GLUCKetonesReading.h"
+#import "GLUCBodyWeightReading.h"
+#import "GLUCInsulinIntakeReading.h"
+
 @interface OverViewViewController () <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *chartScopeControl;
@@ -28,6 +37,8 @@
 
 @property (assign, nonatomic) Class readingTypeToGraph;
 
+@property (strong, nonatomic) NSDictionary *colorForReadingType;
+
 
 - (IBAction) updateChartScope:(id)sender;
 
@@ -39,14 +50,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self configureView];
     
     if (!self.model) {
         self.model = [(GLUCAppDelegate *) [[UIApplication sharedApplication] delegate] appModel];
     }
-    [self configureView];
+    
+    self.colorForReadingType = @{
+                                 NSStringFromClass(GLUCBloodGlucoseReading.class) : [UIColor glucosio_fab_glucose],
+                                 NSStringFromClass(GLUCHB1ACReading.class) : [UIColor glucosio_fab_HB1AC],
+                                 NSStringFromClass(GLUCCholesterolReading.class) : [UIColor glucosio_fab_cholesterol],
+                                 NSStringFromClass(GLUCBloodPressureReading.class) : [UIColor glucosio_fab_pressure],
+                                 NSStringFromClass(GLUCKetonesReading.class) : [UIColor glucosio_fab_ketonest],
+                                 NSStringFromClass(GLUCBodyWeightReading.class) : [UIColor glucosio_fab_weight],
+                                 NSStringFromClass(GLUCInsulinIntakeReading.class) : [UIColor glucosio_fab_cholesterol],
+                                 };
     
     self.graphPickerClasses = self.model.currentUser.readingTypes;
+    
     self.readingTypeToGraph = GLUCBloodGlucoseReading.class;
+    
     [self showReadingsOfType:self.readingTypeToGraph];
 }
 
@@ -75,6 +99,12 @@
     [self.chartView.xAxis setDrawGridLinesEnabled:NO];
 }
 
+#pragma mark - Actions
+
+- (void) updateChartScope:(id)sender {
+    [self showReadingsOfType:self.readingTypeToGraph];
+}
+
 #pragma mark - Private methods
 
 - (LineChartDataSet *)lineChartDataSetWithYValues:(NSArray<ChartDataEntry *> *)yVals lineColor:(UIColor *) lineColor {
@@ -92,6 +122,8 @@
     lineDataSet.fillAlpha = 0.15f;
     lineDataSet.drawValuesEnabled = NO;
     lineDataSet.highlightColor = [UIColor glucosio_gray_light];
+    lineDataSet.cubicIntensity = 0.2f;
+    lineDataSet.drawCubicEnabled = YES;
     
     return lineDataSet;
 }
@@ -99,25 +131,42 @@
 - (void)showReadingsOfType:(Class)readingType {
     
     GraphDataGenerator *generator = [[GraphDataGenerator alloc] initWithModeController:self.model];
-    NSArray *points = [generator graphPointsForReadingType:readingType];
+    
+    NSArray *points = nil;
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    
+    switch (self.chartScopeControl.selectedSegmentIndex) {
+        case 0: // Daily
+            [df setDateStyle:NSDateFormatterShortStyle];
+            [df setTimeStyle:NSDateFormatterNoStyle];
+            points = [generator graphPointsForReadingType:readingType];
+            break;
+        case 1: // Weekly
+            [df setDateFormat:@"ww-yyyy"];
+            points = [generator weeklyAverageGraphPointsForReadingType:readingType];
+            break;
+        case 2: // Monthly
+            [df setDateFormat:@"MM-yyyy"];
+            points = [generator montlyAverageGraphPointsForReadingType:readingType];
+            break;
+        default:
+            break;
+    }
     
     NSMutableArray *yVals = [NSMutableArray array];
     NSMutableArray *xVals = [NSMutableArray array];
-    
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateStyle:NSDateFormatterShortStyle];
-    [df setTimeStyle:NSDateFormatterNoStyle];
     
     [points enumerateObjectsUsingBlock:^(GraphPoint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [yVals addObject:[[ChartDataEntry alloc] initWithValue:obj.y xIndex:idx]];
         [xVals addObject:[df stringFromDate:obj.x]];
     }];
     
-    LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:[UIColor glucosio_pink]];
+    LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
     LineChartData *data = [[LineChartData alloc] initWithXVals:xVals dataSet:lineDataSet];
     
     [self.chartView clear];
     self.chartView.data = data;
+    [self.chartView setVisibleXRangeMinimum:10];
     [self.chartView setVisibleXRangeMaximum:20];
     [self.chartView moveViewToX:data.xValCount];
 }
@@ -140,7 +189,8 @@
 }
 
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self showReadingsOfType:[self.graphPickerClasses objectAtIndex:row]];
+    self.readingTypeToGraph = [self.graphPickerClasses objectAtIndex:row];
+    [self showReadingsOfType:self.readingTypeToGraph];
 }
 
 

@@ -33,7 +33,7 @@
     
     if ([readingType isSubclassOfClass:[GLUCReading class]]) {
         
-        RLMResults<GLUCReading *> *readings = [self.modelController allReadingsOfType:readingType sortByDateAscending:NO];
+        RLMResults<GLUCReading *> *readings = [self.modelController allReadingsOfType:readingType sortByDateAscending:YES];
         
         for (GLUCReading *reading in readings) {
             GraphPoint *point = [[GraphPoint alloc] init];
@@ -41,6 +41,60 @@
             point.y = [reading.reading doubleValue];
             [points addObject:point];
         }
+    }
+    
+    return [points copy];
+}
+
+- (NSArray<GraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType {
+    
+    NSMutableArray<GraphPoint *> *points = [NSMutableArray array];
+    
+    // Use same date technique for averaging as Glucosio for Android
+    
+    NSDate *maxDate = [self.modelController lastReadingOfType:readingType].creationDate;
+    NSDate *minDate = [self.modelController firstReadingOfType:readingType].creationDate;
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSInteger weeksBetween = [cal gluc_weeksBetween:minDate andDate:maxDate];
+    
+    for (NSInteger weekIndex = 0; weekIndex < weeksBetween; ++weekIndex) {
+        NSDate *startDate = [cal gluc_dateByAddingWeeks:weekIndex toDate:minDate];
+        NSDate *endDate = [cal gluc_dateByAddingWeeks:1 toDate:startDate];
+        
+        RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
+        
+        GraphPoint *point = [[GraphPoint alloc] init];
+        point.x = startDate;
+        point.y = [readings averageOfProperty:@"reading"].doubleValue;
+        [points addObject:point];
+    }
+    
+    return [points copy];
+}
+
+- (NSArray<GraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType {
+
+    NSMutableArray<GraphPoint *> *points = [NSMutableArray array];
+    
+    // Use same date technique for averaging as Glucosio for Android
+    
+    NSDate *maxDate = [self.modelController lastReadingOfType:readingType].creationDate;
+    NSDate *minDate = [self.modelController firstReadingOfType:readingType].creationDate;
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSInteger monthsBetween = [cal gluc_monthsBetween:minDate andDate:maxDate];
+    
+    for (NSInteger monthIndex = 0; monthIndex < monthsBetween; ++monthIndex) {
+        NSDate *startDate = [cal gluc_dateByAddingMonths:monthIndex toDate:minDate];
+        NSDate *endDate = [cal gluc_dateByAddingMonths:1 toDate:startDate];
+        
+        RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
+        
+        GraphPoint *point = [[GraphPoint alloc] init];
+        point.x = startDate;
+        point.y = [readings averageOfProperty:@"reading"].doubleValue;
+        [points addObject:point];
     }
     
     return [points copy];

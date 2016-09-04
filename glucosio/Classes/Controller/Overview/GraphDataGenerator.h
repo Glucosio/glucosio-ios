@@ -20,4 +20,8 @@
 
 - (NSArray<GraphPoint *> *)graphPointsForReadingType:(Class)readingType;
 
+- (NSArray<GraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType;
+
+- (NSArray<GraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType;
+
 @end

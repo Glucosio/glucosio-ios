@@ -290,6 +290,22 @@
     return allReadings;
 }
 
+- (GLUCReading *)lastReadingOfType:(Class)readingType {
+    
+    NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
+    
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    return [allReadings firstObject];
+}
+
+- (GLUCReading *)firstReadingOfType:(Class)readingType {
+    
+    NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
+    
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    return [allReadings lastObject];
+}
+
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {
     RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
     return [allReadings firstObject];
