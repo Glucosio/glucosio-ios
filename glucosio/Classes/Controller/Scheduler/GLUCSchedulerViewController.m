@@ -1,5 +1,6 @@
 #import <Realm/RLMArray.h>
 #import "GLUCSchedulerViewController.h"
+#import "GLUCEventDateTimeEditorViewController.h"
 #import "GLUCAppDelegate.h"
 #import "GLUCAppearanceController.h"
 #import "NSCalendar+GLUCAdditions.h"
@@ -13,6 +14,33 @@
 @end
 
 @implementation GLUCSchedulerViewController
+
+- (UILocalNotification *) eventAtIndexPath:(NSIndexPath *)indexPath {
+    UILocalNotification *retVal = nil;
+    
+    if (indexPath && indexPath.row < self.notifications.count) {
+        retVal = self.notifications[(NSUInteger)indexPath.row];
+    }
+    return retVal;
+}
+
+- (void) editEvent:(UILocalNotification *)event {
+    GLUCEventDateTimeEditorViewController *editor = (GLUCEventDateTimeEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:@"EventDateTimeEditor"];
+    UIView *v = [editor view]; // force load from xib
+    if (v) {
+        editor.editedEvent = [event copy];
+        
+        [[UIApplication sharedApplication] cancelLocalNotification:event];
+        
+        editor.title = @"Reminder Date/Time";
+        editor.model = self.model;
+        editor.pickerView.datePickerMode = UIDatePickerModeDateAndTime;
+    }
+    
+    self.navigationItem.backBarButtonItem = [self cancelButtonItem];
+    [self.navigationController pushViewController:editor animated:YES];
+    
+}
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +57,7 @@
     self.deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                            title:GLUCLoc(@"dialog_delete") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
     {
-        UILocalNotification *targetNotification = self.notifications[(NSUInteger)indexPath.row];
+        UILocalNotification *targetNotification = [self eventAtIndexPath:indexPath];
         if (targetNotification) {
             [self.notificationModel cancelLocalNotification:targetNotification];
             self.notifications = self.notificationModel.scheduledLocalNotifications;
@@ -42,9 +70,9 @@
                                                          title:GLUCLoc(@"Edit") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
     {
         self.notificationTableView.editing = NO;
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kGLUCMainStoryboardIdentifier bundle:nil];
-        if (mainStoryboard) {
-            // load and display notification editor
+        UILocalNotification *targetNotification = [self eventAtIndexPath:indexPath];
+        if (targetNotification) {
+            [self editEvent:targetNotification];            
         }
     }];
     
@@ -66,6 +94,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:TRUE];
+    UILocalNotification *targetNotification = [self eventAtIndexPath:indexPath];
+    if (targetNotification) {
+        [self editEvent:targetNotification];
+    }
+
 }
 
 - (NSArray *) tableView:tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -147,6 +180,10 @@
     self.notifications =  self.notificationModel.scheduledLocalNotifications;
 
     [self.notificationTableView reloadData];
+    
+    if (reminder) {
+        [self editEvent:reminder];
+    }
     
 }
 

@@ -481,6 +481,69 @@
             </objects>
             <point key="canvasLocation" x="651" y="550"/>
         </scene>
+        <!--Event Date Time Editor View Controller-->
+        <scene sceneID="cy9-Ha-bpi">
+            <objects>
+                <viewController storyboardIdentifier="EventDateTimeEditor" id="C19-56-XWl" customClass="GLUCEventDateTimeEditorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZHb-lF-rEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="wnu-uM-2rR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gAI-Rn-KsE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvb-qV-iGu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="467197793.92442">
+                                    <!--2015-10-22 09:09:53 +0000-->
+                                </date>
+                            </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="go9-E9-mh4">
+                                <rect key="frame" x="240" y="253" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-zo-IFX">
+                                <rect key="frame" x="269" y="224" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dvb-qV-iGu" firstAttribute="top" secondItem="gAI-Rn-KsE" secondAttribute="topMargin" id="7Fh-SR-7fA"/>
+                            <constraint firstItem="Dvb-qV-iGu" firstAttribute="leading" secondItem="gAI-Rn-KsE" secondAttribute="leadingMargin" id="9fA-fH-cFe"/>
+                            <constraint firstItem="go9-E9-mh4" firstAttribute="centerX" secondItem="gAI-Rn-KsE" secondAttribute="centerX" id="QuS-h2-di9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dvb-qV-iGu" secondAttribute="trailing" id="UcO-BK-usZ"/>
+                            <constraint firstItem="CAT-zo-IFX" firstAttribute="centerX" secondItem="gAI-Rn-KsE" secondAttribute="centerX" id="VU0-d1-mL5"/>
+                            <constraint firstItem="Dvb-qV-iGu" firstAttribute="leading" secondItem="gAI-Rn-KsE" secondAttribute="leading" id="doa-pn-o6E"/>
+                            <constraint firstItem="CAT-zo-IFX" firstAttribute="top" secondItem="Dvb-qV-iGu" secondAttribute="bottom" constant="8" id="jhM-rX-wJU"/>
+                            <constraint firstItem="Dvb-qV-iGu" firstAttribute="top" secondItem="gAI-Rn-KsE" secondAttribute="top" id="l94-Rb-BhD"/>
+                            <constraint firstItem="go9-E9-mh4" firstAttribute="top" secondItem="CAT-zo-IFX" secondAttribute="bottom" constant="8" id="uGZ-2D-f6g"/>
+                            <constraint firstAttribute="trailing" secondItem="Dvb-qV-iGu" secondAttribute="trailing" id="znJ-YS-J2V"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Fh-SR-7fA"/>
+                                <exclude reference="9fA-fH-cFe"/>
+                                <exclude reference="UcO-BK-usZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Dvb-qV-iGu" id="TF4-2d-4i2"/>
+                        <outlet property="repeatIntervalControl" destination="go9-E9-mh4" id="ojw-BS-OHw"/>
+                        <outlet property="repeatLabel" destination="CAT-zo-IFX" id="n2N-RL-EF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNS-Tv-ONV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="550"/>
+        </scene>
     </scenes>
     <resources>
         <image name="SettingsIcon" width="24" height="24"/>
