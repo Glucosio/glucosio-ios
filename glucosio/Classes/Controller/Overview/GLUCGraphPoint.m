@@ -6,9 +6,9 @@
 //  Copyright © 2016 Glucosio.org. All rights reserved.
 //
 
-#import "GraphPoint.h"
+#import "GLUCGraphPoint.h"
 
-@implementation GraphPoint
+@implementation GLUCGraphPoint
 
 
 @end

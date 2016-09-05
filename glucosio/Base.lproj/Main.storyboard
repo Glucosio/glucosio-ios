@@ -101,7 +101,7 @@
         <!--Overview-->
         <scene sceneID="Kcj-35-uQX">
             <objects>
-                <viewController storyboardIdentifier="Overview" title="Overview" id="gMQ-s1-gWH" customClass="OverViewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Overview" title="Overview" id="gMQ-s1-gWH" customClass="GLUCOverviewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0us-Xl-nBC"/>
                         <viewControllerLayoutGuide type="bottom" id="pr5-LY-EZ8"/>
@@ -131,6 +131,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-zg-nQX">
                                 <rect key="frame" x="20" y="375" width="560" height="176"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="qqR-mA-fiU"/>
+                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="CIt-8d-nom"/>
+                                </connections>
                             </tableView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-BT-yuf">
                                 <rect key="frame" x="0.0" y="275" width="600" height="100"/>
@@ -229,7 +233,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmol/dl" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="v9w-c5-oQQ">
                                 <rect key="frame" x="269" y="125" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

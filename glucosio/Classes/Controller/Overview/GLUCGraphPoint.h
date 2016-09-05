@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GraphPoint : NSObject
+@interface GLUCGraphPoint : NSObject
 
 @property (nonatomic, assign) double y;
 @property (strong, nonatomic) NSDate *x;

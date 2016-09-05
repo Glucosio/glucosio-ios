@@ -6,14 +6,14 @@
 //  Copyright © 2016 Glucosio.org. All rights reserved.
 //
 
-#import "GraphDataGenerator.h"
+#import "GLUCGraphDataGenerator.h"
 #import "GLUCReading.h"
-#import "GraphPoint.h"
+#import "GLUCGraphPoint.h"
 #import "NSCalendar+GLUCAdditions.h"
 #import "NSDate+GLUCAdditions.h"
 #import "NSDateComponents+GLUCAdditions.h"
 
-@implementation GraphDataGenerator
+@implementation GLUCGraphDataGenerator
 
 #pragma mark - Inits
 
@@ -27,16 +27,16 @@
     return self;
 }
 
-- (NSArray<GraphPoint *> *)graphPointsForReadingType:(Class)readingType {
+- (NSArray<GLUCGraphPoint *> *)graphPointsForReadingType:(Class)readingType {
     
-    NSMutableArray<GraphPoint *> *points = [NSMutableArray array];
+    NSMutableArray<GLUCGraphPoint *> *points = [NSMutableArray array];
     
     if ([readingType isSubclassOfClass:[GLUCReading class]]) {
         
         RLMResults<GLUCReading *> *readings = [self.modelController allReadingsOfType:readingType sortByDateAscending:YES];
         
         for (GLUCReading *reading in readings) {
-            GraphPoint *point = [[GraphPoint alloc] init];
+            GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
             point.x = reading.creationDate;
             point.y = [reading.reading doubleValue];
             [points addObject:point];
@@ -46,9 +46,9 @@
     return [points copy];
 }
 
-- (NSArray<GraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType {
+- (NSArray<GLUCGraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType {
     
-    NSMutableArray<GraphPoint *> *points = [NSMutableArray array];
+    NSMutableArray<GLUCGraphPoint *> *points = [NSMutableArray array];
     
     // Use same date technique for averaging as Glucosio for Android
     
@@ -56,7 +56,7 @@
     NSDate *minDate = [self.modelController firstReadingOfType:readingType].creationDate;
     
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSInteger weeksBetween = [cal gluc_weeksBetween:minDate andDate:maxDate];
+    NSInteger weeksBetween = [cal gluc_weeksBetween:minDate andDate:maxDate] + 1;
     
     for (NSInteger weekIndex = 0; weekIndex < weeksBetween; ++weekIndex) {
         NSDate *startDate = [cal gluc_dateByAddingWeeks:weekIndex toDate:minDate];
@@ -64,7 +64,7 @@
         
         RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
         
-        GraphPoint *point = [[GraphPoint alloc] init];
+        GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
         point.x = startDate;
         point.y = [readings averageOfProperty:@"reading"].doubleValue;
         [points addObject:point];
@@ -73,9 +73,9 @@
     return [points copy];
 }
 
-- (NSArray<GraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType {
+- (NSArray<GLUCGraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType {
 
-    NSMutableArray<GraphPoint *> *points = [NSMutableArray array];
+    NSMutableArray<GLUCGraphPoint *> *points = [NSMutableArray array];
     
     // Use same date technique for averaging as Glucosio for Android
     
@@ -83,7 +83,7 @@
     NSDate *minDate = [self.modelController firstReadingOfType:readingType].creationDate;
     
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSInteger monthsBetween = [cal gluc_monthsBetween:minDate andDate:maxDate];
+    NSInteger monthsBetween = [cal gluc_monthsBetween:minDate andDate:maxDate] + 1;
     
     for (NSInteger monthIndex = 0; monthIndex < monthsBetween; ++monthIndex) {
         NSDate *startDate = [cal gluc_dateByAddingMonths:monthIndex toDate:minDate];
@@ -91,7 +91,7 @@
         
         RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
         
-        GraphPoint *point = [[GraphPoint alloc] init];
+        GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
         point.x = startDate;
         point.y = [readings averageOfProperty:@"reading"].doubleValue;
         [points addObject:point];

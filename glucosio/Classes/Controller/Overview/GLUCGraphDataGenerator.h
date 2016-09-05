@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "GLUCPersistenceController.h"
-#import "GraphPoint.h"
+#import "GLUCGraphPoint.h"
 
-@interface GraphDataGenerator : NSObject
+@interface GLUCGraphDataGenerator : NSObject
 
 @property (strong, readonly) GLUCPersistenceController *modelController;
 
@@ -18,10 +18,10 @@
 
 - (instancetype)initWithModeController:(GLUCPersistenceController *)persistence;
 
-- (NSArray<GraphPoint *> *)graphPointsForReadingType:(Class)readingType;
+- (NSArray<GLUCGraphPoint *> *)graphPointsForReadingType:(Class)readingType;
 
-- (NSArray<GraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType;
+- (NSArray<GLUCGraphPoint *> *)weeklyAverageGraphPointsForReadingType:(Class)readingType;
 
-- (NSArray<GraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType;
+- (NSArray<GLUCGraphPoint *> *)montlyAverageGraphPointsForReadingType:(Class)readingType;
 
 @end
