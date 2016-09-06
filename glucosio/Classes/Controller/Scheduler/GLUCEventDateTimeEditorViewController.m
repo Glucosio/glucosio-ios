@@ -35,10 +35,33 @@
         [self.repeatIntervalControl insertSegmentWithTitle:segmentTitle atIndex:segmentIndex++ animated:NO];
     }
     
+    self.repeatLabel.text = GLUCLoc(@"Repeats?");
+
+    
+}
+
+- (NSCalendarUnit) calendarIntervalForSegmentIndex:(NSInteger)index {
+    NSCalendarUnit retVal = NSCalendarUnitNanosecond;
+    
+    switch (index) {
+        case 0:
+        default:
+            break;
+        case 1:
+            retVal = NSCalendarUnitDay;
+            break;
+        case 2:
+            retVal = NSCalendarUnitWeekOfMonth;
+            break;
+        case 3:
+            retVal = NSCalendarUnitMonth;
+            break;
+    }
+    return retVal;
 }
 
 - (NSInteger) segmentIndexForRepeatInterval {
-    NSInteger retVal = UISegmentedControlNoSegment;
+    NSInteger retVal = 0;
     
     NSCalendarUnit interval = self.editedEvent.repeatInterval;
     
@@ -70,13 +93,19 @@
 }
 
 - (void) dateChanged:(id) sender {
-    NSLog(@"Date changed!");
     self.editedEvent.fireDate = [self.pickerView date];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     
     if (self.editedEvent) {
+        NSCalendarUnit specifiedInterval = [self calendarIntervalForSegmentIndex:self.repeatIntervalControl.selectedSegmentIndex];
+        if (specifiedInterval == NSCalendarUnitNanosecond) {
+            // none
+            self.editedEvent.repeatInterval = 0;
+        } else {
+            self.editedEvent.repeatInterval = specifiedInterval;
+        }
         UIApplication *app = [UIApplication sharedApplication];
         [app scheduleLocalNotification:self.editedEvent];
     }    

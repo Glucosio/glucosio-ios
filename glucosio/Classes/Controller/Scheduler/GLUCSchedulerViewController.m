@@ -42,6 +42,26 @@
     
 }
 
+- (NSString *) recurrenceLabelValueForEvent:(UILocalNotification *)event {
+    NSString *retVal = GLUCLoc(@"Occurs: Once");
+    if (event) {
+        switch (event.repeatInterval) {
+            case NSCalendarUnitDay:
+                retVal = @"Repeats: Daily";
+                break;
+            case NSCalendarUnitWeekOfMonth:
+                retVal = GLUCLoc(@"Repeats: Weekly");
+                break;
+            case NSCalendarUnitMonth:
+                retVal = @"Repeats: Monthly";
+                break;
+            default:
+                break;
+        }
+    }
+    return retVal;
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad];
 
@@ -77,6 +97,7 @@
     }];
     
     self.title = GLUCLoc(@"tab_scheduler");
+    
 
 }
 
@@ -110,7 +131,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0f;
+    return 64.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,10 +148,12 @@
         UILabel *dateLabel = (UILabel *) [cell viewWithTag:1];
         UILabel *typeLabel = (UILabel *) [cell viewWithTag:2];
         UILabel *valueLabel = (UILabel *) [cell viewWithTag:3];
+        UILabel *recurrenceLabel = (UILabel *) [cell viewWithTag:4];
 
         [dateLabel setFont:[GLUCAppearanceController defaultFontOfSize:([UIFont systemFontSize] - 3.0f)]];
         [valueLabel setFont:[GLUCAppearanceController defaultBoldFontOfSize:([UIFont systemFontSize] - 2.0f)]];
         [typeLabel setFont:[GLUCAppearanceController defaultBoldFontOfSize:([UIFont systemFontSize] - 2.0f)]];
+        [recurrenceLabel setFont:[GLUCAppearanceController defaultBoldFontOfSize:([UIFont systemFontSize] - 2.0f)]];
 
         dateLabel.text = [NSString stringWithFormat:@"%@",
                         [NSDateFormatter localizedStringFromDate:[notification fireDate]
@@ -138,6 +161,7 @@
                                                        timeStyle:NSDateFormatterShortStyle]];
         NSDictionary *userInfo = notification.userInfo;
         
+        recurrenceLabel.text = [self recurrenceLabelValueForEvent:notification];
         if (userInfo) {
             typeLabel.text = notification.alertTitle;
             valueLabel.text = userInfo[kGLUCScheduleNotificationReadingTypeKey];
