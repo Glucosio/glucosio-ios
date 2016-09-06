@@ -37,8 +37,17 @@
         
         for (GLUCReading *reading in readings) {
             GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
+            
             point.x = reading.creationDate;
-            point.y = [reading.reading doubleValue];
+            
+            if (readingType == [GLUCBloodGlucoseReading class]) {
+                GLUCUser *user = self.modelController.currentUser;
+                NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading];
+                point.y = [readingValueInPreferredUnit doubleValue];
+            } else {
+                point.y = [reading.reading doubleValue];
+            }
+            
             [points addObject:point];
         }
     }
@@ -65,8 +74,21 @@
         RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
         
         GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
+        
+        NSNumber *averageValue = [readings averageOfProperty:@"reading"];
+        
+        if (readingType == [GLUCBloodGlucoseReading class]) {
+            GLUCUser *user = self.modelController.currentUser;
+            GLUCBloodGlucoseReading *tempReading = [[GLUCBloodGlucoseReading alloc] init];
+            tempReading.reading = averageValue;
+            NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)tempReading];
+            point.y = [readingValueInPreferredUnit doubleValue];
+        } else {
+            point.y = averageValue.doubleValue;
+        }
+        
         point.x = startDate;
-        point.y = [readings averageOfProperty:@"reading"].doubleValue;
+        
         [points addObject:point];
     }
     
@@ -92,8 +114,21 @@
         RLMResults<GLUCReading *> *readings = [self.modelController readingsOfType:readingType fromDate:startDate toDate:endDate sortByDateAscending:YES];
         
         GLUCGraphPoint *point = [[GLUCGraphPoint alloc] init];
+        
+        NSNumber *averageValue = [readings averageOfProperty:@"reading"];
+        
+        if (readingType == [GLUCBloodGlucoseReading class]) {
+            GLUCUser *user = self.modelController.currentUser;
+            GLUCBloodGlucoseReading *tempReading = [[GLUCBloodGlucoseReading alloc] init];
+            tempReading.reading = averageValue;
+            NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)tempReading];
+            point.y = [readingValueInPreferredUnit doubleValue];
+        } else {
+            point.y = averageValue.doubleValue;
+        }
+        
         point.x = startDate;
-        point.y = [readings averageOfProperty:@"reading"].doubleValue;
+        
         [points addObject:point];
     }
     

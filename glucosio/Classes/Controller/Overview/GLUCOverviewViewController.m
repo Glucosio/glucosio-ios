@@ -231,6 +231,25 @@
     LineChartData *data = [[LineChartData alloc] initWithXVals:xVals dataSet:lineDataSet];
     
     [self.chartView clear];
+    [self.chartView.leftAxis removeAllLimitLines];
+    
+    if (readingType == [GLUCBloodGlucoseReading class]) {
+        GLUCUser *user = self.model.currentUser;
+        
+        ChartLimitLine *maxLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMax.doubleValue label:GLUCLoc(@"reading_high")];
+        maxLimit.lineColor = [UIColor glucosio_reading_high];
+        maxLimit.lineWidth = 0.8f;
+        
+        ChartLimitLine *minLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMin.doubleValue label:GLUCLoc(@"reading_low")];
+        minLimit.lineColor = [UIColor glucosio_reading_low];
+        minLimit.lineWidth = 0.8f;
+        
+        ChartYAxis *leftAxis = self.chartView.leftAxis;
+        [leftAxis addLimitLine:maxLimit];
+        [leftAxis addLimitLine:minLimit];
+        leftAxis.drawLimitLinesBehindDataEnabled = YES;
+    }
+    
     self.chartView.data = data;
     [self.chartView setVisibleXRangeMinimum:10];
     [self.chartView setVisibleXRangeMaximum:20];

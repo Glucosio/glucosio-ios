@@ -115,7 +115,7 @@
     for (int i = 0; i < 1000; ++i) {
         NSDate *today = [[NSCalendar currentCalendar] gluc_dateByAddingMonths:(arc4random_uniform(12) * -1) toDate:[NSDate date]];
         NSDate *readingDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:(arc4random_uniform(45) * -1) toDate:today];
-        int reading = arc4random_uniform(30) + 70;
+        int reading = arc4random_uniform(110) + 70;
         GLUCBloodGlucoseReading *testReading = [[GLUCBloodGlucoseReading alloc] init];
         if (testReading) {
             testReading.reading = (id)[NSNumber numberWithInt:reading];
