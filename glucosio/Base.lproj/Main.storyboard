@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bUu-8H-pg1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bUu-8H-pg1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,15 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-bk-sB9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="3zH-XN-3jy" id="SIH-0Z-EBL"/>
+                                    <outlet property="delegate" destination="3zH-XN-3jy" id="a8Y-AR-U3X"/>
+                                </connections>
+                            </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VN3-wv-E93">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="170" width="600" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="52" id="VgL-rG-Y8A">
                                         <rect key="frame" x="0.0" y="28" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VgL-rG-Y8A" id="H8l-dX-sK9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/15 4:39pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-cS-vcM">
@@ -68,8 +78,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="topMargin" id="Jfu-KY-q0q"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="leading" secondItem="VN3-wv-E93" secondAttribute="leading" id="BRz-zd-ZOj"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="top" id="HPH-Pi-7GJ"/>
+                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="bSD-dY-mzN" secondAttribute="topMargin" constant="170" id="Jfu-KY-q0q"/>
+                            <constraint firstItem="zfN-bk-sB9" firstAttribute="trailing" secondItem="VN3-wv-E93" secondAttribute="trailing" id="cC8-Xy-n2e"/>
                             <constraint firstItem="VN3-wv-E93" firstAttribute="leading" secondItem="bSD-dY-mzN" secondAttribute="leadingMargin" constant="-20" id="eQe-h2-xlS"/>
+                            <constraint firstItem="VN3-wv-E93" firstAttribute="top" secondItem="zfN-bk-sB9" secondAttribute="bottom" constant="8" symbolic="YES" id="gvT-yG-CLI"/>
                             <constraint firstItem="m5B-RK-O69" firstAttribute="top" secondItem="VN3-wv-E93" secondAttribute="bottom" id="kL5-tl-79a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VN3-wv-E93" secondAttribute="trailing" constant="-20" id="smI-ay-ZBF"/>
                         </constraints>
@@ -77,11 +91,12 @@
                     <tabBarItem key="tabBarItem" title="History" image="HistoryIcon" id="mjH-jc-o8T"/>
                     <connections>
                         <outlet property="historyTableView" destination="VN3-wv-E93" id="re3-1h-hsi"/>
+                        <outlet property="readingTypePicker" destination="zfN-bk-sB9" id="lIC-Js-Hu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQM-kT-tBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="389"/>
+            <point key="canvasLocation" x="1640" y="177"/>
         </scene>
         <!--Overview-->
         <scene sceneID="Kcj-35-uQX">
@@ -103,7 +118,7 @@
                                     <segment title="Month"/>
                                 </segments>
                                 <connections>
-                                    <action selector="updateChartScope:" destination="gMQ-s1-gWH" eventType="valueChanged" id="lN3-Py-1Ng"/>
+                                    <action selector="updateChartScope:" destination="gMQ-s1-gWH" eventType="valueChanged" id="OhT-S0-mxu"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-9r-JaW" customClass="LineChartView" customModule="Charts">
@@ -114,38 +129,52 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-zg-nQX">
-                                <rect key="frame" x="20" y="283" width="560" height="268"/>
+                                <rect key="frame" x="20" y="375" width="560" height="176"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="BJz-wv-enh"/>
-                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="XhO-35-FDH"/>
+                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="qqR-mA-fiU"/>
+                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="CIt-8d-nom"/>
                                 </connections>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-BT-yuf">
+                                <rect key="frame" x="0.0" y="275" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ehk-5T-hdX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="gMQ-s1-gWH" id="4DF-fH-yjc"/>
+                                    <outlet property="delegate" destination="gMQ-s1-gWH" id="2vG-RG-gFz"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="7fR-2R-e0w" secondAttribute="trailing" id="0gO-rd-0VJ"/>
+                            <constraint firstItem="5Dx-zg-nQX" firstAttribute="top" secondItem="yJX-BT-yuf" secondAttribute="bottom" id="1v4-lc-iCQ"/>
                             <constraint firstItem="5Dx-zg-nQX" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="8iT-OF-n3S"/>
                             <constraint firstItem="7fR-2R-e0w" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="8rx-jR-C5G"/>
+                            <constraint firstItem="yJX-BT-yuf" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leading" id="P15-OE-k5r"/>
                             <constraint firstItem="7fR-2R-e0w" firstAttribute="top" secondItem="GZt-RN-3CF" secondAttribute="topMargin" constant="10" id="Pda-sw-Z0y"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="leading" secondItem="GZt-RN-3CF" secondAttribute="leadingMargin" id="YiA-E8-pJV"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="trailing" secondItem="GZt-RN-3CF" secondAttribute="trailingMargin" id="ZoM-o2-Pk1"/>
-                            <constraint firstItem="5Dx-zg-nQX" firstAttribute="top" secondItem="hdc-9r-JaW" secondAttribute="bottom" constant="8" id="cMh-hJ-Zcx"/>
                             <constraint firstItem="5Dx-zg-nQX" firstAttribute="trailing" secondItem="GZt-RN-3CF" secondAttribute="trailingMargin" id="jdV-R6-b8W"/>
                             <constraint firstItem="hdc-9r-JaW" firstAttribute="top" secondItem="7fR-2R-e0w" secondAttribute="bottom" constant="8" id="v6z-cu-6UZ"/>
+                            <constraint firstItem="yJX-BT-yuf" firstAttribute="top" secondItem="hdc-9r-JaW" secondAttribute="bottom" id="w4z-ai-JKU"/>
                             <constraint firstItem="pr5-LY-EZ8" firstAttribute="top" secondItem="5Dx-zg-nQX" secondAttribute="bottom" id="wNY-F7-dop"/>
+                            <constraint firstAttribute="trailing" secondItem="yJX-BT-yuf" secondAttribute="trailing" id="xdq-gn-yy9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="OverviewIcon" id="Htv-gh-Mqa"/>
                     <connections>
-                        <outlet property="chartScopeControl" destination="7fR-2R-e0w" id="ye0-hi-Bzj"/>
-                        <outlet property="chartView" destination="hdc-9r-JaW" id="lWf-h2-Z6a"/>
-                        <outlet property="tableView" destination="5Dx-zg-nQX" id="N8I-BA-UTX"/>
+                        <outlet property="chartScopeControl" destination="7fR-2R-e0w" id="Iv9-5g-3AZ"/>
+                        <outlet property="chartView" destination="hdc-9r-JaW" id="wAT-ZK-o0I"/>
+                        <outlet property="graphPicker" destination="yJX-BT-yuf" id="FDy-xf-4Tu"/>
+                        <outlet property="tableView" destination="5Dx-zg-nQX" id="whc-pa-NKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x11-Ds-9Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="784"/>
+            <point key="canvasLocation" x="1640" y="-626"/>
         </scene>
         <!--TabView-->
         <scene sceneID="lUt-Yc-pVE">
@@ -157,14 +186,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gMQ-s1-gWH" kind="relationship" relationship="viewControllers" id="8v0-7x-Hg1"/>
+                        <segue destination="gMQ-s1-gWH" kind="relationship" relationship="viewControllers" id="0L4-TJ-jAK"/>
                         <segue destination="3zH-XN-3jy" kind="relationship" relationship="viewControllers" id="Nwb-TY-dNG"/>
                         <segue destination="1u4-v0-Rl5" kind="relationship" relationship="viewControllers" id="ZiY-V0-sKS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hn-O8-deJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="51"/>
+            <point key="canvasLocation" x="678" y="366"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yMi-LM-mRX">
@@ -174,6 +203,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVQ-yh-Wi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1640.5" y="668"/>
         </scene>
         <!--Reading Editor View Controller-->
         <scene sceneID="0eF-4u-A8e">
@@ -188,7 +218,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xuz-M5-o1m">
-                                <rect key="frame" x="0.0" y="123" width="600" height="477"/>
+                                <rect key="frame" x="0.0" y="154" width="600" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vlq-Ka-NZz" id="lrN-Ld-cbn"/>
@@ -200,13 +230,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmol/dl" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="v9w-c5-oQQ">
+                                <rect key="frame" x="269" y="125" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RpK-Sf-Ehy" firstAttribute="top" secondItem="xuz-M5-o1m" secondAttribute="bottom" id="6Vc-ym-1b2"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="leading" secondItem="tjL-5U-5UK" secondAttribute="leadingMargin" id="FDD-UD-Yxg"/>
+                            <constraint firstItem="xuz-M5-o1m" firstAttribute="top" secondItem="v9w-c5-oQQ" secondAttribute="bottom" constant="8" id="FQy-Yb-a4s"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="top" secondItem="UhW-L0-H9u" secondAttribute="bottom" constant="8" id="N84-pj-Gxv"/>
-                            <constraint firstItem="xuz-M5-o1m" firstAttribute="top" secondItem="OUR-7V-yMA" secondAttribute="bottom" constant="18" id="X5P-j4-yRp"/>
+                            <constraint firstItem="xuz-M5-o1m" firstAttribute="top" secondItem="OUR-7V-yMA" secondAttribute="bottom" constant="49" id="X5P-j4-yRp"/>
+                            <constraint firstItem="v9w-c5-oQQ" firstAttribute="top" secondItem="OUR-7V-yMA" secondAttribute="bottom" constant="20" id="gPd-GK-2sT"/>
+                            <constraint firstItem="v9w-c5-oQQ" firstAttribute="centerX" secondItem="tjL-5U-5UK" secondAttribute="centerX" id="pV2-QX-Qlo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xuz-M5-o1m" secondAttribute="trailing" constant="-20" id="tKz-Sr-Lfy"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="centerX" secondItem="tjL-5U-5UK" secondAttribute="centerX" constant="1" id="wWr-1d-wxE"/>
                             <constraint firstItem="OUR-7V-yMA" firstAttribute="trailing" secondItem="tjL-5U-5UK" secondAttribute="trailingMargin" id="xJQ-SO-3Su"/>
@@ -220,12 +259,13 @@
                     </view>
                     <connections>
                         <outlet property="editorTableView" destination="xuz-M5-o1m" id="EiU-6w-Dw2"/>
+                        <outlet property="unitsLabel" destination="v9w-c5-oQQ" id="zD9-4X-Q4M"/>
                         <outlet property="valueField" destination="OUR-7V-yMA" id="Lkx-pi-5C0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbs-fC-nD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-358"/>
+            <point key="canvasLocation" x="644" y="-518"/>
         </scene>
     </scenes>
     <resources>

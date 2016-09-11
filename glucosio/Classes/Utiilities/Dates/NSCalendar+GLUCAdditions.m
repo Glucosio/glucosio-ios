@@ -533,5 +533,21 @@
     return incrementedDate;    
 }
 
+- (NSInteger)gluc_monthsBetween:(NSDate *)aDate andDate:(NSDate *)anotherDate {
+    NSInteger retVal = 0;
+    if (aDate && anotherDate) {
+        retVal = abs([[self components:NSCalendarUnitMonth fromDate:aDate toDate:anotherDate options:nil] month]);
+    }
+    return retVal;
+}
+
+- (NSInteger)gluc_weeksBetween:(NSDate *)aDate andDate:(NSDate *)anotherDate {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    int unitFlags = NSCalendarUnitWeekOfYear;
+    NSDateComponents *dateComponents = [calendar components:unitFlags fromDate:aDate  toDate:anotherDate options:0];
+    
+    return [dateComponents weekOfYear];
+}
+
 
 @end

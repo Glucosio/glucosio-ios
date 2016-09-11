@@ -1,6 +1,8 @@
 use_frameworks!
 platform :ios, '9.0'
 
-pod 'FMDB'
-pod 'Charts'
-pod 'SVProgressHUD'
+target 'glucosio' do
+  pod 'Realm', '1.0.2'
+  pod 'Charts', '2.2.5'
+  pod 'SVProgressHUD'
+end

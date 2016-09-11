@@ -9,18 +9,19 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
-import UIKit
+import CoreGraphics
+
 
 /// The limit line is an additional feature for all Line, Bar and ScatterCharts.
 /// It allows the displaying of an additional line in the chart that marks a certain maximum / limit on the specified axis (x- or y-axis).
 public class ChartLimitLine: ChartComponentBase
 {
-    @objc
-    public enum ChartLimitLabelPosition: Int
+    @objc(ChartLimitLabelPosition)
+    public enum LabelPosition: Int
     {
         case LeftTop
         case LeftBottom
@@ -32,13 +33,14 @@ public class ChartLimitLine: ChartComponentBase
     public var limit = Double(0.0)
     
     private var _lineWidth = CGFloat(2.0)
-    public var lineColor = UIColor(red: 237.0/255.0, green: 91.0/255.0, blue: 91.0/255.0, alpha: 1.0)
+    public var lineColor = NSUIColor(red: 237.0/255.0, green: 91.0/255.0, blue: 91.0/255.0, alpha: 1.0)
     public var lineDashPhase = CGFloat(0.0)
     public var lineDashLengths: [CGFloat]?
-    public var valueTextColor = UIColor.blackColor()
-    public var valueFont = UIFont.systemFontOfSize(13.0)
+    public var valueTextColor = NSUIColor.blackColor()
+    public var valueFont = NSUIFont.systemFontOfSize(13.0)
     public var label = ""
-    public var labelPosition = ChartLimitLabelPosition.RightTop
+    public var drawLabelEnabled = true
+    public var labelPosition = LabelPosition.RightTop
     
     public override init()
     {

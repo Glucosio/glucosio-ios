@@ -8,7 +8,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
@@ -19,5 +19,5 @@ import CoreGraphics
 public protocol ChartFillFormatter
 {
     /// - returns: the vertical (y-axis) position where the filled-line of the LineDataSet should end.
-    func getFillLinePosition(dataSet dataSet: LineChartDataSet, data: LineChartData, chartMaxY: Double, chartMinY: Double) -> CGFloat
+    func getFillLinePosition(dataSet dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat
 }

@@ -1,7 +1,9 @@
 #import "GLUCWebViewController.h"
 #import "SVProgressHUD.h"
 
-@interface GLUCWebViewController ()
+@interface GLUCWebViewController ()<WKNavigationDelegate>
+
+@property (strong, nonatomic) WKWebView *webView;
 
 @property (nonatomic, assign, getter=isLoading) BOOL loading;
 
@@ -9,9 +11,13 @@
 
 @implementation GLUCWebViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webView.delegate = self;
+    self.allowLinks = YES;
+    self.webView = self.webViewWrappper.webView;
+    self.webView.navigationDelegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:request];
 }
@@ -23,20 +29,32 @@
                                  userInfo:nil];
 }
 
-#pragma mark - UIWebViewDelegate
+#pragma mark - WKNavigationDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     self.loading = YES;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     self.loading = NO;
 }
 
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     self.loading = NO;
     [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+}
+
+// Prevent navigation away from the first page specified.
+// URL's must match request to prevent navigation - check trailing '/'
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
+    if (self.allowLinks) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    } else {
+        BOOL sameURL = [navigationAction.request.URL.absoluteString isEqualToString:self.url.absoluteString];
+        WKNavigationActionPolicy decision = (sameURL) ? WKNavigationActionPolicyAllow : WKNavigationActionPolicyCancel;
+        decisionHandler(decision);
+    }
 }
 
 #pragma mark - Accessors

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "GLUCEditorViewController.h"
-#import "GLUCReading.h"
+#import "GLUCBloodGlucoseReading.h"
 
 static NSString *const kGLUCReadingEditorTableViewCellIdentifier = @"ReadingEditorTableViewCell";
 
@@ -8,6 +8,6 @@ static NSString *const kGLUCReadingEditorTableViewCellIdentifier = @"ReadingEdit
 
 @property (nonatomic, readwrite, strong) IBOutlet UITableView *editorTableView;
 @property (nonatomic, readwrite, strong) IBOutlet UITextField *valueField;
-@property (nonatomic, readwrite, strong) GLUCReading *editedObject;
+@property (nonatomic, readwrite, strong) IBOutlet UILabel *unitsLabel;
 
 @end

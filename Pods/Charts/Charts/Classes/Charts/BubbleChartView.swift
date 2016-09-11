@@ -6,100 +6,58 @@
 //    Copyright 2015 Pierre-Marc Airoldi
 //    Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
 import CoreGraphics
 
-public class BubbleChartView: BarLineChartViewBase, BubbleChartRendererDelegate
+public class BubbleChartView: BarLineChartViewBase, BubbleChartDataProvider
 {
     public override func initialize()
     {
         super.initialize()
         
-        renderer = BubbleChartRenderer(delegate: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        renderer = BubbleChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
     }
     
     public override func calcMinMax()
     {
         super.calcMinMax()
+        guard let data = _data else { return }
         
-        if (_deltaX == 0.0 && _data.yValCount > 0)
+        if _xAxis.axisRange == 0.0 && data.yValCount > 0
         {
-            _deltaX = 1.0
+            _xAxis.axisRange = 1.0
         }
         
-        _chartXMin = -0.5
-        _chartXMax = Double(_data.xVals.count) - 0.5
+        _xAxis._axisMinimum = -0.5
+        _xAxis._axisMaximum = Double(data.xVals.count) - 0.5
         
         if renderer as? BubbleChartRenderer !== nil,
-            let sets = _data.dataSets as? [BubbleChartDataSet]
+            let sets = data.dataSets as? [IBubbleChartDataSet]
         {
             for set in sets {
                 
                 let xmin = set.xMin
                 let xmax = set.xMax
                 
-                if (xmin < _chartXMin)
+                if (xmin < _xAxis._axisMinimum)
                 {
-                    _chartXMin = xmin
+                    _xAxis._axisMinimum = xmin
                 }
                 
-                if (xmax > _chartXMax)
+                if (xmax > _xAxis._axisMaximum)
                 {
-                    _chartXMax = xmax
+                    _xAxis._axisMaximum = xmax
                 }
             }
         }
         
-        _deltaX = CGFloat(abs(_chartXMax - _chartXMin))
-    }
-
-    // MARK: - BubbleChartRendererDelegate
-    
-    public func bubbleChartRendererData(renderer: BubbleChartRenderer) -> BubbleChartData!
-    {
-        return _data as! BubbleChartData!
+        _xAxis.axisRange = abs(_xAxis._axisMaximum - _xAxis._axisMinimum)
     }
     
-    public func bubbleChartRenderer(renderer: BubbleChartRenderer, transformerForAxis which: ChartYAxis.AxisDependency) -> ChartTransformer!
-    {
-        return getTransformer(which)
-    }
+    // MARK: - BubbleChartDataProbider
     
-    public func bubbleChartDefaultRendererValueFormatter(renderer: BubbleChartRenderer) -> NSNumberFormatter!
-    {
-        return self._defaultValueFormatter
-    }
-    
-    public func bubbleChartRendererChartYMax(renderer: BubbleChartRenderer) -> Double
-    {
-        return self.chartYMax
-    }
-    
-    public func bubbleChartRendererChartYMin(renderer: BubbleChartRenderer) -> Double
-    {
-        return self.chartYMin
-    }
-    
-    public func bubbleChartRendererChartXMax(renderer: BubbleChartRenderer) -> Double
-    {
-        return self.chartXMax
-    }
-    
-    public func bubbleChartRendererChartXMin(renderer: BubbleChartRenderer) -> Double
-    {
-        return self.chartXMin
-    }
-    
-    public func bubbleChartRendererMaxVisibleValueCount(renderer: BubbleChartRenderer) -> Int
-    {
-        return self.maxVisibleValueCount
-    }
-    
-    public func bubbleChartRendererXValCount(renderer: BubbleChartRenderer) -> Int
-    {
-        return _data.xValCount
-    }
+    public var bubbleData: BubbleChartData? { return _data as? BubbleChartData }
 }

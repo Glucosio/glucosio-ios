@@ -10,6 +10,7 @@
     self.numberFormatter = [[NSNumberFormatter alloc] init];
     self.numberFormatter.positiveFormat = @"0.0";
     self.numberFormatter.roundingMode = NSNumberFormatterRoundHalfUp;
+    self.model.currentUser.numberFormatter = self.numberFormatter;
 }
 
 

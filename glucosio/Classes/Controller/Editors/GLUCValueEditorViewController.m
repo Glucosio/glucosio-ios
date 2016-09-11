@@ -1,3 +1,4 @@
+#import <Realm/RLMRealm.h>
 #import "GLUCValueEditorViewController.h"
 
 
@@ -44,7 +45,9 @@
     
     if (newVal) {
         if (self.editedProperty && self.editedProperty.length && self.editedObject) {
+            [[self.editedObject realm] beginWriteTransaction];
             [self.editedObject setValue:newVal forKey:self.editedProperty];
+            [[self.editedObject realm] commitWriteTransaction];
         }
     }
     

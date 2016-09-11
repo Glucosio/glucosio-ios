@@ -26,20 +26,22 @@
 }
 
 + (void) setAppearanceDefaults {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor gluc_pink]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor glucosio_pink]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UITableViewCell appearance] setTintColor:[UIColor gluc_pink]];
+    [[UITableViewCell appearance] setTintColor:[UIColor glucosio_pink]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
             NSForegroundColorAttributeName: [UIColor whiteColor],
             NSFontAttributeName: [self defaultFont]
     }];
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
 
-    [[UIButton appearance] setTintColor:[UIColor gluc_pink]];
+    [[UIButton appearance] setTintColor:[UIColor glucosio_pink]];
 
     [[UILabel appearance] setFont:[self defaultFont]];
     [[UITextField appearance] setFont:[self defaultFont]];
     [[UILabel appearanceWhenContainedInInstancesOfClasses:@[[UIButton class]]] setFont:[self defaultFont]];
-    [[UITabBar appearance] setBarTintColor:[UIColor gluc_pink]];
+    [[UITabBar appearance] setBarTintColor:[UIColor glucosio_pink]];
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [[UIView appearanceWhenContainedInInstancesOfClasses:@[[UITabBar class]]] setTintColor:[UIColor yellowColor]];
     
@@ -51,7 +53,7 @@
                                                         NSForegroundColorAttributeName: [UIColor whiteColor],
                                                         NSFontAttributeName: [self defaultFont]
                                                         } forState:UIControlStateSelected];
-    [[UISegmentedControl appearance] setTintColor:[UIColor gluc_pink]];
+    [[UISegmentedControl appearance] setTintColor:[UIColor glucosio_pink]];
     [[UISegmentedControl appearance] setTitleTextAttributes:@{
                                                               NSFontAttributeName: [self defaultFont]
                                                               } forState:UIControlStateNormal];
@@ -64,9 +66,8 @@
                                                            NSFontAttributeName: [self defaultFont]                                                           
                                                            } forState:UIControlStateNormal];
     
-    [SVProgressHUD setBackgroundColor:[UIColor gluc_pink]];
+    [SVProgressHUD setBackgroundColor:[UIColor glucosio_pink]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (UIFont *) valueEditorTextFieldFont {

@@ -9,29 +9,48 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
 
 public class ChartSelectionDetail: NSObject
 {
+    private var _y = CGFloat.NaN
     private var _value = Double(0)
+    private var _dataIndex = Int(0)
     private var _dataSetIndex = Int(0)
-    private var _dataSet: ChartDataSet!
+    private var _dataSet: IChartDataSet!
     
     public override init()
     {
         super.init()
     }
     
-    public init(value: Double, dataSetIndex: Int, dataSet: ChartDataSet)
+    public init(y: CGFloat, value: Double, dataIndex: Int, dataSetIndex: Int, dataSet: IChartDataSet)
     {
         super.init()
         
+        _y = y
         _value = value
+        _dataIndex = dataIndex
         _dataSetIndex = dataSetIndex
         _dataSet = dataSet
+    }
+    
+    public convenience init(y: CGFloat, value: Double, dataSetIndex: Int, dataSet: IChartDataSet)
+    {
+        self.init(y: y, value: value, dataIndex: 0, dataSetIndex: dataSetIndex, dataSet: dataSet)
+    }
+    
+    public convenience init(value: Double, dataSetIndex: Int, dataSet: IChartDataSet)
+    {
+        self.init(y: CGFloat.NaN, value: value, dataIndex: 0, dataSetIndex: dataSetIndex, dataSet: dataSet)
+    }
+    
+    public var y: CGFloat
+    {
+        return _y
     }
     
     public var value: Double
@@ -39,12 +58,17 @@ public class ChartSelectionDetail: NSObject
         return _value
     }
     
+    public var dataIndex: Int
+    {
+        return _dataIndex
+    }
+    
     public var dataSetIndex: Int
     {
         return _dataSetIndex
     }
     
-    public var dataSet: ChartDataSet?
+    public var dataSet: IChartDataSet?
     {
         return _dataSet
     }

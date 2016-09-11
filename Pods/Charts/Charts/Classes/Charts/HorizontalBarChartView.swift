@@ -8,11 +8,15 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
-import UIKit
+import CoreGraphics
+
+#if !os(OSX)
+    import UIKit
+#endif
 
 /// BarChart with horizontal bar orientation. In this implementation, x- and y-axis are switched.
 public class HorizontalBarChartView: BarChartView
@@ -24,12 +28,12 @@ public class HorizontalBarChartView: BarChartView
         _leftAxisTransformer = ChartTransformerHorizontalBarChart(viewPortHandler: _viewPortHandler)
         _rightAxisTransformer = ChartTransformerHorizontalBarChart(viewPortHandler: _viewPortHandler)
         
-        renderer = HorizontalBarChartRenderer(delegate: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        renderer = HorizontalBarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
         _leftYAxisRenderer = ChartYAxisRendererHorizontalBarChart(viewPortHandler: _viewPortHandler, yAxis: _leftAxis, transformer: _leftAxisTransformer)
         _rightYAxisRenderer = ChartYAxisRendererHorizontalBarChart(viewPortHandler: _viewPortHandler, yAxis: _rightAxis, transformer: _rightAxisTransformer)
         _xAxisRenderer = ChartXAxisRendererHorizontalBarChart(viewPortHandler: _viewPortHandler, xAxis: _xAxis, transformer: _leftAxisTransformer, chart: self)
         
-        _highlighter = HorizontalBarChartHighlighter(chart: self)
+        self.highlighter = HorizontalBarChartHighlighter(chart: self)
     }
     
     internal override func calculateOffsets()
@@ -39,27 +43,10 @@ public class HorizontalBarChartView: BarChartView
         offsetTop: CGFloat = 0.0,
         offsetBottom: CGFloat = 0.0
         
-        // setup offsets for legend
-        if (_legend !== nil && _legend.isEnabled)
-        {
-            if (_legend.position == .RightOfChart
-                || _legend.position == .RightOfChartCenter)
-            {
-                offsetRight += min(_legend.neededWidth, _viewPortHandler.chartWidth * _legend.maxSizePercent) + _legend.xOffset * 2.0
-            }
-            else if (_legend.position == .LeftOfChart
-                || _legend.position == .LeftOfChartCenter)
-            {
-                offsetLeft += min(_legend.neededWidth, _viewPortHandler.chartWidth * _legend.maxSizePercent) + _legend.xOffset * 2.0
-            }
-            else if (_legend.position == .BelowChartLeft
-                || _legend.position == .BelowChartRight
-                || _legend.position == .BelowChartCenter)
-            {
-                let yOffset = _legend.textHeightMax * 2.0; // It's possible that we do not need this offset anymore as it is available through the extraOffsets
-                offsetBottom += min(_legend.neededHeight + yOffset, _viewPortHandler.chartHeight * _legend.maxSizePercent)
-            }
-        }
+        calculateLegendOffsets(offsetLeft: &offsetLeft,
+                               offsetTop: &offsetTop,
+                               offsetRight: &offsetRight,
+                               offsetBottom: &offsetBottom)
         
         // offsets for y-labels
         if (_leftAxis.needsOffset)
@@ -72,7 +59,7 @@ public class HorizontalBarChartView: BarChartView
             offsetBottom += _rightAxis.getRequiredHeightSpace()
         }
         
-        let xlabelwidth = _xAxis.labelWidth
+        let xlabelwidth = _xAxis.labelRotatedWidth
         
         if (_xAxis.isEnabled)
         {
@@ -97,13 +84,11 @@ public class HorizontalBarChartView: BarChartView
         offsetBottom += self.extraBottomOffset
         offsetLeft += self.extraLeftOffset
         
-        let minOffset: CGFloat = 10.0
-        
         _viewPortHandler.restrainViewPort(
-            offsetLeft: max(minOffset, offsetLeft),
-            offsetTop: max(minOffset, offsetTop),
-            offsetRight: max(minOffset, offsetRight),
-            offsetBottom: max(minOffset, offsetBottom))
+            offsetLeft: max(self.minOffset, offsetLeft),
+            offsetTop: max(self.minOffset, offsetTop),
+            offsetRight: max(self.minOffset, offsetRight),
+            offsetBottom: max(self.minOffset, offsetBottom))
         
         prepareOffsetMatrix()
         prepareValuePxMatrix()
@@ -111,13 +96,20 @@ public class HorizontalBarChartView: BarChartView
     
     internal override func prepareValuePxMatrix()
     {
-        _rightAxisTransformer.prepareMatrixValuePx(chartXMin: _rightAxis.axisMinimum, deltaX: CGFloat(_rightAxis.axisRange), deltaY: _deltaX, chartYMin: _chartXMin)
-        _leftAxisTransformer.prepareMatrixValuePx(chartXMin: _leftAxis.axisMinimum, deltaX: CGFloat(_leftAxis.axisRange), deltaY: _deltaX, chartYMin: _chartXMin)
+        _rightAxisTransformer.prepareMatrixValuePx(chartXMin: _rightAxis._axisMinimum, deltaX: CGFloat(_rightAxis.axisRange), deltaY: CGFloat(_xAxis.axisRange), chartYMin: _xAxis._axisMinimum)
+        _leftAxisTransformer.prepareMatrixValuePx(chartXMin: _leftAxis._axisMinimum, deltaX: CGFloat(_leftAxis.axisRange), deltaY: CGFloat(_xAxis.axisRange), chartYMin: _xAxis._axisMinimum)
     }
 
     internal override func calcModulus()
     {
-        _xAxis.axisLabelModulus = Int(ceil((CGFloat(_data.xValCount) * _xAxis.labelHeight) / (_viewPortHandler.contentHeight * viewPortHandler.touchMatrix.d)))
+        if let data = _data
+        {
+            _xAxis.axisLabelModulus = Int(ceil((CGFloat(data.xValCount) * _xAxis.labelRotatedHeight) / (_viewPortHandler.contentHeight * viewPortHandler.touchMatrix.d)))
+        }
+        else
+        {
+            _xAxis.axisLabelModulus = 1
+        }
         
         if (_xAxis.axisLabelModulus < 1)
         {
@@ -125,14 +117,11 @@ public class HorizontalBarChartView: BarChartView
         }
     }
     
-    public override func getBarBounds(e: BarChartDataEntry) -> CGRect!
+    public override func getBarBounds(e: BarChartDataEntry) -> CGRect
     {
-        let set = _data.getDataSetForEntry(e) as! BarChartDataSet!
-        
-        if (set === nil)
-        {
-            return nil
-        }
+        guard let
+            set = _data?.getDataSetForEntry(e) as? IBarChartDataSet
+            else { return CGRectNull }
         
         let barspace = set.barSpace
         let y = CGFloat(e.value)
@@ -162,18 +151,18 @@ public class HorizontalBarChartView: BarChartView
 
     public override func getHighlightByTouchPoint(pt: CGPoint) -> ChartHighlight?
     {
-        if (_dataNotSet || _data === nil)
+        if _data === nil
         {
-            print("Can't select by touch. No data set.", terminator: "\n")
+            Swift.print("Can't select by touch. No data set.", terminator: "\n")
             return nil
         }
         
-        return _highlighter?.getHighlight(x: Double(pt.y), y: Double(pt.x))
+        return self.highlighter?.getHighlight(x: pt.y, y: pt.x)
     }
     
     public override var lowestVisibleXIndex: Int
     {
-        let step = CGFloat(_data.dataSetCount)
+        let step = CGFloat(_data?.dataSetCount ?? 0)
         let div = (step <= 1.0) ? 1.0 : step + (_data as! BarChartData).groupSpace
         
         var pt = CGPoint(x: _viewPortHandler.contentLeft, y: _viewPortHandler.contentBottom)
@@ -184,7 +173,7 @@ public class HorizontalBarChartView: BarChartView
     
     public override var highestVisibleXIndex: Int
     {
-        let step = CGFloat(_data.dataSetCount)
+        let step = CGFloat(_data?.dataSetCount ?? 0)
         let div = (step <= 1.0) ? 1.0 : step + (_data as! BarChartData).groupSpace
         
         var pt = CGPoint(x: _viewPortHandler.contentLeft, y: _viewPortHandler.contentTop)
