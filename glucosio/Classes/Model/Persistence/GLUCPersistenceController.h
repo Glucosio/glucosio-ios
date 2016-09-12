@@ -26,8 +26,16 @@ static NSInteger const kGLUCModelSchemaVersion = 1;
 - (BOOL)saveReading:(GLUCReading *)reading;
 - (BOOL)deleteReading:(GLUCReading *)reading;
 
-- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType;
+- (RLMResults<GLUCReading *> *)allReadingsOfType:(Class)readingType sortByDateAscending:(BOOL)ascending;
+
+- (RLMResults<GLUCReading *> *)readingsOfType:(Class)readingType fromDate:(NSDate *)from toDate:(NSDate *)to sortByDateAscending:(BOOL)ascending;
+
+- (GLUCReading *)lastReadingOfType:(Class)readingType;
+
+- (GLUCReading *)firstReadingOfType:(Class)readingType;
+
 - (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending;
+
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading;
 
 - (void) saveAll;

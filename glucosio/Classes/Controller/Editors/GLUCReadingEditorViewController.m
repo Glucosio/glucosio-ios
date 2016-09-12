@@ -22,6 +22,11 @@
 
 - (void) viewDidLoad {
     
+    // If you leve it enabled a white space of 44px height will appear above the tableview (the same space occupied by a navigation bar)
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.editorTableView.tableFooterView = [[UIView alloc] init];
+    
     self.dateFormatter = [[NSDateFormatter alloc] init];
     
     if (!self.model) {

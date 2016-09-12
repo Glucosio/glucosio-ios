@@ -68,7 +68,7 @@
  Date created;
  ************************************************/
 
-//#define GLUC_CREATE_TEST_DATA
+#define GLUC_CREATE_TEST_DATA
 
 @interface GLUCPersistenceController ()
 @property(strong, nonatomic, readwrite) GLUCUser *user;
@@ -115,7 +115,7 @@
     for (int i = 0; i < 1000; ++i) {
         NSDate *today = [[NSCalendar currentCalendar] gluc_dateByAddingMonths:(arc4random_uniform(12) * -1) toDate:[NSDate date]];
         NSDate *readingDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:(arc4random_uniform(45) * -1) toDate:today];
-        int reading = arc4random_uniform(30) + 70;
+        int reading = arc4random_uniform(110) + 70;
         GLUCBloodGlucoseReading *testReading = [[GLUCBloodGlucoseReading alloc] init];
         if (testReading) {
             testReading.reading = (id)[NSNumber numberWithInt:reading];
@@ -288,15 +288,42 @@
 }
 
 
-- (RLMResults <GLUCReading *> *)allReadingsOfType:(Class)readingType {
-    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+- (RLMResults <GLUCReading *> *)allReadingsOfType:(Class)readingType sortByDateAscending:(BOOL)ascending {
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:ascending];
 
     return allReadings;
+}
+
+- (RLMResults <GLUCReading *> *)readingsOfType:(Class)readingType fromDate:(NSDate *)from toDate:(NSDate *)to sortByDateAscending:(BOOL)ascending {
+    
+    NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"creationDate BETWEEN {%@, %@}", from, to];
+    RLMResults <GLUCReading *> *readings = [[readingType objectsWithPredicate:predicate]
+                                            sortedResultsUsingProperty:@"creationDate" ascending:ascending];
+    
+    return readings;
 }
 
 - (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending {
     RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
     return allReadings;
+}
+
+- (GLUCReading *)lastReadingOfType:(Class)readingType {
+    
+    NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
+    
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    return [allReadings firstObject];
+}
+
+- (GLUCReading *)firstReadingOfType:(Class)readingType {
+    
+    NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
+    
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    return [allReadings lastObject];
 }
 
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {

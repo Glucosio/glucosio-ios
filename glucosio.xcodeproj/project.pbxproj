@@ -29,7 +29,6 @@
 		551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A31BC3EF60007CD147 /* GLUCAppDelegate.m */; };
 		551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */; };
 		551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */; };
-		551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */; };
 		551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */; };
 		551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B21BC3EF60007CD147 /* GLUCEULAViewController.m */; };
 		551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193B61BC3EF60007CD147 /* GLUCHealthTip.m */; };
@@ -39,7 +38,6 @@
 		551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C01BC3EF60007CD147 /* GLUCUser.m */; };
 		551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */; };
 		551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
-		552B8ADB1D7C444300494735 /* GLUCSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */; };
 		555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */; };
 		555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3581BD28BC80052A865 /* NSDate+GLUCAdditions.m */; };
 		555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35A1BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m */; };
@@ -53,11 +51,15 @@
 		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; };
 		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; };
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
-		559FC63D1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559FC63C1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.m */; };
+		55F571D31D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */; };
+		55F571D41D86A310006A83D3 /* GLUCSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */; };
 		73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A360826019661824371D0886 /* Pods_glucosio.framework */; };
 		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
 		DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */; };
 		DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */; };
+		DFDFD7901D79DD6A001F2503 /* GLUCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDFD78F1D79DD6A001F2503 /* GLUCOverviewViewController.m */; };
+		DFDFD7931D7A3B94001F2503 /* GLUCGraphDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDFD7921D7A3B94001F2503 /* GLUCGraphDataGenerator.m */; };
+		DFDFD7971D7A3E30001F2503 /* GLUCGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDFD7961D7A3E30001F2503 /* GLUCGraphPoint.m */; };
 		DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -127,8 +129,6 @@
 		551193A61BC3EF60007CD147 /* GLUCFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCFeedbackViewController.m; sourceTree = "<group>"; };
 		551193A81BC3EF60007CD147 /* GLUCHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCHistoryViewController.h; sourceTree = "<group>"; };
 		551193A91BC3EF60007CD147 /* GLUCHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCHistoryViewController.m; sourceTree = "<group>"; };
-		551193AB1BC3EF60007CD147 /* GLUCOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCOverviewViewController.h; sourceTree = "<group>"; };
-		551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCOverviewViewController.m; sourceTree = "<group>"; };
 		551193AE1BC3EF60007CD147 /* GLUCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSettingsViewController.h; sourceTree = "<group>"; };
 		551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSettingsViewController.m; sourceTree = "<group>"; };
 		551193B11BC3EF60007CD147 /* GLUCEULAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEULAViewController.h; sourceTree = "<group>"; };
@@ -147,8 +147,6 @@
 		551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCPersistenceController.m; sourceTree = "<group>"; };
 		551193C61BC3EF60007CD147 /* UIColor+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLUCAdditions.h"; sourceTree = "<group>"; };
 		551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLUCAdditions.m"; sourceTree = "<group>"; };
-		552B8AD91D7C444300494735 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
-		552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSchedulerViewController.m; sourceTree = "<group>"; };
 		555CA3551BD28BC80052A865 /* NSCalendar+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+GLUCAdditions.h"; sourceTree = "<group>"; };
 		555CA3561BD28BC80052A865 /* NSCalendar+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+GLUCAdditions.m"; sourceTree = "<group>"; };
 		555CA3571BD28BC80052A865 /* NSDate+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GLUCAdditions.h"; sourceTree = "<group>"; };
@@ -169,8 +167,6 @@
 		5584534A1BC564D300492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		5584534D1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5584534F1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		559FC63B1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEventDateTimeEditorViewController.h; sourceTree = "<group>"; };
-		559FC63C1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEventDateTimeEditorViewController.m; sourceTree = "<group>"; };
 		55B73F2E1CA6C86300D44C76 /* pap */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pap; path = pap.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B73F331CA6C89500D44C76 /* aa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = aa; path = aa.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743381CA6C9A300D44C76 /* ach */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ach; path = ach.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -421,6 +417,10 @@
 		55ECF7D81C7DB8B800311A12 /* sq-XK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-XK"; path = "sq-XK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7D91C7DB8C100311A12 /* sq-MK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-MK"; path = "sq-MK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7DA1C7DBD0200311A12 /* am */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = am; path = am.lproj/Localizable.strings; sourceTree = "<group>"; };
+		55F571CF1D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEventDateTimeEditorViewController.h; sourceTree = "<group>"; };
+		55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEventDateTimeEditorViewController.m; sourceTree = "<group>"; };
+		55F571D11D86A310006A83D3 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
+		55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSchedulerViewController.m; sourceTree = "<group>"; };
 		A360826019661824371D0886 /* Pods_glucosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
 		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
@@ -429,6 +429,12 @@
 		DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewWrapper.m; sourceTree = "<group>"; };
 		DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCWebViewController.h; path = WebViewController/GLUCWebViewController.h; sourceTree = "<group>"; };
 		DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUCWebViewController.m; path = WebViewController/GLUCWebViewController.m; sourceTree = "<group>"; };
+		DFDFD78E1D79DD6A001F2503 /* GLUCOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCOverviewViewController.h; sourceTree = "<group>"; };
+		DFDFD78F1D79DD6A001F2503 /* GLUCOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCOverviewViewController.m; sourceTree = "<group>"; };
+		DFDFD7911D7A3B93001F2503 /* GLUCGraphDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCGraphDataGenerator.h; sourceTree = "<group>"; };
+		DFDFD7921D7A3B94001F2503 /* GLUCGraphDataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCGraphDataGenerator.m; sourceTree = "<group>"; };
+		DFDFD7951D7A3E30001F2503 /* GLUCGraphPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCGraphPoint.h; sourceTree = "<group>"; };
+		DFDFD7961D7A3E30001F2503 /* GLUCGraphPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCGraphPoint.m; sourceTree = "<group>"; };
 		DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCIndexedListEditorViewController.h; sourceTree = "<group>"; };
 		DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCIndexedListEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -551,8 +557,8 @@
 		5511939D1BC3EF60007CD147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				552B8AD81D7C444300494735 /* Scheduler */,
-				DFC3CE811C763191003A22D9 /* Web */,
+				55F571CE1D86A310006A83D3 /* Scheduler */,
+				DFC3CE811C763191003A22D9 /* GLUCWebViewController */,
 				5511939E1BC3EF60007CD147 /* About */,
 				551193A11BC3EF60007CD147 /* Application */,
 				551193A41BC3EF60007CD147 /* Feedback */,
@@ -609,8 +615,12 @@
 		551193AA1BC3EF60007CD147 /* Overview */ = {
 			isa = PBXGroup;
 			children = (
-				551193AB1BC3EF60007CD147 /* GLUCOverviewViewController.h */,
-				551193AC1BC3EF60007CD147 /* GLUCOverviewViewController.m */,
+				DFDFD78E1D79DD6A001F2503 /* GLUCOverviewViewController.h */,
+				DFDFD78F1D79DD6A001F2503 /* GLUCOverviewViewController.m */,
+				DFDFD7911D7A3B93001F2503 /* GLUCGraphDataGenerator.h */,
+				DFDFD7921D7A3B94001F2503 /* GLUCGraphDataGenerator.m */,
+				DFDFD7951D7A3E30001F2503 /* GLUCGraphPoint.h */,
+				DFDFD7961D7A3E30001F2503 /* GLUCGraphPoint.m */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -702,17 +712,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		552B8AD81D7C444300494735 /* Scheduler */ = {
-			isa = PBXGroup;
-			children = (
-				559FC63B1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.h */,
-				559FC63C1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.m */,
-				552B8AD91D7C444300494735 /* GLUCSchedulerViewController.h */,
-				552B8ADA1D7C444300494735 /* GLUCSchedulerViewController.m */,
-			);
-			path = Scheduler;
-			sourceTree = "<group>";
-		};
 		555CA3531BD28BC80052A865 /* Utiilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +777,17 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		55F571CE1D86A310006A83D3 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				55F571CF1D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.h */,
+				55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */,
+				55F571D11D86A310006A83D3 /* GLUCSchedulerViewController.h */,
+				55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
 		8EF3A7B0E2A3FAB6667EA2ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,13 +815,13 @@
 			name = Privacy;
 			sourceTree = "<group>";
 		};
-		DFC3CE811C763191003A22D9 /* Web */ = {
+		DFC3CE811C763191003A22D9 /* GLUCWebViewController */ = {
 			isa = PBXGroup;
 			children = (
 				DFC3CE821C7631E1003A22D9 /* GLUCWebViewController.h */,
 				DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */,
 			);
-			name = Web;
+			name = GLUCWebViewController;
 			sourceTree = "<group>";
 		};
 		E361650FCAC6BC1A71F98212 /* Frameworks */ = {
@@ -893,7 +903,7 @@
 				TargetAttributes = {
 					551193631BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 5QFGKN2X54;
+						DevelopmentTeam = A6J677A893;
 					};
 					5511937C1BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1310,13 +1320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */,
-				551193CC1BC3EF60007CD147 /* GLUCOverviewViewController.m in Sources */,
 				551193D51BC3EF60007CD147 /* GLUCPersistenceController.m in Sources */,
 				551193D01BC3EF60007CD147 /* GLUCModel.m in Sources */,
+				DFDFD7971D7A3E30001F2503 /* GLUCGraphPoint.m in Sources */,
 				DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */,
 				DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */,
 				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
-				552B8ADB1D7C444300494735 /* GLUCSchedulerViewController.m in Sources */,
 				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
 				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
 				555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */,
@@ -1326,6 +1335,7 @@
 				551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */,
 				555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */,
 				551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */,
+				55F571D31D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m in Sources */,
 				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
 				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
 				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
@@ -1334,6 +1344,7 @@
 				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
 				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
 				551193691BC2D2B9007CD147 /* main.m in Sources */,
+				55F571D41D86A310006A83D3 /* GLUCSchedulerViewController.m in Sources */,
 				551193D41BC3EF60007CD147 /* GLUCUser.m in Sources */,
 				42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */,
 				5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */,
@@ -1341,14 +1352,15 @@
 				DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */,
 				42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */,
 				42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */,
-				559FC63D1D7DEDFC0035D0B1 /* GLUCEventDateTimeEditorViewController.m in Sources */,
 				42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */,
 				42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */,
+				DFDFD7931D7A3B94001F2503 /* GLUCGraphDataGenerator.m in Sources */,
 				42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */,
 				42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */,
 				42B3C01DE173A65EE923381B /* GLUCKetonesReading.m in Sources */,
 				42B3CC3DD9F894EC8CDB09D4 /* GLUCBloodPressureReading.m in Sources */,
 				42B3CF7EA614BB87178681F3 /* GLUCCholesterolReading.m in Sources */,
+				DFDFD7901D79DD6A001F2503 /* GLUCOverviewViewController.m in Sources */,
 				42B3C7D6323CCAE20D63B88B /* GLUCHbA1cReading.m in Sources */,
 				42B3CD76A2F2FBBAB494D071 /* GLUCInsulinIntakeReading.m in Sources */,
 			);
