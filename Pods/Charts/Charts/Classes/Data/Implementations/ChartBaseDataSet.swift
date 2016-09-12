@@ -9,7 +9,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/ios-charts
+//  https://github.com/danielgindi/Charts
 //
 
 import Foundation
@@ -71,9 +71,19 @@ public class ChartBaseDataSet: NSObject, IChartDataSet
         fatalError("yValForXIndex is not implemented in ChartBaseDataSet")
     }
     
+    public func yValsForXIndex(x: Int) -> [Double]
+    {
+        fatalError("yValsForXIndex is not implemented in ChartBaseDataSet")
+    }
+    
     public func entryForIndex(i: Int) -> ChartDataEntry?
     {
         fatalError("entryForIndex is not implemented in ChartBaseDataSet")
+    }
+    
+    public func entryForXIndex(x: Int, rounding: ChartDataSetRounding) -> ChartDataEntry?
+    {
+        fatalError("entryForXIndex is not implemented in ChartBaseDataSet")
     }
     
     public func entryForXIndex(x: Int) -> ChartDataEntry?
@@ -81,7 +91,12 @@ public class ChartBaseDataSet: NSObject, IChartDataSet
         fatalError("entryForXIndex is not implemented in ChartBaseDataSet")
     }
     
-    public func entryIndex(xIndex x: Int) -> Int
+    public func entriesForXIndex(x: Int) -> [ChartDataEntry]
+    {
+        fatalError("entriesForXIndex is not implemented in ChartBaseDataSet")
+    }
+    
+    public func entryIndex(xIndex x: Int, rounding: ChartDataSetRounding) -> Int
     {
         fatalError("entryIndex is not implemented in ChartBaseDataSet")
     }
@@ -160,8 +175,9 @@ public class ChartBaseDataSet: NSObject, IChartDataSet
     
     /// - returns: the color at the given index of the DataSet's color array.
     /// This prevents out-of-bounds by performing a modulus on the color index, so colours will repeat themselves.
-    public func colorAt(var index: Int) -> NSUIColor
+    public func colorAt(index: Int) -> NSUIColor
     {
+        var index = index
         if (index < 0)
         {
             index = 0
@@ -260,8 +276,9 @@ public class ChartBaseDataSet: NSObject, IChartDataSet
     }
     
     /// - returns: the color at the specified index that is used for drawing the values inside the chart. Uses modulus internally.
-    public func valueTextColorAt(var index: Int) -> NSUIColor
+    public func valueTextColorAt(index: Int) -> NSUIColor
     {
+        var index = index
         if (index < 0)
         {
             index = 0
@@ -301,7 +318,7 @@ public class ChartBaseDataSet: NSObject, IChartDataSet
     {
         var desc = description + ":"
         
-        for (var i = 0, count = self.entryCount; i < count; i++)
+        for i in 0 ..< self.entryCount
         {
             desc += "\n" + (self.entryForIndex(i)?.description ?? "")
         }

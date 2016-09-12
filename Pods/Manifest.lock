@@ -1,22 +1,22 @@
 PODS:
-  - Charts (2.2.3):
-    - Charts/Core (= 2.2.3)
-  - Charts/Core (2.2.3)
-  - Realm (0.103.1):
-    - Realm/Headers (= 0.103.1)
-  - Realm/Headers (0.103.1)
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
-  - Charts (= 2.2.3)
+  - Charts (= 2.2.5)
   - Realm
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
-  Realm: 9ed57109332e95bdc48a7caedff80b70c51d5ef4
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: d8ffd105d3604114b4546e66071e7b93e90bfba9
+PODFILE CHECKSUM: cfe59adc2fa7d0a4f3ce445d8a66bf71a49f3c41
 
 COCOAPODS: 1.0.1
