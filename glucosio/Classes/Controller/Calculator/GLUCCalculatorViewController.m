@@ -20,6 +20,24 @@
 
 @implementation GLUCCalculatorViewController
 
+- (UIToolbar *) decimalPadAccessory {
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectZero];
+    
+    UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
+    
+    [doneButtonItem setTitleTextAttributes:@{
+                                             NSFontAttributeName: [GLUCAppearanceController defaultFont],
+                                             NSForegroundColorAttributeName: [UIColor glucosio_pink_dark]
+                                             } forState:UIControlStateNormal];
+    
+    
+    numberToolbar.items = @[
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                            doneButtonItem];
+    [numberToolbar sizeToFit];
+
+    return numberToolbar;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +49,14 @@
     self.inputValueField.text = @"";
     self.resultsValueField.text = @"";
     
+    self.inputValueField.inputAccessoryView = [self decimalPadAccessory];
+    self.resultsValueField.inputAccessoryView = self.inputValueField.inputAccessoryView;
+}
+
+
+-(void) dismissKeyboard {
+    [self.inputValueField resignFirstResponder];
+    [self.resultsValueField resignFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,6 +74,8 @@
     [self recalc];
     
     [self.resultsValueField setNeedsDisplay];
+    
+    [self.inputValueField becomeFirstResponder];
 }
 
 
@@ -69,6 +97,10 @@
     } else {
         self.resultsValueField.text = @"";
     }
+}
+
+- (IBAction) textEditingEnded:(UITextField *)sender {
+    [sender resignFirstResponder];
 }
 
 - (IBAction) textChanged:(UITextField *)sender {
