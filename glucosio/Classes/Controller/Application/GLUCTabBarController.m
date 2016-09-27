@@ -27,7 +27,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSArray *tabItemTitlesLoc = @[GLUCLoc(@"tab_overview"), GLUCLoc(@"tab_history"), GLUCLoc(@"action_settings"), GLUCLoc(@"tab_scheduler")];
+    NSArray *tabItemTitlesLoc = @[GLUCLoc(@"tab_overview"), GLUCLoc(@"tab_history"), GLUCLoc(@"action_settings"), GLUCLoc(@"tab_scheduler"), GLUCLoc(@"tab_calculator")];
     int tabItemIndex = 0;
     for (UITabBarItem *tabItem in self.tabBar.items) {
         tabItem.image = [tabItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

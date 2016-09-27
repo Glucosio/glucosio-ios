@@ -42,9 +42,15 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 
 - (BOOL)needsBloodGlucoseReadingUnitConversion;
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading;
+- (NSNumber *)glucose:(NSNumber *)mgDlValue inUnits:(NSInteger)units;
+
 - (void)setNewValue:(NSNumber *)value inReading:(GLUCReading *)reading;
 - (NSString *) displayValueForReading:(GLUCReading *)reading;
 - (NSString *) displayUnitsForReading:(GLUCReading *)reading;
+
+- (NSString *)displayUnitsForBloodGlucoseReadings;
+- (NSString *)displayUnitsForBodyWeightReadings;
+- (NSString *)displayUnitsForHbA1cReadings;
 
 - (NSArray *) readingTypes;
 

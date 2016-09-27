@@ -44,6 +44,7 @@
 		555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA35D1BD28BC80052A865 /* NSArray+GLUCAdditions.m */; };
 		555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3661BD28BC80052A865 /* GLUCLoc.m */; };
 		555CA3731BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */; };
+		55732C091D998E8B002CA6B1 /* GLUCCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55732C081D998E8B002CA6B1 /* GLUCCalculatorViewController.m */; };
 		558180BA1BCD16210088A518 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 558180B81BCD161C0088A518 /* Localizable.strings */; };
 		558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BC1BCD419B0088A518 /* lato-bold.ttf */; };
 		558180BF1BCD419B0088A518 /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558180BD1BCD419B0088A518 /* lato.ttf */; };
@@ -159,6 +160,8 @@
 		555CA3661BD28BC80052A865 /* GLUCLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCLoc.m; sourceTree = "<group>"; };
 		555CA3711BD4E0C80052A865 /* NSFileManager+GLUCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GLUCAdditions.h"; sourceTree = "<group>"; };
 		555CA3721BD4E0C80052A865 /* NSFileManager+GLUCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GLUCAdditions.m"; sourceTree = "<group>"; };
+		55732C071D998E8B002CA6B1 /* GLUCCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCCalculatorViewController.h; sourceTree = "<group>"; };
+		55732C081D998E8B002CA6B1 /* GLUCCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCCalculatorViewController.m; sourceTree = "<group>"; };
 		558180B91BCD161D0088A518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		558180BC1BCD419B0088A518 /* lato-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-bold.ttf"; sourceTree = "<group>"; };
 		558180BD1BCD419B0088A518 /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
@@ -557,6 +560,7 @@
 		5511939D1BC3EF60007CD147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				55732C061D998E8B002CA6B1 /* Calculator */,
 				55F571CE1D86A310006A83D3 /* Scheduler */,
 				DFC3CE811C763191003A22D9 /* GLUCWebViewController */,
 				5511939E1BC3EF60007CD147 /* About */,
@@ -753,6 +757,15 @@
 				555CA3661BD28BC80052A865 /* GLUCLoc.m */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		55732C061D998E8B002CA6B1 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				55732C071D998E8B002CA6B1 /* GLUCCalculatorViewController.h */,
+				55732C081D998E8B002CA6B1 /* GLUCCalculatorViewController.m */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		558180BB1BCD419B0088A518 /* Fonts */ = {
@@ -1358,6 +1371,7 @@
 				42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */,
 				42B3CCD90A2F587003B07BD4 /* GLUCReading.m in Sources */,
 				42B3C01DE173A65EE923381B /* GLUCKetonesReading.m in Sources */,
+				55732C091D998E8B002CA6B1 /* GLUCCalculatorViewController.m in Sources */,
 				42B3CC3DD9F894EC8CDB09D4 /* GLUCBloodPressureReading.m in Sources */,
 				42B3CF7EA614BB87178681F3 /* GLUCCholesterolReading.m in Sources */,
 				DFDFD7901D79DD6A001F2503 /* GLUCOverviewViewController.m in Sources */,

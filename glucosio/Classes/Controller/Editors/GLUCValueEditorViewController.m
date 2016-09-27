@@ -1,6 +1,7 @@
 #import <Realm/RLMRealm.h>
 #import "GLUCValueEditorViewController.h"
-
+#import "GLUCAppearanceController.h"
+#import "UIColor+GLUCAdditions.h"
 
 @implementation GLUCValueEditorViewController {
 
@@ -15,17 +16,30 @@
     [super viewDidLoad];
 
     self.textField.keyboardType = UIKeyboardTypeNumberPad;
+}
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.textField setFont:[GLUCAppearanceController valueEditorTextFieldFont]];
+    [self.textField setTextColor:[UIColor glucosio_pink]];
+
+    
     NSString *currentValue = [self.editedObject displayValueForKey:self.editedProperty];
-
+    
     [self enableOrDisableSaveButton:currentValue];
-
+    
     if (self.textField) {
         self.textField.text = currentValue;
         self.textField.delegate = self;
         
         [self.textField becomeFirstResponder];
     }
+    
+}
+
+- (IBAction) textChanged:(UITextField *)sender {
+    [self enableOrDisableSaveButton:sender.text];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {

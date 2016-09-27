@@ -16,7 +16,11 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 
 + (NSArray *) averageMonthlyReadings;
 
++ (NSNumber *) glucoseToMgDl:(NSNumber *) mmolL_glucose;
++ (NSNumber *) glucoseToMmolL:(NSNumber *) mgDl_glucose;
+
 + (NSNumber *) glucoseToA1CAsPercentage:(NSNumber *)mgDl_glucose;
 + (NSNumber *) glucoseToA1CAsMmolMol:(NSNumber *)mgDl_glucose;
++ (NSNumber *) glucoseToA1CInUnits:(NSInteger)units forValue:(NSNumber *)value;
 
 @end

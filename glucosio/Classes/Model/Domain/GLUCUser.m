@@ -184,11 +184,16 @@
     return ((BOOL)[self.preferredBloodGlucoseUnitOfMeasure intValue]);
 }
 
-- (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
-    if ([self needsBloodGlucoseReadingUnitConversion]) {
-        return @([reading.reading floatValue] / 18.0f);
+- (NSNumber *)glucose:(NSNumber *)mgDlValue inUnits:(NSInteger)units {
+    NSNumber *retVal = mgDlValue;
+    if (units) {
+        retVal = [GLUCBloodGlucoseReading glucoseToMmolL:mgDlValue];
     }
-    return reading.reading;
+    return retVal;
+}
+
+- (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
+    return [self glucose:reading.reading inUnits:[self.preferredBloodGlucoseUnitOfMeasure integerValue]];
 }
 
 // Let the user's preferences take effect if display needs to be in different units
@@ -205,13 +210,26 @@
     return valueStr;
 }
 
+- (NSString *)displayUnitsForBloodGlucoseReadings {
+    return [self displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey];
+}
+
+- (NSString *)displayUnitsForBodyWeightReadings {
+    return [self displayValueForKey:kGLUCUserPreferredBodyWeightUnitsPropertyKey];
+}
+
+- (NSString *)displayUnitsForHbA1cReadings {
+    return [self displayValueForKey:kGLUCUserPreferredA1CUnitsPropertyKey];
+}
+
+
 - (NSString *)displayUnitsForReading:(GLUCReading *)aReading {
     NSString *retVal = @"";
     if (aReading && [aReading isKindOfClass:[GLUCBloodGlucoseReading class]]) {
-        retVal = [self displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey];
+        retVal = [self displayUnitsForBloodGlucoseReadings];
     }
     if (aReading && [aReading isKindOfClass:[GLUCBodyWeightReading class]]) {
-        retVal = [self displayValueForKey:kGLUCUserPreferredBodyWeightUnitsPropertyKey];
+        retVal = [self displayUnitsForBodyWeightReadings];
     }
     return retVal;
 }
@@ -234,6 +252,7 @@
 - (NSArray *) readingTypes {
     return @[GLUCBloodGlucoseReading.class, GLUCHbA1cReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class, GLUCInsulinIntakeReading.class];
 }
+
 
 - (NSString *) hb1acAverageValue {
     NSInteger h1bacUnits = [[self preferredA1CUnitOfMeasure] integerValue];

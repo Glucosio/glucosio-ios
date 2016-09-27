@@ -144,6 +144,15 @@
     return [self readingTypeForId:[self.readingTypeId integerValue]];
 }
 
+
++ (NSNumber *) glucoseToMgDl:(NSNumber *) mmolL_glucose {
+    return [NSNumber numberWithInteger:[mmolL_glucose doubleValue] * 18];
+}
+
++ (NSNumber *) glucoseToMmolL:(NSNumber *) mgDl_glucose {
+    return [NSNumber numberWithDouble:round([mgDl_glucose doubleValue] / 18.0f)];
+}
+
 + (NSNumber *) glucoseToA1CAsPercentage:(NSNumber *)mgDl_glucose {
     NSNumber *h1bacValue = @(0);
     if (mgDl_glucose) {
@@ -157,6 +166,13 @@
     return @((glucToA1C - 2.152) / 0.09148);
 }
 
++ (NSNumber *) glucoseToA1CInUnits:(NSInteger)units forValue:(NSNumber *)value {
+    if (units == 0) {
+        return [self glucoseToA1CAsPercentage:value];
+    } else {
+        return [self glucoseToA1CAsMmolMol:value];
+    }
+}
 
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour {
     NSInteger retVal = -1; // other

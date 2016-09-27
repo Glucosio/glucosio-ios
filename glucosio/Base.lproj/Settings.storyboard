@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hk3-Vk-kPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hk3-Vk-kPc">
     <dependencies>
+        <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -195,13 +196,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fy2-6S-Lcs">
-                                <rect key="frame" x="252" y="36" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="xp2-rh-EHL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="64" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-GW-N5j">
+                                <rect key="frame" x="20" y="28" width="560" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="6h6-GR-YG4" eventType="editingChanged" id="YrB-P5-vDt"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72w-6a-ik1">
                                 <rect key="frame" x="283" y="118" width="34" height="30"/>
@@ -213,15 +214,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fy2-6S-Lcs" firstAttribute="top" secondItem="VzE-x6-Din" secondAttribute="bottom" constant="16" id="L35-Sd-Cbh"/>
-                            <constraint firstItem="72w-6a-ik1" firstAttribute="centerX" secondItem="Fy2-6S-Lcs" secondAttribute="centerX" id="geg-vl-3a1"/>
+                            <constraint firstItem="U8c-GW-N5j" firstAttribute="trailing" secondItem="FnF-Cd-TY9" secondAttribute="trailingMargin" id="Kuu-JP-9z1"/>
+                            <constraint firstItem="72w-6a-ik1" firstAttribute="top" secondItem="U8c-GW-N5j" secondAttribute="bottom" constant="13" id="iah-0r-s3B"/>
+                            <constraint firstItem="U8c-GW-N5j" firstAttribute="top" secondItem="VzE-x6-Din" secondAttribute="bottom" constant="8" id="kq5-Dn-pri"/>
                             <constraint firstItem="72w-6a-ik1" firstAttribute="centerX" secondItem="FnF-Cd-TY9" secondAttribute="centerX" id="pKz-5O-IMa"/>
-                            <constraint firstItem="72w-6a-ik1" firstAttribute="top" secondItem="Fy2-6S-Lcs" secondAttribute="bottom" constant="52" id="zfL-Xj-3CB"/>
+                            <constraint firstItem="U8c-GW-N5j" firstAttribute="leading" secondItem="FnF-Cd-TY9" secondAttribute="leadingMargin" id="q9T-ox-IdI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="saveButton" destination="72w-6a-ik1" id="FwI-pz-BYV"/>
-                        <outlet property="textField" destination="Fy2-6S-Lcs" id="adg-7n-wlv"/>
+                        <outlet property="textField" destination="U8c-GW-N5j" id="cLj-tp-8oy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8V-Lf-JdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,7 +490,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-zo-IFX">
                                 <rect key="frame" x="269" y="224" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

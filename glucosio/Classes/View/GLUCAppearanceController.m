@@ -2,6 +2,7 @@
 #import "GLUCAppearanceController.h"
 #import "UIColor+GLUCAdditions.h"
 #import "GLUCTabBarController.h"
+#import "GLUCEditorViewController.h"
 #import "SVProgressHUD.h"
 
 @implementation GLUCAppearanceController {
@@ -61,6 +62,7 @@
     [[UITableView appearance] setBackgroundColor:[UIColor whiteColor]];
 
     [[UILabel appearanceWhenContainedInInstancesOfClasses:@[[UITextField class]]] setFont:[self valueEditorTextFieldFont]];
+//    [[UITextField appearanceWhenContainedInInstancesOfClasses:@[[GLUCEditorViewController class]]] setFont:[self valueEditorTextFieldFont]];
 
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [self defaultFont]                                                           
