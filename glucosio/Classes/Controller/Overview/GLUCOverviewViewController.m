@@ -219,41 +219,52 @@
             break;
     }
     
-    NSMutableArray *yVals = [NSMutableArray array];
-    NSMutableArray *xVals = [NSMutableArray array];
-    
-    [points enumerateObjectsUsingBlock:^(GLUCGraphPoint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [yVals addObject:[[ChartDataEntry alloc] initWithValue:obj.y xIndex:idx]];
-        [xVals addObject:[df stringFromDate:obj.x]];
-    }];
-    
-    LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
-    LineChartData *data = [[LineChartData alloc] initWithXVals:xVals dataSet:lineDataSet];
-    
-    [self.chartView clear];
-    [self.chartView.leftAxis removeAllLimitLines];
-    
-    if (readingType == [GLUCBloodGlucoseReading class]) {
-        GLUCUser *user = self.model.currentUser;
+    if (points && points.count >0) {
         
-        ChartLimitLine *maxLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMax.doubleValue label:GLUCLoc(@"reading_high")];
-        maxLimit.lineColor = [UIColor glucosio_reading_high];
-        maxLimit.lineWidth = 0.8f;
+        NSMutableArray *yVals = [NSMutableArray array];
+        NSMutableArray *xVals = [NSMutableArray array];
         
-        ChartLimitLine *minLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMin.doubleValue label:GLUCLoc(@"reading_low")];
-        minLimit.lineColor = [UIColor glucosio_reading_low];
-        minLimit.lineWidth = 0.8f;
+        [points enumerateObjectsUsingBlock:^(GLUCGraphPoint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            ChartDataEntry *entryXValue = [[ChartDataEntry alloc] initWithValue:obj.y xIndex:idx];
+            NSString *entryYValue = [df stringFromDate:obj.x];
+            
+            if (entryXValue && entryYValue) {
+                [yVals addObject:entryXValue];
+                [xVals addObject:entryYValue];
+            }
+        }];
         
-        ChartYAxis *leftAxis = self.chartView.leftAxis;
-        [leftAxis addLimitLine:maxLimit];
-        [leftAxis addLimitLine:minLimit];
-        leftAxis.drawLimitLinesBehindDataEnabled = YES;
+        LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
+        LineChartData *data = [[LineChartData alloc] initWithXVals:xVals dataSet:lineDataSet];
+        
+        [self.chartView clear];
+        [self.chartView.leftAxis removeAllLimitLines];
+        
+        if (readingType == [GLUCBloodGlucoseReading class]) {
+            GLUCUser *user = self.model.currentUser;
+            
+            ChartLimitLine *maxLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMax.doubleValue label:GLUCLoc(@"reading_high")];
+            maxLimit.lineColor = [UIColor glucosio_reading_high];
+            maxLimit.lineWidth = 0.8f;
+            
+            ChartLimitLine *minLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMin.doubleValue label:GLUCLoc(@"reading_low")];
+            minLimit.lineColor = [UIColor glucosio_reading_low];
+            minLimit.lineWidth = 0.8f;
+            
+            ChartYAxis *leftAxis = self.chartView.leftAxis;
+            [leftAxis addLimitLine:maxLimit];
+            [leftAxis addLimitLine:minLimit];
+            leftAxis.drawLimitLinesBehindDataEnabled = YES;
+        }
+        
+        self.chartView.data = data;
+        [self.chartView setVisibleXRangeMinimum:10];
+        [self.chartView setVisibleXRangeMaximum:20];
+        [self.chartView moveViewToX:data.xValCount];
+        
+    } else {
+        self.chartView.data = nil;
     }
-    
-    self.chartView.data = data;
-    [self.chartView setVisibleXRangeMinimum:10];
-    [self.chartView setVisibleXRangeMaximum:20];
-    [self.chartView moveViewToX:data.xValCount];
 }
 
 - (NSString *)hb1acAverageValue {

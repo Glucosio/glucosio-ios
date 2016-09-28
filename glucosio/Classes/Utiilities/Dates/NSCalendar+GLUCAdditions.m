@@ -69,6 +69,8 @@
 
 - (NSDate *) gluc_dateByRoundingUpDate:(NSDate *)date;
 {
+    if (!date) return nil;
+    
     NSDateComponents *components = [self gluc_standardComponentsForDate:date];
     
     double percentageOfHour = components.minute / 60.0;
@@ -96,58 +98,93 @@
 
 - (NSDate *) gluc_dateByAddingSeconds:(NSInteger)seconds toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setSecond:seconds];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setSecond:seconds];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingMinutes:(NSInteger)minutes toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setMinute:minutes];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setMinute:minutes];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingHours:(NSInteger)hours toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setHour:hours];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setHour:hours];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingDays:(NSInteger)days toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:days];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setDay:days];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingWeeks:(NSInteger)weeks toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setWeekOfYear:weeks];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setWeekOfYear:weeks];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingMonths:(NSInteger)months toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setMonth:months];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setMonth:months];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateByAddingYears:(NSInteger)years toDate:(NSDate *)date;
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setYear:years];
-    NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
-    return incrementedDate;
+    NSDate *retVal = nil;
+    
+    if (date) {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setYear:years];
+        NSDate *incrementedDate = [self dateByAddingComponents:components toDate:date options:0];
+        retVal = incrementedDate;
+    }
+    return retVal;
 }
 
 - (NSDate *) gluc_dateForWeekday:(int)weekdayIndex withOrdinal:(int)ordinal withDate:(NSDate *)aDate {
@@ -542,11 +579,17 @@
 }
 
 - (NSInteger)gluc_weeksBetween:(NSDate *)aDate andDate:(NSDate *)anotherDate {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    int unitFlags = NSCalendarUnitWeekOfYear;
-    NSDateComponents *dateComponents = [calendar components:unitFlags fromDate:aDate  toDate:anotherDate options:0];
+    NSInteger retVal = 0;
     
-    return [dateComponents weekOfYear];
+    if (aDate && anotherDate) {
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        int unitFlags = NSCalendarUnitWeekOfYear;
+        NSDateComponents *dateComponents = [calendar components:unitFlags fromDate:aDate  toDate:anotherDate options:0];
+        
+        retVal = [dateComponents weekOfYear];
+    }
+    
+    return retVal;
 }
 
 
