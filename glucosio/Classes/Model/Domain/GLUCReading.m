@@ -5,6 +5,7 @@
 
 #import <Realm/Realm.h>
 #import "GLUCReading.h"
+#import "UIColor+GLUCAdditions.h"
 
 
 @implementation GLUCReading {
@@ -46,6 +47,15 @@
 
     };
 }
+
++ (NSString *) menuIconName {
+    return nil;
+}
+
++ (UIColor *) readingColor {
+    return [UIColor blackColor];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

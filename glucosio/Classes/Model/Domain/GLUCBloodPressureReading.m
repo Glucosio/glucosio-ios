@@ -14,6 +14,14 @@
     return GLUCLoc(@"Blood Pressure");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_BloodPressure";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_pressure];
+}
+
 + (NSDictionary *)schema {
     NSDictionary *propertiesDict = @{
                                      kGLUCReadingModelValuePropertyKey : @{

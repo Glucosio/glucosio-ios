@@ -73,6 +73,14 @@
     return GLUCLoc(@"Blood Glucose Level");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_Glucose";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_glucose];
+}
+
 - (instancetype) init {
     if ((self = [super init]) != nil) {
         NSInteger rTypeId = [self readingTypeIdForHourOfDay:[[NSCalendar currentCalendar] gluc_hourFromDate:[NSDate date]]];

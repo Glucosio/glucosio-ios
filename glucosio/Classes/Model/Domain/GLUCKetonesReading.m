@@ -4,7 +4,7 @@
 //
 
 #import "GLUCKetonesReading.h"
-
+#import "UIColor+GLUCAdditions.h"
 
 @implementation GLUCKetonesReading {
 
@@ -14,5 +14,12 @@
     return GLUCLoc(@"Ketones");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_Ketones";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_ketonest];
+}
 
 @end

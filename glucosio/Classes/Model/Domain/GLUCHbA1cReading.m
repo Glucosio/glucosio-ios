@@ -14,4 +14,12 @@
     return GLUCLoc(@"HbA1c Reading");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_a1c";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_HbA1c];
+}
+
 @end

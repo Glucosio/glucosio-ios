@@ -15,4 +15,6 @@ static NSString *const kGlUCAppearanceDefaultBoldFontName = @"Lato-Bold";
 + (UIFont *) defaultFont;
 + (UIFont *) defaultBoldFont;
 
++ (UIImage *) menuIconForReadingType:(Class)readingType;
+
 @end

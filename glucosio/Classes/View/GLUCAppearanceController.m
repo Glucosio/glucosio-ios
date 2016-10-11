@@ -76,7 +76,27 @@
     return [self defaultFontOfSize:64.0f];
 }
 
++ (UIImage *) menuIconForReadingType:(Class)readingType {
+    UIImage *retVal = nil;
+    
+    if ([readingType isSubclassOfClass:[GLUCReading class]]) {
+        UIImage *menuIcon = [UIImage imageNamed:[readingType menuIconName]];
+        if (menuIcon) {
+            UIImageView *menuIconView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f,32.0f)];
+            menuIconView.contentMode = UIViewContentModeScaleAspectFit;
+            menuIconView.backgroundColor = [readingType readingColor];
+            menuIconView.layer.cornerRadius = 4.0f;
+            menuIconView.image = menuIcon;
+            UIGraphicsBeginImageContext(CGSizeMake(32.0f,32.0f));
+            [menuIconView.layer renderInContext:UIGraphicsGetCurrentContext()];
+            UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
+            retVal = [finalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            UIGraphicsEndImageContext();
+        }
 
+    }
+    return retVal;
+}
 
 
 @end

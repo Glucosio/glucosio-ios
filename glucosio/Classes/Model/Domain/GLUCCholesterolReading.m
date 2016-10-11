@@ -14,6 +14,14 @@
     return GLUCLoc(@"Cholesterol Level");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_Cholesterol";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_cholesterol];
+}
+
 + (NSDictionary *)schema {
     NSDictionary *propertiesDict = @{
                                      kGLUCReadingModelValuePropertyKey : @{

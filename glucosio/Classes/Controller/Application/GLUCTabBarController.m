@@ -11,7 +11,8 @@
 #import "GLUCKetonesReading.h"
 #import "GLUCBodyWeightReading.h"
 #import "GLUCInsulinIntakeReading.h"
-
+#import "UIColor+GLUCAdditions.h"
+#import "GLUCAppearanceController.h"
 
 @interface GLUCTabBarController ()
 
@@ -70,6 +71,10 @@
             UIAlertAction *action = [UIAlertAction actionWithTitle:[readingType title] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self addReadingOfSelectedType:readingType];
             }];
+            UIImage *menuIcon = [GLUCAppearanceController menuIconForReadingType:readingType];
+            if (menuIcon) {
+                [action setValue:menuIcon forKey:@"image"];
+            }
             [readingTypeSelector addAction:action];
         }
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {

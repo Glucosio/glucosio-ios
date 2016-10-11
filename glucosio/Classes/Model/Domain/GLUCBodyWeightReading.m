@@ -4,6 +4,7 @@
 //
 
 #import "GLUCBodyWeightReading.h"
+#import "UIColor+GLUCAdditions.h"
 
 
 @implementation GLUCBodyWeightReading {
@@ -14,6 +15,14 @@
 
 + (NSString *)title {
     return GLUCLoc(@"Body Weight");
+}
+
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_Weight";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_weight];
 }
 
 
