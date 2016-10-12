@@ -21,11 +21,8 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
-
-    if (!self.model) {
-        self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
-    }
+    
+    
     self.readingTypes = [self.model.currentUser readingTypes];
     self.readingClass = self.readingTypes.firstObject;
 

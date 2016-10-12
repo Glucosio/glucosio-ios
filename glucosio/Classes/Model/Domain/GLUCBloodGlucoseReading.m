@@ -182,6 +182,25 @@
     }
 }
 
++ (NSNumber *) convertValue:(NSNumber *)aValue fromUnits:(NSInteger)fromUnits toUnits:(NSInteger)toUnits {
+    NSNumber *retVal = aValue;
+    if (fromUnits != toUnits) {
+        if (fromUnits == 0 && toUnits == 1) {
+            retVal = [self glucoseToMmolL:aValue];
+        }
+        if (fromUnits == 1 && toUnits == 0) {
+            retVal = [self glucoseToMgDl:aValue];
+        }
+    }
+    return retVal;
+}
+
+
+// units = 0 is always the default units for the reading
+- (NSNumber *) readingInUnits:(NSInteger)units {
+    return [[self class] convertValue:self.reading fromUnits:0 toUnits:units];
+}
+
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour {
     NSInteger retVal = -1; // other
     

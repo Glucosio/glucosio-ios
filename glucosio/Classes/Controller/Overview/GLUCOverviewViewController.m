@@ -58,10 +58,6 @@
 
     [self configureView];
     
-    if (!self.model) {
-        self.model = [(GLUCAppDelegate *) [[UIApplication sharedApplication] delegate] appModel];
-    }
-    
     self.rowTitles = @[GLUCLoc(@"fragment_overview_last_reading"), GLUCLoc(@"HbA1c:")];
     
     // TODO: too specific to blood glucose readings.  For now the overview controller only shows glucose,
@@ -91,30 +87,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    GLUCBloodGlucoseReading *reading = [self.model lastBloodGlucoseReading];
-    NSString *valueStr = @"";
-    NSString *lastReading = GLUCLoc(@"fragment_empty_text");
-    
-    if (reading) {
-        if (self.model.currentUser.needsBloodGlucoseReadingUnitConversion) {
-            valueStr = [self.numberFormatter stringFromNumber:[self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
-        }
-        else {
-            valueStr = [NSString stringWithFormat:@"%@",
-                        [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:reading]];
-        }
-        
-        lastReading = [NSString stringWithFormat:@"%@ %@", valueStr,
-                       [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
-        
-    }
-    
-    
-    self.rowValues = @[lastReading, [self hb1acAverageValue]];
-    
-    [self.tableView reloadData];
+    [super viewWillAppear:animated];    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -194,6 +167,25 @@
     return lineDataSet;
 }
 
+- (void)showLastReadingOfType:(Class)readingType {
+    GLUCReading *reading = [self.model lastReadingOfType:readingType];
+    NSString *valueStr = @"";
+    NSString *lastReading = GLUCLoc(@"fragment_empty_text");
+    
+    if (reading) {
+        valueStr = [self.model.currentUser displayValueForReading:reading];
+        
+        lastReading = [NSString stringWithFormat:@"%@ %@", valueStr,
+                       [self.model.currentUser displayUnitsForReading:reading]];
+        
+    }
+    
+    self.rowValues = @[lastReading, [self hb1acAverageValue]];
+    
+    [self.tableView reloadData];
+    
+}
+
 - (void)showReadingsOfType:(Class)readingType {
     
     GLUCGraphDataGenerator *generator = [[GLUCGraphDataGenerator alloc] initWithModeController:self.model];
@@ -265,6 +257,8 @@
     } else {
         self.chartView.data = nil;
     }
+    
+    [self showLastReadingOfType:readingType];
 }
 
 - (NSString *)hb1acAverageValue {

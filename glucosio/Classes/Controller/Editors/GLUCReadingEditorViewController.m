@@ -21,6 +21,7 @@
 @dynamic editedObject;
 
 - (void) viewDidLoad {
+    [super viewDidLoad];
     
     // If you leve it enabled a white space of 44px height will appear above the tableview (the same space occupied by a navigation bar)
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -29,10 +30,6 @@
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     
-    if (!self.model) {
-        self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
-    }
-
     self.rowKeys = [self rowKeysForReadingType:self.editedObject.class];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
@@ -40,7 +37,6 @@
     
     self.useEditedValue = NO;
     
-    [super viewDidLoad];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

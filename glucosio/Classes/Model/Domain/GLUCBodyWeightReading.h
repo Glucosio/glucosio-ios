@@ -9,4 +9,8 @@
 
 // Always stored in kilograms in the database, converted for display / entry as required
 @interface GLUCBodyWeightReading : GLUCReading
+
++ (NSNumber *) kgToLb:(NSNumber *)kgValue;
++ (NSNumber *) lbToKg:(NSNumber *)lbValue;
+
 @end

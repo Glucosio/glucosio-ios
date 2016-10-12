@@ -17,6 +17,10 @@ static NSString *const kGLUCReadingModelValuePropertyKey = @"reading";
 + (NSString *) menuIconName;
 + (UIColor *) readingColor;
 
+// units = 0 is always the default units for the reading
+- (NSNumber *) readingInUnits:(NSInteger)units;
++ (NSNumber *) convertValue:(NSNumber *)aValue fromUnits:(NSInteger)fromUnits toUnits:(NSInteger)toUnits;
+
 @property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *reading;
 @property (nonatomic, readwrite, strong) NSString *notes;
 @end

@@ -48,6 +48,8 @@
     };
 }
 
+
+
 + (NSString *) menuIconName {
     return nil;
 }
@@ -66,5 +68,13 @@
     return self;
 }
 
+// units = 0 is always the default units for the reading
+- (NSNumber *) readingInUnits:(NSInteger)units {
+    return self.reading;
+}
+
++ (NSNumber *) convertValue:(NSNumber *)aValue fromUnits:(NSInteger)fromUnits toUnits:(NSInteger)units {
+    return aValue;
+}
 
 @end

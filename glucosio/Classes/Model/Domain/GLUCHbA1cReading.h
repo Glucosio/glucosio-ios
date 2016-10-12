@@ -8,4 +8,11 @@
 
 
 @interface GLUCHbA1cReading : GLUCReading
+
+// percentage to mmol/mol
++ (NSNumber *) a1cNgspToIfcc:(NSNumber *)ngspValue;
+
+// mmol/mol to percentage
++ (NSNumber *) a1cIfccToNgsp:(NSNumber *)ifccValue;
+
 @end

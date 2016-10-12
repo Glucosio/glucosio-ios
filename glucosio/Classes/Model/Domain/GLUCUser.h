@@ -41,6 +41,9 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 - (BOOL) validateAge:(id *)ioValue error:(NSError **)outError;
 
 - (BOOL)needsBloodGlucoseReadingUnitConversion;
+- (BOOL)needsHbA1CReadingUnitConversion;
+- (BOOL)needsBodyWeightReadingUnitConversion;
+
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading;
 - (NSNumber *)glucose:(NSNumber *)mgDlValue inUnits:(NSInteger)units;
 
@@ -53,6 +56,7 @@ static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse
 - (NSString *)displayUnitsForHbA1cReadings;
 
 - (NSArray *) readingTypes;
+- (NSInteger) unitPreferenceForReadingType:(Class)readingType;
 
 - (NSString *) hb1acAverageValue;
 

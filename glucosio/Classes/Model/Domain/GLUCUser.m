@@ -184,6 +184,14 @@
     return ((BOOL)[self.preferredBloodGlucoseUnitOfMeasure intValue]);
 }
 
+- (BOOL)needsHbA1CReadingUnitConversion {
+    return ((BOOL)[self.preferredA1CUnitOfMeasure intValue]);
+}
+
+- (BOOL)needsBodyWeightReadingUnitConversion {
+    return ((BOOL)[self.preferredBodyWeightUnitOfMeasure intValue]);
+}
+
 - (NSNumber *)glucose:(NSNumber *)mgDlValue inUnits:(NSInteger)units {
     NSNumber *retVal = mgDlValue;
     if (units) {
@@ -199,13 +207,9 @@
 // Let the user's preferences take effect if display needs to be in different units
 - (NSString *) displayValueForReading:(GLUCReading *)aReading {
     NSString *valueStr = @"";
-    if (aReading && [aReading isKindOfClass:[GLUCBloodGlucoseReading class]]) {
-        GLUCBloodGlucoseReading *bloodGlucoseReading = (GLUCBloodGlucoseReading *)aReading;
-        valueStr = (self.needsBloodGlucoseReadingUnitConversion) ?
-                [self.numberFormatter stringFromNumber:[self bloodGlucoseReadingValueInPreferredUnits:bloodGlucoseReading]] :
-                [NSString stringWithFormat:@"%@", [self bloodGlucoseReadingValueInPreferredUnits:bloodGlucoseReading]];
-    } else {
-        valueStr = [NSString stringWithFormat:@"%@", aReading.reading];
+    if (aReading) {
+        NSNumber *displayVal = [aReading readingInUnits:[self unitPreferenceForReadingType:[aReading class]]];
+        valueStr = [self.numberFormatter stringFromNumber:displayVal];
     }
     return valueStr;
 }
@@ -231,16 +235,31 @@
     if (aReading && [aReading isKindOfClass:[GLUCBodyWeightReading class]]) {
         retVal = [self displayUnitsForBodyWeightReadings];
     }
+    if (aReading && [aReading isKindOfClass:[GLUCHbA1cReading class]]) {
+        retVal = [self displayUnitsForHbA1cReadings];
+    }
+    return retVal;
+}
+
+- (NSInteger) unitPreferenceForReadingType:(Class)readingType {
+    NSInteger retVal = 0;
+    
+    // superclass comparison required since Realm changes the class dynamically
+    if ([readingType superclass] == [GLUCBloodGlucoseReading class] || readingType == [GLUCBloodGlucoseReading class] ) {
+        retVal = [self.preferredBloodGlucoseUnitOfMeasure integerValue];
+    }
+    if ([readingType superclass] == [GLUCBodyWeightReading class] || readingType == [GLUCBodyWeightReading class]) {
+        retVal = [self.preferredBodyWeightUnitOfMeasure integerValue];
+    }
+    if ([readingType superclass] == [GLUCHbA1cReading class] || readingType == [GLUCHbA1cReading class]) {
+        retVal = [self.preferredA1CUnitOfMeasure integerValue];
+    }
     return retVal;
 }
 
 // TODO: move this into the readings to handle appropriate conversion to default units
 - (void)setNewValue:(NSNumber *)value inReading:(GLUCReading *)reading {
-    NSNumber *newValue = value;
-    if (reading && [reading isKindOfClass:[GLUCBloodGlucoseReading class]] && [self needsBloodGlucoseReadingUnitConversion]) {
-        newValue = [NSNumber numberWithFloat:([value floatValue] * 18.0f)];
-    }
-
+    NSNumber *newValue = [[reading class] convertValue:value fromUnits:[self unitPreferenceForReadingType:[reading class]] toUnits:0];
     if (reading && newValue) {
         [[RLMRealm defaultRealm] beginWriteTransaction];
         reading.reading = newValue;

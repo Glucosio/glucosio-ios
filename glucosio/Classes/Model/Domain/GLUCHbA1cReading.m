@@ -22,4 +22,33 @@
     return [UIColor glucosio_fab_HbA1c];
 }
 
+// percentage to mmol/mol
++ (NSNumber *) a1cNgspToIfcc:(NSNumber *)ngspValue {
+    return @((ngspValue.doubleValue - 2.152)/0.09148);
+}
+
+// mmol/mol to percentage
++ (NSNumber *) a1cIfccToNgsp:(NSNumber *)ifccValue {
+    return @((0.09148 * ifccValue.doubleValue) + 2.152);
+}
+
+// units = 0 is always the default units for the reading
+
++ (NSNumber *) convertValue:(NSNumber *)aValue fromUnits:(NSInteger)fromUnits toUnits:(NSInteger)toUnits {
+    NSNumber *retVal = aValue;
+    if (fromUnits != toUnits) {
+        if (fromUnits == 0 && toUnits == 1) {
+            retVal = [self a1cNgspToIfcc:aValue];
+        }
+        if (fromUnits == 1 && toUnits == 0) {
+            retVal = [self a1cIfccToNgsp:aValue];
+        }
+    }
+    return retVal;
+    
+}
+
+- (NSNumber *) readingInUnits:(NSInteger)units {
+    return [[self class] convertValue:self.reading fromUnits:0 toUnits:units];
+}
 @end

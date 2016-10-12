@@ -31,10 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if (!self.model) {
-        self.model = [(GLUCAppDelegate *)[[UIApplication sharedApplication] delegate] appModel];
-    }
-    
     if (self.welcomeMode) {
         self.settingKeys = [self.model.currentUser requiredStartProperties];
     } else {

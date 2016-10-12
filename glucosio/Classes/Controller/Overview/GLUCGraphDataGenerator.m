@@ -40,13 +40,9 @@
             
             point.x = reading.creationDate;
             
-            if (readingType == [GLUCBloodGlucoseReading class]) {
-                GLUCUser *user = self.modelController.currentUser;
-                NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading];
-                point.y = [readingValueInPreferredUnit doubleValue];
-            } else {
-                point.y = [reading.reading doubleValue];
-            }
+            NSNumber *readingInPreferredUnits = [reading readingInUnits:[self.modelController.currentUser unitPreferenceForReadingType:readingType]];
+
+            point.y = readingInPreferredUnits.doubleValue;
             
             [points addObject:point];
         }
@@ -77,15 +73,10 @@
         
         NSNumber *averageValue = [readings averageOfProperty:@"reading"];
         
-        if (readingType == [GLUCBloodGlucoseReading class]) {
-            GLUCUser *user = self.modelController.currentUser;
-            GLUCBloodGlucoseReading *tempReading = [[GLUCBloodGlucoseReading alloc] init];
-            tempReading.reading = averageValue;
-            NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)tempReading];
-            point.y = [readingValueInPreferredUnit doubleValue];
-        } else {
-            point.y = averageValue.doubleValue;
-        }
+        NSNumber *averageInDisplayUnits = [readingType convertValue:averageValue fromUnits:0 toUnits:[self.modelController.currentUser unitPreferenceForReadingType:readingType]];
+        
+        
+        point.y = averageInDisplayUnits.doubleValue;
         
         point.x = startDate;
         
@@ -117,15 +108,9 @@
         
         NSNumber *averageValue = [readings averageOfProperty:@"reading"];
         
-        if (readingType == [GLUCBloodGlucoseReading class]) {
-            GLUCUser *user = self.modelController.currentUser;
-            GLUCBloodGlucoseReading *tempReading = [[GLUCBloodGlucoseReading alloc] init];
-            tempReading.reading = averageValue;
-            NSNumber *readingValueInPreferredUnit = [user bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)tempReading];
-            point.y = [readingValueInPreferredUnit doubleValue];
-        } else {
-            point.y = averageValue.doubleValue;
-        }
+        NSNumber *averageInDisplayUnits = [readingType convertValue:averageValue fromUnits:0 toUnits:[self.modelController.currentUser unitPreferenceForReadingType:readingType]];        
+        
+        point.y = averageInDisplayUnits.doubleValue;
         
         point.x = startDate;
         
