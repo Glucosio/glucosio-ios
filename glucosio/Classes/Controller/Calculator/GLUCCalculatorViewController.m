@@ -129,7 +129,8 @@
         GLUCReadingEditorViewController *editorVC = (GLUCReadingEditorViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:kGLUCReadingEditorViewControllerIdentifier];
         if (editorVC) {
             GLUCHbA1cReading *newReading = [[GLUCHbA1cReading alloc] init];
-            newReading.reading = @(self.resultsValueField.text.doubleValue);
+            NSNumber *newVal = [GLUCHbA1cReading convertValue:@(self.resultsValueField.text.doubleValue) fromUnits:[self.model.currentUser unitPreferenceForReadingType:[newReading class]] toUnits:0];
+            newReading.reading = newVal;
             editorVC.title = [NSString stringWithFormat:@"%@ %@", GLUCLoc(@"Add"), GLUCLoc([GLUCHbA1cReading title])];
             editorVC.editedObject = newReading;
             
