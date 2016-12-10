@@ -424,6 +424,7 @@
 		55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEventDateTimeEditorViewController.m; sourceTree = "<group>"; };
 		55F571D11D86A310006A83D3 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
 		55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSchedulerViewController.m; sourceTree = "<group>"; };
+		96708FFE1DFC4CC4003E47D9 /* glucosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = glucosio.entitlements; sourceTree = "<group>"; };
 		A360826019661824371D0886 /* Pods_glucosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
 		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
@@ -512,6 +513,7 @@
 		551193661BC2D2B9007CD147 /* glucosio */ = {
 			isa = PBXGroup;
 			children = (
+				96708FFE1DFC4CC4003E47D9 /* glucosio.entitlements */,
 				558453481BC564C400492E38 /* UI */,
 				5511939C1BC3EF60007CD147 /* Classes */,
 				551193781BC2D2B9007CD147 /* Info.plist */,
@@ -917,6 +919,11 @@
 					551193631BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 5QFGKN2X54;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 					5511937C1BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1783,13 +1790,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = glucosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "beaf4031-1a77-46e4-85f1-48ffd65df63a";
 			};
 			name = Debug;
 		};
@@ -1799,13 +1806,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = glucosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "beaf4031-1a77-46e4-85f1-48ffd65df63a";
 			};
 			name = Release;
 		};
