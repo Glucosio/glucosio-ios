@@ -112,9 +112,18 @@
     self.chartView.descriptionText = @"";
     self.chartView.pinchZoomEnabled = YES;
     self.chartView.legend.enabled = NO;
-    [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
+    
+    // ACF So https://github.com/danielgindi/Charts/releases/tag/v3.0.0 tells me
+    // "If you have any old startAtZeroEnabled calls - these have been deprecated
+    //  for a long time. Replace them with axisMinimum."
+    // But since you seem to be saying *dont* start at zero, I'm not sure what
+    // the axisMinimum setting should be.
+    
+    // [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
+    // [[self.chartView getAxis:AxisDependencyLeft] setAxisMinimum:0];  // <- what goes here
     [[self.chartView getAxis:AxisDependencyLeft] setDrawGridLinesEnabled:NO];
-    [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
+//     [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
+    // [[self.chartView getAxis:AxisDependencyRight] setAxisMinimum:0];  // <- what goes here
     [[self.chartView getAxis:AxisDependencyRight] setEnabled:NO];
     [self.chartView.xAxis setLabelPosition:XAxisLabelPositionBottom];
     [self.chartView.xAxis setDrawGridLinesEnabled:NO];
@@ -148,7 +157,7 @@
 
 - (LineChartDataSet *)lineChartDataSetWithYValues:(NSArray<ChartDataEntry *> *)yVals lineColor:(UIColor *) lineColor {
     
-    LineChartDataSet *lineDataSet = [[LineChartDataSet alloc] initWithYVals:yVals];
+    LineChartDataSet *lineDataSet = [[LineChartDataSet alloc] initWithValues:yVals];
     
     lineDataSet.colors = @[lineColor];
     lineDataSet.circleColors = @[lineColor];
@@ -217,7 +226,7 @@
         NSMutableArray *xVals = [NSMutableArray array];
         
         [points enumerateObjectsUsingBlock:^(GLUCGraphPoint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            ChartDataEntry *entryXValue = [[ChartDataEntry alloc] initWithValue:obj.y xIndex:idx];
+            ChartDataEntry *entryXValue = [[ChartDataEntry alloc] initWithX:idx y:obj.y];
             NSString *entryYValue = [df stringFromDate:obj.x];
             
             if (entryXValue && entryYValue) {
@@ -227,7 +236,7 @@
         }];
         
         LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
-        LineChartData *data = [[LineChartData alloc] initWithXVals:xVals dataSet:lineDataSet];
+        LineChartData *data = [[LineChartData alloc] initWithDataSet:lineDataSet];
         
         [self.chartView clear];
         [self.chartView.leftAxis removeAllLimitLines];
@@ -252,7 +261,8 @@
         self.chartView.data = data;
         [self.chartView setVisibleXRangeMinimum:10];
         [self.chartView setVisibleXRangeMaximum:20];
-        [self.chartView moveViewToX:data.xValCount];
+        // ACF replaced data.xvalCount with data.entryCount
+        [self.chartView moveViewToX:data.entryCount];
         
     } else {
         self.chartView.data = nil;
