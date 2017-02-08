@@ -63,10 +63,8 @@
 - (NSInteger) segmentIndexForRepeatInterval {
     NSInteger retVal = 0;
     
-    NSCalendarUnit interval = self.editedEvent.repeatInterval;
-    
-    switch (interval) {
-        case 0:
+    // ACF removed the 0 case which wasnt a valid enum value
+    switch (self.editedEvent.repeatInterval) {
         default:
             break;
         case NSCalendarUnitDay:
