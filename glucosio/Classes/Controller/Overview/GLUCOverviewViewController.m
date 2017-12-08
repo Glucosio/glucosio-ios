@@ -235,36 +235,48 @@
             }
         }];
         
-        LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
-        LineChartData *data = [[LineChartData alloc] initWithDataSet:lineDataSet];
-        
-        [self.chartView clear];
-        [self.chartView.leftAxis removeAllLimitLines];
-        
-        if (readingType == [GLUCBloodGlucoseReading class]) {
-            GLUCUser *user = self.model.currentUser;
+        if ([yVals count] && [xVals count]) {
+            LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
+            LineChartData *data = [[LineChartData alloc] initWithDataSet:lineDataSet];
             
-            ChartLimitLine *maxLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMax.doubleValue label:GLUCLoc(@"reading_high")];
-            maxLimit.lineColor = [UIColor glucosio_reading_high];
-            maxLimit.lineWidth = 0.8f;
+            [self.chartView clear];
+            [self.chartView.leftAxis removeAllLimitLines];
             
-            ChartLimitLine *minLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMin.doubleValue label:GLUCLoc(@"reading_low")];
-            minLimit.lineColor = [UIColor glucosio_reading_low];
-            minLimit.lineWidth = 0.8f;
+            if (readingType == [GLUCBloodGlucoseReading class]) {
+                GLUCUser *user = self.model.currentUser;
+                
+                ChartLimitLine *maxLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMax.doubleValue label:GLUCLoc(@"reading_high")];
+                maxLimit.lineColor = [UIColor glucosio_reading_high];
+                maxLimit.lineWidth = 0.8f;
+                
+                ChartLimitLine *minLimit = [[ChartLimitLine alloc] initWithLimit:user.rangeMin.doubleValue label:GLUCLoc(@"reading_low")];
+                minLimit.lineColor = [UIColor glucosio_reading_low];
+                minLimit.lineWidth = 0.8f;
+                
+                ChartYAxis *leftAxis = self.chartView.leftAxis;
+                [leftAxis addLimitLine:maxLimit];
+                [leftAxis addLimitLine:minLimit];
+                leftAxis.drawLimitLinesBehindDataEnabled = YES;
+            }
             
-            ChartYAxis *leftAxis = self.chartView.leftAxis;
-            [leftAxis addLimitLine:maxLimit];
-            [leftAxis addLimitLine:minLimit];
-            leftAxis.drawLimitLinesBehindDataEnabled = YES;
+            self.chartView.data = data;
+            [self.chartView setVisibleXRangeMinimum:10];
+            [self.chartView setVisibleXRangeMaximum:20];
+            // ACF replaced data.xvalCount with data.entryCount
+            [self.chartView moveViewToX:data.entryCount];
+
+            self.chartView.leftAxis.enabled = YES;
+            self.chartView.xAxis.enabled = YES;
+        } else {
+            self.chartView.leftAxis.enabled = NO;
+            self.chartView.xAxis.enabled = NO;
+            self.chartView.data = nil;
         }
         
-        self.chartView.data = data;
-        [self.chartView setVisibleXRangeMinimum:10];
-        [self.chartView setVisibleXRangeMaximum:20];
-        // ACF replaced data.xvalCount with data.entryCount
-        [self.chartView moveViewToX:data.entryCount];
         
     } else {
+        self.chartView.xAxis.enabled = NO;
+        self.chartView.leftAxis.enabled = NO;
         self.chartView.data = nil;
     }
     
