@@ -154,11 +154,11 @@
 
 
 + (NSNumber *) glucoseToMgDl:(NSNumber *) mmolL_glucose {
-    return [NSNumber numberWithInteger:[mmolL_glucose doubleValue] * 18];
+    return [NSNumber numberWithDouble:[mmolL_glucose doubleValue] * 18.0f];
 }
 
 + (NSNumber *) glucoseToMmolL:(NSNumber *) mgDl_glucose {
-    return [NSNumber numberWithDouble:round([mgDl_glucose doubleValue] / 18.0f)];
+    return [NSNumber numberWithDouble:[mgDl_glucose doubleValue] / 18.0f];
 }
 
 + (NSNumber *) glucoseToA1CAsPercentage:(NSNumber *)mgDl_glucose {

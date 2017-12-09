@@ -201,7 +201,7 @@
 }
 
 - (NSNumber *)bloodGlucoseReadingValueInPreferredUnits:(GLUCBloodGlucoseReading *)reading {
-    return [self glucose:reading.reading inUnits:[self.preferredBloodGlucoseUnitOfMeasure integerValue]];
+    return [self glucose:reading.reading inUnits:[self.preferredBloodGlucoseUnitOfMeasure doubleValue]];
 }
 
 // Let the user's preferences take effect if display needs to be in different units
@@ -281,7 +281,7 @@
 
     NSArray *averages = [GLUCBloodGlucoseReading averageMonthlyReadings];
 
-    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMinimumFractionDigits:2];
     [formatter setMaximumFractionDigits:2];
 
     if (averages && [averages count]) {

@@ -85,7 +85,6 @@
         
         NSNumber *hbA1cValue = [GLUCBloodGlucoseReading glucoseToA1CInUnits:hbA1cUnits forValue:inputGlucoseMgDl];
         
-        [self.numberFormatter setRoundingMode:NSNumberFormatterRoundUp];
         [self.numberFormatter setMaximumFractionDigits:2];
         
         

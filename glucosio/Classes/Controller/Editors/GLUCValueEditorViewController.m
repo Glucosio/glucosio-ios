@@ -55,7 +55,7 @@
 }
 
 - (IBAction) save:(UIButton *)sender {
-    NSNumber *newVal = @([self.textField.text integerValue]);
+    NSNumber *newVal = @([self.textField.text doubleValue]);
     
     if (newVal) {
         if (self.editedProperty && self.editedProperty.length && self.editedObject) {
