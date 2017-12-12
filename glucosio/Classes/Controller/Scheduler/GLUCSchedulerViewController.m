@@ -10,7 +10,6 @@
 @property (strong, nonatomic) UITableViewRowAction *editAction;
 @property (strong, nonatomic) NSArray *notificationTypes;
 @property (strong, nonatomic) UIApplication *notificationModel;
-@property (strong, nonatomic) GLUCAppDelegate *appDelegate;
 @end
 
 @implementation GLUCSchedulerViewController
@@ -66,10 +65,8 @@
     [super viewDidLoad];
 
 
-    if (!self.model) {
+    if (!self.notificationModel) {
         self.notificationModel = [UIApplication sharedApplication];
-        self.appDelegate = (GLUCAppDelegate *)[self.notificationModel delegate];
-        self.model = [self.appDelegate appModel];
     }
     
     self.notificationTypes = [self.model.currentUser readingTypes];
