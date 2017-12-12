@@ -22,6 +22,12 @@
     [self.webView loadRequest:request];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.webView stopLoading];
+    [SVProgressHUD dismiss];
+}
+
 - (NSURL *)url {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:[NSString stringWithFormat:@"You must override %@ method in GLUCWebViewController's subclass",
