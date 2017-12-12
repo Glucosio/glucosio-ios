@@ -45,6 +45,12 @@
 
 @property(strong, nonatomic) UITextView *tipView;
 
+@property(strong, nonatomic) NSMutableArray *yVals;
+
+@property(strong, nonatomic) NSMutableArray *xVals;
+
+@property(strong, nonatomic) NSDateFormatter *chartDateFormatter;
+
 - (IBAction) updateChartScope:(id)sender;
 
 @end
@@ -84,6 +90,11 @@
     self.graphPickerClasses = self.model.currentUser.readingTypes;
     
     self.readingTypeToGraph = GLUCBloodGlucoseReading.class;
+    
+    self.xVals = [NSMutableArray array];
+    self.yVals = [NSMutableArray array];
+    self.chartDateFormatter = [[NSDateFormatter alloc] init];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -195,12 +206,22 @@
     
 }
 
+- (NSString *) stringForValue:(double)value axis:(ChartAxisBase *)axis {
+    NSString *retVal = @"";
+    int xIndex = (int)value;
+    
+    if (xIndex >= 0 && xIndex < self.xVals.count) {
+        retVal = [self.xVals objectAtIndex:xIndex];
+    }
+    return retVal;
+}
+
 - (void)showReadingsOfType:(Class)readingType {
     
     GLUCGraphDataGenerator *generator = [[GLUCGraphDataGenerator alloc] initWithModeController:self.model];
     
     NSArray *points = nil;
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    NSDateFormatter *df = self.chartDateFormatter;
     
     switch (self.chartScopeControl.selectedSegmentIndex) {
         case 0: // Daily
@@ -219,28 +240,47 @@
         default:
             break;
     }
+ 
+    [self.yVals removeAllObjects];
+    [self.xVals removeAllObjects];
     
-    if (points && points.count >0) {
+    if (points && points.count > 0) {
         
-        NSMutableArray *yVals = [NSMutableArray array];
-        NSMutableArray *xVals = [NSMutableArray array];
         
         [points enumerateObjectsUsingBlock:^(GLUCGraphPoint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            ChartDataEntry *entryXValue = [[ChartDataEntry alloc] initWithX:idx y:obj.y];
-            NSString *entryYValue = [df stringFromDate:obj.x];
+            ChartDataEntry *entryYValue = [[ChartDataEntry alloc] initWithX:idx y:obj.y];
+            NSString *entryXValue = [df stringFromDate:obj.x];
+            
             
             if (entryXValue && entryYValue) {
-                [yVals addObject:entryXValue];
-                [xVals addObject:entryYValue];
+                [self.yVals addObject:entryYValue];
+                [self.xVals addObject:entryXValue];
             }
         }];
         
-        if ([yVals count] && [xVals count]) {
-            LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
+        if ([self.yVals count] && [self.xVals count]) {
+            LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:self.yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
             LineChartData *data = [[LineChartData alloc] initWithDataSet:lineDataSet];
             
             [self.chartView clear];
             [self.chartView.leftAxis removeAllLimitLines];
+
+            self.chartView.data = data;
+            [self.chartView setVisibleXRangeMinimum:10];
+            [self.chartView setVisibleXRangeMaximum:20];
+            // ACF replaced data.xvalCount with data.entryCount
+            [self.chartView resetViewPortOffsets];
+            [self.chartView moveViewToX:data.entryCount];
+            
+            self.chartView.leftAxis.enabled = YES;
+            self.chartView.xAxis.enabled = YES;
+            
+            ChartXAxis *xAxis = self.chartView.xAxis;
+            //xAxis.drawLimitLinesBehindDataEnabled = YES;
+            xAxis.granularityEnabled = YES;
+            xAxis.granularity = 1;
+            xAxis.valueFormatter = self;
+            xAxis.labelRotationAngle = -45.0f;
             
             if (readingType == [GLUCBloodGlucoseReading class]) {
                 GLUCUser *user = self.model.currentUser;
@@ -257,16 +297,10 @@
                 [leftAxis addLimitLine:maxLimit];
                 [leftAxis addLimitLine:minLimit];
                 leftAxis.drawLimitLinesBehindDataEnabled = YES;
+                
+                
             }
             
-            self.chartView.data = data;
-            [self.chartView setVisibleXRangeMinimum:10];
-            [self.chartView setVisibleXRangeMaximum:20];
-            // ACF replaced data.xvalCount with data.entryCount
-            [self.chartView moveViewToX:data.entryCount];
-
-            self.chartView.leftAxis.enabled = YES;
-            self.chartView.xAxis.enabled = YES;
         } else {
             self.chartView.leftAxis.enabled = NO;
             self.chartView.xAxis.enabled = NO;
@@ -281,6 +315,9 @@
     }
     
     [self showLastReadingOfType:readingType];
+    
+    self.chartView.noDataText = @"There are not enough measurements for the chart.";
+    [self.chartView notifyDataSetChanged];
 }
 
 - (NSString *)hb1acAverageValue {

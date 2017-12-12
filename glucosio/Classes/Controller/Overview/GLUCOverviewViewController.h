@@ -12,6 +12,6 @@
 
 static NSString *const kGLUCOverviewCellIdentifier = @"OverviewCell";
 
-@interface GLUCOverviewViewController : GLUCViewController
+@interface GLUCOverviewViewController : GLUCViewController <IChartAxisValueFormatter>
 
 @end
