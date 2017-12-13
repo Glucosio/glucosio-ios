@@ -335,4 +335,32 @@
     [self saveUser:self.currentUser];
 }
 
+
+- (NSData *) exportAll {
+    NSMutableData * dump = [NSMutableData dataWithLength:0];
+
+    NSArray * readingTypes = [self.currentUser readingTypes];
+    for(int i=0; i < readingTypes.count; i++) {
+        Class clazz = (Class) readingTypes[i];
+        NSLog(@"%@", clazz);
+        NSString * table = NSStringFromClass(clazz);
+
+        NSString * tableLine = [NSString stringWithFormat:@"#%@\n", table];
+        [dump appendData:[tableLine dataUsingEncoding:NSUTF8StringEncoding]];
+
+        RLMResults <GLUCReading *> * data = [self allReadingsOfType:clazz sortByDateAscending:YES];
+
+        for(int k = 0;k < data.count; k++) {
+            GLUCReading * r = data[k];
+            NSString * line = [NSString stringWithFormat:@"%lf %@ %@\n", r.creationDate.timeIntervalSince1970, r.reading, r.notes];
+
+            NSLog(@"%@", line);
+
+            [dump appendData: [line dataUsingEncoding:NSUTF8StringEncoding]];
+        }
+    }
+
+    return dump;
+}
+
 @end

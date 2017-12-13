@@ -198,6 +198,10 @@
 /* No description supplied by the engineer */
 "preferences_about" = "About";
 
+"preferences_data" = "Data";
+
+"preferences_data_export" = "Export";
+
 /* No description supplied by the engineer */
 "preferences_experimental_title" = "Here be dragons :/";
 
