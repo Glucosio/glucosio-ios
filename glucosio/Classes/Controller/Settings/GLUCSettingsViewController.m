@@ -11,6 +11,7 @@
 #import "GLUCPrivacyViewController.h"
 
 #import "GLUCAppDelegate.h"
+#import "SVProgressHUD.h"
 
 @interface GLUCSettingsViewController()
 @property (strong, nonatomic) IBOutlet UIStackView *stackView;
@@ -23,10 +24,13 @@
 @property (nonatomic, readwrite, strong) NSMutableDictionary *settings;
 @property (nonatomic, readwrite, strong) NSArray *settingKeys;
 @property (nonatomic, readwrite, strong) NSArray *aboutKeys;
+@property (nonatomic, readwrite, strong) NSArray *dataKeys;
 @end
 
 @implementation GLUCSettingsViewController
 
+#define ABOUT_SECTION 2
+#define DATA_SECTION 1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +42,7 @@
     }
 
     self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy")];
+    self.dataKeys = @[GLUCLoc(@"preferences_data_export")];
 
     self.settings = [NSMutableDictionary dictionary];
 
@@ -109,8 +114,11 @@
         default:
             retVal = self.settingKeys.count + (self.welcomeMode ? 1 : 0);
             break;
-        case 1:
-            retVal = 3;
+        case DATA_SECTION:
+            retVal = self.dataKeys.count;
+            break;
+        case ABOUT_SECTION:
+            retVal = self.aboutKeys.count;
             break;
     }
     return retVal;
@@ -203,7 +211,32 @@
                 }
             }
             break;
-        case 1:
+        case DATA_SECTION:
+            switch(indexPath.row) {
+                case 0:
+                {
+                    //export
+                    [SVProgressHUD showWithStatus:GLUCLoc(@"activity_export_snackbar_1")];
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                        NSData * attachment = [self.model exportAll];
+
+                        NSLog(@"%@", [NSString stringWithUTF8String:[attachment bytes]]);
+
+#if DEBUG
+                        [NSThread sleepForTimeInterval:3.0f];
+#endif
+
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [SVProgressHUD dismiss];
+
+                            [self openMailComposerWithAttachment: attachment];
+                        });
+                    });
+                }
+                    break;
+            }
+            break;
+        case ABOUT_SECTION:
             switch (indexPath.row) {
                 case 0:
                 {
@@ -250,12 +283,15 @@
     NSArray *targetKeys = nil;
 
     switch (indexPath.section) {
+        case DATA_SECTION:
+            targetKeys = self.dataKeys;
+            break;
+        case ABOUT_SECTION:
+            targetKeys = self.aboutKeys;
+            break;
         case 0:
         default:
             targetKeys = self.settingKeys;
-            break;
-        case 1:
-            targetKeys = self.aboutKeys;
             break;
     }
 
@@ -268,7 +304,7 @@
     cell.textLabel.font = [GLUCAppearanceController defaultFont];
     
     if (indexPath.row >= 0 && indexPath.row < [targetKeys count]) {
-        if (indexPath.section == 1) {
+        if (indexPath.section == ABOUT_SECTION || indexPath.section == DATA_SECTION) {
             cell.textLabel.text = GLUCLoc(targetKey);
         } else {
             cell.textLabel.text = [self.model.currentUser titleForKey:targetKey];
@@ -314,12 +350,15 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *retVal = @"";
     switch (section) {
+        case DATA_SECTION:
+            retVal = GLUCLoc(@"preferences_data");
+            break;
+        case ABOUT_SECTION:
+            retVal = GLUCLoc(@"preferences_about");
+            break;
         case 0:
         default:
             retVal = GLUCLoc(@"action_settings");
-            break;
-        case 1:
-            retVal = GLUCLoc(@"preferences_about");
             break;
     }
     return retVal;
@@ -330,8 +369,48 @@
     if (self.welcomeMode) {
         return 1;
     } else {
-        return 2;
+        return 3;
     }
+}
+
+
+- (void)openMailComposerWithAttachment
+                                        :(NSData *)attachment
+{
+    if (![MFMailComposeViewController canSendMail]) {
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"Error"
+                                            message:@"Cannot send mail."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:
+         [UIAlertAction actionWithTitle:@"OK"
+                                  style:UIAlertActionStyleCancel
+                                handler:^(UIAlertAction * _Nonnull action) {
+                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+
+    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate = self;
+
+    mailComposer.subject = @"Glucosio Data Backup";
+
+    [mailComposer setMessageBody:@"This is the full data backup" isHTML:false];
+
+    [mailComposer addAttachmentData:attachment
+                           mimeType:@"text/plain"
+                           fileName:@"backup.txt"];
+
+    [self presentViewController:mailComposer animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 
