@@ -336,6 +336,21 @@
 }
 
 
+// From the Android app, https://github.com/Glucosio/glucosio-android/blob/develop/app/src/main/java/org/glucosio/android/tools/ReadingToCSV.java
+//
+// CSV Structure:
+//
+// 1. Date | Time | Concentration | Unit | Measured | Notes
+// ... one line
+//
+// 2. Concentration | Measured | Date | Time | Notes | Unit of Measurement
+// ... for each reading
+//
+// Actual field order is:
+// Created Date | Created Time | Concentration Value | Unit of Measurement | (What was) Measured | Notes
+// where unit of measurement is "mg/dL" or "mmol/L" and the concentration is converted.
+//
+// Note how the Android export is not complete. Most readings are not exported.
 - (NSData *) exportAll {
     NSMutableData * dump = [NSMutableData dataWithLength:0];
 
