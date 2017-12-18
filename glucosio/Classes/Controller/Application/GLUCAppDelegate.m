@@ -65,6 +65,12 @@
         [self showOverview];
     }
     
+    if ([WCSession isSupported]) {
+        WCSession* session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -93,6 +99,21 @@
     } else {
         // TODO: go ahead and navigate to the add reading view controller for the
         // type of reading specified in the user dict.
+    }
+}
+
+//WCSessionDelegate
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error {
+    if(activationState == WCSessionActivationStateActivated) {
+        GLUCBloodGlucoseReading * gReading = [self.appModel lastBloodGlucoseReading];
+        if (gReading) {
+            NSDictionary * context =@{
+                                      @"reading" : [self.appModel.currentUser displayValueForReading: gReading],
+                                      @"unit" : [self.appModel.currentUser displayUnitsForBloodGlucoseReadings],
+                                      @"desc" : gReading.readingType
+                                      };
+            [session updateApplicationContext: context error:nil];
+        }
     }
 }
 

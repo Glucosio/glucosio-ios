@@ -192,6 +192,19 @@
     [self.valueField resignFirstResponder];
     [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
     [self.model saveReading:(GLUCReading *)self.editedObject];
+
+    //TODO: push more reading types to the watch
+    //EMI: Can't use .class directly since these are all Realm proxies. Note how RLMObject.class.className does have the actual proxied class name.
+    if ([self.editedObject.class isSubclassOfClass:[GLUCBloodGlucoseReading class]]) {
+        GLUCBloodGlucoseReading * gReading = (GLUCBloodGlucoseReading*)self.editedObject;
+        [WCSession.defaultSession updateApplicationContext:@{
+                                                             @"reading" : self.valueField.text,
+                                                             @"unit" : [self.model.currentUser displayUnitsForBloodGlucoseReadings],
+                                                             @"desc" : gReading.readingType
+                                                             }
+                                                     error:nil];
+    }
+
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -131,6 +131,8 @@
         self.rangeMin = @70;
         self.rangeMax = @180;
 
+        self.numberFormatter = [[NSNumberFormatter alloc] init];
+        self.numberFormatter.positiveFormat = @"0.00";
     }
     return self;
 }

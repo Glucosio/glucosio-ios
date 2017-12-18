@@ -63,6 +63,7 @@
 		5F5950B81FE5BBAF0098DE07 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5950B71FE5BBAF0098DE07 /* ComplicationController.swift */; };
 		5F5950BA1FE5BBAF0098DE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5950B91FE5BBAF0098DE07 /* Assets.xcassets */; };
 		5F5950BE1FE5BBAF0098DE07 /* Glucosio Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5F59509E1FE5BBAF0098DE07 /* Glucosio Watch.app */; };
+		5F80050A1FE715E700967550 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
 		73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A360826019661824371D0886 /* Pods_glucosio.framework */; };
 		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
 		DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */; };
@@ -484,6 +485,7 @@
 		5F5950B71FE5BBAF0098DE07 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		5F5950B91FE5BBAF0098DE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F5950BB1FE5BBAF0098DE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F80050B1FE8285700967550 /* glucosio-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "glucosio-Bridging-Header.h"; path = "glucosio/Classes/glucosio-Bridging-Header.h"; sourceTree = "<group>"; };
 		96708FFE1DFC4CC4003E47D9 /* glucosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = glucosio.entitlements; sourceTree = "<group>"; };
 		A360826019661824371D0886 /* Pods_glucosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 		5511935B1BC2D2B8007CD147 = {
 			isa = PBXGroup;
 			children = (
+				5F80050B1FE8285700967550 /* glucosio-Bridging-Header.h */,
 				551193661BC2D2B9007CD147 /* glucosio */,
 				551193801BC2D2B9007CD147 /* glucosioTests */,
 				5511938B1BC2D2B9007CD147 /* glucosioUITests */,
@@ -1577,6 +1580,7 @@
 				5F5950B61FE5BBAF0098DE07 /* NotificationController.swift in Sources */,
 				5F5950B81FE5BBAF0098DE07 /* ComplicationController.swift in Sources */,
 				5F5950B41FE5BBAF0098DE07 /* ExtensionDelegate.swift in Sources */,
+				5F80050A1FE715E700967550 /* UIColor+GLUCAdditions.m in Sources */,
 				5F5950B21FE5BBAF0098DE07 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2127,6 +2131,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "glucosio/Classes/glucosio-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -2147,6 +2152,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "glucosio/Classes/glucosio-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -2200,6 +2206,7 @@
 				5F5950C21FE5BBAF0098DE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F5950C51FE5BBAF0098DE07 /* Build configuration list for PBXNativeTarget "Glucosio Watch" */ = {
 			isa = XCConfigurationList;
@@ -2208,6 +2215,7 @@
 				5F5950C01FE5BBAF0098DE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
