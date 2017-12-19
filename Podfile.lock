@@ -5,7 +5,7 @@ PODS:
   - Realm (1.0.2):
     - Realm/Headers (= 1.0.2)
   - Realm/Headers (1.0.2)
-  - SVProgressHUD (2.0.3)
+  - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
   - Charts (= 3.0.1)
@@ -15,7 +15,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
 PODFILE CHECKSUM: 202fe1de33f20685f126e9b94565c345e89ca9ff
 
