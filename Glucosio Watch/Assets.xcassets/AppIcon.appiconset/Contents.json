@@ -61,6 +61,7 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
+      "filename" : "Icon-Small@2x-2.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -68,6 +69,7 @@
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
+      "filename" : "Icon-Small@2x-3.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "42mm"
@@ -97,6 +99,7 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
+      "filename" : "Icon-76@2x.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
@@ -104,6 +107,7 @@
     {
       "size" : "98x98",
       "idiom" : "watch",
+      "filename" : "Icon-76@2x-1.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
