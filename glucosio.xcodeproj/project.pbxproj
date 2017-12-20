@@ -1079,10 +1079,12 @@
 					};
 					5F59509D1FE5BBAF0098DE07 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5QFGKN2X54;
 						ProvisioningStyle = Automatic;
 					};
 					5F5950A91FE5BBAF0098DE07 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5QFGKN2X54;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2088,6 +2090,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 5QFGKN2X54;
 				IBSC_MODULE = Glucosio_Watch_Extension;
 				INFOPLIST_FILE = "Glucosio Watch/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios.watchkitapp;
@@ -2110,6 +2113,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 5QFGKN2X54;
 				IBSC_MODULE = Glucosio_Watch_Extension;
 				INFOPLIST_FILE = "Glucosio Watch/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios.watchkitapp;
@@ -2130,6 +2134,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 5QFGKN2X54;
 				INFOPLIST_FILE = "Glucosio Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios.watchkitapp.watchkitextension;
@@ -2152,6 +2157,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 5QFGKN2X54;
 				INFOPLIST_FILE = "Glucosio Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glucosio.ios.watchkitapp.watchkitextension;
