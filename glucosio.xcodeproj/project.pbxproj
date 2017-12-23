@@ -54,6 +54,9 @@
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
 		55F571D31D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */; };
 		55F571D41D86A310006A83D3 /* GLUCSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */; };
+		5F18A3491FEE5B1500AA2162 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18A3481FEE5B1500AA2162 /* Timeline.swift */; };
+		5F18A34A1FEE5B1500AA2162 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18A3481FEE5B1500AA2162 /* Timeline.swift */; };
+		5F18A34C1FEEDEE400AA2162 /* TimelineUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F18A34B1FEEDEE400AA2162 /* TimelineUtil.m */; };
 		5F5950A21FE5BBAF0098DE07 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5950A01FE5BBAF0098DE07 /* Interface.storyboard */; };
 		5F5950A41FE5BBAF0098DE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5950A31FE5BBAF0098DE07 /* Assets.xcassets */; };
 		5F5950AB1FE5BBAF0098DE07 /* Glucosio Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5F5950AA1FE5BBAF0098DE07 /* Glucosio Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -473,6 +476,9 @@
 		55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEventDateTimeEditorViewController.m; sourceTree = "<group>"; };
 		55F571D11D86A310006A83D3 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
 		55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCSchedulerViewController.m; sourceTree = "<group>"; };
+		5F18A3481FEE5B1500AA2162 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Watch/Timeline.swift; sourceTree = "<group>"; };
+		5F18A34B1FEEDEE400AA2162 /* TimelineUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineUtil.m; sourceTree = "<group>"; };
+		5F18A34D1FEEDF1000AA2162 /* TimelineUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineUtil.h; sourceTree = "<group>"; };
 		5F59509E1FE5BBAF0098DE07 /* Glucosio Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glucosio Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5950A11FE5BBAF0098DE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		5F5950A31FE5BBAF0098DE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -629,6 +635,7 @@
 				5511939D1BC3EF60007CD147 /* Controller */,
 				551193B31BC3EF60007CD147 /* Model */,
 				551193C41BC3EF60007CD147 /* View */,
+				5F18A3481FEE5B1500AA2162 /* Timeline.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -795,6 +802,8 @@
 		555CA3531BD28BC80052A865 /* Utiilities */ = {
 			isa = PBXGroup;
 			children = (
+				5F18A34D1FEEDF1000AA2162 /* TimelineUtil.h */,
+				5F18A34B1FEEDEE400AA2162 /* TimelineUtil.m */,
 				555CA3541BD28BC80052A865 /* Dates */,
 				555CA35B1BD28BC80052A865 /* Extensions */,
 				555CA3641BD28BC80052A865 /* Localization */,
@@ -1062,6 +1071,7 @@
 					551193631BC2D2B9007CD147 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 5QFGKN2X54;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
@@ -1532,9 +1542,11 @@
 				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
 				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
 				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
+				5F18A3491FEE5B1500AA2162 /* Timeline.swift in Sources */,
 				DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */,
 				551193D21BC3EF60007CD147 /* GLUCBloodGlucoseReading.m in Sources */,
 				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
+				5F18A34C1FEEDEE400AA2162 /* TimelineUtil.m in Sources */,
 				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
 				551193691BC2D2B9007CD147 /* main.m in Sources */,
 				55F571D41D86A310006A83D3 /* GLUCSchedulerViewController.m in Sources */,
@@ -1584,6 +1596,7 @@
 				5F5950B81FE5BBAF0098DE07 /* ComplicationController.swift in Sources */,
 				5F5950B41FE5BBAF0098DE07 /* ExtensionDelegate.swift in Sources */,
 				5F80050A1FE715E700967550 /* UIColor+GLUCAdditions.m in Sources */,
+				5F18A34A1FEE5B1500AA2162 /* Timeline.swift in Sources */,
 				5F5950B21FE5BBAF0098DE07 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2003,6 +2016,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -2012,6 +2026,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -2022,6 +2038,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -2031,12 +2048,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		551193951BC2D2B9007CD147 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = glucosioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2049,6 +2068,7 @@
 		551193961BC2D2B9007CD147 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = glucosioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2061,6 +2081,7 @@
 		551193981BC2D2B9007CD147 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = glucosioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioUITests;
@@ -2073,6 +2094,7 @@
 		551193991BC2D2B9007CD147 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = glucosioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.glucosio.glucosioUITests;

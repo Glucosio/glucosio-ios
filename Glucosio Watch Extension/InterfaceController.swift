@@ -18,9 +18,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
 
     func updateReading() {
-        let reading = def.string(forKey: "reading") ?? "N/A"
-        let unit = def.string(forKey: "unit") ?? ""
-        let _desc = def.string(forKey: "desc") ?? ""
+        var reading : String
+        var unit : String
+        var _desc : String
+
+        if let item = DayTimeline.init(def).elements.last {
+            reading = item.value
+            unit = item.unit
+            _desc = item.desc
+        } else {
+            reading = "N/A"
+            unit = ""
+            _desc = ""
+        }
+
         latestReading.setText(reading)
         desc.setText(unit + " " + _desc)
     }
@@ -52,9 +63,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        def.set(applicationContext["reading"] ?? "", forKey: "reading")
-        def.set(applicationContext["unit"] ?? "", forKey: "unit")
-        def.set(applicationContext["desc"] ?? "", forKey: "desc")
+        DayTimeline.init(d: applicationContext).toUserDefaults(def)
+
         for complication in CLKComplicationServer.sharedInstance().activeComplications! {
             CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
         }

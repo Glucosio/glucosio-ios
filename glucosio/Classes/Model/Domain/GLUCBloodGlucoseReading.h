@@ -15,6 +15,7 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour;
 
 + (NSArray *) averageMonthlyReadings;
++ (RLMResults<GLUCBloodGlucoseReading *> *) last24hReadings;
 
 + (NSNumber *) glucoseToMgDl:(NSNumber *) mmolL_glucose;
 + (NSNumber *) glucoseToMmolL:(NSNumber *) mgDl_glucose;

@@ -10,11 +10,17 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        handler(nil)
+        let min = DayTimeline.init().elements
+            .min {a, b in a.timestamp.compare(b.timestamp) == ComparisonResult.orderedAscending}
+
+        handler(min?.timestamp)
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        handler(nil)
+        let max = DayTimeline.init().elements
+            .max {a, b in a.timestamp.compare(b.timestamp) == ComparisonResult.orderedAscending}
+
+        handler(max?.timestamp)
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
@@ -71,11 +77,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
 
-        let def = UserDefaults.init()
+        let item = DayTimeline.init().elements.last
 
-        let reading = def.string(forKey: "reading") ?? "N/A"
-        let unit = def.string(forKey: "unit") ?? ""
-        let desc = def.string(forKey: "desc") ?? ""
+        let reading = item?.value ?? "N/A"
+        let unit = item?.unit ?? ""
+        let desc = item?.desc ?? ""
 
         if let template = template(family: complication.family, withReading: reading, withUnit: unit, desc: desc) {
             template.tintColor = UIColor.glucosio_pink()
@@ -85,15 +91,39 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             handler(nil)
         }
     }
+
+    func filterTimelineEntries(for complication: CLKComplication, with filter: (TimelineItem) -> Bool) -> [CLKComplicationTimelineEntry]{
+
+        let entries = DayTimeline.init().elements
+            .filter(filter)
+            .map({item -> CLKComplicationTimelineEntry? in
+                if let template = template(family: complication.family, withReading: item.value, withUnit: item.unit, desc: item.desc) {
+                    return CLKComplicationTimelineEntry(date: item.timestamp, complicationTemplate: template)
+                } else {
+                    return nil
+                }
+            })
+            .flatMap {$0}
+
+        return entries
+    }
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
+
+        //TODO: EMI: respect limit
+        let entries = filterTimelineEntries(for: complication, with: {date.compare($0.timestamp) == ComparisonResult.orderedDescending })
+
         // Call the handler with the timeline entries prior to the given date
-        handler(nil)
+        handler(entries)
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
+
+        //TODO: EMI: respect limit
+        let entries = filterTimelineEntries(for: complication, with: {date.compare($0.timestamp) == ComparisonResult.orderedAscending })
+
         // Call the handler with the timeline entries after to the given date
-        handler(nil)
+        handler(entries)
     }
     
     // MARK: - Placeholder Templates
