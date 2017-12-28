@@ -5,6 +5,7 @@ cache: cocoapods
 podfile: Podfile
 
 before_install:
+    - gem install cocoapods -v 1.2.0
     - gem install xcpretty -N
 
 script:
