@@ -105,6 +105,17 @@
     return self;
 }
 
++ (RLMResults<GLUCBloodGlucoseReading *> *) last24hReadings {
+    RLMResults<GLUCBloodGlucoseReading *> *allBloodGlucoseReadings = [[self allObjects] sortedResultsUsingProperty:@"creationDate" ascending:YES];
+
+    NSDate *endDate = [allBloodGlucoseReadings maxOfProperty:@"creationDate"];
+    NSDate *startDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:-1 toDate:endDate];
+
+    RLMResults<GLUCBloodGlucoseReading *> *today = [allBloodGlucoseReadings objectsWhere:@"creationDate BETWEEN {%@, %@}", startDate, endDate];
+
+    return today;
+}
+
 + (NSArray *) averageMonthlyReadings {
     RLMResults<GLUCBloodGlucoseReading *> *allBloodGlucoseReadings = [self allObjects];
     NSMutableArray *averageReadings = [NSMutableArray array];

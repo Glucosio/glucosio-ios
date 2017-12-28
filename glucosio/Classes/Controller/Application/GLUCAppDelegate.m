@@ -3,6 +3,7 @@
 #import "GLUCAppearanceController.h"
 #import "GLUCOverviewViewController.h"
 #import "GLUCHistoryViewController.h"
+#import "TimelineUtil.h"
 
 @interface GLUCAppDelegate ()
 @property (strong, nonatomic) GLUCPersistenceController *model;
@@ -105,15 +106,8 @@
 //WCSessionDelegate
 - (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error {
     if(activationState == WCSessionActivationStateActivated) {
-        GLUCBloodGlucoseReading * gReading = [self.appModel lastBloodGlucoseReading];
-        if (gReading) {
-            NSDictionary * context =@{
-                                      @"reading" : [self.appModel.currentUser displayValueForReading: gReading],
-                                      @"unit" : [self.appModel.currentUser displayUnitsForBloodGlucoseReadings],
-                                      @"desc" : gReading.readingType
-                                      };
-            [session updateApplicationContext: context error:nil];
-        }
+        NSDictionary * context = [[TimelineUtil load24hTimeline: self.appModel.currentUser] toDictionary];
+        [session updateApplicationContext: context error:nil];
     }
 }
 
