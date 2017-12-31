@@ -24,6 +24,43 @@
              ];
 }
 
+// Corresponding HealthKit metadata constants taken from https://github.com/dariosalvi78/cordova-plugin-health/issues/65
+// Not sure if they are a standard or not.
+- (NSString *) healthKitMealTime {
+    switch ([[self readingTypeId] intValue]) {
+        case 0:
+            return @"before_breakfast";
+        case 1:
+            return @"after_breakfast";
+        case 2:
+            return @"before_lunch";
+        case 3:
+            return @"after_lunch";
+        case 4:
+            return @"before_dinner";
+        case 5:
+            return @"after_dinner";
+        case 6:
+            return @"snack";
+        case 7:
+            // "Bedtime"
+            // TODO: mapping this to after_dinner, a better mapping might exist / appear in the future
+            return @"after_dinner";
+        case 8:
+            // "Night"
+            return @"unknown";
+        case 9:
+            return @"fasting";
+        case 10:
+            // "Recheck"
+            return @"unknown";
+        case 11:
+            return @"unknown";
+        default:
+            return @"unknown";
+    }
+}
+
 + (NSDictionary *)schema {
     NSDictionary *propertiesDict = @{
             kGLUCReadingModelValuePropertyKey : @{

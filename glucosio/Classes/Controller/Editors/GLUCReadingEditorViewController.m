@@ -8,6 +8,7 @@
 #import "GLUCAppearanceController.h"
 #import "GLUCValueEditorViewController.h"
 #import "TimelineUtil.h"
+#import "glucosio-Swift.h"
 
 @interface GLUCReadingEditorViewController ()
 @property (strong, nonatomic) NSArray *rowKeys;
@@ -199,6 +200,14 @@
     if ([self.editedObject.class isSubclassOfClass:[GLUCBloodGlucoseReading class]]) {
         NSDictionary * context = [[TimelineUtil load24hTimeline: self.model.currentUser] toDictionary];
         [WCSession.defaultSession updateApplicationContext:context error:nil];
+
+        GLUCBloodGlucoseReading * gReading = (GLUCBloodGlucoseReading *) self.editedObject;
+
+        double mgdL =[[gReading readingInUnits:0 /* mg/dL, see preferredBloodGlucoseUnitOfMeasure*/ ] doubleValue];
+
+        [HealthKitBridge.singleton addMolarMassBloodGlucoseWithValue: mgdL
+                                                                when: gReading.creationDate
+                                                            mealTime: gReading.healthKitMealTime];
     }
 
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
