@@ -4,6 +4,7 @@
 #import "GLUCBloodGlucoseReading.h"
 #import "GLUCLoc.h"
 #import "NSCalendar+GLUCAdditions.h"
+#import "GLUCRange.h"
 
 @implementation GLUCBloodGlucoseReading
 
@@ -79,6 +80,29 @@
 
 + (UIColor *) readingColor {
     return [UIColor glucosio_fab_glucose];
+}
+
++ (UIColor *) historyColor: (GLUCReading *) me forUser: (GLUCUser *) user {
+    NSDictionary * range = [[GLUCRange allRanges] objectAtIndex:[[user rangeType] intValue]];
+
+    double hypoLimit =[range[@"min"] doubleValue];
+    double hyperLimit = [range[@"max"] doubleValue];
+    double userMin = user.rangeMin.doubleValue;
+    double userMax = user.rangeMax.doubleValue;
+
+    double reading = me.reading.doubleValue;
+
+    if (reading < hypoLimit) {
+        return UIColor.glucosio_reading_hypo;
+    } else if (reading > hyperLimit) {
+        return UIColor.glucosio_reading_hyper;
+    } else if (reading < userMin) {
+        return UIColor.glucosio_reading_low;
+    } else if (reading > userMax) {
+        return UIColor.glucosio_reading_high;
+    } else {
+        return UIColor.glucosio_reading_ok;
+    }
 }
 
 - (instancetype) init {

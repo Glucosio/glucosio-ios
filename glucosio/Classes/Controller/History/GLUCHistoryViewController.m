@@ -139,6 +139,11 @@
 
         valueLabel.text = readingValueStr;
         
+        //Note: All the reading types are GLUCReading so this respondsToSelector check is not really needed
+        if ([self.readingClass respondsToSelector:@selector(historyColor: forUser:)]) {
+            valueLabel.textColor = [self.readingClass historyColor: reading forUser: self.model.currentUser];
+        }
+
     }
     
     return cell;

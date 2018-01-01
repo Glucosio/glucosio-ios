@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "GLUCModel.h"
 #import "UIColor+GLUCAdditions.h"
+#import "GLUCUser.h"
 
 @protocol RLMFloat;
 
@@ -16,6 +17,8 @@ static NSString *const kGLUCReadingModelValuePropertyKey = @"reading";
 
 + (NSString *) menuIconName;
 + (UIColor *) readingColor;
+
++ (UIColor *) historyColor: (GLUCReading *) me forUser: (GLUCUser *) user;
 
 // units = 0 is always the default units for the reading
 - (NSNumber *) readingInUnits:(NSInteger)units;
