@@ -11,6 +11,9 @@ static NSString *const kGLUCReadingReadingTypeIdPropertyKey = @"readingTypeId";
 + (NSArray *) readingTypes;
 - (NSString *) readingType;
 
+//HKMetadataKeyBloodGlucoseMealTime values
+- (NSString *) healthKitMealTime;
+
 - (NSString *) readingTypeForId:(NSInteger) readingTypeId;
 - (NSInteger) readingTypeIdForHourOfDay:(NSInteger)hour;
 
