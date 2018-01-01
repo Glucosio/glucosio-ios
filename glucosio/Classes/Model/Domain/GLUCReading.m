@@ -58,6 +58,10 @@
     return [UIColor blackColor];
 }
 
++ (UIColor *) historyColor: (GLUCReading *) me forUser: (GLUCUser *) user {
+    return [UIColor blackColor];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
