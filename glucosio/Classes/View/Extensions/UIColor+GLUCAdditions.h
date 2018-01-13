@@ -16,6 +16,7 @@
 + (UIColor *)glucosio_fab_pressure;
 + (UIColor *)glucosio_fab_ketonest;
 + (UIColor *)glucosio_fab_weight;
++ (UIColor *)glucosio_fab_insulin;
 + (UIColor *)glucosio_separator;
 + (UIColor *)glucosio_gray_light;
 + (UIColor *)glucosio_text;

@@ -17,9 +17,20 @@
     self.numberFormatter = self.model.currentUser.numberFormatter;
 }
 
+- (IBAction) cancel {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (UIBarButtonItem *) cancelButtonItem {
-    return [[UIBarButtonItem alloc] initWithTitle:GLUCLoc(@"dialog_add_cancel") style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    
+    [cancelButton setTitle:GLUCLoc(@"Cancel") forState:UIControlStateNormal];
+    [cancelButton.widthAnchor constraintEqualToConstant:80].active = YES;
+    [cancelButton.heightAnchor constraintEqualToConstant:35].active = YES;
+    
+    [cancelButton addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
 }
 
 @end

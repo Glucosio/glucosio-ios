@@ -20,12 +20,15 @@
 
 @class RLMSchema;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface RLMRealmConfiguration ()
 
 @property (nonatomic, readwrite) bool cache;
 @property (nonatomic, readwrite) bool dynamic;
 @property (nonatomic, readwrite) bool disableFormatUpgrade;
-@property (nonatomic, copy) RLMSchema *customSchema;
+@property (nonatomic, copy, nullable) RLMSchema *customSchema;
+@property (nonatomic, copy) NSString *pathOnDisk;
 
 // Get the default confiugration without copying it
 + (RLMRealmConfiguration *)rawDefaultConfiguration;
@@ -36,3 +39,5 @@
 // Get a path in the platform-appropriate documents directory with the given filename
 FOUNDATION_EXTERN NSString *RLMRealmPathForFile(NSString *fileName);
 FOUNDATION_EXTERN NSString *RLMRealmPathForFileAndBundleIdentifier(NSString *fileName, NSString *mainBundleIdentifier);
+
+NS_ASSUME_NONNULL_END

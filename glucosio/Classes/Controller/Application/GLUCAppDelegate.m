@@ -111,4 +111,14 @@
     }
 }
 
+- (void)sessionDidBecomeInactive:(nonnull WCSession *)session { 
+    return;
+}
+
+
+- (void)sessionDidDeactivate:(nonnull WCSession *)session {
+    return;
+}
+
+
 @end

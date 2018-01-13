@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  An `NSArray` containing `RLMObjectSchema`s for all object types in the Realm.
- 
+
  This property is intended to be used during migrations for dynamic introspection.
 
  @see `RLMObjectSchema`
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Looks up and returns an `RLMObjectSchema` for the given class name in the Realm.
- 
+
  If there is no object of type `className` in the schema, an exception will be thrown.
 
  @param className   The object class name.
@@ -65,10 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see               `RLMObjectSchema`
  */
-- (RLMObjectSchema *)objectForKeyedSubscript:(id <NSCopying>)className;
+- (RLMObjectSchema *)objectForKeyedSubscript:(NSString *)className;
 
 /**
- Returns a Boolean value that indicates whether two `RLMSchema` instances are equivalent.
+ Returns whether two `RLMSchema` instances are equivalent.
  */
 - (BOOL)isEqualToSchema:(RLMSchema *)schema;
 

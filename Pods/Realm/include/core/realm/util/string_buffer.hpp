@@ -1,22 +1,21 @@
 /*************************************************************************
  *
- * REALM CONFIDENTIAL
- * __________________
+ * Copyright 2016 Realm Inc.
  *
- *  [2011] - [2015] Realm Inc
- *  All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * NOTICE:  All information contained herein is, and remains
- * the property of Realm Incorporated and its suppliers,
- * if any.  The intellectual and technical concepts contained
- * herein are proprietary to Realm Incorporated
- * and its suppliers and may be covered by U.S. and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from Realm Incorporated.
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  **************************************************************************/
+
 #ifndef REALM_UTIL_STRING_BUFFER_HPP
 #define REALM_UTIL_STRING_BUFFER_HPP
 
@@ -37,7 +36,6 @@ namespace util {
 class StringBuffer {
 public:
     StringBuffer() noexcept;
-    ~StringBuffer() noexcept {}
 
     std::string str() const;
 
@@ -54,13 +52,6 @@ public:
     /// read from *c_str() up to, but not including,
     /// *(c_str()+size()).
     const char* data() const noexcept;
-
-    /// Guarantees that the returned string is zero terminated, that
-    /// is, *(c_str()+size()) is zero. The caller may read from
-    /// *c_str() up to and including *(c_str()+size()), the caller may
-    /// write from *c_str() up to, but not including,
-    /// *(c_str()+size()).
-    char* c_str() noexcept;
 
     /// Guarantees that the returned string is zero terminated, that
     /// is, *(c_str()+size()) is zero. The caller may read from
@@ -98,18 +89,14 @@ public:
 private:
     util::Buffer<char> m_buffer;
     size_t m_size; // Excluding the terminating zero
-    static char m_zero;
-
     void reallocate(size_t min_capacity);
 };
 
 
-
-
-
 // Implementation:
 
-inline StringBuffer::StringBuffer() noexcept: m_size(0)
+inline StringBuffer::StringBuffer() noexcept
+    : m_size(0)
 {
 }
 
@@ -133,16 +120,11 @@ inline const char* StringBuffer::data() const noexcept
     return m_buffer.data();
 }
 
-inline char* StringBuffer::c_str() noexcept
-{
-    char* d = data();
-    return d ? d : &m_zero;
-}
-
 inline const char* StringBuffer::c_str() const noexcept
 {
+    static const char zero = 0;
     const char* d = data();
-    return d ? d : &m_zero;
+    return d ? d : &zero;
 }
 
 inline void StringBuffer::append(const std::string& s)
@@ -158,7 +140,7 @@ inline void StringBuffer::append_c_str(const char* c_string)
 inline void StringBuffer::reserve(size_t min_capacity)
 {
     size_t capacity = m_buffer.size();
-    if (capacity == 0 || capacity-1 < min_capacity)
+    if (capacity == 0 || capacity - 1 < min_capacity)
         reallocate(min_capacity);
 }
 

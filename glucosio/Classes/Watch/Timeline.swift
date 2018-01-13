@@ -6,14 +6,14 @@ public class TimelineItem : NSObject /*, Equatable */ {
     public var unit: String
     public var desc : String
 
-    public init(date: Date, value: String, unit: String, description: String) {
+    @objc public init(date: Date, value: String, unit: String, description: String) {
         timestamp = date
         self.value = value
         self.unit = unit
         desc = description
     }
 
-    public override var description: String {
+    @objc public override var description: String {
         return "TimelineItem: \(timestamp) \(value) \(unit) \(desc)"
     }
 
@@ -27,7 +27,7 @@ public class TimelineItem : NSObject /*, Equatable */ {
 
     // MARK: Dictionary (de)serialization
 
-    convenience init(d: Dictionary<String, String>) {
+    @objc convenience init(d: Dictionary<String, String>) {
         //TODO: how to use reflection here?
         self.init(date: Date(timeIntervalSince1970 : Double(d["timestamp"] ?? "") ?? 0.0),
                   value: d["value"] ?? "",
@@ -55,7 +55,7 @@ public class TimelineItem : NSObject /*, Equatable */ {
 public class DayTimeline : NSObject /*, Equatable */ {
     public var elements : Array<TimelineItem>
 
-    public init(items : Array<TimelineItem>) {
+    @objc public init(items : Array<TimelineItem>) {
         elements = items
 
 //        print(elements)
@@ -95,7 +95,7 @@ public class DayTimeline : NSObject /*, Equatable */ {
     }
 
     //d[elements] = Array[Dictionary<String,String>]
-    public func toDictionary() -> Dictionary<String, Array<Dictionary<String, String>>> {
+    @objc public func toDictionary() -> Dictionary<String, Array<Dictionary<String, String>>> {
         var d = Dictionary<String, Array<Dictionary<String, String>>>.init()
 
         d["elements"] = elements.map { t in t.toDictionary() }

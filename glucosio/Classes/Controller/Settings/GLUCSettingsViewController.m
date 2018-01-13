@@ -162,7 +162,6 @@
                             editor.selectedItemIndex = [[self.model.currentUser lookupIndexForKey:targetKey] unsignedIntegerValue];
                         }
                         
-                        self.navigationItem.backBarButtonItem = [self cancelButtonItem];
                         [self.navigationController pushViewController:editor animated:YES];
                     } else {
                         
@@ -181,7 +180,6 @@
                             editor.selectedItemIndex = [[self.model.currentUser lookupIndexForKey:targetKey] unsignedIntegerValue];
                         }
                         
-                        self.navigationItem.backBarButtonItem = [self cancelButtonItem];
                         [self.navigationController pushViewController:editor animated:YES];
                     }
                 } else {
@@ -196,7 +194,6 @@
                         editor.editedProperty = targetKey;
                         editor.title = [self.model.currentUser titleForKey:targetKey];
                         editor.model = self.model;
-                        self.navigationItem.backBarButtonItem = [self cancelButtonItem];
                         [self.navigationController pushViewController:editor animated:YES];
                     }
 

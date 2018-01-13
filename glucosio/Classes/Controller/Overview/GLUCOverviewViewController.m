@@ -120,7 +120,7 @@
     self.chartView.drawBordersEnabled = NO;
     self.chartView.backgroundColor = [UIColor whiteColor];
     self.chartView.autoScaleMinMaxEnabled = NO;
-    self.chartView.descriptionText = @"";
+    self.chartView.chartDescription = nil;
     self.chartView.pinchZoomEnabled = YES;
     self.chartView.legend.enabled = NO;
     
@@ -182,7 +182,6 @@
     lineDataSet.drawValuesEnabled = NO;
     lineDataSet.highlightColor = [UIColor glucosio_gray_light];
     lineDataSet.cubicIntensity = 0.2f;
-    lineDataSet.drawCubicEnabled = YES;
     
     return lineDataSet;
 }

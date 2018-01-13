@@ -23,7 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addReading:)];
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    [addButton.widthAnchor constraintEqualToConstant:35].active = YES;
+    [addButton.heightAnchor constraintEqualToConstant:35].active = YES;
+    [addButton setImage:[UIImage imageNamed:@"ButtonIconAdd_Reading"] forState:UIControlStateNormal];
+    [addButton addTarget:self action:@selector(addReading:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:addButton];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

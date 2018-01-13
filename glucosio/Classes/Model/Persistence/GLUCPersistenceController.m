@@ -289,7 +289,7 @@
 
 
 - (RLMResults <GLUCReading *> *)allReadingsOfType:(Class)readingType sortByDateAscending:(BOOL)ascending {
-    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:ascending];
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:ascending];
 
     return allReadings;
 }
@@ -300,13 +300,13 @@
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"creationDate BETWEEN {%@, %@}", from, to];
     RLMResults <GLUCReading *> *readings = [[readingType objectsWithPredicate:predicate]
-                                            sortedResultsUsingProperty:@"creationDate" ascending:ascending];
+                                            sortedResultsUsingKeyPath:@"creationDate" ascending:ascending];
     
     return readings;
 }
 
 - (RLMResults <GLUCBloodGlucoseReading *> *)allBloodGlucoseReadings:(BOOL)ascending {
-    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:NO];
     return allReadings;
 }
 
@@ -314,7 +314,7 @@
     
     NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
     
-    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:NO];
     return [allReadings firstObject];
 }
 
@@ -322,12 +322,12 @@
     
     NSAssert([readingType isSubclassOfClass:[RLMObject class]], @"Error: reading type must me a subclass of RLMObject");
     
-    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:NO];
     return [allReadings lastObject];
 }
 
 - (GLUCBloodGlucoseReading *)lastBloodGlucoseReading {
-    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingProperty:@"creationDate" ascending:NO];
+    RLMResults <GLUCBloodGlucoseReading *> *allReadings = [[GLUCBloodGlucoseReading allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:NO];
     return [allReadings firstObject];
 }
 

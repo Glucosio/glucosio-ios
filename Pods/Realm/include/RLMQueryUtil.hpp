@@ -23,11 +23,11 @@
 namespace realm {
     class Group;
     class Query;
-    class Table;
-    struct SortOrder;
+    class SortDescriptor;
 }
 
 @class RLMObjectSchema, RLMProperty, RLMSchema, RLMSortDescriptor;
+class RLMClassInfo;
 
 extern NSString * const RLMPropertiesComparisonTypeMismatchException;
 extern NSString * const RLMUnsupportedTypesFoundInPropertyComparisonException;
@@ -37,6 +37,3 @@ realm::Query RLMPredicateToQuery(NSPredicate *predicate, RLMObjectSchema *object
 
 // return property - throw for invalid column name
 RLMProperty *RLMValidatedProperty(RLMObjectSchema *objectSchema, NSString *columnName);
-
-// validate the array of RLMSortDescriptors and convert it to a realm::SortOrder
-realm::SortOrder RLMSortOrderFromDescriptors(realm::Table& table, NSArray<RLMSortDescriptor *> *descriptors);

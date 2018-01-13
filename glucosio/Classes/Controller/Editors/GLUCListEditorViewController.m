@@ -9,6 +9,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
+
     [self.pickerView reloadAllComponents];
 }
 

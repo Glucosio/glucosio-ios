@@ -24,6 +24,17 @@ static NSString *const kGLUCGLUCIndexedCellIdentifier = @"ItemCell";
 {
     [super viewDidLoad];
     [self setupUI];
+    self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
+    UIButton *doneButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    [doneButton setTitle:GLUCLoc(@"Done") forState:UIControlStateNormal];
+    [doneButton.widthAnchor constraintEqualToConstant:80].active = YES;
+    [doneButton.heightAnchor constraintEqualToConstant:35].active = YES;
+    
+    [doneButton addTarget:self action:@selector(save:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
+
+
 }
 
 #pragma mark -

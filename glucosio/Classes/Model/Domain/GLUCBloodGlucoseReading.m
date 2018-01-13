@@ -167,7 +167,7 @@
 }
 
 + (RLMResults<GLUCBloodGlucoseReading *> *) last24hReadings {
-    RLMResults<GLUCBloodGlucoseReading *> *allBloodGlucoseReadings = [[self allObjects] sortedResultsUsingProperty:@"creationDate" ascending:YES];
+    RLMResults<GLUCBloodGlucoseReading *> *allBloodGlucoseReadings = [[self allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:YES];
 
     NSDate *endDate = [allBloodGlucoseReadings maxOfProperty:@"creationDate"];
     NSDate *startDate = [[NSCalendar currentCalendar] gluc_dateByAddingDays:-1 toDate:endDate];

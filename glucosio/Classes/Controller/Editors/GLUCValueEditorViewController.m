@@ -15,6 +15,7 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
     self.textField.keyboardType = UIKeyboardTypeNumberPad;
 }
 

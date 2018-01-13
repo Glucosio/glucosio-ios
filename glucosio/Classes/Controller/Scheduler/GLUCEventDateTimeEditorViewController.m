@@ -37,7 +37,8 @@
     
     self.repeatLabel.text = GLUCLoc(@"Repeats?");
 
-    
+    self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
+
 }
 
 - (NSCalendarUnit) calendarIntervalForSegmentIndex:(NSInteger)index {

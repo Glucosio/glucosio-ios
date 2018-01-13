@@ -14,4 +14,11 @@
     return GLUCLoc(@"Insulin Intake");
 }
 
++ (NSString *) menuIconName {
+    return @"MenuIconAdd_InsulinIntake";
+}
+
++ (UIColor *) readingColor {
+    return [UIColor glucosio_fab_insulin];
+}
 @end

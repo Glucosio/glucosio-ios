@@ -36,7 +36,6 @@
         editor.pickerView.datePickerMode = UIDatePickerModeDateAndTime;
     }
     
-    self.navigationItem.backBarButtonItem = [self cancelButtonItem];
     [self.navigationController pushViewController:editor animated:YES];
     
 }

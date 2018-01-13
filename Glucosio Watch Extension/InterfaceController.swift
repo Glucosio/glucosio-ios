@@ -41,7 +41,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.willActivate()
 
         if WCSession.isSupported() {
-            let session = WCSession.default()
+            let session = WCSession.default
             if (session.activationState == WCSessionActivationState.notActivated) {
                 session.delegate = self
                 session.activate()

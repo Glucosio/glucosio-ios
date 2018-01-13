@@ -34,8 +34,21 @@
     
     self.rowKeys = [self rowKeysForReadingType:self.editedObject.class];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    UIButton *doneButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    [doneButton setTitle:GLUCLoc(@"Done") forState:UIControlStateNormal];
+    [doneButton.widthAnchor constraintEqualToConstant:80].active = YES;
+    [doneButton.heightAnchor constraintEqualToConstant:35].active = YES;
+
+    [cancelButton setTitle:GLUCLoc(@"Cancel") forState:UIControlStateNormal];
+    [cancelButton.widthAnchor constraintEqualToConstant:80].active = YES;
+    [cancelButton.heightAnchor constraintEqualToConstant:35].active = YES;
+
+    [doneButton addTarget:self action:@selector(save:) forControlEvents:UIControlEventTouchUpInside];
+    [cancelButton addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     
     self.useEditedValue = NO;
     
@@ -87,7 +100,6 @@
         editor.editedDate = [self.editedObject valueForKey:targetKey];
     }
     
-    self.navigationItem.backBarButtonItem = [self cancelButtonItem];
     [self.navigationController pushViewController:editor animated:YES];
 }
 
@@ -120,7 +132,6 @@
                 editor.selectedItemIndex = [[self.editedObject lookupIndexForKey:targetKey] unsignedIntegerValue];
             }
             
-            self.navigationItem.backBarButtonItem = [self cancelButtonItem];
             [self.navigationController pushViewController:editor animated:YES];
         } else {
             GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
@@ -128,7 +139,6 @@
             editor.editedProperty = targetKey;
             editor.title = [self.model.currentUser titleForKey:targetKey];
             editor.model = self.model;
-            self.navigationItem.backBarButtonItem = [self cancelButtonItem];
             [self.navigationController pushViewController:editor animated:YES];
 
         }
@@ -193,24 +203,43 @@
 - (IBAction)save:(UIButton *)sender {
     [self.valueField resignFirstResponder];
     [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
-    [self.model saveReading:(GLUCReading *)self.editedObject];
 
-    //TODO: push more reading types to the watch
-    //EMI: Can't use .class directly since these are all Realm proxies. Note how RLMObject.class.className does have the actual proxied class name.
-    if ([self.editedObject.class isSubclassOfClass:[GLUCBloodGlucoseReading class]]) {
-        NSDictionary * context = [[TimelineUtil load24hTimeline: self.model.currentUser] toDictionary];
-        [WCSession.defaultSession updateApplicationContext:context error:nil];
+    @try {
+        //TODO: push more reading types to the watch
+        //EMI: Can't use .class directly since these are all Realm proxies. Note how RLMObject.class.className does have the actual proxied class name.
+        if ([self.editedObject.class isSubclassOfClass:[GLUCBloodGlucoseReading class]]) {
+            NSDictionary * context = [[TimelineUtil load24hTimeline: self.model.currentUser] toDictionary];
+            [WCSession.defaultSession updateApplicationContext:context error:nil];
+            
+            GLUCBloodGlucoseReading * gReading = (GLUCBloodGlucoseReading *) self.editedObject;
+            
+            
+            double mgdL =[[gReading readingInUnits:0 /* mg/dL, see preferredBloodGlucoseUnitOfMeasure*/ ] doubleValue];
 
-        GLUCBloodGlucoseReading * gReading = (GLUCBloodGlucoseReading *) self.editedObject;
+            
+            [HealthKitBridge.singleton addMolarMassBloodGlucoseWithValue: mgdL
+                                                                    when: gReading.creationDate
+                                                                mealTime: gReading.healthKitMealTime];
+        }
+        [self.model saveReading:(GLUCReading *)self.editedObject];
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 
-        double mgdL =[[gReading readingInUnits:0 /* mg/dL, see preferredBloodGlucoseUnitOfMeasure*/ ] doubleValue];
-
-        [HealthKitBridge.singleton addMolarMassBloodGlucoseWithValue: mgdL
-                                                                when: gReading.creationDate
-                                                            mealTime: gReading.healthKitMealTime];
     }
 
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    @catch(NSException *exception) {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:GLUCLoc(@"Error")
+                                      message:(exception ? [exception reason] : GLUCLoc(@"Data is invalid"))
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Ok") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        }];
+        
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
+
+    }
+
 }
 
 @end

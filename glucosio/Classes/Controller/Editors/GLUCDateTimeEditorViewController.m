@@ -10,6 +10,9 @@
     self.pickerView.calendar = [NSCalendar currentCalendar];
     self.editedDate = [NSDate date];
     [self.pickerView addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

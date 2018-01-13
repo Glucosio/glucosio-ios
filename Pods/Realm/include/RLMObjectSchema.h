@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  An array of `RLMProperty` instances representing the managed properties of a class described by the schema.
- 
+
  @see `RLMProperty`
  */
 @property (nonatomic, readonly, copy) NSArray<RLMProperty *> *properties;
@@ -55,16 +55,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Retrieves an `RLMProperty` object by the property name.
- 
+
  @param propertyName The property's name.
- 
+
  @return An `RLMProperty` object, or `nil` if there is no property with the given name.
  */
-- (nullable RLMProperty *)objectForKeyedSubscript:(id <NSCopying>)propertyName;
+- (nullable RLMProperty *)objectForKeyedSubscript:(NSString *)propertyName;
 
 /**
-  Returns a Boolean value that indicates whether two `RLMObjectSchema` instances are equal.
-*/
+ Returns whether two `RLMObjectSchema` instances are equal.
+ */
 - (BOOL)isEqualToObjectSchema:(RLMObjectSchema *)objectSchema;
 
 @end
