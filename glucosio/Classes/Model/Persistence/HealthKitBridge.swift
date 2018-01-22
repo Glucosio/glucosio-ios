@@ -1,5 +1,6 @@
 import Foundation
 import HealthKit
+import UIKit
 
 
 public class HealthKitBridge : NSObject {
@@ -24,8 +25,12 @@ public class HealthKitBridge : NSObject {
                 })
             }
             if (allowStore) {
-                //HKMetadataKeyBloodGlucoseMealTime shows up in iOS 11.0+, using a hardcoded string bellow
-                let metadata = ["HKBloodGlucoseMealTime": mealTime]
+                let iosVersion = (UIDevice.current.systemVersion as NSString).floatValue
+                var hkMealtimeKey = "HKBloodGlucoseMealTime"
+                if iosVersion >= 11.0 {
+                    hkMealtimeKey = "HKMetadataKeyBloodGlucoseMealTime"
+                }
+                let metadata = [hkMealtimeKey: mealTime]
                 let measurement = HKQuantitySample(type: glucoseType!, quantity: quantity,
                                                    start: when, end: when,
                                                    metadata: metadata)
