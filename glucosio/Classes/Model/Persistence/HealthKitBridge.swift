@@ -25,11 +25,7 @@ public class HealthKitBridge : NSObject {
                 })
             }
             if (allowStore) {
-                let iosVersion = (UIDevice.current.systemVersion as NSString).floatValue
-                var hkMealtimeKey = "HKBloodGlucoseMealTime"
-                if iosVersion >= 11.0 {
-                    hkMealtimeKey = "HKMetadataKeyBloodGlucoseMealTime"
-                }
+                let hkMealtimeKey = "HKMetadataKeyBloodGlucoseMealTime"
                 let metadata = [hkMealtimeKey: mealTime]
                 let measurement = HKQuantitySample(type: glucoseType!, quantity: quantity,
                                                    start: when, end: when,
