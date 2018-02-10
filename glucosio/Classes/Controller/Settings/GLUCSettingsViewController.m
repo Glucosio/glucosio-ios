@@ -215,18 +215,21 @@
                     //export
                     [SVProgressHUD showWithStatus:GLUCLoc(@"activity_export_snackbar_1")];
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        NSData * attachment = [self.model exportAll];
-
-                        NSLog(@"%@", [NSString stringWithUTF8String:[attachment bytes]]);
-
-#if DEBUG
-                        [NSThread sleepForTimeInterval:3.0f];
-#endif
+                        [self.model exportAll];
 
                         dispatch_async(dispatch_get_main_queue(), ^{
                             [SVProgressHUD dismiss];
 
-                            [self openMailComposerWithAttachment: attachment];
+                            UIAlertController * alert=   [UIAlertController
+                                                          alertControllerWithTitle:GLUCLoc(@"Export")
+                                                          message:(GLUCLoc(@"Zip file created"))
+                                                          preferredStyle:UIAlertControllerStyleAlert];
+                            
+                            UIAlertAction *okAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Ok") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                            }];
+                            
+                            [alert addAction:okAction];
+                            [self presentViewController:alert animated:YES completion:nil];
                         });
                     });
                 }

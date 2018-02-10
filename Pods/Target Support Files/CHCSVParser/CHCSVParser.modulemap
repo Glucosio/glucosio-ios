@@ -1,0 +1,6 @@
+framework module CHCSVParser {
+  umbrella header "CHCSVParser-umbrella.h"
+
+  export *
+  module * { export * }
+}

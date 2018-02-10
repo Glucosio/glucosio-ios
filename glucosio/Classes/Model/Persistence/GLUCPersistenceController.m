@@ -9,6 +9,8 @@
 #import "GLUCInsulinIntakeReading.h"
 #import "GLUCKetonesReading.h"
 #import "GLUCBloodGlucoseReading.h"
+#import <CHCSVParser/CHCSVParser.h>
+#import <SSZipArchive/SSZipArchive.h>
 
 /*
  Current Database Schema as of 2016-03-26 (Mar 26 2016), as defined in Android app's Realm schema
@@ -68,7 +70,7 @@
  Date created;
  ************************************************/
 
-//#define GLUC_CREATE_TEST_DATA
+#define GLUC_CREATE_TEST_DATA
 
 @interface GLUCPersistenceController ()
 @property(strong, nonatomic, readwrite) GLUCUser *user;
@@ -351,31 +353,44 @@
 // where unit of measurement is "mg/dL" or "mmol/L" and the concentration is converted.
 //
 // Note how the Android export is not complete. Most readings are not exported.
-- (NSData *) exportAll {
-    NSMutableData * dump = [NSMutableData dataWithLength:0];
+- (void) exportAll {
+    [self exportAllToZipUsingCSV];
+}
 
+- (void) exportAllToZipUsingCSV {
+    NSDateFormatter *iso8601DateFormatter = [[NSDateFormatter alloc] init];
+    NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    [iso8601DateFormatter setLocale:enUSPOSIXLocale];
+    [iso8601DateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *outputFolder = [documentsDirectory stringByAppendingPathComponent:@"/Export"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:outputFolder]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:outputFolder withIntermediateDirectories:NO attributes:nil error:&error];
+    }
     NSArray * readingTypes = [self.currentUser readingTypes];
     for(int i=0; i < readingTypes.count; i++) {
         Class clazz = (Class) readingTypes[i];
-        NSLog(@"%@", clazz);
         NSString * table = NSStringFromClass(clazz);
-
-        NSString * tableLine = [NSString stringWithFormat:@"#%@\n", table];
-        [dump appendData:[tableLine dataUsingEncoding:NSUTF8StringEncoding]];
-
-        RLMResults <GLUCReading *> * data = [self allReadingsOfType:clazz sortByDateAscending:YES];
-
-        for(int k = 0;k < data.count; k++) {
-            GLUCReading * r = data[k];
-            NSString * line = [NSString stringWithFormat:@"%lf %@ %@\n", r.creationDate.timeIntervalSince1970, r.reading, r.notes];
-
-            NSLog(@"%@", line);
-
-            [dump appendData: [line dataUsingEncoding:NSUTF8StringEncoding]];
+        NSString *filename = [NSString stringWithFormat:@"/%@.csv", table];
+        NSString *outputFile = [outputFolder stringByAppendingPathComponent:filename];
+        CHCSVWriter *writer = [[CHCSVWriter alloc] initForWritingToCSVFile:outputFile];
+        if (writer) {
+            RLMResults <GLUCReading *> * data = [self allReadingsOfType:clazz sortByDateAscending:YES];
+            for(int k = 0;k < data.count; k++) {
+                GLUCReading * r = data[k];
+                [writer writeLineOfFields:@[[iso8601DateFormatter stringFromDate:r.creationDate], r.reading, r.notes]];
+            }
+            [writer closeStream];
         }
     }
-
-    return dump;
+    
+    NSString *zipFilePath = [documentsDirectory stringByAppendingPathComponent:@"/Data.zip"];
+    
+    [SSZipArchive createZipFileAtPath:zipFilePath withContentsOfDirectory:outputFolder keepParentDirectory:YES];
 }
+
 
 @end

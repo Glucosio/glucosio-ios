@@ -40,6 +40,6 @@ static NSInteger const kGLUCModelSchemaVersion = 1;
 
 - (void) saveAll;
 
-- (NSData *) exportAll;
+- (void) exportAll;
 
 @end
