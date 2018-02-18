@@ -35,6 +35,7 @@ static NSString *const kGLUCModelAPISubmissionDateKey = @"apiSubmissionDate";
 @property (nonatomic, readwrite, strong) NSDate *creationDate;
 @property (nonatomic, readwrite, strong) NSDate *modificationDate;
 // Added to support tracking whether a reading has been sent to the API or not
+// Deprecated - this will now be stored per-service, see GLUCDataService
 @property (nonatomic, readwrite, strong) NSDate *apiSubmissionDate;
 
 @property (nonatomic, readwrite, strong) NSNumber *ownerId;
@@ -63,6 +64,8 @@ static NSString *const kGLUCModelAPISubmissionDateKey = @"apiSubmissionDate";
 - (NSString *)displayValueForDateKey:(NSString *)key withDateFormatter:(NSDateFormatter *)aFormatter;
 - (NSNumber *)defaultLookupIndexValueForKey:(NSString *)key;
 
+- (id)transformedValueForKey:(NSString *) key;
+
 - (void)setValueFromLookupAtIndex:(NSNumber *)index forKey:(NSString *)key;
 - (NSArray *) indirectLookupKeys;
 - (BOOL)propertyIsLookup:(NSString *)key;
@@ -75,5 +78,6 @@ static NSString *const kGLUCModelAPISubmissionDateKey = @"apiSubmissionDate";
 - (BOOL) isDateKey:(NSString *)key;
 - (BOOL) isTimeKey:(NSString *)key;
 
+- (NSDictionary *) dictionaryRepresentation;
 
 @end

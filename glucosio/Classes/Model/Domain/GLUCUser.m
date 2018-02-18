@@ -9,6 +9,11 @@
 #import "GLUCKetonesReading.h"
 #import "GLUCBodyWeightReading.h"
 #import "GLUCInsulinIntakeReading.h"
+#import "GLUCTreatment.h"
+#import "GLUCMedication.h"
+#import "GLUCSleep.h"
+#import "GLUCExercise.h"
+#import "GLUCFood.h"
 
 @interface GLUCUser ()
 @end
@@ -153,6 +158,39 @@
             @"allowResearchUse",@"numberFormatter"];
 }
 
+- (id)transformedValueForKey:(NSString *) key {
+    id retVal = [super transformedValueForKey:key];
+    
+    if (key && key.length &&
+        ([key isEqualToString:kGLUCUserRangeMaxPropertyKey] ||
+         [key isEqualToString:kGLUCUserRangeMinPropertyKey]))
+    {
+        if ([[retVal class] isSubclassOfClass:[NSNumber class]]) {
+            if ([self needsBloodGlucoseReadingUnitConversion]) {
+                NSNumber *convertedVal = [GLUCBloodGlucoseReading convertValue:retVal fromUnits:kGLUCUnitOfMeasure_mgDl toUnits:kGLUCUnitOfMeasure_mmolL];
+                retVal = convertedVal;
+            }
+        }
+    }
+    return retVal;
+}
+
+- (NSString *)displayValueForKey:(NSString *)key {
+    NSString *retVal = @"";
+    if (key && key.length) {
+        if ([key isEqualToString:kGLUCUserRangeMaxPropertyKey] ||
+            [key isEqualToString:kGLUCUserRangeMinPropertyKey]) {
+            id val = [self transformedValueForKey:key];
+            if ([[val class] isSubclassOfClass:[NSNumber class]]) {
+                retVal = [self.numberFormatter stringFromNumber:val];
+            }
+        } else {
+            retVal = [super displayValueForKey:key];
+        }
+    }
+    return retVal;
+}
+
 - (NSArray *)settingsProperties {
     NSArray *retVal = nil;
     NSDictionary *mySchema = [[(id)self class] schema];
@@ -271,7 +309,8 @@
 
 // all supported reading types
 - (NSArray *) readingTypes {
-    return @[GLUCBloodGlucoseReading.class, GLUCHbA1cReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class, GLUCInsulinIntakeReading.class];
+    return @[GLUCBloodGlucoseReading.class, GLUCHbA1cReading.class, GLUCCholesterolReading.class, GLUCBloodPressureReading.class, GLUCKetonesReading.class, GLUCBodyWeightReading.class,
+             GLUCSleep.class, GLUCTreatment.class, GLUCMedication.class, GLUCExercise.class, GLUCFood.class];
 }
 
 

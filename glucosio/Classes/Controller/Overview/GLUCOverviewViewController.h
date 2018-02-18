@@ -14,4 +14,13 @@ static NSString *const kGLUCOverviewCellIdentifier = @"OverviewCell";
 
 @interface GLUCOverviewViewController : GLUCViewController <IChartAxisValueFormatter>
 
+@property (nonatomic, weak) IBOutlet UISwitch *nightscoutSwitch;
+@property (nonatomic, weak) IBOutlet UIImageView *nightscoutIconView;
+
+@property (nonatomic, strong) NSTimer *refreshTimer;
+
+@property (nonatomic, strong) NSNumber *lastReadingValue;
+
+- (IBAction)toggleNightscoutMonitoring:(UISwitch *)sender;
+
 @end

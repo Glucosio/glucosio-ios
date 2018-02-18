@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>18</string>
+	<string>21</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.healthcare-fitness</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -36,7 +36,9 @@
 	<key>NSHealthShareUsageDescription</key>
 	<string>Share glucose readings with Glucosio app</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Save glucose readings</string>
+	<string>Save and load glucose readings</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Attach photos and images to notes and records</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>lato.ttf</string>

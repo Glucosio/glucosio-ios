@@ -24,7 +24,7 @@
 }
 
 + (BOOL) allowResearchCollection {
-    return true;
+    return YES;
 }
 
 - (instancetype) init {
@@ -233,7 +233,6 @@
 - (NSString *)displayValueForKey:(NSString *)key {
     NSString *retVal = @"";
     if (key) {
-
         id val = [self transformedValueForKey:key];
 
         if (val) {
@@ -323,4 +322,16 @@
 - (BOOL) isTimeKey:(NSString *)key {
     return [self isKey:key ofType:kGLUCModelAttributeTimeTypeKey];
 }
+
+- (NSDictionary *) dictionaryRepresentation {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSDate *invalidDate = [NSDate dateWithTimeIntervalSince1970:0];
+    
+    dict[kGLUCModelIdKey] = self.glucID ?: @"";
+    dict[kGLUCModelCreationDateKey] = self.creationDate ?: invalidDate;
+    dict[kGLUCModelModificationDateKey] = self.modificationDate ?: invalidDate;
+    dict[kGLUCModelAPISubmissionDateKey] = self.apiSubmissionDate ?: invalidDate;
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
+
 @end

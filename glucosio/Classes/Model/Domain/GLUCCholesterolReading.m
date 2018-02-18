@@ -63,7 +63,7 @@
              
              kGLUCModelSchemaPropertiesKey : propertiesDict,
              
-             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingLDLReadingPropertyKey, kGLUCReadingHDLReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey],
+             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingLDLReadingPropertyKey, kGLUCReadingHDLReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingNotesPropertyKey],
              
              };
 }

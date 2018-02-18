@@ -43,12 +43,22 @@
 
             kGLUCModelSchemaPropertiesKey : propertiesDict,
 
-            kGLUCModelEditorRowsPropertiesKey : @[kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey],
+            kGLUCModelEditorRowsPropertiesKey : @[kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingNotesPropertyKey],
 
     };
 }
 
+- (NSDictionary *) dictionaryRepresentation {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryRepresentation]];
+    NSMutableDictionary *property_dict = [NSMutableDictionary dictionary];
 
+    property_dict[kGLUCReadingModelValuePropertyKey] = self.reading ?: @0;
+    property_dict[kGLUCReadingNotesPropertyKey] = self.notes ?: @"";
+
+    [dict addEntriesFromDictionary:property_dict];
+    
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
 
 + (NSString *) menuIconName {
     return nil;
@@ -60,6 +70,10 @@
 
 + (UIColor *) historyColor: (GLUCReading *) me forUser: (GLUCUser *) user {
     return [UIColor blackColor];
+}
+
++ (HKQuantityType *) healthKitQuantityType {
+    return nil;
 }
 
 - (instancetype)init {

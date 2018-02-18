@@ -4,8 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GLUCReading.h"
+#import "GLUCMedication.h"
 
 
-@interface GLUCInsulinIntakeReading : GLUCReading
+@interface GLUCInsulinIntakeReading : GLUCMedication
+
 @end

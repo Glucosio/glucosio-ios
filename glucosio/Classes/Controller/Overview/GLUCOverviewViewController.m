@@ -23,6 +23,7 @@
 #import "GLUCBodyWeightReading.h"
 #import "GLUCInsulinIntakeReading.h"
 
+
 @interface GLUCOverviewViewController () <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *chartScopeControl;
@@ -73,6 +74,8 @@
                              [self.model.currentUser bloodGlucoseReadingValueInPreferredUnits:[self.model lastBloodGlucoseReading]],
                              [self.model.currentUser displayValueForKey:kGLUCUserPreferredBloodGlucoseUnitsPropertyKey]];;
     
+    self.lastReadingValue = @0;
+    
     self.rowValues = @[lastReading, @"fragment_overview_trend_positive"];
     
     self.title = GLUCLoc(@"tab_overview");
@@ -95,15 +98,80 @@
     self.yVals = [NSMutableArray array];
     self.chartDateFormatter = [[NSDateFormatter alloc] init];
     
+    self.speechEnabled = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];    
 }
 
+- (void) startTimer {
+    
+    CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fade.toValue = @0;
+    CABasicAnimation *pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulse.toValue = @2;
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[fade,pulse];
+    group.duration = 1.0;
+    group.repeatCount = MAXFLOAT;
+    group.autoreverses = YES;
+    [self.nightscoutIconView.layer addAnimation:group forKey:@"nightscoutworking"];
+    
+    self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self.model refreshFromServices];
+        [self showReadingsOfType:self.readingTypeToGraph];
+    }];
+}
+
+- (void) stopTimer {
+    [self.nightscoutIconView.layer removeAllAnimations];
+    
+    [self.refreshTimer invalidate];
+    self.refreshTimer = nil;
+}
+
+- (IBAction)toggleNightscoutMonitoring:(UISwitch *)sender {
+    
+    if ([sender isOn]) {
+        if ([self.model nightscoutAvailable]) {
+            [self startTimer];
+        } else {
+            [sender setOn:NO];
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:GLUCLoc(@"Missing Configuration")
+                                          message:GLUCLoc(@"Please configure Nightscout first in the settings->data section")
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:GLUCLoc(@"Ok") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            }];
+            
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:nil];
+
+        }
+    } else {
+        [self stopTimer];
+    }
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self stopTimer];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleServiceAlarmNotification:)
+                                                 name:@"ServiceAlarm" object:nil];
+    
     [self showReadingsOfType:self.readingTypeToGraph];
+    
+    if ([self.nightscoutSwitch isOn])
+        [self startTimer];
 }
 
 - (void)configureView {
@@ -115,7 +183,6 @@
     [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_week") forSegmentAtIndex:1];
     [self.chartScopeControl setTitle:GLUCLoc(@"fragment_overview_selector_month") forSegmentAtIndex:2];
     
-    //ye[self.chartView.animator animateWithXAxisDuration:0.75f yAxisDuration:0.35f];
     self.chartView.drawGridBackgroundEnabled = NO;
     self.chartView.drawBordersEnabled = NO;
     self.chartView.backgroundColor = [UIColor whiteColor];
@@ -124,17 +191,7 @@
     self.chartView.pinchZoomEnabled = YES;
     self.chartView.legend.enabled = NO;
     
-    // ACF So https://github.com/danielgindi/Charts/releases/tag/v3.0.0 tells me
-    // "If you have any old startAtZeroEnabled calls - these have been deprecated
-    //  for a long time. Replace them with axisMinimum."
-    // But since you seem to be saying *dont* start at zero, I'm not sure what
-    // the axisMinimum setting should be.
-    
-    // [[self.chartView getAxis:AxisDependencyLeft] setStartAtZeroEnabled:NO];
-    // [[self.chartView getAxis:AxisDependencyLeft] setAxisMinimum:0];  // <- what goes here
     [[self.chartView getAxis:AxisDependencyLeft] setDrawGridLinesEnabled:NO];
-//     [[self.chartView getAxis:AxisDependencyRight] setStartAtZeroEnabled:NO];
-    // [[self.chartView getAxis:AxisDependencyRight] setAxisMinimum:0];  // <- what goes here
     [[self.chartView getAxis:AxisDependencyRight] setEnabled:NO];
     [self.chartView.xAxis setLabelPosition:XAxisLabelPositionBottom];
     [self.chartView.xAxis setDrawGridLinesEnabled:NO];
@@ -164,6 +221,9 @@
     [self showReadingsOfType:self.readingTypeToGraph];
 }
 
+- (void) refreshFromExternalServices {
+    [self.model performSelector:@selector(refreshFromServices) withObject:nil afterDelay:5.0];
+}
 #pragma mark - Private methods
 
 - (LineChartDataSet *)lineChartDataSetWithYValues:(NSArray<ChartDataEntry *> *)yVals lineColor:(UIColor *) lineColor {
@@ -192,10 +252,31 @@
     NSString *lastReading = GLUCLoc(@"fragment_empty_text");
     
     if (reading) {
-        valueStr = [self.model.currentUser displayValueForReading:reading];
+        NSNumber *displayVal = [reading readingInUnits:[self.model.currentUser unitPreferenceForReadingType:readingType]];
+
+        NSString *floatString = [displayVal stringValue];
+        NSArray *floatStringComps = [floatString componentsSeparatedByString:@"."];
+        NSUInteger numberOfDecimalPlaces = 0;
+        if (floatStringComps && floatStringComps.count > 1) {
+            NSString *decimalPart = [floatStringComps objectAtIndex:1];
+            if (decimalPart)
+                numberOfDecimalPlaces = decimalPart.length;
+        }
         
+        valueStr = [self.model.currentUser displayValueForReading:reading];
+        if (numberOfDecimalPlaces > 0) {
+            floatString = valueStr;
+        }
+
         lastReading = [NSString stringWithFormat:@"%@ %@", valueStr,
                        [self.model.currentUser displayUnitsForReading:reading]];
+        
+        if (![self.lastReadingValue isEqualToNumber:reading.reading]) {
+            if (self.speechEnabled) {
+                [self say:floatString];
+            }
+        }
+        self.lastReadingValue = reading.reading;
         
     }
     
@@ -258,7 +339,8 @@
         }];
         
         if ([self.yVals count] && [self.xVals count]) {
-            LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:self.yVals lineColor:self.colorForReadingType[NSStringFromClass(readingType)]];
+            UIColor *colorForReadingType = [readingType readingColor];
+            LineChartDataSet *lineDataSet = [self lineChartDataSetWithYValues:self.yVals lineColor:colorForReadingType ?: [UIColor blackColor]];
             LineChartData *data = [[LineChartData alloc] initWithDataSet:lineDataSet];
             
             [self.chartView clear];

@@ -52,6 +52,9 @@
 		5584534B1BC564D300492E38 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558453491BC564D300492E38 /* Settings.storyboard */; };
 		558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534C1BC564E800492E38 /* LaunchScreen.storyboard */; };
 		558453511BC564E800492E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5584534E1BC564E800492E38 /* Main.storyboard */; };
+		5597D8152037AD9A00C7A8F8 /* GLUCNotesEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597D8142037AD9A00C7A8F8 /* GLUCNotesEditorViewController.m */; };
+		55EE3D6820365167008CBF52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EE3D6720365167008CBF52 /* AudioToolbox.framework */; };
+		55EE3D702036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EE3D6F2036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.m */; };
 		55F571D31D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */; };
 		55F571D41D86A310006A83D3 /* GLUCSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F571D21D86A310006A83D3 /* GLUCSchedulerViewController.m */; };
 		5F18A3491FEE5B1500AA2162 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18A3481FEE5B1500AA2162 /* Timeline.swift */; };
@@ -68,8 +71,21 @@
 		5F5950BE1FE5BBAF0098DE07 /* Glucosio Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5F59509E1FE5BBAF0098DE07 /* Glucosio Watch.app */; };
 		5F80050A1FE715E700967550 /* UIColor+GLUCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 551193C71BC3EF60007CD147 /* UIColor+GLUCAdditions.m */; };
 		5F93A6951FF8B63B00E35FCE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F93A6941FF8B63B00E35FCE /* HealthKit.framework */; };
-		5F93A6971FF8B6A700E35FCE /* HealthKitBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93A6961FF8B6A700E35FCE /* HealthKitBridge.swift */; };
 		73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A360826019661824371D0886 /* Pods_glucosio.framework */; };
+		961050BE203395DC00514D32 /* GLUCDataServiceReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 961050BD203395DC00514D32 /* GLUCDataServiceReading.m */; };
+		9613B14F20383960009B9AAF /* GLUCTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B14E20383960009B9AAF /* GLUCTreatment.m */; };
+		9613B1522038399C009B9AAF /* GLUCMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B1512038399C009B9AAF /* GLUCMedication.m */; };
+		9613B155203839FA009B9AAF /* GLUCSleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B154203839FA009B9AAF /* GLUCSleep.m */; };
+		9613B15820383EFA009B9AAF /* GLUCMedicine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B15720383EFA009B9AAF /* GLUCMedicine.m */; };
+		9613B15B203844B4009B9AAF /* GLUCExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B15A203844B4009B9AAF /* GLUCExercise.m */; };
+		9613B15E203844DB009B9AAF /* GLUCFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B15D203844DB009B9AAF /* GLUCFood.m */; };
+		9613B16220385E55009B9AAF /* GLUCDataServiceWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9613B16120385E55009B9AAF /* GLUCDataServiceWatch.m */; };
+		962B41642034E8540074097E /* GLUCDataServiceHealthKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 962B41632034E8540074097E /* GLUCDataServiceHealthKit.m */; };
+		962B41662035040F0074097E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B41652035040F0074097E /* AVFoundation.framework */; };
+		9671B9DF2036F10700E19D28 /* HighThreshold.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9671B9DD2036F10600E19D28 /* HighThreshold.wav */; };
+		9671B9E02036F10700E19D28 /* LowThreshold.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9671B9DE2036F10700E19D28 /* LowThreshold.wav */; };
+		96D386B22030EEAA005F2B72 /* GLUCDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D386B12030EEAA005F2B72 /* GLUCDataService.m */; };
+		96D386B52030FC7C005F2B72 /* GLUCDataServiceNightscout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D386B42030FC7C005F2B72 /* GLUCDataServiceNightscout.m */; };
 		DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF951BAA1C7643BA003E1625 /* GLUCPrivacyViewController.m */; };
 		DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAED14D1D77037D0042708D /* WKWebViewWrapper.m */; };
 		DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CE831C7631E1003A22D9 /* GLUCWebViewController.m */; };
@@ -224,6 +240,8 @@
 		5584534A1BC564D300492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		5584534D1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5584534F1BC564E800492E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5597D8132037AD9A00C7A8F8 /* GLUCNotesEditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCNotesEditorViewController.h; sourceTree = "<group>"; };
+		5597D8142037AD9A00C7A8F8 /* GLUCNotesEditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCNotesEditorViewController.m; sourceTree = "<group>"; };
 		55B73F2E1CA6C86300D44C76 /* pap */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pap; path = pap.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B73F331CA6C89500D44C76 /* aa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = aa; path = aa.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743381CA6C9A300D44C76 /* ach */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ach; path = ach.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -239,10 +257,8 @@
 		55B743421CA6C9D400D44C76 /* bal */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bal; path = bal.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743431CA6C9DC00D44C76 /* ban */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ban; path = ban.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743441CA6C9E000D44C76 /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/Localizable.strings; sourceTree = "<group>"; };
-		55B743451CA6C9E800D44C76 /* ber */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ber; path = ber.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743461CA6C9EC00D44C76 /* bfo */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bfo; path = bfo.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743471CA6C9F000D44C76 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
-		55B743481CA6C9F400D44C76 /* bh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bh; path = bh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743491CA6C9F800D44C76 /* bi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bi; path = bi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7434A1CA6C9FC00D44C76 /* bm */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bm; path = bm.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7434B1CA6C9FF00D44C76 /* bn-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bn-IN"; path = "bn-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -260,7 +276,6 @@
 		55B743571CA6CA5200D44C76 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743581CA6CA5400D44C76 /* ur-PK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ur-PK"; path = "ur-PK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743591CA6CA5C00D44C76 /* ug */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ug; path = ug.lproj/Localizable.strings; sourceTree = "<group>"; };
-		55B7435A1CA6CA6200D44C76 /* tzl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tzl; path = tzl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7435B1CA6CA6700D44C76 /* ty */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ty; path = ty.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7435C1CA6CA6900D44C76 /* tt-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "tt-RU"; path = "tt-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B7435D1CA6CA7000D44C76 /* ts */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ts; path = ts.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -283,7 +298,6 @@
 		55B7436E1CA6CACA00D44C76 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7436F1CA6CACD00D44C76 /* sr-ME */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-ME"; path = "sr-ME.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743701CA6CAD100D44C76 /* sr-RS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-RS"; path = "sr-RS.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		55B743711CA6CAD700D44C76 /* son */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = son; path = son.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743721CA6CADC00D44C76 /* so */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = so; path = so.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743731CA6CAE000D44C76 /* sn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sn; path = sn.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743741CA6CAE700D44C76 /* sma */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sma; path = sma.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -297,11 +311,9 @@
 		55B7437C1CA6CB0F00D44C76 /* sc */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sc; path = sc.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7437D1CA6CB1300D44C76 /* sat */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sat; path = sat.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B7437E1CA6CB1800D44C76 /* sa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sa; path = sa.lproj/Localizable.strings; sourceTree = "<group>"; };
-		55B7437F1CA6CB1B00D44C76 /* ry-UA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ry-UA"; path = "ry-UA.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743801CA6CB2100D44C76 /* rw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = rw; path = rw.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743811CA6CB2500D44C76 /* rn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = rn; path = rn.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743821CA6CB2900D44C76 /* rm-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "rm-CH"; path = "rm-CH.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		55B743831CA6CB2D00D44C76 /* qya-AA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "qya-AA"; path = "qya-AA.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743841CA6CB3300D44C76 /* quc */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = quc; path = quc.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743851CA6CB3800D44C76 /* qu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = qu; path = qu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743861CA6CB3B00D44C76 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -335,7 +347,6 @@
 		55B743A21CA6CCCD00D44C76 /* mi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mi; path = mi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743A31CA6CCD200D44C76 /* mh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mh; path = mh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743A41CA6CCD700D44C76 /* mg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mg; path = mg.lproj/Localizable.strings; sourceTree = "<group>"; };
-		55B743A51CA6CCE700D44C76 /* me */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = me; path = me.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743A61CA6CCEC00D44C76 /* mai */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mai; path = mai.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743A71CA6CDAE00D44C76 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743A81CA6CDB700D44C76 /* luy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = luy; path = luy.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -391,7 +402,6 @@
 		55B743DA1CA6CF3500D44C76 /* fur-IT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fur-IT"; path = "fur-IT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743DB1CA6CF3C00D44C76 /* frp */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = frp; path = frp.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743DC1CA6CF4000D44C76 /* fr-DE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-DE"; path = "fr-DE.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		55B743DD1CA6CF4500D44C76 /* fr-QC */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-QC"; path = "fr-QC.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55B743DE1CA6CF4B00D44C76 /* fo */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fo; path = fo.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743DF1CA6CF5600D44C76 /* fj */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fj; path = fj.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55B743E01CA6CF5D00D44C76 /* fil */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fil; path = fil.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -471,9 +481,11 @@
 		55ECF7D51C7DB8A100311A12 /* ak */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ak; path = ak.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55ECF7D61C7DB8A900311A12 /* ak-GH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ak-GH"; path = "ak-GH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7D71C7DB8B000311A12 /* sq-AL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-AL"; path = "sq-AL.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		55ECF7D81C7DB8B800311A12 /* sq-XK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-XK"; path = "sq-XK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7D91C7DB8C100311A12 /* sq-MK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sq-MK"; path = "sq-MK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		55ECF7DA1C7DBD0200311A12 /* am */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = am; path = am.lproj/Localizable.strings; sourceTree = "<group>"; };
+		55EE3D6720365167008CBF52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		55EE3D6E2036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCNightscoutSettingsViewController.h; sourceTree = "<group>"; };
+		55EE3D6F2036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCNightscoutSettingsViewController.m; sourceTree = "<group>"; };
 		55F571CF1D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCEventDateTimeEditorViewController.h; sourceTree = "<group>"; };
 		55F571D01D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUCEventDateTimeEditorViewController.m; sourceTree = "<group>"; };
 		55F571D11D86A310006A83D3 /* GLUCSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUCSchedulerViewController.h; sourceTree = "<group>"; };
@@ -495,8 +507,32 @@
 		5F5950BB1FE5BBAF0098DE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F80050B1FE8285700967550 /* glucosio-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "glucosio-Bridging-Header.h"; path = "glucosio/Classes/glucosio-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F93A6941FF8B63B00E35FCE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		5F93A6961FF8B6A700E35FCE /* HealthKitBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitBridge.swift; sourceTree = "<group>"; };
+		961050BC203395DC00514D32 /* GLUCDataServiceReading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCDataServiceReading.h; sourceTree = "<group>"; };
+		961050BD203395DC00514D32 /* GLUCDataServiceReading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCDataServiceReading.m; sourceTree = "<group>"; };
+		9613B14D20383960009B9AAF /* GLUCTreatment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCTreatment.h; sourceTree = "<group>"; };
+		9613B14E20383960009B9AAF /* GLUCTreatment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCTreatment.m; sourceTree = "<group>"; };
+		9613B1502038399C009B9AAF /* GLUCMedication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCMedication.h; sourceTree = "<group>"; };
+		9613B1512038399C009B9AAF /* GLUCMedication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCMedication.m; sourceTree = "<group>"; };
+		9613B153203839FA009B9AAF /* GLUCSleep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCSleep.h; sourceTree = "<group>"; };
+		9613B154203839FA009B9AAF /* GLUCSleep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCSleep.m; sourceTree = "<group>"; };
+		9613B15620383EFA009B9AAF /* GLUCMedicine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCMedicine.h; sourceTree = "<group>"; };
+		9613B15720383EFA009B9AAF /* GLUCMedicine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCMedicine.m; sourceTree = "<group>"; };
+		9613B159203844B4009B9AAF /* GLUCExercise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCExercise.h; sourceTree = "<group>"; };
+		9613B15A203844B4009B9AAF /* GLUCExercise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCExercise.m; sourceTree = "<group>"; };
+		9613B15C203844DB009B9AAF /* GLUCFood.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCFood.h; sourceTree = "<group>"; };
+		9613B15D203844DB009B9AAF /* GLUCFood.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCFood.m; sourceTree = "<group>"; };
+		9613B16020385E55009B9AAF /* GLUCDataServiceWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCDataServiceWatch.h; sourceTree = "<group>"; };
+		9613B16120385E55009B9AAF /* GLUCDataServiceWatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCDataServiceWatch.m; sourceTree = "<group>"; };
+		962B41622034E8540074097E /* GLUCDataServiceHealthKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCDataServiceHealthKit.h; sourceTree = "<group>"; };
+		962B41632034E8540074097E /* GLUCDataServiceHealthKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCDataServiceHealthKit.m; sourceTree = "<group>"; };
+		962B41652035040F0074097E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		96708FFE1DFC4CC4003E47D9 /* glucosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = glucosio.entitlements; sourceTree = "<group>"; };
+		9671B9DD2036F10600E19D28 /* HighThreshold.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HighThreshold.wav; sourceTree = "<group>"; };
+		9671B9DE2036F10700E19D28 /* LowThreshold.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LowThreshold.wav; sourceTree = "<group>"; };
+		96D386B02030EEAA005F2B72 /* GLUCDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCDataService.h; sourceTree = "<group>"; };
+		96D386B12030EEAA005F2B72 /* GLUCDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCDataService.m; sourceTree = "<group>"; };
+		96D386B32030FC7C005F2B72 /* GLUCDataServiceNightscout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUCDataServiceNightscout.h; sourceTree = "<group>"; };
+		96D386B42030FC7C005F2B72 /* GLUCDataServiceNightscout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLUCDataServiceNightscout.m; sourceTree = "<group>"; };
 		A360826019661824371D0886 /* Pods_glucosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275089609BD502A53C9B849 /* Pods-glucosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucosio.release.xcconfig"; path = "Pods/Target Support Files/Pods-glucosio/Pods-glucosio.release.xcconfig"; sourceTree = "<group>"; };
 		DF951BA91C7643BA003E1625 /* GLUCPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUCPrivacyViewController.h; path = Privacy/GLUCPrivacyViewController.h; sourceTree = "<group>"; };
@@ -520,6 +556,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EE3D6820365167008CBF52 /* AudioToolbox.framework in Frameworks */,
+				962B41662035040F0074097E /* AVFoundation.framework in Frameworks */,
 				73B1C2B53A6DC6F490520D78 /* Pods_glucosio.framework in Frameworks */,
 				5F93A6951FF8B63B00E35FCE /* HealthKit.framework in Frameworks */,
 			);
@@ -571,6 +609,8 @@
 				42B3C415C7327E79591C5889 /* GLUCEditorViewController.m */,
 				DFF65A9B1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.h */,
 				DFF65A9C1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m */,
+				5597D8132037AD9A00C7A8F8 /* GLUCNotesEditorViewController.h */,
+				5597D8142037AD9A00C7A8F8 /* GLUCNotesEditorViewController.m */,
 			);
 			path = Editors;
 			sourceTree = "<group>";
@@ -729,6 +769,8 @@
 			children = (
 				551193AE1BC3EF60007CD147 /* GLUCSettingsViewController.h */,
 				551193AF1BC3EF60007CD147 /* GLUCSettingsViewController.m */,
+				55EE3D6E2036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.h */,
+				55EE3D6F2036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -778,6 +820,18 @@
 				42B3CB4FB479419E84455EDC /* GLUCHbA1cReading.h */,
 				42B3C2B3958E31875DEC82DF /* GLUCInsulinIntakeReading.m */,
 				42B3CA2CF7F396DD6B569268 /* GLUCInsulinIntakeReading.h */,
+				9613B14D20383960009B9AAF /* GLUCTreatment.h */,
+				9613B14E20383960009B9AAF /* GLUCTreatment.m */,
+				9613B1502038399C009B9AAF /* GLUCMedication.h */,
+				9613B1512038399C009B9AAF /* GLUCMedication.m */,
+				9613B153203839FA009B9AAF /* GLUCSleep.h */,
+				9613B154203839FA009B9AAF /* GLUCSleep.m */,
+				9613B15620383EFA009B9AAF /* GLUCMedicine.h */,
+				9613B15720383EFA009B9AAF /* GLUCMedicine.m */,
+				9613B159203844B4009B9AAF /* GLUCExercise.h */,
+				9613B15A203844B4009B9AAF /* GLUCExercise.m */,
+				9613B15C203844DB009B9AAF /* GLUCFood.h */,
+				9613B15D203844DB009B9AAF /* GLUCFood.m */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -785,9 +839,9 @@
 		551193C11BC3EF60007CD147 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				9669AC72202EE0F100730413 /* Services */,
 				551193C21BC3EF60007CD147 /* GLUCPersistenceController.h */,
 				551193C31BC3EF60007CD147 /* GLUCPersistenceController.m */,
-				5F93A6961FF8B6A700E35FCE /* HealthKitBridge.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -878,6 +932,7 @@
 		558453481BC564C400492E38 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				55EE3D69203653E7008CBF52 /* Sounds */,
 				558180BB1BCD419B0088A518 /* Fonts */,
 				551193731BC2D2B9007CD147 /* Assets.xcassets */,
 				5584534C1BC564E800492E38 /* LaunchScreen.storyboard */,
@@ -886,6 +941,15 @@
 				558180B81BCD161C0088A518 /* Localizable.strings */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		55EE3D69203653E7008CBF52 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9671B9DD2036F10600E19D28 /* HighThreshold.wav */,
+				9671B9DE2036F10700E19D28 /* LowThreshold.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		55F571CE1D86A310006A83D3 /* Scheduler */ = {
@@ -940,6 +1004,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		961050BB2033926000514D32 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9613B15F20385E2B009B9AAF /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				9613B16020385E55009B9AAF /* GLUCDataServiceWatch.h */,
+				9613B16120385E55009B9AAF /* GLUCDataServiceWatch.m */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		9669AC72202EE0F100730413 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9613B15F20385E2B009B9AAF /* Watch */,
+				961050BB2033926000514D32 /* Networking */,
+				9669AC76202EE12B00730413 /* WebHooks */,
+				9669AC75202EE11700730413 /* CSV */,
+				9669AC74202EE10F00730413 /* NightScout */,
+				9669AC73202EE10400730413 /* HealthKit */,
+				96D386B02030EEAA005F2B72 /* GLUCDataService.h */,
+				96D386B12030EEAA005F2B72 /* GLUCDataService.m */,
+				961050BC203395DC00514D32 /* GLUCDataServiceReading.h */,
+				961050BD203395DC00514D32 /* GLUCDataServiceReading.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9669AC73202EE10400730413 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				962B41622034E8540074097E /* GLUCDataServiceHealthKit.h */,
+				962B41632034E8540074097E /* GLUCDataServiceHealthKit.m */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		9669AC74202EE10F00730413 /* NightScout */ = {
+			isa = PBXGroup;
+			children = (
+				96D386B32030FC7C005F2B72 /* GLUCDataServiceNightscout.h */,
+				96D386B42030FC7C005F2B72 /* GLUCDataServiceNightscout.m */,
+			);
+			path = NightScout;
+			sourceTree = "<group>";
+		};
+		9669AC75202EE11700730413 /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CSV;
+			sourceTree = "<group>";
+		};
+		9669AC76202EE12B00730413 /* WebHooks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebHooks;
+			sourceTree = "<group>";
+		};
 		DFAED14B1D77037D0042708D /* WKWebViewWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,6 +1099,8 @@
 		E361650FCAC6BC1A71F98212 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55EE3D6720365167008CBF52 /* AudioToolbox.framework */,
+				962B41652035040F0074097E /* AVFoundation.framework */,
 				5F93A6941FF8B63B00E35FCE /* HealthKit.framework */,
 				44416E140D3C3C50BF35DA28 /* Pods.framework */,
 				A360826019661824371D0886 /* Pods_glucosio.framework */,
@@ -1446,8 +1577,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9671B9E02036F10700E19D28 /* LowThreshold.wav in Resources */,
 				558180BA1BCD16210088A518 /* Localizable.strings in Resources */,
 				558180BE1BCD419B0088A518 /* lato-bold.ttf in Resources */,
+				9671B9DF2036F10700E19D28 /* HighThreshold.wav in Resources */,
 				558453501BC564E800492E38 /* LaunchScreen.storyboard in Resources */,
 				551193741BC2D2B9007CD147 /* Assets.xcassets in Resources */,
 				5584534B1BC564D300492E38 /* Settings.storyboard in Resources */,
@@ -1497,19 +1630,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-glucosio/Pods-glucosio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CHCSVParser/CHCSVParser.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHCSVParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1562,25 +1699,32 @@
 				DFDFD7971D7A3E30001F2503 /* GLUCGraphPoint.m in Sources */,
 				DFF65A9D1C24AC07003EC9A4 /* GLUCIndexedListEditorViewController.m in Sources */,
 				DF951BAB1C7643BA003E1625 /* GLUCPrivacyViewController.m in Sources */,
+				9613B16220385E55009B9AAF /* GLUCDataServiceWatch.m in Sources */,
 				551193C81BC3EF60007CD147 /* GLUCAboutViewController.m in Sources */,
 				551193CB1BC3EF60007CD147 /* GLUCHistoryViewController.m in Sources */,
 				555CA3671BD28BC80052A865 /* NSCalendar+GLUCAdditions.m in Sources */,
 				555CA36A1BD28BC80052A865 /* NSArray+GLUCAdditions.m in Sources */,
 				555CA3681BD28BC80052A865 /* NSDate+GLUCAdditions.m in Sources */,
-				5F93A6971FF8B6A700E35FCE /* HealthKitBridge.swift in Sources */,
 				558180C21BCD5DF50088A518 /* GLUCTabBarController.m in Sources */,
+				9613B15820383EFA009B9AAF /* GLUCMedicine.m in Sources */,
+				55EE3D702036E7E3008CBF52 /* GLUCNightscoutSettingsViewController.m in Sources */,
 				551193C91BC3EF60007CD147 /* GLUCAppDelegate.m in Sources */,
 				551193D11BC3EF60007CD147 /* GLUCRange.m in Sources */,
 				555CA36E1BD28BC80052A865 /* GLUCLoc.m in Sources */,
+				96D386B52030FC7C005F2B72 /* GLUCDataServiceNightscout.m in Sources */,
 				551193CF1BC3EF60007CD147 /* GLUCHealthTip.m in Sources */,
+				9613B155203839FA009B9AAF /* GLUCSleep.m in Sources */,
 				55F571D31D86A310006A83D3 /* GLUCEventDateTimeEditorViewController.m in Sources */,
 				551193CD1BC3EF60007CD147 /* GLUCSettingsViewController.m in Sources */,
 				551193CA1BC3EF60007CD147 /* GLUCFeedbackViewController.m in Sources */,
 				555CA3691BD28BC80052A865 /* NSDateComponents+GLUCAdditions.m in Sources */,
 				5F18A3491FEE5B1500AA2162 /* Timeline.swift in Sources */,
+				5597D8152037AD9A00C7A8F8 /* GLUCNotesEditorViewController.m in Sources */,
+				96D386B22030EEAA005F2B72 /* GLUCDataService.m in Sources */,
 				DFAED14E1D77037D0042708D /* WKWebViewWrapper.m in Sources */,
 				551193D21BC3EF60007CD147 /* GLUCBloodGlucoseReading.m in Sources */,
 				551193D61BC3EF60007CD147 /* UIColor+GLUCAdditions.m in Sources */,
+				9613B15E203844DB009B9AAF /* GLUCFood.m in Sources */,
 				5F18A34C1FEEDEE400AA2162 /* TimelineUtil.m in Sources */,
 				551193CE1BC3EF60007CD147 /* GLUCEULAViewController.m in Sources */,
 				551193691BC2D2B9007CD147 /* main.m in Sources */,
@@ -1589,10 +1733,13 @@
 				42B3C9FB8F268369626F7CA0 /* GLUCAppearanceController.m in Sources */,
 				5511291D1BD8DDA30018FB52 /* GLUCDateTimeEditorViewController.m in Sources */,
 				42B3C1710EE8C4C9E3CC128B /* GLUCViewController.m in Sources */,
+				9613B1522038399C009B9AAF /* GLUCMedication.m in Sources */,
 				DFC3CE841C7631E1003A22D9 /* GLUCWebViewController.m in Sources */,
+				9613B14F20383960009B9AAF /* GLUCTreatment.m in Sources */,
 				42B3C9A05FF6EB126AE341CA /* GLUCReadingEditorViewController.m in Sources */,
 				42B3CFB317213E7885579706 /* GLUCListEditorViewController.m in Sources */,
 				42B3C18D792DC62F83313074 /* GLUCValueEditorViewController.m in Sources */,
+				962B41642034E8540074097E /* GLUCDataServiceHealthKit.m in Sources */,
 				42B3C9B685EC178E06898C19 /* GLUCEditorViewController.m in Sources */,
 				DFDFD7931D7A3B94001F2503 /* GLUCGraphDataGenerator.m in Sources */,
 				42B3C49857A570BA58FC1438 /* GLUCBodyWeightReading.m in Sources */,
@@ -1602,8 +1749,10 @@
 				42B3CC3DD9F894EC8CDB09D4 /* GLUCBloodPressureReading.m in Sources */,
 				42B3CF7EA614BB87178681F3 /* GLUCCholesterolReading.m in Sources */,
 				DFDFD7901D79DD6A001F2503 /* GLUCOverviewViewController.m in Sources */,
+				9613B15B203844B4009B9AAF /* GLUCExercise.m in Sources */,
 				42B3C7D6323CCAE20D63B88B /* GLUCHbA1cReading.m in Sources */,
 				42B3CD76A2F2FBBAB494D071 /* GLUCInsulinIntakeReading.m in Sources */,
+				961050BE203395DC00514D32 /* GLUCDataServiceReading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1710,7 +1859,6 @@
 				55ECF7D51C7DB8A100311A12 /* ak */,
 				55ECF7D61C7DB8A900311A12 /* ak-GH */,
 				55ECF7D71C7DB8B000311A12 /* sq-AL */,
-				55ECF7D81C7DB8B800311A12 /* sq-XK */,
 				55ECF7D91C7DB8C100311A12 /* sq-MK */,
 				55ECF7DA1C7DBD0200311A12 /* am */,
 				55B73F2E1CA6C86300D44C76 /* pap */,
@@ -1728,10 +1876,8 @@
 				55B743421CA6C9D400D44C76 /* bal */,
 				55B743431CA6C9DC00D44C76 /* ban */,
 				55B743441CA6C9E000D44C76 /* be */,
-				55B743451CA6C9E800D44C76 /* ber */,
 				55B743461CA6C9EC00D44C76 /* bfo */,
 				55B743471CA6C9F000D44C76 /* bg */,
-				55B743481CA6C9F400D44C76 /* bh */,
 				55B743491CA6C9F800D44C76 /* bi */,
 				55B7434A1CA6C9FC00D44C76 /* bm */,
 				55B7434B1CA6C9FF00D44C76 /* bn-IN */,
@@ -1749,7 +1895,6 @@
 				55B743571CA6CA5200D44C76 /* uz */,
 				55B743581CA6CA5400D44C76 /* ur-PK */,
 				55B743591CA6CA5C00D44C76 /* ug */,
-				55B7435A1CA6CA6200D44C76 /* tzl */,
 				55B7435B1CA6CA6700D44C76 /* ty */,
 				55B7435C1CA6CA6900D44C76 /* tt-RU */,
 				55B7435D1CA6CA7000D44C76 /* ts */,
@@ -1772,7 +1917,6 @@
 				55B7436E1CA6CACA00D44C76 /* sr */,
 				55B7436F1CA6CACD00D44C76 /* sr-ME */,
 				55B743701CA6CAD100D44C76 /* sr-RS */,
-				55B743711CA6CAD700D44C76 /* son */,
 				55B743721CA6CADC00D44C76 /* so */,
 				55B743731CA6CAE000D44C76 /* sn */,
 				55B743741CA6CAE700D44C76 /* sma */,
@@ -1786,11 +1930,9 @@
 				55B7437C1CA6CB0F00D44C76 /* sc */,
 				55B7437D1CA6CB1300D44C76 /* sat */,
 				55B7437E1CA6CB1800D44C76 /* sa */,
-				55B7437F1CA6CB1B00D44C76 /* ry-UA */,
 				55B743801CA6CB2100D44C76 /* rw */,
 				55B743811CA6CB2500D44C76 /* rn */,
 				55B743821CA6CB2900D44C76 /* rm-CH */,
-				55B743831CA6CB2D00D44C76 /* qya-AA */,
 				55B743841CA6CB3300D44C76 /* quc */,
 				55B743851CA6CB3800D44C76 /* qu */,
 				55B743861CA6CB3B00D44C76 /* pt-BR */,
@@ -1824,7 +1966,6 @@
 				55B743A21CA6CCCD00D44C76 /* mi */,
 				55B743A31CA6CCD200D44C76 /* mh */,
 				55B743A41CA6CCD700D44C76 /* mg */,
-				55B743A51CA6CCE700D44C76 /* me */,
 				55B743A61CA6CCEC00D44C76 /* mai */,
 				55B743A71CA6CDAE00D44C76 /* lv */,
 				55B743A81CA6CDB700D44C76 /* luy */,
@@ -1880,7 +2021,6 @@
 				55B743DA1CA6CF3500D44C76 /* fur-IT */,
 				55B743DB1CA6CF3C00D44C76 /* frp */,
 				55B743DC1CA6CF4000D44C76 /* fr-DE */,
-				55B743DD1CA6CF4500D44C76 /* fr-QC */,
 				55B743DE1CA6CF4B00D44C76 /* fo */,
 				55B743DF1CA6CF5600D44C76 /* fj */,
 				55B743E01CA6CF5D00D44C76 /* fil */,

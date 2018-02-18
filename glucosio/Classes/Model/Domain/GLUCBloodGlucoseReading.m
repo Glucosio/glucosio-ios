@@ -101,7 +101,7 @@
 
             kGLUCModelSchemaPropertiesKey : propertiesDict,
 
-            kGLUCModelEditorRowsPropertiesKey : @[kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingReadingTypeIdPropertyKey],
+            kGLUCModelEditorRowsPropertiesKey : @[kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingReadingTypeIdPropertyKey, kGLUCReadingNotesPropertyKey],
 
     };
 }
@@ -142,6 +142,10 @@
     }
 }
 
++ (HKQuantityType *) healthKitQuantityType {
+    return [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
+}
+
 - (instancetype) init {
     if ((self = [super init]) != nil) {
         NSInteger rTypeId = [self readingTypeIdForHourOfDay:[[NSCalendar currentCalendar] gluc_hourFromDate:[NSDate date]]];
@@ -164,6 +168,17 @@
     }
 
     return self;
+}
+
+- (NSDictionary *) dictionaryRepresentation {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryRepresentation]];
+    NSMutableDictionary *property_dict = [NSMutableDictionary dictionary];
+    
+    property_dict[kGLUCReadingReadingTypeIdPropertyKey] = self.readingTypeId ?: @-1;
+    
+    [dict addEntriesFromDictionary:property_dict];
+    
+    return [NSDictionary dictionaryWithDictionary:dict];
 }
 
 + (RLMResults<GLUCBloodGlucoseReading *> *) last24hReadings {

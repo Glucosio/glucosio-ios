@@ -18,6 +18,8 @@ static NSString *const kGLUCUserRangeMinPropertyKey = @"rangeMin";
 static NSString *const kGLUCUserRangeMaxPropertyKey = @"rangeMax";
 static NSString *const kGLUCUserAllowResearchUsePropertyKey = @"allowResearchUse";
 
+static NSInteger kGLUCUnitOfMeasure_mgDl = 0;
+static NSInteger kGLUCUnitOfMeasure_mmolL = 1;
 
 @interface GLUCUser : GLUCModel
 

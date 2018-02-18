@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <HealthKit/HealthKit.h>
 #import "GLUCModel.h"
 #import "UIColor+GLUCAdditions.h"
 #import "GLUCUser.h"
@@ -23,6 +24,10 @@ static NSString *const kGLUCReadingModelValuePropertyKey = @"reading";
 // units = 0 is always the default units for the reading
 - (NSNumber *) readingInUnits:(NSInteger)units;
 + (NSNumber *) convertValue:(NSNumber *)aValue fromUnits:(NSInteger)fromUnits toUnits:(NSInteger)toUnits;
+
+- (NSDictionary *) dictionaryRepresentation;
+
++ (HKQuantityType *) healthKitQuantityType;
 
 @property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *reading;
 @property (nonatomic, readwrite, strong) NSString *notes;

@@ -16,7 +16,6 @@
     [super viewDidLoad];
 
     self.navigationItem.leftBarButtonItem = [self cancelButtonItem];
-    self.textField.keyboardType = UIKeyboardTypeNumberPad;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -28,6 +27,12 @@
     
     NSString *currentValue = [self.editedObject displayValueForKey:self.editedProperty];
     
+    id val = [self.editedObject valueForKey:self.editedProperty];
+    if ([[val class] isSubclassOfClass:[NSNumber class]]) {
+        self.textField.keyboardType = UIKeyboardTypeNumberPad;
+    } else {
+        self.textField.keyboardType = UIKeyboardTypeDefault;
+    }
     [self enableOrDisableSaveButton:currentValue];
     
     if (self.textField) {
@@ -56,7 +61,7 @@
 }
 
 - (IBAction) save:(UIButton *)sender {
-    NSNumber *newVal = @([self.textField.text doubleValue]);
+    NSNumber *newVal = [NSNumber numberWithFloat:[self.textField.text doubleValue]];
     
     if (newVal) {
         if (self.editedProperty && self.editedProperty.length && self.editedObject) {

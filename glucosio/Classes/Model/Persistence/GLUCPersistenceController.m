@@ -11,6 +11,10 @@
 #import "GLUCBloodGlucoseReading.h"
 #import <CHCSVParser/CHCSVParser.h>
 #import <SSZipArchive/SSZipArchive.h>
+#import "GLUCDataService.h"
+#import "GLUCDataServiceHealthKit.h"
+#import "GLUCDataServiceNightscout.h"
+#import "GLUCDataServiceWatch.h"
 
 /*
  Current Database Schema as of 2016-03-26 (Mar 26 2016), as defined in Android app's Realm schema
@@ -74,12 +78,16 @@
 
 @interface GLUCPersistenceController ()
 @property(strong, nonatomic, readwrite) GLUCUser *user;
+@property(strong, nonatomic, readwrite) NSMutableArray *exportServices;
+@property(strong, nonatomic, readwrite) NSMutableArray *importServices;
 @end
 
 @implementation GLUCPersistenceController
 
 - (instancetype)init {
     if ((self = [super init]) != nil) {
+        self.exportServices = [NSMutableArray array];
+        self.importServices = [NSMutableArray array];
     }
     return self;
 }
@@ -94,7 +102,7 @@
             dummyReading.reading = (id)[NSNumber numberWithDouble:reading];
             dummyReading.creationDate = readingDate;
             dummyReading.modificationDate = readingDate;
-            [self saveReading:dummyReading];
+            [self saveReading:dummyReading fromService:nil];
         }
     }
 
@@ -124,7 +132,7 @@
             testReading.readingTypeId = (id)@(arc4random_uniform(9));
             testReading.creationDate = readingDate;
             testReading.modificationDate = readingDate;
-            [self saveReading:testReading];
+            [self saveReading:testReading fromService:nil];
         }
     }
     // create some other standard readings
@@ -163,6 +171,109 @@
     if (blood_glucose_readings.count == 0) {
         [self execDDL];
     }
+}
+
+- (void) saveObject:(RLMObject *)anObject {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+    [realm beginWriteTransaction];
+    [realm addOrUpdateObject:anObject];
+    [realm commitWriteTransaction];
+}
+
+- (void) configureWatchService {
+    GLUCDataServiceWatch *watchService = [GLUCDataServiceWatch objectForPrimaryKey:@"AppleWatch"];
+    if (!watchService) {
+        watchService = [[GLUCDataServiceWatch alloc] init];
+        watchService.serviceEnabled = @(1);
+        watchService.serviceName = @"AppleWatch";
+        watchService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
+        watchService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+    }
+    watchService.database = self;
+    
+    [self.exportServices addObject:watchService];
+    [self.importServices addObject:watchService];
+
+    [self saveObject:watchService];
+}
+
+- (void) configureHealthKit {
+    GLUCDataServiceHealthKit *healthKitService = [GLUCDataServiceHealthKit objectForPrimaryKey:@"HealthKit"];
+    if (!healthKitService) {
+        healthKitService = [[GLUCDataServiceHealthKit alloc] init];
+        healthKitService.serviceName = @"HealthKit";
+        healthKitService.serviceEnabled = @([HKHealthStore isHealthDataAvailable]);
+        healthKitService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
+        healthKitService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+    }
+    healthKitService.database = self;
+
+    [self.exportServices addObject:healthKitService];
+    [self.importServices addObject:healthKitService];
+
+    if (healthKitService.serviceEnabled) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        
+        [realm beginWriteTransaction];
+
+        healthKitService.serviceEnabled = @([healthKitService configure]);
+        [realm addOrUpdateObject:healthKitService];
+        [realm commitWriteTransaction];
+    }
+    [self saveObject:healthKitService];
+}
+
+- (void) configureNightScout {
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectInRealm:[RLMRealm defaultRealm] forPrimaryKey:@"Nightscout"];
+
+    if (!nightscoutService) {
+        nightscoutService = [[GLUCDataServiceNightscout alloc] init];
+        nightscoutService.serviceEnabled = @(0);
+        nightscoutService.serviceName = @"Nightscout";
+        nightscoutService.uri = @"";
+        nightscoutService.secretKey = @"";
+        nightscoutService.roleToken = @"";
+        nightscoutService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
+        nightscoutService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+    }
+    nightscoutService.database = self;
+    
+    [self.exportServices addObject:nightscoutService];
+    [self.importServices addObject:nightscoutService];
+
+    [self saveObject:nightscoutService];
+}
+
+- (BOOL) nightscoutAvailable {
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectInRealm:[RLMRealm defaultRealm] forPrimaryKey:@"Nightscout"];
+    
+    if (!nightscoutService) {
+        nightscoutService = [[GLUCDataServiceNightscout alloc] init];
+        nightscoutService.serviceEnabled = @(0);
+        nightscoutService.serviceName = @"Nightscout";
+        nightscoutService.uri = @"";
+        nightscoutService.secretKey = @"";
+        nightscoutService.roleToken = @"";
+        nightscoutService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
+        nightscoutService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+    }
+    nightscoutService.database = self;
+
+    return [nightscoutService.serviceEnabled boolValue];
+}
+
+- (BOOL) configureServices {
+    [self.exportServices removeAllObjects];
+    [self.importServices removeAllObjects];
+    
+    [self configureWatchService];
+    [self configureHealthKit];
+    [self configureNightScout];
+    
+    GLUCDataServiceNightscout *foo = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
+    NSLog(@"Foo -> %@", foo.serviceName);
+    return YES;
 }
 
 // CRUD operations
@@ -273,12 +384,24 @@
 
 // read, update, delete reading
 
-- (BOOL)saveReading:(GLUCReading *)reading {
+- (BOOL)saveReading:(GLUCReading *)reading fromService:(GLUCDataService *)importService {
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
     [realm addOrUpdateObject:reading];
     [realm commitWriteTransaction];
 
+    RLMResults <GLUCReading *> *readingResults = [[reading class] objectsWhere:@"glucID == %@", reading.glucID];
+    if (readingResults.count > 0) {
+        for (GLUCDataService *service in self.exportServices) {
+            if ([service allowsExportForReadingType:[reading class]]) {
+                if (![service.serviceName isEqualToString:importService.serviceName]) {
+                    [service exportReadings:readingResults ofType:[reading class] forUser:self.currentUser];
+                }
+            } else {
+                NSLog(@"*NOT* using %@ service to export reading: %@", service.serviceName, reading.reading);
+            }
+        }
+    }
     return YES;
 }
 
@@ -289,6 +412,14 @@
     return YES;
 }
 
+- (void) cancelWriteTransaction {
+    @try {
+        [[RLMRealm defaultRealm] cancelWriteTransaction];
+    }
+    @catch (NSException *e) {
+        // pass
+    }
+}
 
 - (RLMResults <GLUCReading *> *)allReadingsOfType:(Class)readingType sortByDateAscending:(BOOL)ascending {
     RLMResults <GLUCReading *> *allReadings = [[readingType allObjects] sortedResultsUsingKeyPath:@"creationDate" ascending:ascending];
@@ -337,7 +468,21 @@
     [self saveUser:self.currentUser];
 }
 
-
+- (void)refreshFromServices {
+    NSArray * readingTypes = [self.currentUser readingTypes];
+    for (Class clazz in readingTypes) {
+        for (GLUCDataService *service in self.importServices) {
+            if ([service allowsImportForReadingType:clazz]) {
+                BOOL success = [service importReadingsOfType:clazz forUser:self.currentUser];
+                if (success) {
+                    NSLog(@"Success importing readings from service");
+                }
+            }
+        }
+    }
+    return;
+}
+    
 // From the Android app, https://github.com/Glucosio/glucosio-android/blob/develop/app/src/main/java/org/glucosio/android/tools/ReadingToCSV.java
 //
 // CSV Structure:
@@ -356,6 +501,11 @@
 - (void) exportAll {
     [self exportAllToZipUsingCSV];
 }
+
+- (void) import {
+    return;
+}
+
 
 - (void) exportAllToZipUsingCSV {
     NSDateFormatter *iso8601DateFormatter = [[NSDateFormatter alloc] init];

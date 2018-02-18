@@ -21,4 +21,22 @@
 + (UIColor *) readingColor {
     return [UIColor glucosio_fab_insulin];
 }
+
++ (NSArray *) readingTypes {
+    return @[
+             GLUCLoc(@"Snack Bolus"), // "Snack Bolus"
+             GLUCLoc(@"Meal Bolus"), // "Meal Bolus"
+             GLUCLoc(@"Correction Bolus"), // "Correction Bolus"
+             GLUCLoc(@"Pump Site Change"), // "Pump Site Change"
+             GLUCLoc(@"Before Dinner"), // "Before dinner"
+             GLUCLoc(@"After Dinner"), // "After dinner"
+             GLUCLoc(@"Snack"), // "Snack"
+             GLUCLoc(@"Bedtime"), // "Bedtime"
+             GLUCLoc(@"Night"), // "Night"
+             GLUCLoc(@"Fasting glucose"), // "Fasting glucose"
+             GLUCLoc(@"Recheck"), // "Recheck"
+             GLUCLoc(@"Other"), // "Other"
+             ];
+}
+
 @end

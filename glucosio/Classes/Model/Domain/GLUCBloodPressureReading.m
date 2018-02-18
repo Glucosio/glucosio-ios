@@ -58,7 +58,7 @@
              
              kGLUCModelSchemaPropertiesKey : propertiesDict,
              
-             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingMaxBloodPressureReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey],
+             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingMaxBloodPressureReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingNotesPropertyKey],
              
              };
 }

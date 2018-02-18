@@ -1,28 +1,48 @@
 PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
   - Charts (3.0.5):
     - Charts/Core (= 3.0.5)
   - Charts/Core (3.0.5)
   - CHCSVParser (2.1.0)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
   - SSZipArchive (2.1.1)
   - SVProgressHUD (2.2.2)
+  - XLForm (4.0.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - Charts (= 3.0.5)
   - CHCSVParser (~> 2.1)
-  - Realm (= 3.0.2)
+  - Realm (~> 3.1)
   - SSZipArchive (~> 2.1)
   - SVProgressHUD
+  - XLForm (~> 4.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
   SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  XLForm: 04110197c12187dd28a6c7295d3d8b95f4fdb4de
 
-PODFILE CHECKSUM: 425f2ba6b02abc1571950fb823dfa8af6f5c5f9c
+PODFILE CHECKSUM: d2db63d816d124a1784e568b63e0f2ff60984b6a
 
 COCOAPODS: 1.3.1

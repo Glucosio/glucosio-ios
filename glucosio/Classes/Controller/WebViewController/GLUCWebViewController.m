@@ -1,5 +1,6 @@
 #import "GLUCWebViewController.h"
 #import "SVProgressHUD.h"
+#import "GLUCAppearanceController.h"
 
 @interface GLUCWebViewController ()<WKNavigationDelegate>
 
@@ -19,8 +20,14 @@
     self.webView = self.webViewWrappper.webView;
     self.webView.navigationDelegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    self.navigationItem.leftBarButtonItem = [GLUCAppearanceController backButtonItemWithTarget:self action:@selector(back)];
     [self.webView loadRequest:request];
 }
+
+- (void) back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

@@ -7,8 +7,7 @@
 #import "GLUCDateTimeEditorViewController.h"
 #import "GLUCAppearanceController.h"
 #import "GLUCValueEditorViewController.h"
-#import "TimelineUtil.h"
-#import "glucosio-Swift.h"
+#import "GLUCNotesEditorViewController.h"
 
 @interface GLUCReadingEditorViewController ()
 @property (strong, nonatomic) NSArray *rowKeys;
@@ -134,13 +133,22 @@
             
             [self.navigationController pushViewController:editor animated:YES];
         } else {
-            GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
-            editor.editedObject = self.editedObject;
-            editor.editedProperty = targetKey;
-            editor.title = [self.model.currentUser titleForKey:targetKey];
-            editor.model = self.model;
-            [self.navigationController pushViewController:editor animated:YES];
-
+            id val = [self.editedObject valueForKey:targetKey];
+            if ([[val class] isSubclassOfClass:[NSNumber class]]) {
+                GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
+                editor.editedObject = self.editedObject;
+                editor.editedProperty = targetKey;
+                editor.title = [self.model.currentUser titleForKey:targetKey];
+                editor.model = self.model;
+                [self.navigationController pushViewController:editor animated:YES];
+            } else {
+                GLUCNotesEditorViewController *editor = (GLUCNotesEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCMainStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCNotesEditorViewControllerIdentifier];
+                editor.editedObject = self.editedObject;
+                editor.editedProperty = targetKey;
+//                editor.title = [self.model.currentUser titleForKey:targetKey];
+//                editor.model = self.model;
+                [self.navigationController pushViewController:editor animated:YES];
+            }
         }
     }
 }
@@ -205,28 +213,14 @@
     [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
 
     @try {
-        //TODO: push more reading types to the watch
-        //EMI: Can't use .class directly since these are all Realm proxies. Note how RLMObject.class.className does have the actual proxied class name.
-        if ([self.editedObject.class isSubclassOfClass:[GLUCBloodGlucoseReading class]]) {
-            NSDictionary * context = [[TimelineUtil load24hTimeline: self.model.currentUser] toDictionary];
-            [WCSession.defaultSession updateApplicationContext:context error:nil];
-            
-            GLUCBloodGlucoseReading * gReading = (GLUCBloodGlucoseReading *) self.editedObject;
-            
-            
-            double mgdL =[[gReading readingInUnits:0 /* mg/dL, see preferredBloodGlucoseUnitOfMeasure*/ ] doubleValue];
-
-            
-            [HealthKitBridge.singleton addMolarMassBloodGlucoseWithValue: mgdL
-                                                                    when: gReading.creationDate
-                                                                mealTime: gReading.healthKitMealTime];
-        }
-        [self.model saveReading:(GLUCReading *)self.editedObject];
+        [self.model saveReading:(GLUCReading *)self.editedObject fromService:nil];
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 
     }
 
     @catch(NSException *exception) {
+        [self.model cancelWriteTransaction];
+        
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:GLUCLoc(@"Error")
                                       message:(exception ? [exception reason] : GLUCLoc(@"Data is invalid"))

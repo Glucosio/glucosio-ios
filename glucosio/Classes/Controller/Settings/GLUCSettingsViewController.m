@@ -9,6 +9,7 @@
 #import "GLUCAppearanceController.h"
 #import "GLUCAboutViewController.h"
 #import "GLUCPrivacyViewController.h"
+#import "GLUCNightscoutSettingsViewController.h"
 
 #import "GLUCAppDelegate.h"
 #import "SVProgressHUD.h"
@@ -42,7 +43,7 @@
     }
 
     self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy")];
-    self.dataKeys = @[GLUCLoc(@"preferences_data_export")];
+    self.dataKeys = @[GLUCLoc(@"preferences_data_export"), GLUCLoc(@"preferences_data_import"), GLUCLoc(@"preferences_data_nightscout_refresh")];
 
     self.settings = [NSMutableDictionary dictionary];
 
@@ -232,6 +233,18 @@
                             [self presentViewController:alert animated:YES completion:nil];
                         });
                     });
+                }
+                    break;
+                case 1:
+                {
+                    [self.model import];
+                }
+                    break;
+                case 2:
+                {
+                    GLUCNightscoutSettingsViewController *editor = (GLUCNightscoutSettingsViewController *) [[self storyboard] instantiateViewControllerWithIdentifier:kGLUCNightscoutSettingsViewControllerIdentifier];
+                                        
+                    [self.navigationController pushViewController:editor animated:YES];
                 }
                     break;
             }

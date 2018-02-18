@@ -67,9 +67,26 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [self defaultFont]                                                           
                                                            } forState:UIControlStateNormal];
+    [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setTitleTextAttributes:@{
+                                                                                                                      NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                                                                      NSFontAttributeName: [self defaultFont]
+                                                                                                                      } forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
     [SVProgressHUD setBackgroundColor:[UIColor glucosio_pink]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+}
+
++ (UIBarButtonItem *) backButtonItemWithTarget:(id)target action:(SEL)action {
+    
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    
+    [backButton.widthAnchor constraintEqualToConstant:35].active = YES;
+    [backButton.heightAnchor constraintEqualToConstant:35].active = YES;
+    [backButton setImage:[UIImage imageNamed:@"ButtonIconBack"] forState:UIControlStateNormal];
+    [backButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:backButton];
 }
 
 + (UIFont *) valueEditorTextFieldFont {

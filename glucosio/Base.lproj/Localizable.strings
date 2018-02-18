@@ -11,6 +11,8 @@
 /* No description supplied by the engineer */
 "action_settings" = "Settings";
 
+"nightscout_settings" = "Nightscout Settings";
+
 /* No description supplied by the engineer */
 "action_feedback" = "Send feedback";
 
@@ -200,7 +202,9 @@
 
 "preferences_data" = "Data";
 
-"preferences_data_export" = "Export";
+"preferences_data_export" = "Export to CSV";
+"preferences_data_import" = "Import from CSV";
+"preferences_data_nightscout_refresh" = "Nightscout";
 
 /* No description supplied by the engineer */
 "preferences_experimental_title" = "Here be dragons :/";

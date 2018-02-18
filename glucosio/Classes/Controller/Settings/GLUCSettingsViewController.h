@@ -13,6 +13,5 @@ static NSString *const kGLUCSettingsCellIdentifier = @"SettingsCell";
 
 // Set this to use the view controller as the initial welcome view
 @property (nonatomic, readwrite, assign) BOOL welcomeMode;
-//@property (nonatomic, readwrite, strong) GLUCUser *user;
 
 @end

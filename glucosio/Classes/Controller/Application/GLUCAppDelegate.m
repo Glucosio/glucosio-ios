@@ -15,7 +15,9 @@
     if (!self.model) {
         self.model = [[GLUCPersistenceController alloc] init];
         [self.model configureModel];
+        [self.model configureServices];
     }
+
     return self.model;
 }
 
@@ -29,7 +31,7 @@
             overviewVC.model = [self appModel];
             
             UINavigationController *mainNavCtrl = [[UINavigationController alloc] initWithRootViewController:overviewVC];
-            self.window.rootViewController = mainNavCtrl;            
+            self.window.rootViewController = mainNavCtrl;
         }
     }
 }
