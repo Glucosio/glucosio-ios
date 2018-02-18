@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>21</string>
+	<string>22</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.healthcare-fitness</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,6 +38,8 @@
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Save and load glucose readings</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Attach photos and images to notes and records</string>
+	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Attach photos and images to notes and records</string>
 	<key>UIAppFonts</key>
 	<array>
