@@ -392,11 +392,11 @@
 {
     if (![MFMailComposeViewController canSendMail]) {
         UIAlertController *alert =
-        [UIAlertController alertControllerWithTitle:@"Error"
-                                            message:@"Cannot send mail."
+        [UIAlertController alertControllerWithTitle:GLUCLoc(@"Error")
+                                            message:GLUCLoc(@"Cannot send mail.")
                                      preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:
-         [UIAlertAction actionWithTitle:@"OK"
+         [UIAlertAction actionWithTitle:GLUCLoc(@"OK")
                                   style:UIAlertActionStyleCancel
                                 handler:^(UIAlertAction * _Nonnull action) {
                                 }]];

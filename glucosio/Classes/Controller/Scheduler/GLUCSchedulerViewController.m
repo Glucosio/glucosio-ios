@@ -31,7 +31,7 @@
         
         [[UIApplication sharedApplication] cancelLocalNotification:event];
         
-        editor.title = @"Reminder Date/Time";
+        editor.title = GLUCLoc(@"Reminder Date/Time");
         editor.model = self.model;
         editor.pickerView.datePickerMode = UIDatePickerModeDateAndTime;
     }
@@ -157,7 +157,7 @@
                                                        timeStyle:NSDateFormatterShortStyle]];
         NSDictionary *userInfo = notification.userInfo;
         
-        recurrenceLabel.text = [self recurrenceLabelValueForEvent:notification];
+        recurrenceLabel.text = GLUCLoc([self recurrenceLabelValueForEvent:notification]);
         if (userInfo) {
             typeLabel.text = notification.alertTitle;
             valueLabel.text = userInfo[kGLUCScheduleNotificationReadingTypeKey];
