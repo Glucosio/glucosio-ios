@@ -97,6 +97,8 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     
+    [super viewWillDisappear:animated];
+    
     if (self.editedEvent) {
         NSCalendarUnit specifiedInterval = [self calendarIntervalForSegmentIndex:self.repeatIntervalControl.selectedSegmentIndex];
         if (specifiedInterval == NSCalendarUnitNanosecond) {
