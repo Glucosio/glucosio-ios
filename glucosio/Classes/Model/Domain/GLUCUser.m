@@ -278,6 +278,12 @@
     if (aReading && [aReading isKindOfClass:[GLUCHbA1cReading class]]) {
         retVal = [self displayUnitsForHbA1cReadings];
     }
+    if (aReading && [aReading isKindOfClass:[GLUCBloodPressureReading class]]) {
+        retVal = GLUCLoc(@"mmHg");
+    }
+    if (aReading && [aReading isKindOfClass:[GLUCSleep class]]) {
+        retVal = GLUCLoc(@"hours");
+    }
     return retVal;
 }
 
