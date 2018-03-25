@@ -16,6 +16,7 @@ static NSString *const kGLUCOverviewCellIdentifier = @"OverviewCell";
 
 @property (nonatomic, weak) IBOutlet UISwitch *nightscoutSwitch;
 @property (nonatomic, weak) IBOutlet UIImageView *nightscoutIconView;
+@property (nonatomic, weak) IBOutlet UILabel *nightscoutLabel;
 
 @property (nonatomic, strong) NSTimer *refreshTimer;
 

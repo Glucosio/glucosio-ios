@@ -98,6 +98,12 @@
     self.yVals = [NSMutableArray array];
     self.chartDateFormatter = [[NSDateFormatter alloc] init];
     
+    BOOL disableNightscout = YES;
+    
+    self.nightscoutSwitch.hidden = disableNightscout;
+    self.nightscoutIconView.hidden = disableNightscout;
+    self.nightscoutLabel.hidden = disableNightscout;
+    
     self.speechEnabled = NO;
 }
 
