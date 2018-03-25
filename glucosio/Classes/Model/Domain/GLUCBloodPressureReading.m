@@ -29,9 +29,9 @@
                                              kGLUCModelAttributeTitleKey : @"dialog_add_concentration",
                                              kGLUCModelAttributeTypeKey : @"NSNumber",
                                              },
-                                     kGLUCReadingMaxBloodPressureReadingPropertyKey : @{
-                                             kGLUCModelAttributeKey : kGLUCReadingMaxBloodPressureReadingPropertyKey,
-                                             kGLUCModelAttributeTitleKey : @"Max Reading",
+                                     kGLUCReadingDiastolicBloodPressureReadingPropertyKey : @{
+                                             kGLUCModelAttributeKey : kGLUCReadingDiastolicBloodPressureReadingPropertyKey,
+                                             kGLUCModelAttributeTitleKey : @"Diastolic",
                                              kGLUCModelAttributeTypeKey : @"NSNumber",
                                              },
                                      kGLUCReadingNotesPropertyKey : @{
@@ -58,7 +58,7 @@
              
              kGLUCModelSchemaPropertiesKey : propertiesDict,
              
-             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingMaxBloodPressureReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingNotesPropertyKey],
+             kGLUCModelEditorRowsPropertiesKey : @[kGLUCReadingDiastolicBloodPressureReadingPropertyKey, kGLUCModelCreationDatePropertyKey, kGLUCModelCreationTimePropertyKey, kGLUCReadingNotesPropertyKey],
              
              };
 }

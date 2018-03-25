@@ -6,9 +6,10 @@
 #import <Foundation/Foundation.h>
 #import "GLUCReading.h"
 
-// reading is min
-static NSString *const kGLUCReadingMaxBloodPressureReadingPropertyKey = @"maxReading";
+// changes - reading is systolic (sys), second num is diastolic (dia), for both
+// units are mmHg
+static NSString *const kGLUCReadingDiastolicBloodPressureReadingPropertyKey = @"diastolic";
 
 @interface GLUCBloodPressureReading : GLUCReading
-@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *maxReading;
+@property (nonatomic, readwrite, strong) NSNumber<RLMFloat> *diastolic;
 @end
