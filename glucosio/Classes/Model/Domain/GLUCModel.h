@@ -52,6 +52,7 @@ static NSString *const kGLUCModelAPISubmissionDateKey = @"apiSubmissionDate";
 - (NSArray *)potentialDisplayValuesForKey:(NSString *)key;
 
 - (NSString *)titleForKey:(NSString *)key;
+- (Class) typeForKey:(NSString *)key;
 
 - (NSNumber *)lookupIndexForKey:(NSString *)key;
 - (NSNumber *)lookupIndexFromDisplayValue:(NSString *)displayValue forKey:(NSString *)key;

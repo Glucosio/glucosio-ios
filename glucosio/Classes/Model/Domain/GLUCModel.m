@@ -81,6 +81,19 @@
     return retVal;
 }
 
+- (Class) typeForKey:(NSString *)key {
+    Class retVal = nil;
+    
+    if (key && key.length && [[self class] schema]) {
+        NSString *typeName = [[[[[self class] schema] valueForKey:kGLUCModelSchemaPropertiesKey] valueForKey:key] valueForKey:kGLUCModelAttributeTypeKey];
+        if (typeName) {
+            retVal = NSClassFromString(typeName);
+        }
+    }    
+    return retVal;
+
+}
+
 - (BOOL)propertyIsLookup:(NSString *)key {
     BOOL retVal = NO;
 
