@@ -35,11 +35,6 @@
 
 + (NSDictionary *)schema {
     NSDictionary *propertiesDict = @{
-                                     kGLUCReadingModelValuePropertyKey : @{
-                                             kGLUCModelAttributeKey : kGLUCReadingModelValuePropertyKey,
-                                             kGLUCModelAttributeTitleKey : @"Duration",
-                                             kGLUCModelAttributeTypeKey : @"NSNumber",
-                                             },
                                      @"treatmentName" : @{
                                              kGLUCModelAttributeKey : @"treatmentName",
                                              kGLUCModelAttributeTitleKey : @"Sleep type",
@@ -80,7 +75,6 @@
     
     return @{
              kGLUCModelSettingsPropertiesKey : @[kGLUCReadingModelValuePropertyKey,
-                                                 @"duration",
                                                  @"sleepApneaEventsPerHour",
                                                  @"cpapMaskScore",
                                                  @"cpapMaskEventCount",
@@ -90,7 +84,6 @@
              kGLUCModelSchemaPropertiesKey : propertiesDict,
              
              kGLUCModelEditorRowsPropertiesKey :@[
-                     kGLUCReadingModelValuePropertyKey,
                      @"sleepApneaEventsPerHour",
                      @"cpapMaskScore",
                      @"cpapMaskEventCount",
