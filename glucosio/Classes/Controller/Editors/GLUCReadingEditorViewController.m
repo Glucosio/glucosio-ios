@@ -134,20 +134,26 @@
             [self.navigationController pushViewController:editor animated:YES];
         } else {
             id val = [self.editedObject valueForKey:targetKey];
-            if ([[val class] isSubclassOfClass:[NSNumber class]]) {
-                GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
-                editor.editedObject = self.editedObject;
-                editor.editedProperty = targetKey;
-                editor.title = [self.model.currentUser titleForKey:targetKey];
-                editor.model = self.model;
-                [self.navigationController pushViewController:editor animated:YES];
+            Class valClass;
+            if (val) {
+                valClass = [val class];
             } else {
-                GLUCNotesEditorViewController *editor = (GLUCNotesEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCMainStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCNotesEditorViewControllerIdentifier];
-                editor.editedObject = self.editedObject;
-                editor.editedProperty = targetKey;
-//                editor.title = [self.model.currentUser titleForKey:targetKey];
-//                editor.model = self.model;
-                [self.navigationController pushViewController:editor animated:YES];
+                valClass = [self.editedObject typeForKey:targetKey];
+            }
+            if (valClass) {
+                if ([valClass isSubclassOfClass:[NSNumber class]]) {
+                    GLUCValueEditorViewController *editor = (GLUCValueEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCSettingsStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCValueEditorViewControllerIdentifier];
+                    editor.editedObject = self.editedObject;
+                    editor.editedProperty = targetKey;
+                    editor.title = [self.model.currentUser titleForKey:targetKey];
+                    editor.model = self.model;
+                    [self.navigationController pushViewController:editor animated:YES];
+                } else {
+                    GLUCNotesEditorViewController *editor = (GLUCNotesEditorViewController *)[[UIStoryboard storyboardWithName:kGLUCMainStoryboardIdentifier bundle:nil] instantiateViewControllerWithIdentifier:kGLUCNotesEditorViewControllerIdentifier];
+                    editor.editedObject = self.editedObject;
+                    editor.editedProperty = targetKey;
+                    [self.navigationController pushViewController:editor animated:YES];
+                }
             }
         }
     }
