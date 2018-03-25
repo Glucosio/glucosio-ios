@@ -217,6 +217,7 @@
                         <outlet property="chartView" destination="hdc-9r-JaW" id="wAT-ZK-o0I"/>
                         <outlet property="graphPicker" destination="yJX-BT-yuf" id="FDy-xf-4Tu"/>
                         <outlet property="nightscoutIconView" destination="eac-lg-rs0" id="dTz-D8-g1N"/>
+                        <outlet property="nightscoutLabel" destination="f2h-ZB-dIf" id="n94-3j-EwB"/>
                         <outlet property="nightscoutSwitch" destination="q2i-dX-qIF" id="ayI-1Z-H3n"/>
                         <outlet property="tableView" destination="5Dx-zg-nQX" id="whc-pa-NKo"/>
                     </connections>
