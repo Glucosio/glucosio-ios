@@ -10,7 +10,7 @@
 @class GLUCDataService;
 
 // Increment this for each schema change
-static NSInteger const kGLUCModelSchemaVersion = 2;
+static NSInteger const kGLUCModelSchemaVersion = 3;
 
 @protocol GLUCDatabase
 - (BOOL)saveReading:(GLUCReading *)reading fromService:(GLUCDataService *)importService;
