@@ -43,7 +43,7 @@
     }
 
     self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy")];
-    self.dataKeys = @[GLUCLoc(@"preferences_data_export"), GLUCLoc(@"preferences_data_import"), GLUCLoc(@"preferences_data_nightscout_refresh")];
+    self.dataKeys = @[GLUCLoc(@"preferences_data_export")];//, GLUCLoc(@"preferences_data_import"), GLUCLoc(@"preferences_data_nightscout_refresh")];
 
     self.settings = [NSMutableDictionary dictionary];
 
