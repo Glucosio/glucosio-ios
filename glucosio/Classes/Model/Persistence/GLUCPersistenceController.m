@@ -74,6 +74,10 @@
  Date created;
  ************************************************/
 
+// Use the following define to enable creation of
+// random test data/readings for populating the
+// database during development
+
 //#define GLUC_CREATE_TEST_DATA
 
 @interface GLUCPersistenceController ()
