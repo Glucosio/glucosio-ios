@@ -23,6 +23,8 @@
 #import "GLUCBodyWeightReading.h"
 #import "GLUCInsulinIntakeReading.h"
 
+// services
+#import "GLUCDataServiceNightscout.h"
 
 @interface GLUCOverviewViewController () <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -98,17 +100,27 @@
     self.yVals = [NSMutableArray array];
     self.chartDateFormatter = [[NSDateFormatter alloc] init];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];    
+
+    [self.model configureServices];
+
     BOOL disableNightscout = YES;
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
+    
+    if (nightscoutService) {
+        disableNightscout = ![nightscoutService.serviceEnabled boolValue];
+    }
     
     self.nightscoutSwitch.hidden = disableNightscout;
     self.nightscoutIconView.hidden = disableNightscout;
     self.nightscoutLabel.hidden = disableNightscout;
     
-    self.speechEnabled = NO;
-}
+    self.speechEnabled = !disableNightscout;
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];    
+    
 }
 
 - (void) startTimer {

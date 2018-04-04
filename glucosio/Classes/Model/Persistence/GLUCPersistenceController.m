@@ -216,11 +216,10 @@
     [self.exportServices addObject:healthKitService];
     [self.importServices addObject:healthKitService];
 
-    if (healthKitService.serviceEnabled) {
+    if ([HKHealthStore isHealthDataAvailable]) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         
         [realm beginWriteTransaction];
-
         healthKitService.serviceEnabled = @([healthKitService configure]);
         [realm addOrUpdateObject:healthKitService];
         [realm commitWriteTransaction];
@@ -229,17 +228,11 @@
 }
 
 - (void) configureNightScout {
-    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectInRealm:[RLMRealm defaultRealm] forPrimaryKey:@"Nightscout"];
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
 
-    if (!nightscoutService) {
+    if (!nightscoutService || nightscoutService.serviceEnabled == nil) {
         nightscoutService = [[GLUCDataServiceNightscout alloc] init];
-        nightscoutService.serviceEnabled = @(0);
-        nightscoutService.serviceName = @"Nightscout";
-        nightscoutService.uri = @"";
-        nightscoutService.secretKey = @"";
-        nightscoutService.roleToken = @"";
-        nightscoutService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
-        nightscoutService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+          nightscoutService.serviceName = @"Nightscout";
     }
     nightscoutService.database = self;
     
@@ -250,21 +243,17 @@
 }
 
 - (BOOL) nightscoutAvailable {
-    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectInRealm:[RLMRealm defaultRealm] forPrimaryKey:@"Nightscout"];
+    BOOL available = NO;
     
-    if (!nightscoutService) {
-        nightscoutService = [[GLUCDataServiceNightscout alloc] init];
-        nightscoutService.serviceEnabled = @(0);
-        nightscoutService.serviceName = @"Nightscout";
-        nightscoutService.uri = @"";
-        nightscoutService.secretKey = @"";
-        nightscoutService.roleToken = @"";
-        nightscoutService.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
-        nightscoutService.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
-    }
-    nightscoutService.database = self;
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
 
-    return [nightscoutService.serviceEnabled boolValue];
+    if (nightscoutService) {
+        BOOL haveSettings = (nightscoutService.uri.length && nightscoutService.secretKey.length && nightscoutService.roleToken.length);
+        available = (haveSettings && [nightscoutService.serviceEnabled boolValue]);
+    }
+    
+    return available;
+
 }
 
 - (BOOL) configureServices {
@@ -275,8 +264,16 @@
     [self configureHealthKit];
     [self configureNightScout];
     
-    GLUCDataServiceNightscout *foo = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
-    NSLog(@"Foo -> %@", foo.serviceName);
+    GLUCDataServiceNightscout *nightscoutService = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
+    NSLog(@"NS -> %@, %d, %d, %d", nightscoutService.serviceName,
+          [nightscoutService.serviceEnabled intValue],
+          [nightscoutService.mgdLLowAlarmThreshold intValue],
+          [nightscoutService.mgdLHighAlarmThreshold intValue]);
+    GLUCDataServiceHealthKit *hkService = [GLUCDataServiceHealthKit objectForPrimaryKey:@"HealthKit"];
+    NSLog(@"NS -> %@, %d, %d, %d", hkService.serviceName,
+          [hkService.serviceEnabled intValue],
+          [hkService.mgdLLowAlarmThreshold intValue],
+          [hkService.mgdLHighAlarmThreshold intValue]);
     return YES;
 }
 

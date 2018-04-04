@@ -21,6 +21,16 @@
  * (optional) role token, e.g., for role based uploads
  
  */
+
+- (instancetype)init {
+    if ((self = [super init]) != nil) {
+        self.uri = @"";
+        self.secretKey = @"";
+        self.roleToken = @"";
+    }
+    return self;
+}
+
 - (NSURL *) serviceURL {
     NSURL *retVal = nil;
     if (self.uri && self.uri.length) {
@@ -121,7 +131,7 @@
 - (BOOL)exportReadings:(RLMResults<GLUCReading *> *)readings ofType:(Class)readingType forUser:(GLUCUser *)user {
     BOOL result = YES;
     
-    if (self.serviceEnabled) {
+    if ([self.serviceEnabled boolValue]) {
         for (GLUCReading *reading in readings) {
             NSLog(@"Posting to Nightscout: %@", reading);
             NSDictionary *readingDict = [reading dictionaryRepresentation];

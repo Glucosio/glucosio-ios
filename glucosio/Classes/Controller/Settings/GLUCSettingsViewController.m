@@ -66,8 +66,38 @@
         [self.getStartedButton addTarget:self action:@selector(getStarted:) forControlEvents:UIControlEventTouchUpInside];
     }
     
+    // Add a gesture recognizer to enable experimental features
+    
+    UITapGestureRecognizer *experimentalFeaturesToggle = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleExperimentalFeatures:)];
+    experimentalFeaturesToggle.numberOfTapsRequired = 3;
+    [self.view addGestureRecognizer:experimentalFeaturesToggle];
 }
 
+- (IBAction)toggleExperimentalFeatures:(id)sender {
+    BOOL enableFeatures = NO;
+    
+    if (!self.welcomeMode) {
+        if (self.dataKeys) {
+            switch (self.dataKeys.count) {
+                case 1:
+                    enableFeatures = YES;
+                    break;
+                default:
+                    enableFeatures = NO;
+                    break;
+            }
+        }
+        
+        if (enableFeatures) {
+            self.dataKeys = @[GLUCLoc(@"preferences_data_export"), GLUCLoc(@"preferences_data_import"), GLUCLoc(@"preferences_data_nightscout_refresh")];
+        } else {
+            self.dataKeys = @[GLUCLoc(@"preferences_data_export")];
+        }
+        
+        [self.settingsTableView reloadData];
+    }
+    
+}
 - (IBAction)getStarted:(id)sender {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kGLUCModelInitialSettingsCompletedKey];
     [self.model saveAll];

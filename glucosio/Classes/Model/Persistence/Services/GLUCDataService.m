@@ -18,6 +18,16 @@
     return @"serviceName";
 }
 
+- (instancetype)init {
+    if ((self = [super init]) != nil) {
+        self.serviceName = @"Untitled";
+        self.serviceEnabled = @(0);
+        self.mgdLLowAlarmThreshold = [NSNumber numberWithInt:80];
+        self.mgdLHighAlarmThreshold = [NSNumber numberWithInt:180];
+    }
+    return self;
+}
+
 - (BOOL)allowsImportForReadingType:(Class)readingType {
     return NO;
 }

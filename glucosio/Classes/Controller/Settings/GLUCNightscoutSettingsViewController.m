@@ -20,7 +20,7 @@
 
 - (void)initializeForm {
     if (!self.nightscoutService) {
-        self.nightscoutService = [GLUCDataServiceNightscout objectForPrimaryKey:@"Nightscout"];
+        self.nightscoutService = [GLUCDataServiceNightscout objectInRealm:[RLMRealm defaultRealm] forPrimaryKey:@"Nightscout"];
     }
 
     XLFormDescriptor * form;
