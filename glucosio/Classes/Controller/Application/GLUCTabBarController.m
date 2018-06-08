@@ -87,6 +87,10 @@
                                      completion:NULL];
         }];
         [readingTypeSelector addAction:cancelAction];
+        
+        // Added to support running on iPad
+        readingTypeSelector.popoverPresentationController.sourceView = self.navigationController.view;
+
         [self presentViewController:readingTypeSelector animated:YES completion:NULL];        
     }
 }

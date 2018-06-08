@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bUu-8H-pg1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bUu-8H-pg1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,6 +120,9 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-2R-e0w">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="64n-DC-brP"/>
+                                        </constraints>
                                         <segments>
                                             <segment title="Day"/>
                                             <segment title="Week"/>
@@ -134,6 +137,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="5" id="hif-6G-dzO" userLabel="height = 7"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="zkX-1a-3bC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-9r-JaW" customClass="LineChartView" customModule="Charts">
@@ -145,6 +149,9 @@
                                     </view>
                                     <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-BT-yuf">
                                         <rect key="frame" x="0.0" y="277" width="343" height="103"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="103" id="YfK-By-T7c"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="gMQ-s1-gWH" id="4DF-fH-yjc"/>
                                             <outlet property="delegate" destination="gMQ-s1-gWH" id="2vG-RG-gFz"/>
@@ -154,6 +161,7 @@
                                         <rect key="frame" x="0.0" y="385" width="343" height="157"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="157" id="eyy-Z1-HNU"/>
                                             <constraint firstAttribute="height" constant="157" id="fNc-yM-yOL"/>
                                         </constraints>
                                         <connections>
@@ -188,6 +196,7 @@
                                         <constraints>
                                             <constraint firstItem="eac-lg-rs0" firstAttribute="top" secondItem="RJA-Hk-ar9" secondAttribute="top" constant="10" id="2qs-yn-E1a"/>
                                             <constraint firstItem="q2i-dX-qIF" firstAttribute="top" secondItem="RJA-Hk-ar9" secondAttribute="top" constant="8" id="5ci-Iv-I4e"/>
+                                            <constraint firstAttribute="height" constant="51" id="DOF-yM-76s"/>
                                             <constraint firstItem="f2h-ZB-dIf" firstAttribute="leading" secondItem="q2i-dX-qIF" secondAttribute="trailing" constant="8" id="M3U-3g-vyJ"/>
                                             <constraint firstAttribute="bottom" secondItem="q2i-dX-qIF" secondAttribute="bottom" constant="12" id="PKj-9e-ueK"/>
                                             <constraint firstItem="eac-lg-rs0" firstAttribute="leading" secondItem="RJA-Hk-ar9" secondAttribute="leading" id="WV1-Rh-gE7"/>
@@ -438,7 +447,7 @@
                                                 <rect key="frame" x="20" y="55" width="341" height="77"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="121" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="48" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-wo-FpS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="77"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                                         <connections>
@@ -448,7 +457,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="mg/dL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="o5B-NS-vh0">
-                                                        <rect key="frame" x="-17" y="28.5" width="0.0" height="20.5"/>
+                                                        <rect key="frame" x="185" y="28.5" width="156" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -479,7 +488,7 @@
                                                 <rect key="frame" x="20" y="49" width="341" height="77"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="36.49" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="ORO-wd-DNg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="77"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                                         <connections>
@@ -489,7 +498,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="mmol/mol" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-rg-IZ5">
-                                                        <rect key="frame" x="-17" y="28.5" width="0.0" height="20.5"/>
+                                                        <rect key="frame" x="185" y="28.5" width="156" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
