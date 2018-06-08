@@ -30,6 +30,7 @@ static NSString *const kGLUCNotesEditorViewControllerIdentifier = @"NotesEditor"
 
 - (void) say:(NSString *)aString;
 
+- (void) handleServiceAlarmNotification:(NSNotification *)alarmNotification;
 
 @end
 
