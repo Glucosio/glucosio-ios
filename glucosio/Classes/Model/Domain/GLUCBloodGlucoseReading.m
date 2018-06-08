@@ -212,7 +212,7 @@
 
         RLMResults<GLUCBloodGlucoseReading *> *monthReadings =
                 [allBloodGlucoseReadings objectsWhere:@"creationDate BETWEEN {%@, %@}", startDate, endDate];
-        if (monthReadings) {
+        if (monthReadings && monthReadings.count) {
             [averageReadings addObject:@{
                     @"index" : @(monthIndex),
                     @"startDate" : startDate,
