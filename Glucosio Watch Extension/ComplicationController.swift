@@ -103,7 +103,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                     return nil
                 }
             })
-            .flatMap {$0}
+            .compactMap {$0}
 
         return entries
     }
