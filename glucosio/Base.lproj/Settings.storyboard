@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hk3-Vk-kPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hk3-Vk-kPc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -536,6 +536,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEN-ur-tVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4" y="-1175.2623688155923"/>
+        </scene>
+        <!--Donate View Controller-->
+        <scene sceneID="btn-1A-1my">
+            <objects>
+                <viewController storyboardIdentifier="DonateView" id="C0k-AM-qQm" customClass="GLUCDonateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cli-MG-2Kt"/>
+                        <viewControllerLayoutGuide type="bottom" id="wAa-Fq-nGZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBv-JK-Fmk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xI3-mO-Bme" customClass="WKWebViewWrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xI3-mO-Bme" firstAttribute="top" secondItem="dBv-JK-Fmk" secondAttribute="top" id="CWn-IX-Zz8"/>
+                            <constraint firstItem="wAa-Fq-nGZ" firstAttribute="top" secondItem="xI3-mO-Bme" secondAttribute="bottom" id="T4M-2f-4nR"/>
+                            <constraint firstItem="xI3-mO-Bme" firstAttribute="leading" secondItem="dBv-JK-Fmk" secondAttribute="leading" id="fmS-BG-irI"/>
+                            <constraint firstAttribute="trailing" secondItem="xI3-mO-Bme" secondAttribute="trailing" id="yCs-m4-X3O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webViewWrappper" destination="xI3-mO-Bme" id="B2d-z8-Wl1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJK-Yi-6Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="593"/>
+        </scene>
+        <!--Support View Controller-->
+        <scene sceneID="aw7-i4-3wv">
+            <objects>
+                <viewController storyboardIdentifier="SupportView" id="rhm-gd-Q6s" customClass="GLUCSupportViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Xj-JS-s4H"/>
+                        <viewControllerLayoutGuide type="bottom" id="MYT-Fq-YTu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UEK-5r-UHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-UW-YEi" customClass="WKWebViewWrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uxB-UW-YEi" firstAttribute="top" secondItem="UEK-5r-UHf" secondAttribute="top" id="B9T-f3-yQx"/>
+                            <constraint firstAttribute="trailing" secondItem="uxB-UW-YEi" secondAttribute="trailing" id="D8N-cK-JKm"/>
+                            <constraint firstItem="uxB-UW-YEi" firstAttribute="leading" secondItem="UEK-5r-UHf" secondAttribute="leading" id="dSS-qV-21S"/>
+                            <constraint firstItem="MYT-Fq-YTu" firstAttribute="top" secondItem="uxB-UW-YEi" secondAttribute="bottom" id="gGy-Pl-lkB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webViewWrappper" destination="uxB-UW-YEi" id="4BS-X5-j4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4X6-Sw-dwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="593"/>
         </scene>
     </scenes>
     <resources>

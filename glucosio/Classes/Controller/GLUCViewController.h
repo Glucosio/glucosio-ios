@@ -11,6 +11,8 @@ static NSString *const kGLUCReadingEditorViewControllerIdentifier = @"ReadingEdi
 static NSString *const kGLUCValueEditorViewControllerIdentifier = @"ValueEditor";
 static NSString *const kGLUCAboutViewControllerIdentifier = @"AboutView";
 static NSString *const kGLUCPrivacyViewControllerIdentifier = @"PrivacyView";
+static NSString *const kGLUCDonateViewControllerIdentifier = @"DonateView";
+static NSString *const kGLUCSupportViewControllerIdentifier = @"SupportView";
 static NSString *const kGLUCNightscoutSettingsViewControllerIdentifier = @"NightscoutSettingsView";
 
 static NSString *const kGLUCMainStoryboardIdentifier = @"Main";

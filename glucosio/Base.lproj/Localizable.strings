@@ -13,6 +13,12 @@
 
 "nightscout_settings" = "Nightscout Settings";
 
+"donate_action_title" = "Donate";
+"donate_url_str" = "http://glucosio.org/donate";
+
+"support_action_title" = "Support";
+"support_url_str" = "http://community.glucosio.org/c/support/glucosio-ios";
+
 /* No description supplied by the engineer */
 "action_feedback" = "Send feedback";
 

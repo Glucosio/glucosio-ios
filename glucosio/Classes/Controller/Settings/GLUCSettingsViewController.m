@@ -9,6 +9,8 @@
 #import "GLUCAppearanceController.h"
 #import "GLUCAboutViewController.h"
 #import "GLUCPrivacyViewController.h"
+#import "GLUCDonateViewController.h"
+#import "GLUCSupportViewController.h"
 #import "GLUCNightscoutSettingsViewController.h"
 
 #import "GLUCAppDelegate.h"
@@ -42,7 +44,10 @@
         self.settingKeys = [self.model.currentUser settingsProperties];
     }
 
-    self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy")];
+    self.aboutKeys = @[GLUCLoc(@"preferences_version"), GLUCLoc(@"preferences_terms"), GLUCLoc(@"preferences_privacy"),
+                       GLUCLoc(@"donate_action_title"),
+                       GLUCLoc(@"support_action_title")];
+    
     self.dataKeys = @[GLUCLoc(@"preferences_data_export")];//, GLUCLoc(@"preferences_data_import"), GLUCLoc(@"preferences_data_nightscout_refresh")];
 
     self.settings = [NSMutableDictionary dictionary];
@@ -290,11 +295,25 @@
                 case 1:
                     [self gotoEULAViewRequireConfirmation:NO];
                     break;
-                default:
+                case 2:
                 {
                     GLUCPrivacyViewController *privacyViewController = (GLUCPrivacyViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCPrivacyViewControllerIdentifier];
                     [self.navigationController pushViewController:privacyViewController animated:YES];
                 }
+                    break;
+                case 3:
+                {
+                    GLUCDonateViewController *donateViewController = (GLUCDonateViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCDonateViewControllerIdentifier];
+                    [self.navigationController pushViewController:donateViewController animated:YES];
+                }
+                    break;
+                case 4:
+                {
+                    GLUCSupportViewController *supportViewController = (GLUCSupportViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:kGLUCSupportViewControllerIdentifier];
+                    [self.navigationController pushViewController:supportViewController animated:YES];
+                }
+                    break;
+                default:
                     break;
             }
             break;
