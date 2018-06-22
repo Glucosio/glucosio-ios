@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Glucosio/glucosio-ios.svg?branch=develop)](https://travis-ci.org/Glucosio/glucosio-ios)
+[![Open Source Helpers](https://www.codetriage.com/glucosio/glucosio-ios/badges/users.svg)](https://www.codetriage.com/glucosio/glucosio-ios)
 
 # Glucosio for iOS
 
