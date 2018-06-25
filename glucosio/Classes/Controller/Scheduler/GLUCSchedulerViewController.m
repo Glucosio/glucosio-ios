@@ -225,6 +225,11 @@
                                  completion:NULL];
     }];
     [readingTypeSelector addAction:cancelAction];
+
+    // Fix for crasher on iPad when trying to add a scheduled alarm
+    readingTypeSelector.popoverPresentationController.barButtonItem = self.tabBarController.navigationItem.rightBarButtonItem;
+    readingTypeSelector.popoverPresentationController.sourceView = self.view;
+    
     [self presentViewController:readingTypeSelector animated:YES completion:NULL];
 }
 

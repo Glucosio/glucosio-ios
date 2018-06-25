@@ -89,7 +89,10 @@
         [readingTypeSelector addAction:cancelAction];
         
         // Added to support running on iPad
-        readingTypeSelector.popoverPresentationController.sourceView = self.navigationController.view;
+        // Improved location of popup on iPad but this code should be refactored
+        // so that the scheduler vc can make use of it as well
+        readingTypeSelector.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+        readingTypeSelector.popoverPresentationController.sourceView = self.view;
 
         [self presentViewController:readingTypeSelector animated:YES completion:NULL];        
     }
