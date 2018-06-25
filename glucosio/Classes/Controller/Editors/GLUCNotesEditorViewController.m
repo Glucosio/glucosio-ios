@@ -66,7 +66,19 @@
     if (formValues) {
         if (self.editedProperty && self.editedProperty.length) {
             [[self.editedObject realm] beginWriteTransaction];
-            [self.editedObject setValue:formValues[@"notes"] forKey:self.editedProperty];
+            id notesVal = formValues[@"notes"];
+            //
+            // If the user cancels editing of the note, the XL form kit
+            // gives us an instance of NSNull instead of an empty string
+            //
+            // We'd rather have an empty string to prevent crashing
+            // down the line.
+            //
+            if (notesVal && [notesVal isKindOfClass:[NSNull class]]) {
+                [self.editedObject setValue:@"" forKey:self.editedProperty];
+            } else {
+                [self.editedObject setValue:notesVal forKey:self.editedProperty];
+            }
             [[self.editedObject realm] commitWriteTransaction];
         }
     }
