@@ -216,7 +216,7 @@
 
 - (IBAction)save:(UIButton *)sender {
     [self.valueField resignFirstResponder];
-    [self.model.currentUser setNewValue:@([self.valueField.text floatValue]) inReading:(GLUCReading *)self.editedObject];
+    [self.model.currentUser setNewValue:[self.numberFormatter numberFromString:self.valueField.text] inReading:(GLUCReading *)self.editedObject];
 
     @try {
         [self.model saveReading:(GLUCReading *)self.editedObject fromService:nil];
