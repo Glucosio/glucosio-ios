@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Glucosio/glucosio-ios.svg?branch=develop)](https://travis-ci.org/Glucosio/glucosio-ios)
 
-# Glucosio has moved to Gitlab! [Visit our project repos on Github](https://gitlab.com/glucosio)
+# Glucosio has moved to Gitlab! [Visit our project repos on Gitlab](https://gitlab.com/glucosio)
 
 # Glucosio for iOS
 
